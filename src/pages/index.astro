@@ -47,28 +47,103 @@ const sliderExperiences = await Promise.all(
 <Layout title="Destino Pacífico" description="Descubre las experiencias únicas del Pacífico colombiano. Aventuras, cultura y naturaleza en la región más biodiversa del mundo.">
 
   <main class="relative h-screen w-screen overflow-hidden bg-black text-white">
-    <!-- Slider container -->
-    <div id="slider-container" class="relative w-full h-full">
-      <!-- Slides will be populated by JavaScript -->
+
+    <!-- Fullscreen Background Slides -->
+    <div class="slides-container">
+      {sliderExperiences.map((exp, index) => (
+        <div class={`slide ${index === 0 ? 'active' : ''}`} id={`slide-${index}`} 
+             style={`background-image: url('${exp.image}')`}>
+        </div>
+      ))}
     </div>
-    
-    <!-- Navigation -->
-    <div class="absolute bottom-8 left-8 z-30">
-      <button id="prev-btn" class="bg-white text-black px-4 py-2 rounded mr-4">Anterior</button>
-      <button id="next-btn" class="bg-white text-black px-4 py-2 rounded">Siguiente</button>
+
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <div class="details" id="details-even">
+      <div class="place-box">
+        <div class="text"></div>
+      </div>
+      <div class="title-box-1"><div class="title-1"></div></div>
+      <div class="title-box-2"><div class="title-2"></div></div>
+      <div class="desc"></div>
+      <div class="cta">
+        <button class="bookmark">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path fill-rule="evenodd" d="M6.32 2.577a49.255 49.255 0 0111.36 0c1.497.174 2.57 1.46 2.57 2.93V21a.75.75 0 01-1.085.67L12 18.089l-7.165 3.583A.75.75 0 013.75 21V5.507c0-1.47 1.073-2.756 2.57-2.93z" clip-rule="evenodd" />
+          </svg>
+        </button>
+        <button class="discover font-bold">Descubrir experiencia</button>
+      </div>
     </div>
-    
-    <!-- Slide indicators -->
-    <div class="absolute bottom-8 right-8 z-30 flex space-x-2" id="indicators">
-      <!-- Indicators will be populated by JavaScript -->
+
+    <div class="details" id="details-odd">
+      <div class="place-box">
+        <div class="text"></div>
+      </div>
+      <div class="title-box-1"><div class="title-1"></div></div>
+      <div class="title-box-2"><div class="title-2"></div></div>
+      <div class="desc"></div>
+      <div class="cta">
+        <button class="bookmark">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path fill-rule="evenodd" d="M6.32 2.577a49.255 49.255 0 0111.36 0c1.497.174 2.57 1.46 2.57 2.93V21a.75.75 0 01-1.085.67L12 18.089l-7.165 3.583A.75.75 0 013.75 21V5.507c0-1.47 1.073-2.756 2.57-2.93z" clip-rule="evenodd" />
+          </svg>
+        </button>
+        <button class="discover">Descubrir experiencia</button>
+      </div>
     </div>
+
+    <!-- Navigation Controls -->
+    <div class="navigation-controls">
+      <div class="nav-arrows">
+        <button class="nav-arrow nav-prev" id="prev-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+          </svg>
+        </button>
+        <button class="nav-arrow nav-next" id="next-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+          </svg>
+        </button>
+      </div>
+      
+      <!-- Thumbnail Cards Preview -->
+      <div class="thumbnail-cards">
+        {sliderExperiences.map((exp, index) => (
+          <div class={`thumbnail-card ${index === 0 ? 'active' : ''}`} 
+               id={`thumb-${index}`}
+               data-slide={index}
+               style={`background-image: url('${exp.image}')`}>
+            <div class="thumb-content">
+              <div class="thumb-place">{exp.place}</div>
+              <div class="thumb-title">{exp.title}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+      
+      <!-- Slide Counter and Autoplay -->
+      <div class="controls-info">
+        <div class="slide-counter">
+          <span id="current-slide">1</span>
+        </div>
+        <button id="autoplay-toggle" class="autoplay-btn">
+          Autoplay: <span id="autoplay-status">ON</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="cover"></div>
+
   </main>
 
   <!-- Navigation -->
   <nav class="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-50 text-white p-4">
     <div class="flex justify-between items-center">
       <div class="flex items-center">
-        <span class="font-bold">Destino Pacífico</span>
+        <span class="font-bold">🌊 Destino Pacífico</span>
       </div>
       <div class="space-x-4">
         <a href="/experiencias" class="hover:text-blue-300">Experiencias</a>
@@ -83,145 +158,634 @@ const sliderExperiences = await Promise.all(
 body {
   font-family: "botanika-web", sans-serif;
   margin: 0;
+  background-color: #000000;
+  color: #FFFAF0;
   overflow: hidden;
+}
+
+/* Fullscreen Slides */
+.slides-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
 .slide {
   position: absolute;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  visibility: hidden;
+  transition: all 0.8s ease-in-out;
 }
 
 .slide.active {
   opacity: 1;
+  visibility: visible;
 }
 
-.slide-content {
+/* Overlay */
+.overlay {
   position: absolute;
-  bottom: 100px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 100%);
+  z-index: 2;
+}
+
+/* Main Content Details */
+.details {
+  position: absolute;
+  top: 50%;
   left: 60px;
-  color: white;
+  transform: translateY(-50%);
   z-index: 10;
-  max-width: 500px;
+  max-width: 600px;
 }
 
-.slide-title {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-}
-
-.slide-place {
-  font-size: 1.2rem;
-  margin-bottom: 15px;
+.place-box .text {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 40px;
   opacity: 0.9;
 }
 
-.slide-description {
-  font-size: 1.1rem;
-  line-height: 1.5;
+.place-box .text:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 30px;
+  height: 3px;
+  background-color: #ecad29;
+  border-radius: 2px;
+}
+
+.title-1 {
+  font-size: 4.5rem;
+  font-family: "ciclo-display", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 0.9;
   margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
 }
 
-.cta-button {
-  background: linear-gradient(135deg, #00b4db, #0083b0);
-  color: white;
-  padding: 12px 24px;
+.title-2 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+  opacity: 0.95;
+  line-height: 1.4;
+}
+
+.desc {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  max-width: 500px;
+  opacity: 0.9;
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.bookmark {
+  background-color: #ecad29;
   border: none;
-  border-radius: 25px;
-  font-size: 1rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.cta-button:hover {
+.bookmark:hover {
+  transform: scale(1.1);
+  background-color: #d49a23;
+}
+
+.bookmark svg {
+  width: 24px;
+  height: 24px;
+}
+
+.discover {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+}
+
+.discover:hover {
+  background-color: white;
+  color: black;
   transform: translateY(-2px);
+}
+
+/* Navigation Controls */
+.navigation-controls {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.nav-arrows {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-arrow {
+  width: 50px;
+  height: 50px;
+  border: 2px solid rgba(255,255,255,0.4);
+  background: rgba(0,0,0,0.3);
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.nav-arrow:hover {
+  border-color: white;
+  background: rgba(255,255,255,0.2);
+  transform: scale(1.1);
+}
+
+.nav-arrow svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Thumbnail Cards */
+.thumbnail-cards {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  max-width: 300px;
+}
+
+.thumbnail-card {
+  width: 140px;
+  height: 100px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  opacity: 0.7;
+}
+
+.thumbnail-card:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.thumbnail-card.active {
+  border-color: #ecad29;
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+.thumb-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  padding: 15px 10px 10px;
+  color: white;
+}
+
+.thumb-place {
+  font-size: 0.7rem;
+  opacity: 0.8;
+  margin-bottom: 2px;
+}
+
+.thumb-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-family: "ciclo-display", sans-serif;
+  line-height: 1.2;
+}
+
+/* Controls Info */
+.controls-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.slide-counter {
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  min-width: 50px;
+  text-align: center;
+}
+
+.autoplay-btn {
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.autoplay-btn:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.4);
+}
+
+/* Navigation */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
+  padding: 20px 40px;
+}
+
+nav .flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+nav a:hover {
+  background: rgba(255,255,255,0.1);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .details {
+    left: 30px;
+    right: 30px;
+    top: 40%;
+  }
+  
+  .title-1 {
+    font-size: 3rem;
+  }
+  
+  .navigation-controls {
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .thumbnail-cards {
+    max-width: 200px;
+  }
+  
+  .thumbnail-card {
+    width: 90px;
+    height: 65px;
+  }
 }
 </style>
 
-<!-- Slider data and simple script -->
+<!-- Slider data and smooth CSS transitions script -->
 <script>
 // @ts-nocheck  
 const data = JSON.parse(document.getElementById('slider-data')?.textContent || '[]');
 
+// Global variables
 let currentSlide = 0;
+let isPlaying = true;
+let autoAdvanceInterval = null;
+let isTransitioning = false;
 
-function createSlide(item, index) {
-  return `
-    <div class="slide ${index === 0 ? 'active' : ''}" 
-         style="background-image: url('${item.image}')">
-      <div class="slide-content">
-        <div class="slide-place">${item.place}</div>
-        <h1 class="slide-title tk-ciclo-display font-black">${item.title}</h1>
-        <p class="slide-description">${item.descripcion}</p>
-        <button class="cta-button" onclick="window.location.href='${item.permalink}'">
-          Descubrir experiencia
-        </button>
-      </div>
-    </div>
-  `;
+// DOM elements
+let slides = [];
+let thumbnails = [];
+let slideCounter;
+let autoplayStatus;
+let detailsContainer;
+
+// Initialize the slider
+function init() {
+  if (!data || data.length === 0) {
+    console.error('No slider data available');
+    return;
+  }
+
+  // Get DOM elements
+  slides = Array.from(document.querySelectorAll('.slide'));
+  thumbnails = Array.from(document.querySelectorAll('.thumbnail-card'));
+  slideCounter = document.getElementById('current-slide');
+  autoplayStatus = document.getElementById('autoplay-status');
+  detailsContainer = document.querySelector('.details');
+
+  if (slides.length === 0) {
+    console.error('No slides found');
+    return;
+  }
+
+  console.log('Initializing fullscreen slider with', data.length, 'slides');
+
+  // Initialize first slide
+  showSlide(0);
+  updateThumbnails(0);
+  updateCounter(0);
+
+  // Start autoplay if enabled
+  if (isPlaying) {
+    startAutoplay();
+  }
+
+  console.log('Fullscreen slider initialization complete');
 }
 
-function createIndicator(index) {
-  return `
-    <button class="w-3 h-3 rounded-full ${index === 0 ? 'bg-white' : 'bg-gray-500'} 
-             hover:bg-white transition-colors duration-300" 
-            onclick="goToSlide(${index})">
-    </button>
-  `;
-}
+function showSlide(index) {
+  if (index < 0 || index >= data.length || isTransitioning) return;
 
-function goToSlide(index) {
-  // Hide current slide
-  document.querySelectorAll('.slide').forEach(slide => slide.classList.remove('active'));
-  document.querySelectorAll('[onclick*="goToSlide"]').forEach(indicator => {
-    indicator.className = indicator.className.replace('bg-white', 'bg-gray-500');
+  isTransitioning = true;
+  
+  // Hide all slides
+  slides.forEach((slide, i) => {
+    slide.classList.remove('active');
   });
   
-  // Show new slide
-  document.querySelectorAll('.slide')[index]?.classList.add('active');
-  const activeIndicator = document.querySelectorAll('[onclick*="goToSlide"]')[index];
-  if (activeIndicator) {
-    activeIndicator.className = activeIndicator.className.replace('bg-gray-500', 'bg-white');
-  }
+  // Show target slide with small delay for smooth transition
+  setTimeout(() => {
+    slides[index].classList.add('active');
+    updateDetails(index);
+    isTransitioning = false;
+  }, 50);
   
   currentSlide = index;
 }
 
+function updateDetails(index) {
+  const experiencia = data[index];
+  if (!experiencia || !detailsContainer) return;
+  
+  // Update place
+  const placeText = detailsContainer.querySelector('.place-box .text');
+  if (placeText) {
+    placeText.textContent = experiencia.place || 'Pacífico Colombiano';
+  }
+
+  // Update titles
+  const title1 = detailsContainer.querySelector('.title-1');
+  const title2 = detailsContainer.querySelector('.title-2');
+  
+  if (title1) {
+    title1.textContent = experiencia.title || 'Experiencia';
+  }
+  
+  if (title2) {
+    title2.textContent = experiencia.eslogan || 'Descubre el Pacífico';
+  }
+
+  // Update description
+  const desc = detailsContainer.querySelector('.desc');
+  if (desc) {
+    desc.textContent = experiencia.descripcion || 'Una experiencia única en el Pacífico Colombiano.';
+  }
+
+  // Update CTA button link
+  const discoverBtn = detailsContainer.querySelector('.discover');
+  if (discoverBtn) {
+    discoverBtn.onclick = () => {
+      window.location.href = experiencia.permalink || '#';
+    };
+  }
+}
+
+function updateThumbnails(activeIndex) {
+  thumbnails.forEach((thumb, index) => {
+    thumb.classList.toggle('active', index === activeIndex);
+  });
+}
+
+function updateCounter(index) {
+  if (slideCounter) {
+    slideCounter.textContent = (index + 1).toString();
+  }
+}
+
 function nextSlide() {
+  if (isTransitioning) return;
+  
   const nextIndex = (currentSlide + 1) % data.length;
-  goToSlide(nextIndex);
+  console.log(`Next slide: ${currentSlide} -> ${nextIndex}`);
+  
+  showSlide(nextIndex);
+  updateThumbnails(nextIndex);
+  updateCounter(nextIndex);
+  
+  if (isPlaying) {
+    restartAutoplay();
+  }
 }
 
 function prevSlide() {
+  if (isTransitioning) return;
+  
   const prevIndex = currentSlide === 0 ? data.length - 1 : currentSlide - 1;
-  goToSlide(prevIndex);
+  console.log(`Previous slide: ${currentSlide} -> ${prevIndex}`);
+  
+  showSlide(prevIndex);
+  updateThumbnails(prevIndex);
+  updateCounter(prevIndex);
+  
+  if (isPlaying) {
+    restartAutoplay();
+  }
 }
 
-// Initialize slider
-document.addEventListener('DOMContentLoaded', () => {
-  const container = document.getElementById('slider-container');
-  const indicators = document.getElementById('indicators');
+function goToSlide(index) {
+  if (isTransitioning || index === currentSlide) return;
   
-  if (container && indicators && data.length > 0) {
-    // Create slides
-    container.innerHTML = data.map(createSlide).join('');
-    
-    // Create indicators
-    indicators.innerHTML = data.map((_, index) => createIndicator(index)).join('');
-    
-    // Setup navigation
-    document.getElementById('prev-btn')?.addEventListener('click', prevSlide);
-    document.getElementById('next-btn')?.addEventListener('click', nextSlide);
-    
-    // Auto-advance slides (optional)
-    setInterval(nextSlide, 5000);
+  console.log(`Going to slide: ${currentSlide} -> ${index}`);
+  
+  showSlide(index);
+  updateThumbnails(index);
+  updateCounter(index);
+  
+  if (isPlaying) {
+    restartAutoplay();
+  }
+}
+
+function startAutoplay() {
+  if (autoAdvanceInterval) {
+    clearInterval(autoAdvanceInterval);
+  }
+  
+  autoAdvanceInterval = setInterval(() => {
+    if (isPlaying && !isTransitioning) {
+      nextSlide();
+    }
+  }, 4000); // 4 seconds like WordPress
+}
+
+function restartAutoplay() {
+  if (isPlaying) {
+    startAutoplay();
+  }
+}
+
+function toggleAutoplay() {
+  isPlaying = !isPlaying;
+  
+  if (autoplayStatus) {
+    autoplayStatus.textContent = isPlaying ? 'ON' : 'OFF';
+  }
+  
+  if (isPlaying) {
+    startAutoplay();
+    console.log('Autoplay enabled');
+  } else {
+    if (autoAdvanceInterval) {
+      clearInterval(autoAdvanceInterval);
+      autoAdvanceInterval = null;
+    }
+    console.log('Autoplay disabled');
+  }
+}
+
+// Event listeners
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('Fullscreen slider starting, data:', data);
+  
+  // Wait for everything to be ready
+  Promise.all([
+    document.fonts.ready,
+    new Promise(resolve => {
+      if (document.readyState === 'complete') {
+        resolve();
+      } else {
+        window.addEventListener('load', resolve);
+      }
+    })
+  ]).then(() => {
+    setTimeout(init, 100);
+  });
+
+  // Navigation buttons
+  const prevBtn = document.getElementById('prev-btn');
+  const nextBtn = document.getElementById('next-btn');
+  const autoplayToggle = document.getElementById('autoplay-toggle');
+
+  prevBtn?.addEventListener('click', (e) => {
+    e.preventDefault();
+    console.log('Previous button clicked');
+    prevSlide();
+  });
+  
+  nextBtn?.addEventListener('click', (e) => {
+    e.preventDefault();
+    console.log('Next button clicked');
+    nextSlide();
+  });
+  
+  autoplayToggle?.addEventListener('click', (e) => {
+    e.preventDefault();
+    toggleAutoplay();
+  });
+
+  // Thumbnail clicks
+  document.addEventListener('click', (e) => {
+    if (e.target.closest('.thumbnail-card')) {
+      const thumbnail = e.target.closest('.thumbnail-card');
+      const slideIndex = parseInt(thumbnail.dataset.slide);
+      if (!isNaN(slideIndex)) {
+        goToSlide(slideIndex);
+      }
+    }
+  });
+
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    switch(e.key) {
+      case 'ArrowLeft':
+        e.preventDefault();
+        prevSlide();
+        break;
+      case 'ArrowRight':
+        e.preventDefault();
+        nextSlide();
+        break;
+      case ' ':
+        e.preventDefault();
+        toggleAutoplay();
+        break;
+    }
+  });
+});
+
+// Pause autoplay when tab is not visible
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) {
+    if (autoAdvanceInterval) {
+      clearInterval(autoAdvanceInterval);
+    }
+  } else if (isPlaying) {
+    startAutoplay();
   }
 });
 </script>
