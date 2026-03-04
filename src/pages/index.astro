@@ -1,5 +1,40 @@
 ---
 import '../styles/global.css';
+import { getExperienciasMapping } from '../lib/experiencias-mapping';
+import { getExperienceImagePath } from '../lib/narratives-parser';
+import { resolveTaxonomyTerms } from '../lib/wordpress';
+
+// Obtener las primeras 6 experiencias
+const { experienciasSorted } = await getExperienciasMapping();
+const firstSixExperiences = experienciasSorted.slice(0, 6);
+
+// Procesar las experiencias para el slider
+const sliderData = await Promise.all(
+  firstSixExperiences.map(async (exp, index) => {
+    const resolvedTaxonomy = exp.acf ? await resolveTaxonomyTerms(exp.acf) : {};
+    
+    // Formar la ubicación "Municipio, Departamento"
+    const municipio = resolvedTaxonomy.municipio?.[0] || '';
+    const departamento = resolvedTaxonomy.departamento?.[0] || '';
+    const location = municipio && departamento ? `${municipio}, ${departamento}` : 'Pacífico Colombiano';
+    
+    // Extraer títulos del título completo (formato: "EXP-001 - TÍTULO - SUBTÍTULO")
+    const fullTitle = exp.title?.rendered || '';
+    const titleParts = fullTitle.replace(/EXP-\d+\s*-\s*/, '').split(' - ');
+    const mainTitle = titleParts[0] || 'EXPERIENCIA';
+    const subTitle = titleParts[1] || 'PACÍFICO';
+    
+    return {
+      place: location,
+      title: mainTitle.toUpperCase(),
+      title2: subTitle.toUpperCase(),
+      description: exp.excerpt?.rendered?.replace(/<[^>]*>/g, '') || 'Descubre esta increíble experiencia en el Pacífico colombiano.',
+      image: getExperienceImagePath(exp.expNumber || index + 1),
+      expNumber: exp.expNumber,
+      wpId: exp.id
+    };
+  })
+);
 ---
 
 <!DOCTYPE html>
@@ -178,51 +213,16 @@ import '../styles/global.css';
   </main>
 
   <!-- TUS SCRIPTS AQUÍ -->
-  <script is:inline>
-    const data = [
-    {
-        place:'Switzerland Alps',
-        title:'SAINT',
-        title2:'ANTONIEN',
-        description:'Tucked away in the Switzerland Alps, Saint Antönien offers an idyllic retreat for those seeking tranquility and adventure alike. It\'s a hidden gem for backcountry skiing in winter and boasts lush trails for hiking and mountain biking during the warmer months.',
-        image:'https://assets.codepen.io/3685267/timed-cards-1.jpg'
-    },
-    {
-        place:'Japan Alps',
-        title:'NANGANO',
-        title2:'PREFECTURE',
-        description:'Nagano Prefecture, set within the majestic Japan Alps, is a cultural treasure trove with its historic shrines and temples, particularly the famous Zenkō-ji. The region is also a hotspot for skiing and snowboarding, offering some of the country\'s best powder.',
-        image:'https://assets.codepen.io/3685267/timed-cards-2.jpg'
-    },
-    {
-        place:'Sahara Desert - Morocco',
-        title:'MARRAKECH',
-        title2:'MEROUGA',
-        description:'The journey from the vibrant souks and palaces of Marrakech to the tranquil, starlit sands of Merzouga showcases the diverse splendor of Morocco. Camel treks and desert camps offer an unforgettable immersion into the nomadic way of life.',
-        image:'https://assets.codepen.io/3685267/timed-cards-3.jpg'
-    },
-    {
-        place:'Sierra Nevada - USA',
-        title:'YOSEMITE',
-        title2:'NATIONAL PARAK',
-        description:'Yosemite National Park is a showcase of the American wilderness, revered for its towering granite monoliths, ancient giant sequoias, and thundering waterfalls. The park offers year-round recreational activities, from rock climbing to serene valley walks.',
-        image:'https://assets.codepen.io/3685267/timed-cards-4.jpg'
-    },
-    {
-        place:'Tarifa - Spain',
-        title:'LOS LANCES',
-        title2:'BEACH',
-        description:'Los Lances Beach in Tarifa is a coastal paradise known for its consistent winds, making it a world-renowned spot for kitesurfing and windsurfing. The beach\'s long, sandy shores provide ample space for relaxation and sunbathing, with a vibrant atmosphere of beach bars and cafes.',
-        image:'https://assets.codepen.io/3685267/timed-cards-5.jpg'
-    },
-    {
-        place:'Cappadocia - Turkey',
-        title:'Göreme',
-        title2:'Valley',
-        description:'Göreme Valley in Cappadocia is a historical marvel set against a unique geological backdrop, where centuries of wind and water have sculpted the landscape into whimsical formations. The valley is also famous for its open-air museums, underground cities, and the enchanting experience of hot air ballooning.',
-        image:'https://assets.codepen.io/3685267/timed-cards-6.jpg'
-    },
-]
+  <script is:inline define:vars={{ sliderData }}>
+    // Usar datos reales de WordPress
+    const data = sliderData;
+    
+    // Debug: Verificar datos cargados
+    console.log('=== DATOS DE EXPERIENCIAS CARGADOS ===');
+    console.log('Total experiencias:', data.length);
+    data.forEach((exp, i) => {
+      console.log(`${i + 1}. ${exp.title} ${exp.title2} - ${exp.place}`);
+    });
 
 const _ = (id)=>document.getElementById(id)
 const cards = data.map((i, index)=>`<div class="card" id="card${index}" style="background-image:url(${i.image})"  ></div>`).join('')

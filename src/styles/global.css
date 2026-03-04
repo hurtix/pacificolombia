@@ -12,7 +12,6 @@
 }
 
 
-    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500&display=swap");
 /* For modern browsers supporting text-stroke */
 .text-with-stroke {
   color: Black;
@@ -36,7 +35,6 @@ body {
   color: #FFFAF0;
   position: relative;
   overflow: hidden;
-  font-family: "Inter", sans-serif;
 }
 
 .card {
