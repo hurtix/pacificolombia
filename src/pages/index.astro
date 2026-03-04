@@ -1,793 +1,571 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { getExperienciasMapping } from '../lib/experiencias-mapping';
-import { loadNarratives, getExperienceImagePath } from '../lib/narratives-parser';
-import { resolveTaxonomyTerms } from '../lib/wordpress';
-
-// Load experience data for the homepage slider
-const { experienciasSorted } = await getExperienciasMapping();
-const narratives = await loadNarratives();
-
-// Get first 5 experiences with resolved taxonomies for the slider
-const sliderExperiences = await Promise.all(
-  experienciasSorted.slice(0, 5).map(async (exp) => {
-    const narrative = narratives.find(n => n.expNumber === exp.expNumber);
-    const resolvedTaxonomy = exp.acf ? await resolveTaxonomyTerms(exp.acf) : {};
-    const paddedNumber = exp.expNumber?.toString().padStart(3, '0') || '000';
-    
-    // Build place string from resolved taxonomies
-    const placeParts = [];
-    if (resolvedTaxonomy.municipio) {
-      const municipio = Array.isArray(resolvedTaxonomy.municipio) 
-        ? resolvedTaxonomy.municipio[0] 
-        : resolvedTaxonomy.municipio;
-      placeParts.push(municipio);
-    }
-    if (resolvedTaxonomy.departamento) {
-      const departamento = Array.isArray(resolvedTaxonomy.departamento) 
-        ? resolvedTaxonomy.departamento[0] 
-        : resolvedTaxonomy.departamento;
-      placeParts.push(departamento);
-    }
-    
-    return {
-      id: exp.id,
-      title: narrative?.title || exp.acf?.nombre_experiencia || `Experiencia ${paddedNumber}`,
-      place: placeParts.join(' - ') || 'Pacífico Colombiano',
-      eslogan: narrative?.subtitle || exp.acf?.eslogan || '',
-      descripcion: narrative?.content?.substring(0, 200) + '...' || '',
-      image: getExperienceImagePath(exp.expNumber || 0),
-      permalink: `/experiencia/${paddedNumber}`,
-      expNumber: paddedNumber
-    };
-  })
-);
+import '../styles/global.css';
 ---
 
-<Layout title="Destino Pacífico" description="Descubre las experiencias únicas del Pacífico colombiano. Aventuras, cultura y naturaleza en la región más biodiversa del mundo.">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destino Pacífico</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" is:inline></script>
+  <!-- TUS ESTILOS AQUÍ -->
 
-  <main class="relative h-screen w-screen overflow-hidden bg-black text-white">
 
-    <!-- Fullscreen Background Slides -->
-    <div class="slides-container">
-      {sliderExperiences.map((exp, index) => (
-        <div class={`slide ${index === 0 ? 'active' : ''}`} id={`slide-${index}`} 
-             style={`background-image: url('${exp.image}')`}>
+</head>
+<body>
+
+  <!-- TU HTML AQUÍ -->
+  <main id="app">
+     
+    <div class="indicator"></div>
+
+    <nav>
+      <div>
+        <div class="svg-container">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"
+            />
+          </svg>
         </div>
-      ))}
-    </div>
+        <div>CODE.WITH.ARROW</div>
+      </div>
+      <div>
+        <div class="active">Home</div>
+        <div>Holidays</div>
+        <div>Destinations</div>
+        <div>Flights</div>
+        <div>Offers</div>
+        <div>Contact</div>
+        <div class="svg-container">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+            />
+          </svg>
+        </div>
+        <div class="svg-container">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </div>
+      </div>
+    </nav>
 
-    <!-- Overlay -->
-    <div class="overlay"></div>
+    <div id="demo"></div>
 
     <div class="details" id="details-even">
       <div class="place-box">
-        <div class="text"></div>
+        <div class="text">Switzerland Alps</div>
       </div>
-      <div class="title-box-1"><div class="title-1"></div></div>
-      <div class="title-box-2"><div class="title-2"></div></div>
-      <div class="desc"></div>
+      <div class="title-box-1"><div class="title-1">SAINT</div></div>
+      <div class="title-box-2"><div class="title-2">ANTONIEN</div></div>
+      <div class="desc">
+        Tucked away in the Switzerland Alps, Saint Antönien offers an idyllic retreat for those seeking tranquility and adventure alike. It's a hidden gem for backcountry skiing in winter and boasts lush trails for hiking and mountain biking during the warmer months.
+      </div>
       <div class="cta">
         <button class="bookmark">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path fill-rule="evenodd" d="M6.32 2.577a49.255 49.255 0 0111.36 0c1.497.174 2.57 1.46 2.57 2.93V21a.75.75 0 01-1.085.67L12 18.089l-7.165 3.583A.75.75 0 013.75 21V5.507c0-1.47 1.073-2.756 2.57-2.93z" clip-rule="evenodd" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M6.32 2.577a49.255 49.255 0 0111.36 0c1.497.174 2.57 1.46 2.57 2.93V21a.75.75 0 01-1.085.67L12 18.089l-7.165 3.583A.75.75 0 013.75 21V5.507c0-1.47 1.073-2.756 2.57-2.93z"
+              clip-rule="evenodd"
+            />
           </svg>
         </button>
-        <button class="discover font-bold">Descubrir experiencia</button>
+        <button class="discover">Discover Location</button>
       </div>
     </div>
 
     <div class="details" id="details-odd">
       <div class="place-box">
-        <div class="text"></div>
+        <div class="text">Switzerland Alps</div>
       </div>
-      <div class="title-box-1"><div class="title-1"></div></div>
-      <div class="title-box-2"><div class="title-2"></div></div>
-      <div class="desc"></div>
+      <div class="title-box-1"><div class="title-1">SAINT </div></div>
+      <div class="title-box-2"><div class="title-2">ANTONIEN</div></div>
+      <div class="desc">
+        Tucked away in the Switzerland Alps, Saint Antönien offers an idyllic retreat for those seeking tranquility and adventure alike. It's a hidden gem for backcountry skiing in winter and boasts lush trails for hiking and mountain biking during the warmer months.
+      </div>
       <div class="cta">
         <button class="bookmark">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path fill-rule="evenodd" d="M6.32 2.577a49.255 49.255 0 0111.36 0c1.497.174 2.57 1.46 2.57 2.93V21a.75.75 0 01-1.085.67L12 18.089l-7.165 3.583A.75.75 0 013.75 21V5.507c0-1.47 1.073-2.756 2.57-2.93z" clip-rule="evenodd" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M6.32 2.577a49.255 49.255 0 0111.36 0c1.497.174 2.57 1.46 2.57 2.93V21a.75.75 0 01-1.085.67L12 18.089l-7.165 3.583A.75.75 0 013.75 21V5.507c0-1.47 1.073-2.756 2.57-2.93z"
+              clip-rule="evenodd"
+            />
           </svg>
         </button>
-        <button class="discover">Descubrir experiencia</button>
+        <button class="discover">Discover Location</button>
       </div>
     </div>
 
-    <!-- Navigation Controls -->
-    <div class="navigation-controls">
-      <div class="nav-arrows">
-        <button class="nav-arrow nav-prev" id="prev-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-          </svg>
-        </button>
-        <button class="nav-arrow nav-next" id="next-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-          </svg>
-        </button>
+    <div class="pagination" id="pagination">
+      <div class="arrow arrow-left">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 19.5L8.25 12l7.5-7.5"
+          />
+        </svg>
       </div>
-      
-      <!-- Thumbnail Cards Preview -->
-      <div class="thumbnail-cards">
-        {sliderExperiences.map((exp, index) => (
-          <div class={`thumbnail-card ${index === 0 ? 'active' : ''}`} 
-               id={`thumb-${index}`}
-               data-slide={index}
-               style={`background-image: url('${exp.image}')`}>
-            <div class="thumb-content">
-              <div class="thumb-place">{exp.place}</div>
-              <div class="thumb-title">{exp.title}</div>
-            </div>
-          </div>
-        ))}
+      <div class="arrow arrow-right">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M8.25 4.5l7.5 7.5-7.5 7.5"
+          />
+        </svg>
       </div>
-      
-      <!-- Slide Counter and Autoplay -->
-      <div class="controls-info">
-        <div class="slide-counter">
-          <span id="current-slide">1</span>
+      <div class="progress-sub-container" >
+        <div class="progress-sub-background" >
+            <div class="progress-sub-foreground" ></div>
         </div>
-        <button id="autoplay-toggle" class="autoplay-btn">
-          Autoplay: <span id="autoplay-status">ON</span>
-        </button>
-      </div>
+    </div>
+    <div class="slide-numbers" id="slide-numbers"></div>
     </div>
 
-    <div class="cover"></div>
+    <div class="cover" ></div>
+   
 
+   
+  
   </main>
 
-  <!-- Navigation -->
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-50 text-white p-4">
-    <div class="flex justify-between items-center">
-      <div class="flex items-center">
-        <span class="font-bold">🌊 Destino Pacífico</span>
-      </div>
-      <div class="space-x-4">
-        <a href="/experiencias" class="hover:text-blue-300">Experiencias</a>
-        <a href="/" class="text-blue-300">Inicio</a>
-      </div>
-    </div>
-  </nav>
+  <!-- TUS SCRIPTS AQUÍ -->
+  <script is:inline>
+    const data = [
+    {
+        place:'Switzerland Alps',
+        title:'SAINT',
+        title2:'ANTONIEN',
+        description:'Tucked away in the Switzerland Alps, Saint Antönien offers an idyllic retreat for those seeking tranquility and adventure alike. It\'s a hidden gem for backcountry skiing in winter and boasts lush trails for hiking and mountain biking during the warmer months.',
+        image:'https://assets.codepen.io/3685267/timed-cards-1.jpg'
+    },
+    {
+        place:'Japan Alps',
+        title:'NANGANO',
+        title2:'PREFECTURE',
+        description:'Nagano Prefecture, set within the majestic Japan Alps, is a cultural treasure trove with its historic shrines and temples, particularly the famous Zenkō-ji. The region is also a hotspot for skiing and snowboarding, offering some of the country\'s best powder.',
+        image:'https://assets.codepen.io/3685267/timed-cards-2.jpg'
+    },
+    {
+        place:'Sahara Desert - Morocco',
+        title:'MARRAKECH',
+        title2:'MEROUGA',
+        description:'The journey from the vibrant souks and palaces of Marrakech to the tranquil, starlit sands of Merzouga showcases the diverse splendor of Morocco. Camel treks and desert camps offer an unforgettable immersion into the nomadic way of life.',
+        image:'https://assets.codepen.io/3685267/timed-cards-3.jpg'
+    },
+    {
+        place:'Sierra Nevada - USA',
+        title:'YOSEMITE',
+        title2:'NATIONAL PARAK',
+        description:'Yosemite National Park is a showcase of the American wilderness, revered for its towering granite monoliths, ancient giant sequoias, and thundering waterfalls. The park offers year-round recreational activities, from rock climbing to serene valley walks.',
+        image:'https://assets.codepen.io/3685267/timed-cards-4.jpg'
+    },
+    {
+        place:'Tarifa - Spain',
+        title:'LOS LANCES',
+        title2:'BEACH',
+        description:'Los Lances Beach in Tarifa is a coastal paradise known for its consistent winds, making it a world-renowned spot for kitesurfing and windsurfing. The beach\'s long, sandy shores provide ample space for relaxation and sunbathing, with a vibrant atmosphere of beach bars and cafes.',
+        image:'https://assets.codepen.io/3685267/timed-cards-5.jpg'
+    },
+    {
+        place:'Cappadocia - Turkey',
+        title:'Göreme',
+        title2:'Valley',
+        description:'Göreme Valley in Cappadocia is a historical marvel set against a unique geological backdrop, where centuries of wind and water have sculpted the landscape into whimsical formations. The valley is also famous for its open-air museums, underground cities, and the enchanting experience of hot air ballooning.',
+        image:'https://assets.codepen.io/3685267/timed-cards-6.jpg'
+    },
+]
 
-</Layout>
+const _ = (id)=>document.getElementById(id)
+const cards = data.map((i, index)=>`<div class="card" id="card${index}" style="background-image:url(${i.image})"  ></div>`).join('')
 
-<style>
-body {
-  font-family: "botanika-web", sans-serif;
-  margin: 0;
-  background-color: #000000;
-  color: #FFFAF0;
-  overflow: hidden;
+
+
+const cardContents = data.map((i, index)=>`<div class="card-content" id="card-content-${index}">
+<div class="content-start"></div>
+<div class="content-place">${i.place}</div>
+<div class="content-title-1">${i.title}</div>
+<div class="content-title-2">${i.title2}</div>
+
+</div>`).join('')
+
+
+const sildeNumbers = data.map((_, index)=>`<div class="item" id="slide-item-${index}" >${index+1}</div>`).join('')
+_('demo').innerHTML =  cards + cardContents
+_('slide-numbers').innerHTML =  sildeNumbers
+
+
+const range = (n) =>
+  Array(n)
+    .fill(0)
+    .map((i, j) => i + j);
+const set = gsap.set;
+
+function getCard(index) {
+  return `#card${index}`;
+}
+function getCardContent(index) {
+  return `#card-content-${index}`;
+}
+function getSliderItem(index) {
+  return `#slide-item-${index}`;
 }
 
-/* Fullscreen Slides */
-.slides-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
+function animate(target, duration, properties) {
+  return new Promise((resolve) => {
+    gsap.to(target, {
+      ...properties,
+      duration: duration,
+      onComplete: resolve,
+    });
+  });
 }
 
-.slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.8s ease-in-out;
-}
+let order = [0, 1, 2, 3, 4, 5];
+let detailsEven = true;
 
-.slide.active {
-  opacity: 1;
-  visibility: visible;
-}
+let offsetTop = 200;
+let offsetLeft = 700;
+let cardWidth = 200;
+let cardHeight = 300;
+let gap = 40;
+let numberSize = 50;
+const ease = "sine.inOut";
 
-/* Overlay */
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 100%);
-  z-index: 2;
-}
-
-/* Main Content Details */
-.details {
-  position: absolute;
-  top: 50%;
-  left: 60px;
-  transform: translateY(-50%);
-  z-index: 10;
-  max-width: 600px;
-}
-
-.place-box .text {
-  font-size: 16px;
-  font-weight: 500;
-  margin-bottom: 20px;
-  position: relative;
-  padding-left: 40px;
-  opacity: 0.9;
-}
-
-.place-box .text:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 8px;
-  width: 30px;
-  height: 3px;
-  background-color: #ecad29;
-  border-radius: 2px;
-}
-
-.title-1 {
-  font-size: 4.5rem;
-  font-family: "ciclo-display", sans-serif;
-  font-weight: 900;
-  text-transform: uppercase;
-  line-height: 0.9;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
-}
-
-.title-2 {
-  font-size: 1.25rem;
-  font-weight: 400;
-  margin-bottom: 30px;
-  opacity: 0.95;
-  line-height: 1.4;
-}
-
-.desc {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 30px;
-  max-width: 500px;
-  opacity: 0.9;
-}
-
-.cta {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.bookmark {
-  background-color: #ecad29;
-  border: none;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.bookmark:hover {
-  transform: scale(1.1);
-  background-color: #d49a23;
-}
-
-.bookmark svg {
-  width: 24px;
-  height: 24px;
-}
-
-.discover {
-  background: transparent;
-  border: 2px solid white;
-  color: white;
-  padding: 12px 30px;
-  border-radius: 25px;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  letter-spacing: 1px;
-}
-
-.discover:hover {
-  background-color: white;
-  color: black;
-  transform: translateY(-2px);
-}
-
-/* Navigation Controls */
-.navigation-controls {
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  z-index: 20;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 20px;
-}
-
-.nav-arrows {
-  display: flex;
-  gap: 15px;
-}
-
-.nav-arrow {
-  width: 50px;
-  height: 50px;
-  border: 2px solid rgba(255,255,255,0.4);
-  background: rgba(0,0,0,0.3);
-  border-radius: 50%;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
-}
-
-.nav-arrow:hover {
-  border-color: white;
-  background: rgba(255,255,255,0.2);
-  transform: scale(1.1);
-}
-
-.nav-arrow svg {
-  width: 20px;
-  height: 20px;
-}
-
-/* Thumbnail Cards */
-.thumbnail-cards {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  max-width: 300px;
-}
-
-.thumbnail-card {
-  width: 140px;
-  height: 100px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 8px;
-  position: relative;
-  cursor: pointer;
-  overflow: hidden;
-  border: 2px solid transparent;
-  transition: all 0.3s ease;
-  opacity: 0.7;
-}
-
-.thumbnail-card:hover {
-  transform: scale(1.05);
-  opacity: 1;
-}
-
-.thumbnail-card.active {
-  border-color: #ecad29;
-  opacity: 1;
-  transform: scale(1.02);
-}
-
-.thumb-content {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(transparent, rgba(0,0,0,0.8));
-  padding: 15px 10px 10px;
-  color: white;
-}
-
-.thumb-place {
-  font-size: 0.7rem;
-  opacity: 0.8;
-  margin-bottom: 2px;
-}
-
-.thumb-title {
-  font-size: 0.85rem;
-  font-weight: 600;
-  font-family: "ciclo-display", sans-serif;
-  line-height: 1.2;
-}
-
-/* Controls Info */
-.controls-info {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.slide-counter {
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.2);
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  min-width: 50px;
-  text-align: center;
-}
-
-.autoplay-btn {
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.2);
-  color: white;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.autoplay-btn:hover {
-  background: rgba(255,255,255,0.1);
-  border-color: rgba(255,255,255,0.4);
-}
-
-/* Navigation */
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 50;
-  background: rgba(0,0,0,0.4);
-  backdrop-filter: blur(10px);
-  padding: 20px 40px;
-}
-
-nav .flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  padding: 8px 16px;
-  border-radius: 20px;
-}
-
-nav a:hover {
-  background: rgba(255,255,255,0.1);
-  transform: translateY(-2px);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .details {
-    left: 30px;
-    right: 30px;
-    top: 40%;
-  }
-  
-  .title-1 {
-    font-size: 3rem;
-  }
-  
-  .navigation-controls {
-    bottom: 20px;
-    right: 20px;
-  }
-  
-  .thumbnail-cards {
-    max-width: 200px;
-  }
-  
-  .thumbnail-card {
-    width: 90px;
-    height: 65px;
-  }
-}
-</style>
-
-<!-- Slider data and smooth CSS transitions script -->
-<script>
-// @ts-nocheck  
-const data = JSON.parse(document.getElementById('slider-data')?.textContent || '[]');
-
-// Global variables
-let currentSlide = 0;
-let isPlaying = true;
-let autoAdvanceInterval = null;
-let isTransitioning = false;
-
-// DOM elements
-let slides = [];
-let thumbnails = [];
-let slideCounter;
-let autoplayStatus;
-let detailsContainer;
-
-// Initialize the slider
 function init() {
-  if (!data || data.length === 0) {
-    console.error('No slider data available');
-    return;
-  }
+  const [active, ...rest] = order;
+  const detailsActive = detailsEven ? "#details-even" : "#details-odd";
+  const detailsInactive = detailsEven ? "#details-odd" : "#details-even";
+  const { innerHeight: height, innerWidth: width } = window;
+  offsetTop = height - 430;
+  offsetLeft = width - 830;
 
-  // Get DOM elements
-  slides = Array.from(document.querySelectorAll('.slide'));
-  thumbnails = Array.from(document.querySelectorAll('.thumbnail-card'));
-  slideCounter = document.getElementById('current-slide');
-  autoplayStatus = document.getElementById('autoplay-status');
-  detailsContainer = document.querySelector('.details');
-
-  if (slides.length === 0) {
-    console.error('No slides found');
-    return;
-  }
-
-  console.log('Initializing fullscreen slider with', data.length, 'slides');
-
-  // Initialize first slide
-  showSlide(0);
-  updateThumbnails(0);
-  updateCounter(0);
-
-  // Start autoplay if enabled
-  if (isPlaying) {
-    startAutoplay();
-  }
-
-  console.log('Fullscreen slider initialization complete');
-}
-
-function showSlide(index) {
-  if (index < 0 || index >= data.length || isTransitioning) return;
-
-  isTransitioning = true;
-  
-  // Hide all slides
-  slides.forEach((slide, i) => {
-    slide.classList.remove('active');
+  gsap.set("#pagination", {
+    top: offsetTop + 330,
+    left: offsetLeft,
+    y: 200,
+    opacity: 0,
+    zIndex: 60,
   });
-  
-  // Show target slide with small delay for smooth transition
-  setTimeout(() => {
-    slides[index].classList.add('active');
-    updateDetails(index);
-    isTransitioning = false;
-  }, 50);
-  
-  currentSlide = index;
-}
+  gsap.set("nav", { y: -200, opacity: 0 });
 
-function updateDetails(index) {
-  const experiencia = data[index];
-  if (!experiencia || !detailsContainer) return;
-  
-  // Update place
-  const placeText = detailsContainer.querySelector('.place-box .text');
-  if (placeText) {
-    placeText.textContent = experiencia.place || 'Pacífico Colombiano';
-  }
-
-  // Update titles
-  const title1 = detailsContainer.querySelector('.title-1');
-  const title2 = detailsContainer.querySelector('.title-2');
-  
-  if (title1) {
-    title1.textContent = experiencia.title || 'Experiencia';
-  }
-  
-  if (title2) {
-    title2.textContent = experiencia.eslogan || 'Descubre el Pacífico';
-  }
-
-  // Update description
-  const desc = detailsContainer.querySelector('.desc');
-  if (desc) {
-    desc.textContent = experiencia.descripcion || 'Una experiencia única en el Pacífico Colombiano.';
-  }
-
-  // Update CTA button link
-  const discoverBtn = detailsContainer.querySelector('.discover');
-  if (discoverBtn) {
-    discoverBtn.onclick = () => {
-      window.location.href = experiencia.permalink || '#';
-    };
-  }
-}
-
-function updateThumbnails(activeIndex) {
-  thumbnails.forEach((thumb, index) => {
-    thumb.classList.toggle('active', index === activeIndex);
+  gsap.set(getCard(active), {
+    x: 0,
+    y: 0,
+    width: window.innerWidth,
+    height: window.innerHeight,
+    position: 'absolute'
   });
+  gsap.set(getCardContent(active), { x: 0, y: 0, opacity: 0 });
+  gsap.set(detailsActive, { opacity: 0, zIndex: 22, x: -200 });
+  gsap.set(detailsInactive, { opacity: 0, zIndex: 12 });
+  gsap.set(`${detailsInactive} .text`, { y: 100 });
+  gsap.set(`${detailsInactive} .title-1`, { y: 100 });
+  gsap.set(`${detailsInactive} .title-2`, { y: 100 });
+  gsap.set(`${detailsInactive} .desc`, { y: 50 });
+  gsap.set(`${detailsInactive} .cta`, { y: 60 });
+
+  gsap.set(".progress-sub-foreground", {
+    width: 500 * (1 / order.length) * (active + 1),
+  });
+
+  rest.forEach((i, index) => {
+    gsap.set(getCard(i), {
+      x: offsetLeft + 400 + index * (cardWidth + gap),
+      y: offsetTop,
+      width: cardWidth,
+      height: cardHeight,
+      zIndex: 30,
+      borderRadius: 10,
+      position: 'absolute'
+    });
+    gsap.set(getCardContent(i), {
+      x: offsetLeft + 400 + index * (cardWidth + gap),
+      zIndex: 40,
+      y: offsetTop + cardHeight - 100,
+    });
+    gsap.set(getSliderItem(i), { x: (index + 1) * numberSize });
+  });
+
+  gsap.set(".indicator", { x: -window.innerWidth });
+
+  const startDelay = 0.6;
+
+  gsap.to(".cover", {
+    x: width + 400,
+    delay: 0.5,
+    ease,
+    onComplete: () => {
+      setTimeout(() => {
+        loop(); // Comentado para permitir inspección
+        console.log('Autoplay desactivado - puedes inspeccionar libremente');
+      }, 500);
+    },
+  });
+  rest.forEach((i, index) => {
+    gsap.to(getCard(i), {
+      x: offsetLeft + index * (cardWidth + gap),
+      zIndex: 30,
+      delay: 0.05 * index,
+      ease,
+      delay: startDelay,
+    });
+    gsap.to(getCardContent(i), {
+      x: offsetLeft + index * (cardWidth + gap),
+      zIndex: 40,
+      delay: 0.05 * index,
+      ease,
+      delay: startDelay,
+    });
+  });
+  gsap.to("#pagination", { y: 0, opacity: 1, ease, delay: startDelay });
+  gsap.to("nav", { y: 0, opacity: 1, ease, delay: startDelay });
+  gsap.to(detailsActive, { opacity: 1, x: 0, ease, delay: startDelay });
 }
 
-function updateCounter(index) {
-  if (slideCounter) {
-    slideCounter.textContent = (index + 1).toString();
-  }
-}
+let clicks = 0;
 
-function nextSlide() {
-  if (isTransitioning) return;
-  
-  const nextIndex = (currentSlide + 1) % data.length;
-  console.log(`Next slide: ${currentSlide} -> ${nextIndex}`);
-  
-  showSlide(nextIndex);
-  updateThumbnails(nextIndex);
-  updateCounter(nextIndex);
-  
-  if (isPlaying) {
-    restartAutoplay();
-  }
-}
+function step() {
+  return new Promise((resolve) => {
+    order.push(order.shift());
+    detailsEven = !detailsEven;
 
-function prevSlide() {
-  if (isTransitioning) return;
-  
-  const prevIndex = currentSlide === 0 ? data.length - 1 : currentSlide - 1;
-  console.log(`Previous slide: ${currentSlide} -> ${prevIndex}`);
-  
-  showSlide(prevIndex);
-  updateThumbnails(prevIndex);
-  updateCounter(prevIndex);
-  
-  if (isPlaying) {
-    restartAutoplay();
-  }
-}
+    const detailsActive = detailsEven ? "#details-even" : "#details-odd";
+    const detailsInactive = detailsEven ? "#details-odd" : "#details-even";
 
-function goToSlide(index) {
-  if (isTransitioning || index === currentSlide) return;
-  
-  console.log(`Going to slide: ${currentSlide} -> ${index}`);
-  
-  showSlide(index);
-  updateThumbnails(index);
-  updateCounter(index);
-  
-  if (isPlaying) {
-    restartAutoplay();
-  }
-}
+    document.querySelector(`${detailsActive} .place-box .text`).textContent =
+      data[order[0]].place;
+    document.querySelector(`${detailsActive} .title-1`).textContent =
+      data[order[0]].title;
+    document.querySelector(`${detailsActive} .title-2`).textContent =
+      data[order[0]].title2;
+    document.querySelector(`${detailsActive} .desc`).textContent =
+      data[order[0]].description;
 
-function startAutoplay() {
-  if (autoAdvanceInterval) {
-    clearInterval(autoAdvanceInterval);
-  }
-  
-  autoAdvanceInterval = setInterval(() => {
-    if (isPlaying && !isTransitioning) {
-      nextSlide();
-    }
-  }, 4000); // 4 seconds like WordPress
-}
+    gsap.set(detailsActive, { zIndex: 22 });
+    gsap.to(detailsActive, { opacity: 1, delay: 0.4, ease });
+    gsap.to(`${detailsActive} .text`, {
+      y: 0,
+      delay: 0.1,
+      duration: 0.7,
+      ease,
+    });
+    gsap.to(`${detailsActive} .title-1`, {
+      y: 0,
+      delay: 0.15,
+      duration: 0.7,
+      ease,
+    });
+    gsap.to(`${detailsActive} .title-2`, {
+      y: 0,
+      delay: 0.15,
+      duration: 0.7,
+      ease,
+    });
+    gsap.to(`${detailsActive} .desc`, {
+      y: 0,
+      delay: 0.3,
+      duration: 0.4,
+      ease,
+    });
+    gsap.to(`${detailsActive} .cta`, {
+      y: 0,
+      delay: 0.35,
+      duration: 0.4,
+      onComplete: resolve,
+      ease,
+    });
+    gsap.set(detailsInactive, { zIndex: 12 });
 
-function restartAutoplay() {
-  if (isPlaying) {
-    startAutoplay();
-  }
-}
+    const [active, ...rest] = order;
+    const prv = rest[rest.length - 1];
 
-function toggleAutoplay() {
-  isPlaying = !isPlaying;
-  
-  if (autoplayStatus) {
-    autoplayStatus.textContent = isPlaying ? 'ON' : 'OFF';
-  }
-  
-  if (isPlaying) {
-    startAutoplay();
-    console.log('Autoplay enabled');
-  } else {
-    if (autoAdvanceInterval) {
-      clearInterval(autoAdvanceInterval);
-      autoAdvanceInterval = null;
-    }
-    console.log('Autoplay disabled');
-  }
-}
+    gsap.set(getCard(prv), { zIndex: 10, position: 'absolute' });
+    gsap.set(getCard(active), { zIndex: 20, position: 'absolute' });
+    gsap.to(getCard(prv), { scale: 1.5, ease, position: 'absolute' });
 
-// Event listeners
-document.addEventListener('DOMContentLoaded', () => {
-  console.log('Fullscreen slider starting, data:', data);
-  
-  // Wait for everything to be ready
-  Promise.all([
-    document.fonts.ready,
-    new Promise(resolve => {
-      if (document.readyState === 'complete') {
-        resolve();
-      } else {
-        window.addEventListener('load', resolve);
+    gsap.to(getCardContent(active), {
+      y: offsetTop + cardHeight - 10,
+      opacity: 0,
+      duration: 0.3,
+      ease,
+    });
+    gsap.to(getSliderItem(active), { x: 0, ease });
+    gsap.to(getSliderItem(prv), { x: -numberSize, ease });
+    gsap.to(".progress-sub-foreground", {
+      width: 500 * (1 / order.length) * (active + 1),
+      ease,
+    });
+
+    gsap.to(getCard(active), {
+      x: 0,
+      y: 0,
+      ease,
+      width: window.innerWidth,
+      height: window.innerHeight,
+      borderRadius: 0,
+      position: 'absolute',
+      onComplete: () => {
+        const xNew = offsetLeft + (rest.length - 1) * (cardWidth + gap);
+        gsap.set(getCard(prv), {
+          x: xNew,
+          y: offsetTop,
+          width: cardWidth,
+          height: cardHeight,
+          zIndex: 30,
+          borderRadius: 10,
+          scale: 1,
+          position: 'absolute'
+        });
+
+        gsap.set(getCardContent(prv), {
+          x: xNew,
+          y: offsetTop + cardHeight - 100,
+          opacity: 1,
+          zIndex: 40,
+        });
+        gsap.set(getSliderItem(prv), { x: rest.length * numberSize });
+
+        gsap.set(detailsInactive, { opacity: 0 });
+        gsap.set(`${detailsInactive} .text`, { y: 100 });
+        gsap.set(`${detailsInactive} .title-1`, { y: 100 });
+        gsap.set(`${detailsInactive} .title-2`, { y: 100 });
+        gsap.set(`${detailsInactive} .desc`, { y: 50 });
+        gsap.set(`${detailsInactive} .cta`, { y: 60 });
+        clicks -= 1;
+        if (clicks > 0) {
+          step();
+        }
+      },
+    });
+
+    rest.forEach((i, index) => {
+      if (i !== prv) {
+        const xNew = offsetLeft + index * (cardWidth + gap);
+        gsap.set(getCard(i), { zIndex: 30, position: 'absolute' });
+        gsap.to(getCard(i), {
+          x: xNew,
+          y: offsetTop,
+          width: cardWidth,
+          height: cardHeight,
+          ease,
+          delay: 0.1 * (index + 1),
+          position: 'absolute'
+        });
+
+        gsap.to(getCardContent(i), {
+          x: xNew,
+          y: offsetTop + cardHeight - 100,
+          opacity: 1,
+          zIndex: 40,
+          ease,
+          delay: 0.1 * (index + 1),
+        });
+        gsap.to(getSliderItem(i), { x: (index + 1) * numberSize, ease });
       }
-    })
-  ]).then(() => {
-    setTimeout(init, 100);
+    });
   });
+}
 
-  // Navigation buttons
-  const prevBtn = document.getElementById('prev-btn');
-  const nextBtn = document.getElementById('next-btn');
-  const autoplayToggle = document.getElementById('autoplay-toggle');
+async function loop() {
+  await animate(".indicator", 2, { x: 0 });
+  await animate(".indicator", 0.8, { x: window.innerWidth, delay: 0.3 });
+  set(".indicator", { x: -window.innerWidth });
+  await step();
+  loop();
+}
 
-  prevBtn?.addEventListener('click', (e) => {
-    e.preventDefault();
-    console.log('Previous button clicked');
-    prevSlide();
+async function loadImage(src) {
+  return new Promise((resolve, reject) => {
+    let img = new Image();
+    img.onload = () => resolve(img);
+    img.onerror = reject;
+    img.src = src;
   });
-  
-  nextBtn?.addEventListener('click', (e) => {
-    e.preventDefault();
-    console.log('Next button clicked');
-    nextSlide();
-  });
-  
-  autoplayToggle?.addEventListener('click', (e) => {
-    e.preventDefault();
-    toggleAutoplay();
-  });
+}
 
-  // Thumbnail clicks
-  document.addEventListener('click', (e) => {
-    if (e.target.closest('.thumbnail-card')) {
-      const thumbnail = e.target.closest('.thumbnail-card');
-      const slideIndex = parseInt(thumbnail.dataset.slide);
-      if (!isNaN(slideIndex)) {
-        goToSlide(slideIndex);
+async function loadImages() {
+  const promises = data.map(({ image }) => loadImage(image));
+  return Promise.all(promises);
+}
+
+async function start() {
+  try {
+    await loadImages();
+    console.log('=== INIT START ===');
+    console.log('offsetTop:', offsetTop, 'offsetLeft:', offsetLeft);
+    console.log('cardWidth:', cardWidth, 'cardHeight:', cardHeight, 'gap:', gap);
+    console.log('window.innerWidth:', window.innerWidth, 'window.innerHeight:', window.innerHeight);
+    init();
+  } catch (error) {
+    console.error("One or more images failed to load", error);
+  }
+}
+
+// Agregar listener para ver cambios en el DOM
+const observer = new MutationObserver((mutations) => {
+  mutations.forEach((mutation) => {
+    if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
+      const el = mutation.target;
+      if (el.classList.contains('card')) {
+        console.log(`Card ${el.id} updated:`, el.style.cssText);
       }
-    }
-  });
-
-  // Keyboard navigation
-  document.addEventListener('keydown', (e) => {
-    switch(e.key) {
-      case 'ArrowLeft':
-        e.preventDefault();
-        prevSlide();
-        break;
-      case 'ArrowRight':
-        e.preventDefault();
-        nextSlide();
-        break;
-      case ' ':
-        e.preventDefault();
-        toggleAutoplay();
-        break;
     }
   });
 });
 
-// Pause autoplay when tab is not visible
-document.addEventListener('visibilitychange', () => {
-  if (document.hidden) {
-    if (autoAdvanceInterval) {
-      clearInterval(autoAdvanceInterval);
-    }
-  } else if (isPlaying) {
-    startAutoplay();
-  }
-});
-</script>
+observer.observe(document.getElementById('demo'), { subtree: true, attributes: true, attributeFilter: ['style'] });
 
-<script id="slider-data" type="application/json" set:html={JSON.stringify(sliderExperiences)}></script>
+start();
+  </script>
+
+</body>
+</html>
