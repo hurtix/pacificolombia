@@ -1,0 +1,7 @@
+El Pacífico colombiano es un territorio plural donde convergen geografías, historias y modos de vida que dialogan desde la montaña hasta la costa, desde los ríos profundos hasta las ciudades que crecen a su propio ritmo. En esta región cohabitan comunidades afrodescendientes, indígenas, andinas y mestizas, cuyas prácticas, saberes y memorias conforman un mosaico cultural en permanente transformación.
+
+El proyecto Destino Pacífico reúne esta diversidad a través de 100 experiencias turísticas que emergen tanto de comunidades rurales como de centros urbanos, que invitan a recorrer selvas, manglares, playas, páramos, mercados, barrios, centros históricos y espacios comunitarios donde se expresan tradiciones culinarias, artísticas, deportivas y festivas.
+
+Más que visitar un lugar, estas propuestas permiten comprender los paisajes y las relaciones que les dan sentido: los oficios locales, las redes comunitarias, los saberes transmitidos y los procesos contemporáneos que hoy redefinen la región. Desde un enfoque responsable y sostenible, el proyecto apuesta por una forma de turismo que reconoce la complejidad del territorio, respeta los ritmos locales y promueve encuentros basados en la reciprocidad y el cuidado.
+
+Explorar el Pacífico es acercarse a una región viva, diversa y en constante movimiento, que se revela plenamente cuando se escucha, se observa y se camina junto a quienes la habitan.

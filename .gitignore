@@ -12,13 +12,28 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-
 # environment variables
 .env
 .env.production
+.env.local
 
 # macOS-specific files
 .DS_Store
 
 # jetbrains setting folder
 .idea/
+
+# VS Code settings (optional, uncomment if needed)
+# .vscode/
+
+# WordPress local development files
+wp-content/
+wp-config.php
+
+# Backup files
+*.backup
+*-backup.*
+
+# Temporary files
+*.tmp
+*.temp

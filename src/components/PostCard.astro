@@ -1,0 +1,56 @@
+---
+export interface Props {
+  post: {
+    id: number;
+    title: { rendered: string };
+    excerpt: { rendered: string };
+    acf?: any;
+  };
+}
+
+const { post } = Astro.props;
+
+// Extract image from ACF if available
+const featuredImage = post.acf?.featured_image || post.acf?.imagen_destacada;
+---
+
+<article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+  {featuredImage && (
+    <div class="aspect-video overflow-hidden">
+      <img 
+        src={featuredImage.url || featuredImage} 
+        alt={featuredImage.alt || post.title.rendered}
+        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+      />
+    </div>
+  )}
+  
+  <div class="p-6">
+    <h2 class="text-xl font-bold mb-3 text-gray-900">
+      <a href={`/post/${post.id}`} class="hover:text-blue-600 transition-colors">
+        {post.title.rendered}
+      </a>
+    </h2>
+    
+    <div class="prose text-gray-600 mb-4" set:html={post.excerpt.rendered} />
+    
+    {post.acf?.ubicacion && (
+      <div class="flex items-center text-sm text-gray-500 mb-3">
+        <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+        </svg>
+        {post.acf.ubicacion}
+      </div>
+    )}
+    
+    <a 
+      href={`/post/${post.id}`}
+      class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+    >
+      Leer más
+      <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </a>
+  </div>
+</article>

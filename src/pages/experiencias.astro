@@ -1,0 +1,196 @@
+---
+import Layout from '../layouts/Layout.astro';
+import GeneralNarrative from '../components/GeneralNarrative.astro';
+import { getExperienciasMapping } from '../lib/experiencias-mapping';
+import { loadNarratives, getExperienceImagePath, loadGeneralNarrative } from '../lib/narratives-parser';
+import { resolveTaxonomyTerms } from '../lib/wordpress';
+
+// Load all data
+const { experienciasSorted } = await getExperienciasMapping();
+const narratives = await loadNarratives();
+const generalNarrative = await loadGeneralNarrative();
+
+// Create complete experience data by merging WordPress and narratives with resolved taxonomy
+const completeExperiences = await Promise.all(
+  experienciasSorted.map(async exp => {
+    const narrative = narratives.find(n => n.expNumber === exp.expNumber);
+    const resolvedTaxonomy = exp.acf ? await resolveTaxonomyTerms(exp.acf) : {};
+    return {
+      ...exp,
+      narrative,
+      resolvedTaxonomy,
+      imageUrl: getExperienceImagePath(exp.expNumber || 0),
+      paddedNumber: exp.expNumber?.toString().padStart(3, '0') || '000'
+    };
+  })
+);
+
+
+---
+
+<Layout title="Todas las Experiencias" description="Explora las 100 experiencias únicas del Pacífico colombiano. Descubre aventuras, cultura y naturaleza en cada rincón de esta región extraordinaria.">
+  <!-- Hero Section -->
+  <section class="py-16 bg-gradient-to-br from-blue-900 via-green-800 to-teal-700 text-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">
+          100 Experiencias del Pacífico
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 text-blue-100">
+          Descubre la diversidad cultural y natural del Pacífico colombiano a través de experiencias auténticas y transformadoras.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 text-sm">
+          <span class="px-4 py-2 bg-white/20 rounded-full">
+            📊 {completeExperiences.length} experiencias
+          </span>
+          <span class="px-4 py-2 bg-white/20 rounded-full">
+            🗺️ {[...new Set(completeExperiences.map(e => e.resolvedTaxonomy?.departamento).flat().filter(Boolean))].length} departamentos
+          </span>
+          <span class="px-4 py-2 bg-white/20 rounded-full">
+            🏘️ {[...new Set(completeExperiences.map(e => e.resolvedTaxonomy?.municipio).flat().filter(Boolean))].length} municipios
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- General Narrative Section -->
+  <GeneralNarrative content={generalNarrative} />
+
+  <!-- Filters and Search -->
+  <section class="py-8 bg-gray-50 sticky top-0 z-40 shadow-sm">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center">
+          <p class="text-lg text-gray-600">
+            Explora las {completeExperiences.length} experiencias disponibles
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experiences Grid -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="experiences-grid">
+          {completeExperiences.map((experience) => (
+            <article 
+              class="experience-card bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden"
+
+              data-municipio={experience.resolvedTaxonomy?.municipio ? 
+                (Array.isArray(experience.resolvedTaxonomy.municipio) ? 
+                  experience.resolvedTaxonomy.municipio[0]?.toLowerCase() : 
+                  experience.resolvedTaxonomy.municipio.toLowerCase()) : ''}
+              data-departamento={experience.resolvedTaxonomy?.departamento ? 
+                (Array.isArray(experience.resolvedTaxonomy.departamento) ? 
+                  experience.resolvedTaxonomy.departamento[0]?.toLowerCase() : 
+                  experience.resolvedTaxonomy.departamento.toLowerCase()) : ''}
+            >
+              <!-- Image -->
+              <div class="aspect-video overflow-hidden">
+                <img 
+                  src={experience.imageUrl} 
+                  alt={experience.narrative?.title || experience.title?.rendered || `Experiencia ${experience.paddedNumber}`}
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  onerror="this.src='/images/experiencias/placeholder.svg'"
+                  loading="lazy"
+                />
+              </div>
+              
+              <!-- Content -->
+              <div class="p-4">
+                <!-- Header -->
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">
+                    EXP-{experience.paddedNumber}
+                  </span>
+
+                </div>
+                
+                <!-- Title -->
+                <h3 class="font-bold text-gray-900 mb-2 line-clamp-2 text-sm">
+                  {experience.narrative?.title || experience.title?.rendered || `Experiencia ${experience.paddedNumber}`}
+                </h3>
+                
+                <!-- Subtitle/Description -->
+                {experience.narrative?.subtitle && (
+                  <p class="text-xs text-gray-600 mb-3 line-clamp-2">
+                    {experience.narrative.subtitle}
+                  </p>
+                )}
+                
+                <!-- Location -->
+                <div class="flex items-center text-xs text-gray-500 mb-3">
+                  <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                  </svg>
+                  <span>
+                    {experience.resolvedTaxonomy?.municipio ? 
+                      (Array.isArray(experience.resolvedTaxonomy.municipio) ? 
+                        experience.resolvedTaxonomy.municipio[0] : 
+                        experience.resolvedTaxonomy.municipio) : 
+                      'Ubicación'}, 
+                    {experience.resolvedTaxonomy?.departamento ? 
+                      (Array.isArray(experience.resolvedTaxonomy.departamento) ? 
+                        experience.resolvedTaxonomy.departamento[0] : 
+                        experience.resolvedTaxonomy.departamento) : 
+                      'Pacífico'}
+                  </span>
+                </div>
+                
+                <!-- Action Button -->
+                <a 
+                  href={`/experiencia/${experience.paddedNumber}`}
+                  class="block w-full text-center px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Explorar experiencia
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to top -->
+  <button 
+    id="back-to-top" 
+    class="fixed bottom-8 right-8 w-12 h-12 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all opacity-0 pointer-events-none z-50"
+  >
+    <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
+</Layout>
+
+<script>
+  // Back to top functionality
+  document.addEventListener('DOMContentLoaded', () => {
+    const backToTop = document.getElementById('back-to-top');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTop.classList.remove('opacity-0', 'pointer-events-none');
+      } else {
+        backToTop.classList.add('opacity-0', 'pointer-events-none');
+      }
+    });
+    
+    backToTop?.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+</script>
+
+<style>
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>

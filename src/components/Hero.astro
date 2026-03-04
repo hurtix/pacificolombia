@@ -1,0 +1,75 @@
+---
+export interface Props {
+  heroData?: {
+    title?: string;
+    subtitle?: string;
+    backgroundImage?: string | null;
+    ctaText?: string;
+    ctaUrl?: string;
+  };
+}
+
+const { 
+  heroData = {
+    title: "Descubre el Pacífico Colombiano",
+    subtitle: "Explora paisajes únicos, biodiversidad excepcional y culturas ancestrales en la costa más salvaje de Colombia",
+    ctaText: "Explorar Destinos",
+    ctaUrl: "/destinos"
+  }
+} = Astro.props;
+---
+
+<section class="relative bg-blue-900 text-white overflow-hidden">
+  <!-- Background image with overlay -->
+  <div class="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-green-800/80 z-10"></div>
+  {heroData.backgroundImage && (
+    <div class="absolute inset-0">
+      <img 
+        src={heroData.backgroundImage} 
+        alt="Pacífico Colombiano"
+        class="w-full h-full object-cover"
+      />
+    </div>
+  )}
+  
+  <!-- Content -->
+  <div class="relative z-20 container mx-auto px-4 py-20 lg:py-32">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+        {heroData.title}
+      </h1>
+      
+      <p class="text-xl md:text-2xl mb-8 text-blue-100 leading-relaxed">
+        {heroData.subtitle}
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a 
+          href={heroData.ctaUrl}
+          class="inline-flex items-center px-8 py-4 bg-green-600 text-white font-semibold rounded-full hover:bg-green-700 transform hover:scale-105 transition-all duration-300 shadow-lg"
+        >
+          {heroData.ctaText}
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </a>
+        
+        <a 
+          href="#sobre-nosotros"
+          class="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-blue-900 transition-all duration-300"
+        >
+          Conoce más
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
+    <div class="animate-bounce">
+      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+      </svg>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,47 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Descubre la belleza del Pacífico colombiano" } = Astro.props;
+import '../styles/global.css';
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} - Destino Pacífico</title>
+  </head>
+  <body class="min-h-screen bg-gradient-to-br from-blue-50 to-green-50 font-sans">
+    <header class="bg-blue-900 text-white shadow-lg">
+      <nav class="container mx-auto px-4 py-6">
+        <div class="flex items-center justify-between">
+          <h1 class="text-2xl font-bold">Destino Pacífico</h1>
+          <ul class="flex space-x-6">
+            <li><a href="/" class="hover:text-blue-200 transition-colors">Inicio</a></li>
+            <li><a href="/destinos" class="hover:text-blue-200 transition-colors">Destinos</a></li>
+            <li><a href="/experiencias" class="hover:text-blue-200 transition-colors">Experiencias</a></li>
+            <li><a href="/contacto" class="hover:text-blue-200 transition-colors">Contacto</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="flex-1">
+      <slot />
+    </main>
+
+    <footer class="bg-green-800 text-white py-8">
+      <div class="container mx-auto px-4 text-center">
+        <p>&copy; 2026 Destino Pacífico. Todos los derechos reservados.</p>
+        <p class="mt-2 text-green-200">Descubre la magia del Pacífico colombiano</p>
+      </div>
+    </footer>
+  </body>
+</html>
