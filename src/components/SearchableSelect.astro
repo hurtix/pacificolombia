@@ -1,0 +1,143 @@
+---
+interface Props {
+  id: string;
+  label: string;
+  options: string[];
+  placeholder?: string;
+}
+
+const { id, label, options, placeholder = "Buscar..." } = Astro.props;
+---
+
+<div class="w-full min-w-[200px]">
+  <label class="block text-sm font-semibold uppercase text-white mb-2">
+    {label}
+  </label>
+  
+  <div class="relative">
+    <!-- Input visible -->
+    <input
+      type="text"
+      id={`${id}-input`}
+      class="w-full uppercase px-4 py-2 border border-white bg-transparent rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-fuchsia-500 focus:border-fuchsia-500 cursor-pointer"
+      placeholder={placeholder}
+      autocomplete="off"
+      readonly
+    />
+    
+    <!-- Dropdown arrow icon -->
+    <svg 
+      id={`${id}-arrow`}
+      class="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-white pointer-events-none transition-transform duration-200" 
+      viewBox="0 0 24 24" 
+      fill="none" 
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    
+    <!-- Dropdown list -->
+    <div
+      id={`${id}-dropdown`}
+      class="hidden absolute -top-2 left-0 right-0 mt-2 bg-fuchsia-950 border border-fuchsia-500 rounded-lg shadow-xl max-h-50 overflow-y-auto z-50"
+    >
+      <div class="sticky top-0 bg-fuchsia-950 p-2 border-b border-fuchsia-700">
+        <input
+          type="text"
+          class="w-full px-3 py-2 bg-fuchsia-900 text-white rounded placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-fuchsia-400 text-sm"
+          id={`${id}-search-input`}
+          placeholder="Escribe para buscar..."
+        />
+      </div>
+      <div id={`${id}-options`} class="py-1">
+        {options.map((option) => (
+          <div
+            class="searchable-option px-4 py-2 cursor-pointer hover:bg-fuchsia-800 text-white uppercase text-sm transition-colors"
+            data-value={option.toLowerCase()}
+            data-label={option}
+          >
+            {option}
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script define:vars={{ id, options }}>
+  const input = document.getElementById(`${id}-input`);
+  const dropdown = document.getElementById(`${id}-dropdown`);
+  const searchInput = document.getElementById(`${id}-search-input`);
+  const arrow = document.getElementById(`${id}-arrow`);
+  const optionElements = document.querySelectorAll(`#${id}-options .searchable-option`);
+
+  let isOpen = false;
+
+  // Open/close dropdown on click
+  input.addEventListener('click', (e) => {
+    e.stopPropagation();
+    isOpen = !isOpen;
+    updateDropdownVisibility();
+  });
+
+  // Search functionality
+  searchInput.addEventListener('input', (e) => {
+    const searchTerm = e.target.value.toLowerCase();
+    
+    optionElements.forEach(option => {
+      const label = option.getAttribute('data-label').toLowerCase();
+      if (label.includes(searchTerm)) {
+        option.style.display = 'block';
+      } else {
+        option.style.display = 'none';
+      }
+    });
+  });
+
+  // Select option
+  optionElements.forEach(option => {
+    option.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const value = option.getAttribute('data-value');
+      const label = option.getAttribute('data-label');
+      
+      input.value = label;
+      
+      // Reset search
+      searchInput.value = '';
+      optionElements.forEach(opt => opt.style.display = 'block');
+      
+      isOpen = false;
+      updateDropdownVisibility();
+      
+      // Dispatch custom event for filtering
+      const event = new CustomEvent('optionSelected', { 
+        detail: { value, label, id } 
+      });
+      input.dispatchEvent(event);
+    });
+  });
+
+  function updateDropdownVisibility() {
+    if (isOpen) {
+      dropdown.classList.remove('hidden');
+      dropdown.classList.add('block');
+      arrow.style.transform = 'rotate(180deg)';
+      searchInput.focus();
+    } else {
+      dropdown.classList.add('hidden');
+      dropdown.classList.remove('block');
+      arrow.style.transform = 'rotate(0deg)';
+      searchInput.value = '';
+      optionElements.forEach(opt => opt.style.display = 'block');
+    }
+  }
+
+  // Close when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!input.contains(e.target) && !dropdown.contains(e.target)) {
+      isOpen = false;
+      updateDropdownVisibility();
+    }
+  });
+</script>
