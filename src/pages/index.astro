@@ -57,10 +57,28 @@ const sliderData = await Promise.all(
     const resolvedTaxonomy = exp.acf ? await resolveTaxonomyTerms(exp.acf) : {};
     const narrative = narratives.find(n => n.expNumber === exp.expNumber);
     
-    // Formar la ubicación "Municipio, Departamento" con validación mejorada
+    // DEBUG: Verificar qué devuelve la taxonomía
+    if (index < 2) { // Solo para las primeras 2 experiencias
+      console.log(`=== DEBUG EXP-${exp.expNumber} ===`);
+      console.log('resolvedTaxonomy:', resolvedTaxonomy);
+      console.log('municipio raw:', resolvedTaxonomy.municipio);
+      console.log('departamento raw:', resolvedTaxonomy.departamento);
+    }
+    
+    // Formar la ubicación con validación robusta
     const municipio = cleanText(resolvedTaxonomy.municipio?.[0] || '');
     const departamento = cleanText(resolvedTaxonomy.departamento?.[0] || '');
-    const location = (municipio && departamento) ? `${municipio}, ${departamento}` : 'Pacífico Colombiano';
+    
+    // Si la taxonomía no se resolvió correctamente (devuelve 'N' o está vacía), usar fallback
+    let location = 'Pacífico Colombiano'; // Fallback por defecto
+    if (municipio && departamento && municipio !== 'N' && departamento !== 'N' && municipio.length > 1 && departamento.length > 1) {
+      location = `${municipio}, ${departamento}`;
+    } else {
+      // Fallback: intentar usar directamente desde ACF si existe
+      if (exp.acf?.municipio && exp.acf?.departamento) {
+        console.log('Usando fallback directo de ACF para EXP-' + exp.expNumber);
+      }
+    }
     
     // Usar el mismo sistema que /experiencias: narrative.title primero, luego title.rendered
     const rawMainTitle = narrative?.title || exp.title?.rendered || 'EXPERIENCIA';
@@ -87,7 +105,10 @@ const sliderData = await Promise.all(
 console.log('=== DEBUG SLIDER DATA ===');
 console.log(`Total experiencias procesadas: ${sliderData.length}`);
 sliderData.slice(0, 3).forEach((exp, i) => {
-  console.log(`${i + 1}. PLACE: "${exp.place}" | TITLE: "${exp.title}" | DESC length: ${exp.description.length}`);
+  console.log(`${i + 1}. EXP-${exp.expNumber}`);
+  console.log(`   LOCATION: "${exp.place}"`);
+  console.log(`   TITLE: "${exp.title}"`);
+  console.log(`   DESC: "${exp.description.substring(0, 50)}..."`);
 });
 console.log('=== FIN DEBUG ===');
 ---
