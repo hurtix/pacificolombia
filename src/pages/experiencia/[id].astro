@@ -122,7 +122,7 @@ const pageDescription = narrative ? narrative.subtitle : `Descubre la experienci
         
         {narrative ? (
           <>
-            <h1 class="text-6xl md:text-6xl font-bold mb-6 leading-tight tk-ciclo-display uppercase">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight tk-ciclo-display uppercase">
               {narrative.title}
             </h1>
             <p class="text-xl md:text-3xl font-light mb-8">
@@ -130,7 +130,7 @@ const pageDescription = narrative ? narrative.subtitle : `Descubre la experienci
             </p>
           </>
         ) : (
-          <h1 class="text-6xl md:text-6xl font-bold mb-6 leading-tight tk-ciclo-display uppercase">
+          <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight tk-ciclo-display uppercase">
             Experiencia {id}
           </h1>
         )}
@@ -165,8 +165,8 @@ const pageDescription = narrative ? narrative.subtitle : `Descubre la experienci
 
 
   <!-- Experience Content -->
-  <section class="py-16 bg-white textura text-black">
-    <div class="container mx-auto p-16 max-w-7xl bg-white space-y-8">
+  <section class="p-0 md:py-16 bg-white textura text-black">
+    <div class="container mx-auto p-4 md:p-16 max-w-7xl bg-white space-y-8">
       
       <!-- Experience Narrative -->
       {narrative && (
@@ -206,53 +206,6 @@ const pageDescription = narrative ? narrative.subtitle : `Descubre la experienci
         </div>
       )}
 
-      <!-- WordPress Data Section -->
-      <!-- {experienceData && (
-        <div class="mb-16 p-8 bg-gray-50 rounded-lg">
-          <h3 class="text-2xl font-bold mb-6 text-gray-900">Información Detallada</h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <h4 class="font-semibold text-gray-900 mb-2">Ubicación</h4>
-              <p class="text-gray-600">
-                {experienceData.resolvedTaxonomy?.municipio ? 
-                  (Array.isArray(experienceData.resolvedTaxonomy.municipio) ? 
-                    experienceData.resolvedTaxonomy.municipio.join(', ') : 
-                    experienceData.resolvedTaxonomy.municipio) : 
-                  'No especificado'}, 
-                {experienceData.resolvedTaxonomy?.departamento ? 
-                  (Array.isArray(experienceData.resolvedTaxonomy.departamento) ? 
-                    experienceData.resolvedTaxonomy.departamento.join(', ') : 
-                    experienceData.resolvedTaxonomy.departamento) : 
-                  'No especificado'}
-              </p>
-            </div>
-            <div>
-              <h4 class="font-semibold text-gray-900 mb-2">Estado</h4>
-              <p class="text-gray-600">
-                {experienceData.resolvedTaxonomy?.estado !== undefined ? 
-                  (experienceData.resolvedTaxonomy.estado ? 'Activo' : 'Inactivo') : 
-                  'No especificado'}
-              </p>
-            </div>
-            <div>
-              <h4 class="font-semibold text-gray-900 mb-2">Tipología</h4>
-              <p class="text-gray-600">
-                {experienceData.resolvedTaxonomy?.tipologia ? 
-                  (Array.isArray(experienceData.resolvedTaxonomy.tipologia) ? 
-                    experienceData.resolvedTaxonomy.tipologia.join(', ') : 
-                    experienceData.resolvedTaxonomy.tipologia) : 
-                  'No especificado'}
-              </p>
-            </div>
-            <div>
-              <h4 class="font-semibold text-gray-900 mb-2">ID WordPress</h4>
-              <p class="text-gray-600">{experienceData.id}</p>
-            </div>
-          </div>
-        </div>
-      )} -->
-
-
       <hr class="opacity-10">
 
 
@@ -277,12 +230,12 @@ const pageDescription = narrative ? narrative.subtitle : `Descubre la experienci
 
   <!-- Navigation -->
   <section class="bg-white text-black border-t border-black/10">
-    <div class="container mx-auto px-4">
-      <div class="grid grid-cols-3">
+    <div class="container mx-auto md:px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3">
         {expNumber > 1 ? (
           <a 
             href={`/experiencia/${(expNumber - 1).toString().padStart(3, '0')}`}
-            class="inline-flex items-center py-8 justify-start text-lg leading-none hover:text-gray-600 transition-colors"
+            class="inline-flex items-center py-8 justify-center md:justify-start text-lg leading-none hover:text-gray-600 transition-colors"
           >
             <svg class="w-6 h-6 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
@@ -297,7 +250,7 @@ const pageDescription = narrative ? narrative.subtitle : `Descubre la experienci
 
         <a 
           href="/experiencias"
-          class="inline-flex items-center py-8 justify-center text-lg border-l border-r border-black/10 hover:text-gray-600 transition-colors"
+          class="inline-flex items-center py-8 justify-center text-lg md:border-l md:border-r border-black/10 hover:text-gray-600 transition-colors"
         >
           VER TODAS
         </a>
@@ -305,7 +258,7 @@ const pageDescription = narrative ? narrative.subtitle : `Descubre la experienci
         {expNumber < 100 ? (
           <a 
             href={`/experiencia/${(expNumber + 1).toString().padStart(3, '0')}`}
-            class="inline-flex items-center py-8 justify-end text-lg leading-none hover:text-gray-600 transition-colors"
+            class="inline-flex items-center py-8 justify-center md:justify-end text-lg leading-none hover:text-gray-600 transition-colors"
           >
             <div class="text-right line-clamp-2">
               {nextNarrative ? nextNarrative.title : `EXP-${(expNumber + 1).toString().padStart(3, '0')}`}
