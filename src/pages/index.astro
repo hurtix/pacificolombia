@@ -1,253 +1,74 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { getExperienciasMapping } from '../lib/experiencias-mapping';
-import { getExperienceImagePath, loadNarratives } from '../lib/narratives-parser';
-import { resolveTaxonomyTerms } from '../lib/wordpress';
+import SliderDetails from '../components/SliderDetails.astro';
+import SliderNavigation from '../components/SliderNavigation.astro';
+import { getRandomizedSliderData, type SliderExperience } from '../lib/slider-utils';
 
-// Obtener experiencias que tienen imágenes disponibles para randomización
-const { experienciasSorted } = await getExperienciasMapping();
-const narratives = await loadNarratives();
+// Obtener 6 experiencias randomizadas para el slider
+const randomizedSliderData: SliderExperience[] = await getRandomizedSliderData(40, 6);
 
-// Solo usar las primeras 40 experiencias que SÍ tienen imágenes disponibles
-const experiencesForRandom = experienciasSorted.slice(0, 40); // Solo las que tienen imágenes
-//const experiencesForRandom = experienciasSorted; // Todas las 100 experiencias
-
-// Función para decodificar entidades HTML
-function decodeHtmlEntities(text: string): string {
-  const htmlEntities: Record<string, string> = {
-    '&#8211;': '–', // em dash
-    '&#8212;': '—', // en dash
-    '&#8220;': '"', // left double quote
-    '&#8221;': '"', // right double quote
-    '&#038;': '&',  // ampersand
-    '&amp;': '&',   // ampersand
-    '&lt;': '<',    // less than
-    '&gt;': '>',    // greater than
-    '&quot;': '"',  // quote
-    '&nbsp;': ' ',  // non-breaking space
-  };
-  
-  let decoded = text;
-  for (const [entity, char] of Object.entries(htmlEntities)) {
-    decoded = decoded.replace(new RegExp(entity, 'g'), char);
-  }
-  return decoded;
-}
-
-// Función para limpiar HTML tags y extraer solo texto
-function stripHtmlTags(html: string): string {
-  if (!html) return '';
-  return html
-    .replace(/<[^>]*>/g, '') // Remover todos los HTML tags
-    .replace(/\s+/g, ' ')    // Normalizar espacios en blanco
-    .trim();                 // Remover espacios al inicio y final
-}
-
-// Función para limpiar y procesar texto completamente
-function cleanText(text: string): string {
-  if (!text) return '';
-  const decoded = decodeHtmlEntities(String(text));
-  const stripped = stripHtmlTags(decoded);
-  return stripped;
-}
-
-// Procesar las experiencias para el slider
-const sliderData = await Promise.all(
-  experiencesForRandom.map(async (exp, index) => {
-    const resolvedTaxonomy = exp.acf ? await resolveTaxonomyTerms(exp.acf) : {};
-    const narrative = narratives.find(n => n.expNumber === exp.expNumber);
-    
-    // DEBUG: Verificar qué devuelve la taxonomía
-    if (index < 2) { // Solo para las primeras 2 experiencias
-      // console.log(`=== DEBUG EXP-${exp.expNumber} ===`);
-      // console.log('resolvedTaxonomy:', resolvedTaxonomy);
-      // console.log('municipio raw:', resolvedTaxonomy.municipio);
-      // console.log('departamento raw:', resolvedTaxonomy.departamento);
-    }
-    
-    // Formar la ubicación con validación robusta
-    const municipio = cleanText(resolvedTaxonomy.municipio?.[0] || '');
-    const departamento = cleanText(resolvedTaxonomy.departamento?.[0] || '');
-    
-    // Si la taxonomía no se resolvió correctamente (devuelve 'N' o está vacía), usar fallback
-    let location = 'Pacífico Colombiano'; // Fallback por defecto
-    if (municipio && departamento && municipio !== 'N' && departamento !== 'N' && municipio.length > 1 && departamento.length > 1) {
-      location = `${municipio}, ${departamento}`;
-    } else {
-      // Fallback: intentar usar directamente desde ACF si existe
-      if (exp.acf?.municipio && exp.acf?.departamento) {
-        // console.log('Usando fallback directo de ACF para EXP-' + exp.expNumber);
-      }
-    }
-    
-    // Usar el mismo sistema que /experiencias: narrative.title primero, luego title.rendered
-    const rawMainTitle = narrative?.title || exp.title?.rendered || 'EXPERIENCIA';
-    const rawSubTitle = narrative?.subtitle || municipio || 'PACÍFICO';
-    
-    // Limpiar completamente títulos y descripciones
-    const mainTitle = cleanText(rawMainTitle);
-    const subTitle = cleanText(rawSubTitle);
-    const description = cleanText(exp.excerpt?.rendered || 'Descubre esta increíble experiencia en el Pacífico colombiano.');
-    
-    return {
-      place: location,
-      title: mainTitle.toUpperCase(),
-      title2: subTitle.toUpperCase(),
-      description: description,
-      image: getExperienceImagePath(exp.expNumber || index + 1),
-      expNumber: String(exp.expNumber || index + 1).padStart(3, '0'),
-      wpId: exp.id
-    };
-  })
-);
-
-// Debug: Información detallada para comparar local vs producción
-// console.log('=== DEBUG SLIDER DATA ===');
-// console.log(`Total experiencias procesadas: ${sliderData.length}`);
-sliderData.slice(0, 3).forEach((exp, i) => {
-  // console.log(`${i + 1}. EXP-${exp.expNumber}`);
-  // console.log(`   LOCATION: "${exp.place}"`);
-  // console.log(`   TITLE: "${exp.title}"`);
-  // console.log(`   DESC: "${exp.description.substring(0, 50)}..."`);
-});
-
-// Función para randomizar array (también usada por JavaScript)
-function shuffleArray(array: any[]): any[] {
-  const shuffled = [...array];
-  for (let i = shuffled.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-  }
-  return shuffled;
-}
-
-// Hacer la misma randomización que JavaScript para que coincidan
-const randomizedSliderData = shuffleArray(sliderData).slice(0, 6);
-
-// Pre-llenar el contenido inicial para evitar flash - ahora usa la primera de las 6 randomizadas
-const firstSlide = randomizedSliderData && randomizedSliderData.length > 0 ? randomizedSliderData[0] : {
+// Datos para el contenido inicial (primera experiencia)
+const firstSlide = randomizedSliderData[0] || {
   place: 'Pacífico Colombiano',
   title: 'EXPERIENCIAS ÚNICAS',
   title2: 'DEL PACÍFICO',
   description: 'Descubre la diversidad cultural y natural del Pacífico colombiano a través de experiencias auténticas y transformadoras.'
 };
 
-// console.log('=== FIN DEBUG ===');
+// Placeholder para el panel alternativo
+const placeholderSlide = {
+  place: 'Pacífico Colombiano',
+  title: 'EXPLORANDO EL',
+  title2: 'PACÍFICO',
+  description: 'Sumérgete en la riqueza cultural y biodiversidad del Pacífico colombiano, donde cada experiencia te conecta con tradiciones ancestrales y paisajes únicos.'
+};
 ---
 
-<Layout title="Destino Pacífico" description="Explora las experiencias únicas del Pacífico colombiano através de un slider interactivo" isHome={true}>
-
-<main id="app">
-     
+<Layout 
+  title="Destino Pacífico" 
+  description="Explora las experiencias únicas del Pacífico colombiano através de un slider interactivo" 
+  isHome={true}
+>
+  <main id="app">
+    <!-- Indicador de progreso -->
     <div class="indicator"></div>
+    
+    <!-- Contenedor del slider (se llena dinámicamente) -->
     <div id="slider"></div>
-	<!-- <div class="bg-black/40 absolute h-full w-full z-99"></div> -->
 
-    <div class="details space-y-8 text-white" id="details-even">
-      <div class="place-box">
-        <div class="text text-xl pt-4">{firstSlide.place}</div>
-      </div>
-      <div class="title-box-1"><div class="title-1 line-clamp-2">{firstSlide.title}</div></div>
-      <div class="title-box-2"><div class="title-2">{firstSlide.title2}</div></div>
-      <div class="desc w-1/2">
-        {firstSlide.description}
-      </div>
-      <div class="cta">
-        <button class="bookmark">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M6.32 2.577a49.255 49.255 0 0111.36 0c1.497.174 2.57 1.46 2.57 2.93V21a.75.75 0 01-1.085.67L12 18.089l-7.165 3.583A.75.75 0 013.75 21V5.507c0-1.47 1.073-2.756 2.57-2.93z"
-              clip-rule="evenodd"
-            />
-          </svg>
-        </button>
-        <button class="discover">Descubre Más</button>
-      </div>
+    <!-- Paneles de detalles -->
+    <SliderDetails 
+      id="details-even"
+      place={firstSlide.place}
+      title={firstSlide.title}
+      title2={firstSlide.title2}
+      description={firstSlide.description}
+      isActive={true}
+    />
+
+    <SliderDetails 
+      id="details-odd"
+      place={placeholderSlide.place}
+      title={placeholderSlide.title}
+      title2={placeholderSlide.title2}
+      description={placeholderSlide.description}
+    />
+
+    <!-- Navegación del slider -->
+    <SliderNavigation />
+
+    <!-- Pantalla de carga -->
+    <div class="cover"></div>
+
+    <!-- Logo -->
+    <div class="label fixed bottom-5 left-0 z-50 pointer-events-none select-none">
+      <img src="/images/by.png" alt="By" class="w-[700px]">
     </div>
-
-    <div class="details space-y-8 text-white" id="details-odd">
-      <div class="place-box">
-        <div class="text text-xl pt-4">Pacífico Colombiano</div>
-      </div>
-      <div class="title-box-1"><div class="title-1 line-clamp-2">EXPLORANDO EL</div></div>
-      <div class="title-box-2"><div class="title-2">PACÍFICO</div></div>
-      <div class="desc">
-        Sumérgete en la riqueza cultural y biodiversidad del Pacífico colombiano, donde cada experiencia te conecta con tradiciones ancestrales y paisajes únicos.
-      </div>
-      <div class="cta">
-        <button class="bookmark">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M6.32 2.577a49.255 49.255 0 0111.36 0c1.497.174 2.57 1.46 2.57 2.93V21a.75.75 0 01-1.085.67L12 18.089l-7.165 3.583A.75.75 0 013.75 21V5.507c0-1.47 1.073-2.756 2.57-2.93z"
-              clip-rule="evenodd"
-            />
-          </svg>
-        </button>
-        <button class="discover">Descubre Más</button>
-      </div>
-    </div>
-
-    <div class="pagination" id="pagination">
-      <div class="arrow arrow-left">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M15.75 19.5L8.25 12l7.5-7.5"
-          />
-        </svg>
-      </div>
-      <div class="arrow arrow-right">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M8.25 4.5l7.5 7.5-7.5 7.5"
-          />
-        </svg>
-      </div>
-      <div class="progress-sub-container" >
-        <div class="progress-sub-background" >
-            <div class="progress-sub-foreground" ></div>
-        </div>
-    </div>
-    <div class="slide-numbers" id="slide-numbers"></div>
-    </div>
-
-    <div class="cover" ></div>
-   
-
-   
-
-   <div class="label fixed bottom-5 left-0 z-50 pointer-events-none select-none">
-   <img src="/images/by.png" alt="By" class="w-[700px]">
-  </div>
-  
   </main>
 
-  <!-- TUS SCRIPTS AQUÍ -->
+  <!-- Script del slider -->
   <script is:inline define:vars={{ sliderData: randomizedSliderData }}>
-    // Usar directamente los datos ya randomizados desde el servidor
+    // Usar los datos del servidor directamente
     const data = sliderData;
     
     // Debug: Verificar que coincide con el servidor
@@ -259,506 +80,444 @@ const firstSlide = randomizedSliderData && randomizedSliderData.length > 0 ? ran
       console.log(`${i + 1}. ${exp.title} ${exp.title2} - ${exp.place} [EXP-${exp.expNumber}]`);
     });
 
-const _ = (id)=>document.getElementById(id)
-const cards = data.map((i, index)=>`<div class="card" id="card${index}" style="background-image:url(${i.image})"  ></div>`).join('')
+    const _ = (id)=>document.getElementById(id)
+    const cards = data.map((i, index)=>`<div class="card" id="card${index}" style="background-image:url(${i.image})"  ></div>`).join('')
 
-const cardContents = data.map((i, index)=>`<div class="card-content" id="card-content-${index}">
-<div class="content-start"></div>
-<div class="content-place">${i.place}</div>
-<div class="content-title-1 uppercase line-clamp-3">${i.title}</div>
-<!--<div class="content-title-2">${i.title2}</div>-->
+    const cardContents = data.map((i, index)=>`<div class="card-content" id="card-content-${index}">
+    <div class="content-start"></div>
+    <div class="content-place">${i.place}</div>
+    <div class="content-title-1 uppercase line-clamp-3">${i.title}</div>
+    </div>`).join('')
 
-</div>`).join('')
+    const sildeNumbers = data.map((_, index)=>`<div class="item" id="slide-item-${index}" >${index+1}</div>`).join('')
+    _('slider').innerHTML =  cards + cardContents
+    _('slide-numbers').innerHTML =  sildeNumbers
 
-const sildeNumbers = data.map((_, index)=>`<div class="item" id="slide-item-${index}" >${index+1}</div>`).join('')
-_('slider').innerHTML =  cards + cardContents
-_('slide-numbers').innerHTML =  sildeNumbers
+    const range = (n) =>
+      Array(n)
+        .fill(0)
+        .map((i, j) => i + j);
+    const set = gsap.set;
 
-
-const range = (n) =>
-  Array(n)
-    .fill(0)
-    .map((i, j) => i + j);
-const set = gsap.set;
-
-function getCard(index) {
-  return `#card${index}`;
-}
-function getCardContent(index) {
-  return `#card-content-${index}`;
-}
-function getSliderItem(index) {
-  return `#slide-item-${index}`;
-}
-
-function animate(target, duration, properties) {
-  return new Promise((resolve) => {
-    gsap.to(target, {
-      ...properties,
-      duration: duration,
-      onComplete: resolve,
-    });
-  });
-}
-
-let order = [0, 1, 2, 3, 4, 5];
-let detailsEven = true;
-
-let offsetTop = 200;
-let offsetLeft = 700;
-let cardWidth = 200;
-let cardHeight = 300;
-let gap = 40;
-let numberSize = 50;
-const ease = "sine.inOut";
-
-function init() {
-  const [active, ...rest] = order;
-  const detailsActive = detailsEven ? "#details-even" : "#details-odd";
-  const detailsInactive = detailsEven ? "#details-odd" : "#details-even";
-  const { innerHeight: height, innerWidth: width } = window;
-  offsetTop = height - 430;
-  offsetLeft = width - 830;
-
-  gsap.set("#pagination", {
-    top: offsetTop + 330,
-    left: offsetLeft,
-    y: 200,
-    opacity: 0,
-    zIndex: 60,
-  });
-  gsap.set("nav", { y: -200, opacity: 0 });
-
-  gsap.set(getCard(active), {
-    x: 0,
-    y: 0,
-    width: window.innerWidth,
-    height: window.innerHeight,
-    position: 'absolute'
-  });
-  gsap.set(getCardContent(active), { x: 0, y: 0, opacity: 0 });
-  gsap.set(detailsActive, { opacity: 0, zIndex: 22, x: -200 });
-  gsap.set(detailsInactive, { opacity: 0, zIndex: 12 });
-  gsap.set(`${detailsInactive} .text`, { y: 100 });
-  gsap.set(`${detailsInactive} .title-1`, { y: 100 });
-  gsap.set(`${detailsInactive} .title-2`, { y: 100 });
-  gsap.set(`${detailsInactive} .desc`, { y: 50 });
-  gsap.set(`${detailsInactive} .cta`, { y: 60 });
-
-  gsap.set(".progress-sub-foreground", {
-    width: 500 * (1 / order.length) * (active + 1),
-  });
-
-  rest.forEach((i, index) => {
-    gsap.set(getCard(i), {
-      x: offsetLeft + 400 + index * (cardWidth + gap),
-      y: offsetTop,
-      width: cardWidth,
-      height: cardHeight,
-      zIndex: 30,
-      borderRadius: 10,
-      position: 'absolute'
-    });
-    gsap.set(getCardContent(i), {
-      x: offsetLeft + 400 + index * (cardWidth + gap),
-      zIndex: 40,
-      y: offsetTop + cardHeight - 100,
-    });
-    gsap.set(getSliderItem(i), { x: (index + 1) * numberSize });
-  });
-
-  gsap.set(".indicator", { x: -window.innerWidth });
-
-  const startDelay = 0.6;
-
-  gsap.to(".cover", {
-    x: width + 400,
-    delay: 0.5,
-    ease,
-    onComplete: () => {
-      setTimeout(() => {
-        loop(); // Comentado para permitir inspección
-        //console.log('Autoplay desactivado - puedes inspeccionar libremente');
-      }, 1500);
-    },
-  });
-  rest.forEach((i, index) => {
-    gsap.to(getCard(i), {
-      x: offsetLeft + index * (cardWidth + gap),
-      zIndex: 30,
-      delay: 0.05 * index,
-      ease,
-      delay: startDelay,
-    });
-    gsap.to(getCardContent(i), {
-      x: offsetLeft + index * (cardWidth + gap),
-      zIndex: 40,
-      delay: 0.05 * index,
-      ease,
-      delay: startDelay,
-    });
-  });
-  gsap.to("#pagination", { y: 0, opacity: 1, ease, delay: startDelay });
-  gsap.to("nav", { y: 0, opacity: 1, ease, delay: startDelay });
-  gsap.to(detailsActive, { opacity: 1, x: 0, ease, delay: startDelay });
-  
-  // Configurar botón inicial para dirigir a la primera experiencia
-  setTimeout(() => {
-    const initialDiscoverBtn = document.querySelector(`${detailsActive} .discover`);
-    initialDiscoverBtn.onclick = () => {
-      window.location.href = `/experiencia/${data[order[0]].expNumber}`;
-    };
-    
-    // También configurar el botón que ya está visible desde el servidor
-    const serverDiscoverBtn = document.querySelector('#details-even .discover');
-    if (serverDiscoverBtn) {
-      serverDiscoverBtn.onclick = () => {
-        window.location.href = `/experiencia/${data[order[0]].expNumber}`;
-      };
+    function getCard(index) {
+      return `#card${index}`;
     }
-  }, startDelay * 1000 + 100);
-  
-  // Configurar botones de navegación
-  setTimeout(() => {
-    const nextBtn = document.querySelector('.arrow-right');
-    const prevBtn = document.querySelector('.arrow-left');
-    
-    nextBtn.onclick = () => {
-      if (clicks === 0) {
-        clicks = 1;
-        step();
-      }
-    };
-    
-    prevBtn.onclick = () => {
-      if (clicks === 0) {
-        clicks = 1;
-        stepBack();
-      }
-    };
-  }, startDelay * 1000 + 200);
-}
+    function getCardContent(index) {
+      return `#card-content-${index}`;
+    }
+    function getSliderItem(index) {
+      return `#slide-item-${index}`;
+    }
 
-let clicks = 0;
-
-function stepBack() {
-  return new Promise((resolve) => {
-    // Ir hacia atrás: mover el último elemento al principio
-    order.unshift(order.pop());
-    detailsEven = !detailsEven;
-
-    const detailsActive = detailsEven ? "#details-even" : "#details-odd";
-    const detailsInactive = detailsEven ? "#details-odd" : "#details-even";
-
-    // Actualizar contenido del panel activo
-    document.querySelector(`${detailsActive} .place-box .text`).textContent =
-      data[order[0]].place;
-    document.querySelector(`${detailsActive} .title-1`).textContent =
-      data[order[0]].title;
-    document.querySelector(`${detailsActive} .title-2`).textContent =
-      data[order[0]].title2;
-    document.querySelector(`${detailsActive} .desc`).textContent =
-      data[order[0]].description;
-
-    // Configurar botón para dirigir a la experiencia
-    const discoverBtn = document.querySelector(`${detailsActive} .discover`);
-    discoverBtn.onclick = () => {
-      window.location.href = `/experiencia/${data[order[0]].expNumber}`;
-    };
-
-    // Animaciones similares a step() pero en reversa
-    gsap.set(detailsActive, { zIndex: 22 });
-    gsap.to(detailsActive, { opacity: 1, delay: 0.4, ease });
-    gsap.to(`${detailsActive} .text`, { y: 0, delay: 0.1, duration: 0.7, ease });
-    gsap.to(`${detailsActive} .title-1`, { y: 0, delay: 0.15, duration: 0.7, ease });
-    gsap.to(`${detailsActive} .title-2`, { y: 0, delay: 0.15, duration: 0.7, ease });
-    gsap.to(`${detailsActive} .desc`, { y: 0, delay: 0.3, duration: 0.4, ease });
-    gsap.to(`${detailsActive} .cta`, {
-      y: 0, delay: 0.35, duration: 0.4, ease,
-      onComplete: () => {
-        clicks = 0;
-        resolve();
-      }
-    });
-    
-    gsap.set(detailsInactive, { zIndex: 12 });
-
-    const [active, ...rest] = order;
-    const next = rest[0]; // El siguiente será el primero en mostrar
-
-    gsap.set(getCard(next), { zIndex: 10, position: 'absolute' });
-    gsap.set(getCard(active), { zIndex: 20, position: 'absolute' });
-    gsap.to(getCard(next), { scale: 1.5, ease, position: 'absolute' });
-
-    gsap.to(getCardContent(active), {
-      y: offsetTop + cardHeight - 10, opacity: 0, duration: 0.3, ease
-    });
-    
-    gsap.to(getSliderItem(active), { x: 0, ease });
-    gsap.to(getSliderItem(next), { x: numberSize, ease });
-    gsap.to(".progress-sub-foreground", {
-      width: 500 * (1 / order.length) * (active + 1), ease
-    });
-
-    gsap.to(getCard(active), {
-      x: 0, y: 0, ease,
-      width: window.innerWidth, height: window.innerHeight,
-      borderRadius: 0, position: 'absolute',
-      onComplete: () => {
-        const xNew = offsetLeft + (rest.length - 1) * (cardWidth + gap);
-        gsap.set(getCard(next), {
-          x: xNew, y: offsetTop,
-          width: cardWidth, height: cardHeight,
-          zIndex: 30, borderRadius: 10, scale: 1, position: 'absolute'
+    function animate(target, duration, properties) {
+      return new Promise((resolve) => {
+        gsap.to(target, {
+          ...properties,
+          duration: duration,
+          onComplete: resolve,
         });
+      });
+    }
 
-        gsap.set(getCardContent(next), {
-          x: xNew, y: offsetTop + cardHeight - 100,
-          opacity: 1, zIndex: 40
-        });
-        gsap.set(getSliderItem(next), { x: rest.length * numberSize });
+    let order = [0, 1, 2, 3, 4, 5];
+    let detailsEven = true;
 
-        gsap.set(detailsInactive, { opacity: 0 });
-        gsap.set(`${detailsInactive} .text`, { y: 100 });
-        gsap.set(`${detailsInactive} .title-1`, { y: 100 });
-        gsap.set(`${detailsInactive} .title-2`, { y: 100 });
-        gsap.set(`${detailsInactive} .desc`, { y: 50 });
-        gsap.set(`${detailsInactive} .cta`, { y: 60 });
-      }
-    });
+    let offsetTop = 200;
+    let offsetLeft = 700;
+    let cardWidth = 200;
+    let cardHeight = 300;
+    let gap = 40;
+    let numberSize = 50;
+    const ease = "sine.inOut";
 
-    rest.forEach((i, index) => {
-      if (i !== next) {
-        const xNew = offsetLeft + index * (cardWidth + gap);
-        gsap.set(getCard(i), { zIndex: 30, position: 'absolute' });
-        gsap.to(getCard(i), {
-          x: xNew, y: offsetTop,
-          width: cardWidth, height: cardHeight,
-          ease, delay: 0.1 * (index + 1), position: 'absolute'
-        });
+    function init() {
+      const [active, ...rest] = order;
+      const detailsActive = detailsEven ? "#details-even" : "#details-odd";
+      const detailsInactive = detailsEven ? "#details-odd" : "#details-even";
+      const { innerHeight: height, innerWidth: width } = window;
+      offsetTop = height - 430;
+      offsetLeft = width - 830;
 
-        gsap.to(getCardContent(i), {
-          x: xNew, y: offsetTop + cardHeight - 100,
-          opacity: 1, zIndex: 40, ease, delay: 0.1 * (index + 1)
-        });
-        gsap.to(getSliderItem(i), { x: (index + 1) * numberSize, ease });
-      }
-    });
-  });
-}
+      gsap.set("#pagination", {
+        top: offsetTop + 330,
+        left: offsetLeft,
+        y: 200,
+        opacity: 0,
+        zIndex: 60,
+      });
+      gsap.set("nav", { y: -200, opacity: 0 });
 
-function step() {
-  return new Promise((resolve) => {
-    order.push(order.shift());
-    detailsEven = !detailsEven;
+      gsap.set(getCard(active), {
+        x: 0,
+        y: 0,
+        width: window.innerWidth,
+        height: window.innerHeight,
+        position: 'absolute'
+      });
+      gsap.set(getCardContent(active), { x: 0, y: 0, opacity: 0 });
+      gsap.set(detailsActive, { opacity: 0, zIndex: 22, x: -200 });
+      gsap.set(detailsInactive, { opacity: 0, zIndex: 12 });
+      gsap.set(`${detailsInactive} .text`, { y: 100 });
+      gsap.set(`${detailsInactive} .title-1`, { y: 100 });
+      gsap.set(`${detailsInactive} .title-2`, { y: 100 });
+      gsap.set(`${detailsInactive} .desc`, { y: 50 });
+      gsap.set(`${detailsInactive} .cta`, { y: 60 });
 
-    const detailsActive = detailsEven ? "#details-even" : "#details-odd";
-    const detailsInactive = detailsEven ? "#details-odd" : "#details-even";
+      gsap.set(".progress-sub-foreground", {
+        width: 500 * (1 / order.length) * (active + 1),
+      });
 
-    document.querySelector(`${detailsActive} .place-box .text`).textContent =
-      data[order[0]].place;
-    document.querySelector(`${detailsActive} .title-1`).textContent =
-      data[order[0]].title;
-    document.querySelector(`${detailsActive} .title-2`).textContent =
-      data[order[0]].title2;
-    document.querySelector(`${detailsActive} .desc`).textContent =
-      data[order[0]].description;
-
-    // Configurar botón para dirigir a la experiencia
-    const discoverBtn = document.querySelector(`${detailsActive} .discover`);
-    discoverBtn.onclick = () => {
-      window.location.href = `/experiencia/${data[order[0]].expNumber}`;
-    };
-
-    gsap.set(detailsActive, { zIndex: 22 });
-    gsap.to(detailsActive, { opacity: 1, delay: 0.4, ease });
-    gsap.to(`${detailsActive} .text`, {
-      y: 0,
-      delay: 0.1,
-      duration: 0.7,
-      ease,
-    });
-    gsap.to(`${detailsActive} .title-1`, {
-      y: 0,
-      delay: 0.15,
-      duration: 0.7,
-      ease,
-    });
-    gsap.to(`${detailsActive} .title-2`, {
-      y: 0,
-      delay: 0.15,
-      duration: 0.7,
-      ease,
-    });
-    gsap.to(`${detailsActive} .desc`, {
-      y: 0,
-      delay: 0.3,
-      duration: 0.4,
-      ease,
-    });
-    gsap.to(`${detailsActive} .cta`, {
-      y: 0,
-      delay: 0.35,
-      duration: 0.4,
-      onComplete: resolve,
-      ease,
-    });
-    gsap.set(detailsInactive, { zIndex: 12 });
-
-    const [active, ...rest] = order;
-    const prv = rest[rest.length - 1];
-
-    gsap.set(getCard(prv), { zIndex: 10, position: 'absolute' });
-    gsap.set(getCard(active), { zIndex: 20, position: 'absolute' });
-    gsap.to(getCard(prv), { scale: 1.5, ease, position: 'absolute' });
-
-    gsap.to(getCardContent(active), {
-      y: offsetTop + cardHeight - 10,
-      opacity: 0,
-      duration: 0.3,
-      ease,
-    });
-    gsap.to(getSliderItem(active), { x: 0, ease });
-    gsap.to(getSliderItem(prv), { x: -numberSize, ease });
-    gsap.to(".progress-sub-foreground", {
-      width: 500 * (1 / order.length) * (active + 1),
-      ease,
-    });
-
-    gsap.to(getCard(active), {
-      x: 0,
-      y: 0,
-      ease,
-      width: window.innerWidth,
-      height: window.innerHeight,
-      borderRadius: 0,
-      position: 'absolute',
-      onComplete: () => {
-        const xNew = offsetLeft + (rest.length - 1) * (cardWidth + gap);
-        gsap.set(getCard(prv), {
-          x: xNew,
+      rest.forEach((i, index) => {
+        gsap.set(getCard(i), {
+          x: offsetLeft + 400 + index * (cardWidth + gap),
           y: offsetTop,
           width: cardWidth,
           height: cardHeight,
           zIndex: 30,
           borderRadius: 10,
-          scale: 1,
           position: 'absolute'
         });
-
-        gsap.set(getCardContent(prv), {
-          x: xNew,
-          y: offsetTop + cardHeight - 100,
-          opacity: 1,
+        gsap.set(getCardContent(i), {
+          x: offsetLeft + 400 + index * (cardWidth + gap),
           zIndex: 40,
+          y: offsetTop + cardHeight - 100,
         });
-        gsap.set(getSliderItem(prv), { x: rest.length * numberSize });
+        gsap.set(getSliderItem(i), { x: (index + 1) * numberSize });
+      });
 
-        gsap.set(detailsInactive, { opacity: 0 });
-        gsap.set(`${detailsInactive} .text`, { y: 100 });
-        gsap.set(`${detailsInactive} .title-1`, { y: 100 });
-        gsap.set(`${detailsInactive} .title-2`, { y: 100 });
-        gsap.set(`${detailsInactive} .desc`, { y: 50 });
-        gsap.set(`${detailsInactive} .cta`, { y: 60 });
-        clicks -= 1;
-        if (clicks > 0) {
-          step();
-        }
-      },
-    });
+      gsap.set(".indicator", { x: -window.innerWidth });
 
-    rest.forEach((i, index) => {
-      if (i !== prv) {
-        const xNew = offsetLeft + index * (cardWidth + gap);
-        gsap.set(getCard(i), { zIndex: 30, position: 'absolute' });
+      const startDelay = 0.6;
+
+      gsap.to(".cover", {
+        x: width + 400,
+        delay: 0.5,
+        ease,
+        onComplete: () => {
+          setTimeout(() => {
+            loop();
+          }, 1500);
+        },
+      });
+      rest.forEach((i, index) => {
         gsap.to(getCard(i), {
-          x: xNew,
-          y: offsetTop,
-          width: cardWidth,
-          height: cardHeight,
+          x: offsetLeft + index * (cardWidth + gap),
+          zIndex: 30,
+          delay: 0.05 * index,
           ease,
-          delay: 0.1 * (index + 1),
-          position: 'absolute'
+          delay: startDelay,
         });
-
         gsap.to(getCardContent(i), {
-          x: xNew,
-          y: offsetTop + cardHeight - 100,
-          opacity: 1,
+          x: offsetLeft + index * (cardWidth + gap),
           zIndex: 40,
+          delay: 0.05 * index,
           ease,
-          delay: 0.1 * (index + 1),
+          delay: startDelay,
         });
-        gsap.to(getSliderItem(i), { x: (index + 1) * numberSize, ease });
+      });
+      gsap.to("#pagination", { y: 0, opacity: 1, ease, delay: startDelay });
+      gsap.to("nav", { y: 0, opacity: 1, ease, delay: startDelay });
+      gsap.to(detailsActive, { opacity: 1, x: 0, ease, delay: startDelay });
+      
+      // Configurar botón inicial para dirigir a la primera experiencia
+      setTimeout(() => {
+        const initialDiscoverBtn = document.querySelector(`${detailsActive} .discover`);
+        initialDiscoverBtn.onclick = () => {
+          window.location.href = `/experiencia/${data[order[0]].expNumber}`;
+        };
+        
+        // También configurar el botón que ya está visible desde el servidor
+        const serverDiscoverBtn = document.querySelector('#details-even .discover');
+        if (serverDiscoverBtn) {
+          serverDiscoverBtn.onclick = () => {
+            window.location.href = `/experiencia/${data[order[0]].expNumber}`;
+          };
+        }
+      }, startDelay * 1000 + 100);
+      
+      // Configurar botones de navegación
+      setTimeout(() => {
+        const nextBtn = document.querySelector('.arrow-right');
+        const prevBtn = document.querySelector('.arrow-left');
+        
+        nextBtn.onclick = () => {
+          if (clicks === 0) {
+            clicks = 1;
+            step();
+          }
+        };
+        
+        prevBtn.onclick = () => {
+          if (clicks === 0) {
+            clicks = 1;
+            stepBack();
+          }
+        };
+      }, startDelay * 1000 + 200);
+    }
+
+    let clicks = 0;
+
+    function stepBack() {
+      return new Promise((resolve) => {
+        order.unshift(order.pop());
+        detailsEven = !detailsEven;
+
+        const detailsActive = detailsEven ? "#details-even" : "#details-odd";
+        const detailsInactive = detailsEven ? "#details-odd" : "#details-even";
+
+        document.querySelector(`${detailsActive} .place-box .text`).textContent =
+          data[order[0]].place;
+        document.querySelector(`${detailsActive} .title-1`).textContent =
+          data[order[0]].title;
+        document.querySelector(`${detailsActive} .title-2`).textContent =
+          data[order[0]].title2;
+        document.querySelector(`${detailsActive} .desc`).textContent =
+          data[order[0]].description;
+
+        const discoverBtn = document.querySelector(`${detailsActive} .discover`);
+        discoverBtn.onclick = () => {
+          window.location.href = `/experiencia/${data[order[0]].expNumber}`;
+        };
+
+        gsap.set(detailsActive, { zIndex: 22 });
+        gsap.to(detailsActive, { opacity: 1, delay: 0.4, ease });
+        gsap.to(`${detailsActive} .text`, { y: 0, delay: 0.1, duration: 0.7, ease });
+        gsap.to(`${detailsActive} .title-1`, { y: 0, delay: 0.15, duration: 0.7, ease });
+        gsap.to(`${detailsActive} .title-2`, { y: 0, delay: 0.15, duration: 0.7, ease });
+        gsap.to(`${detailsActive} .desc`, { y: 0, delay: 0.3, duration: 0.4, ease });
+        gsap.to(`${detailsActive} .cta`, {
+          y: 0, delay: 0.35, duration: 0.4, ease,
+          onComplete: () => {
+            clicks = 0;
+            resolve();
+          }
+        });
+        
+        gsap.set(detailsInactive, { zIndex: 12 });
+
+        const [active, ...rest] = order;
+        const next = rest[0];
+
+        gsap.set(getCard(next), { zIndex: 10, position: 'absolute' });
+        gsap.set(getCard(active), { zIndex: 20, position: 'absolute' });
+        gsap.to(getCard(next), { scale: 1.5, ease, position: 'absolute' });
+
+        gsap.to(getCardContent(active), {
+          y: offsetTop + cardHeight - 10, opacity: 0, duration: 0.3, ease
+        });
+        
+        gsap.to(getSliderItem(active), { x: 0, ease });
+        gsap.to(getSliderItem(next), { x: numberSize, ease });
+        gsap.to(".progress-sub-foreground", {
+          width: 500 * (1 / order.length) * (active + 1), ease
+        });
+
+        gsap.to(getCard(active), {
+          x: 0, y: 0, ease,
+          width: window.innerWidth, height: window.innerHeight,
+          borderRadius: 0, position: 'absolute',
+          onComplete: () => {
+            const xNew = offsetLeft + (rest.length - 1) * (cardWidth + gap);
+            gsap.set(getCard(next), {
+              x: xNew, y: offsetTop,
+              width: cardWidth, height: cardHeight,
+              zIndex: 30, borderRadius: 10, scale: 1, position: 'absolute'
+            });
+
+            gsap.set(getCardContent(next), {
+              x: xNew, y: offsetTop + cardHeight - 100,
+              opacity: 1, zIndex: 40
+            });
+            gsap.set(getSliderItem(next), { x: rest.length * numberSize });
+
+            gsap.set(detailsInactive, { opacity: 0 });
+            gsap.set(`${detailsInactive} .text`, { y: 100 });
+            gsap.set(`${detailsInactive} .title-1`, { y: 100 });
+            gsap.set(`${detailsInactive} .title-2`, { y: 100 });
+            gsap.set(`${detailsInactive} .desc`, { y: 50 });
+            gsap.set(`${detailsInactive} .cta`, { y: 60 });
+          }
+        });
+
+        rest.forEach((i, index) => {
+          if (i !== next) {
+            const xNew = offsetLeft + index * (cardWidth + gap);
+            gsap.set(getCard(i), { zIndex: 30, position: 'absolute' });
+            gsap.to(getCard(i), {
+              x: xNew, y: offsetTop,
+              width: cardWidth, height: cardHeight,
+              ease, delay: 0.1 * (index + 1), position: 'absolute'
+            });
+
+            gsap.to(getCardContent(i), {
+              x: xNew, y: offsetTop + cardHeight - 100,
+              opacity: 1, zIndex: 40, ease, delay: 0.1 * (index + 1)
+            });
+            gsap.to(getSliderItem(i), { x: (index + 1) * numberSize, ease });
+          }
+        });
+      });
+    }
+
+    function step() {
+      return new Promise((resolve) => {
+        order.push(order.shift());
+        detailsEven = !detailsEven;
+
+        const detailsActive = detailsEven ? "#details-even" : "#details-odd";
+        const detailsInactive = detailsEven ? "#details-odd" : "#details-even";
+
+        document.querySelector(`${detailsActive} .place-box .text`).textContent =
+          data[order[0]].place;
+        document.querySelector(`${detailsActive} .title-1`).textContent =
+          data[order[0]].title;
+        document.querySelector(`${detailsActive} .title-2`).textContent =
+          data[order[0]].title2;
+        document.querySelector(`${detailsActive} .desc`).textContent =
+          data[order[0]].description;
+
+        const discoverBtn = document.querySelector(`${detailsActive} .discover`);
+        discoverBtn.onclick = () => {
+          window.location.href = `/experiencia/${data[order[0]].expNumber}`;
+        };
+
+        gsap.set(detailsActive, { zIndex: 22 });
+        gsap.to(detailsActive, { opacity: 1, delay: 0.4, ease });
+        gsap.to(`${detailsActive} .text`, { y: 0, delay: 0.1, duration: 0.7, ease });
+        gsap.to(`${detailsActive} .title-1`, { y: 0, delay: 0.15, duration: 0.7, ease });
+        gsap.to(`${detailsActive} .title-2`, { y: 0, delay: 0.15, duration: 0.7, ease });
+        gsap.to(`${detailsActive} .desc`, { y: 0, delay: 0.3, duration: 0.4, ease });
+        gsap.to(`${detailsActive} .cta`, {
+          y: 0, delay: 0.35, duration: 0.4, onComplete: resolve, ease,
+        });
+        gsap.set(detailsInactive, { zIndex: 12 });
+
+        const [active, ...rest] = order;
+        const prv = rest[rest.length - 1];
+
+        gsap.set(getCard(prv), { zIndex: 10, position: 'absolute' });
+        gsap.set(getCard(active), { zIndex: 20, position: 'absolute' });
+        gsap.to(getCard(prv), { scale: 1.5, ease, position: 'absolute' });
+
+        gsap.to(getCardContent(active), {
+          y: offsetTop + cardHeight - 10, opacity: 0, duration: 0.3, ease,
+        });
+        gsap.to(getSliderItem(active), { x: 0, ease });
+        gsap.to(getSliderItem(prv), { x: -numberSize, ease });
+        gsap.to(".progress-sub-foreground", {
+          width: 500 * (1 / order.length) * (active + 1), ease,
+        });
+
+        gsap.to(getCard(active), {
+          x: 0, y: 0, ease,
+          width: window.innerWidth, height: window.innerHeight,
+          borderRadius: 0, position: 'absolute',
+          onComplete: () => {
+            const xNew = offsetLeft + (rest.length - 1) * (cardWidth + gap);
+            gsap.set(getCard(prv), {
+              x: xNew, y: offsetTop, width: cardWidth, height: cardHeight,
+              zIndex: 30, borderRadius: 10, scale: 1, position: 'absolute'
+            });
+
+            gsap.set(getCardContent(prv), {
+              x: xNew, y: offsetTop + cardHeight - 100,
+              opacity: 1, zIndex: 40,
+            });
+            gsap.set(getSliderItem(prv), { x: rest.length * numberSize });
+
+            gsap.set(detailsInactive, { opacity: 0 });
+            gsap.set(`${detailsInactive} .text`, { y: 100 });
+            gsap.set(`${detailsInactive} .title-1`, { y: 100 });
+            gsap.set(`${detailsInactive} .title-2`, { y: 100 });
+            gsap.set(`${detailsInactive} .desc`, { y: 50 });
+            gsap.set(`${detailsInactive} .cta`, { y: 60 });
+            clicks -= 1;
+            if (clicks > 0) {
+              step();
+            }
+          },
+        });
+
+        rest.forEach((i, index) => {
+          if (i !== prv) {
+            const xNew = offsetLeft + index * (cardWidth + gap);
+            gsap.set(getCard(i), { zIndex: 30, position: 'absolute' });
+            gsap.to(getCard(i), {
+              x: xNew, y: offsetTop, width: cardWidth, height: cardHeight,
+              ease, delay: 0.1 * (index + 1), position: 'absolute'
+            });
+
+            gsap.to(getCardContent(i), {
+              x: xNew, y: offsetTop + cardHeight - 100,
+              opacity: 1, zIndex: 40, ease, delay: 0.1 * (index + 1),
+            });
+            gsap.to(getSliderItem(i), { x: (index + 1) * numberSize, ease });
+          }
+        });
+      });
+    }
+
+    async function loop() {
+      await animate(".indicator", 2, { x: 0 });
+      await animate(".indicator", 0.8, { x: window.innerWidth, delay: 0.3 });
+      set(".indicator", { x: -window.innerWidth });
+      await step();
+      loop();
+    }
+
+    async function loadImage(src) {
+      return new Promise((resolve) => {
+        let img = new Image();
+        img.onload = () => resolve({ success: true, src });
+        img.onerror = () => {
+          console.warn(`Error loading image: ${src}`);
+          resolve({ success: false, src });
+        };
+        img.src = src;
+      });
+    }
+
+    async function loadImages() {
+      const promises = data.map(({ image }) => loadImage(image));
+      const results = await Promise.all(promises);
+      
+      const failedImages = results.filter(r => !r.success);
+      if (failedImages.length > 0) {
+        console.warn(`${failedImages.length} imágenes no se pudieron cargar:`, failedImages.map(r => r.src));
       }
-    });
-  });
-}
+      
+      console.log(`✅ ${results.filter(r => r.success).length}/${results.length} imágenes cargadas correctamente`);
+      return results;
+    }
 
-async function loop() {
-  await animate(".indicator", 2, { x: 0 });
-  await animate(".indicator", 0.8, { x: window.innerWidth, delay: 0.3 });
-  set(".indicator", { x: -window.innerWidth });
-  await step();
-  loop();
-}
-
-async function loadImage(src) {
-  return new Promise((resolve) => {
-    let img = new Image();
-    img.onload = () => resolve({ success: true, src });
-    img.onerror = () => {
-      console.warn(`Error loading image: ${src}`);
-      resolve({ success: false, src }); // No rechazar, solo reportar
-    };
-    img.src = src;
-  });
-}
-
-async function loadImages() {
-  const promises = data.map(({ image }) => loadImage(image));
-  const results = await Promise.all(promises);
-  
-  const failedImages = results.filter(r => !r.success);
-  if (failedImages.length > 0) {
-    console.warn(`${failedImages.length} imágenes no se pudieron cargar:`, failedImages.map(r => r.src));
-  }
-  
-  // console.log(`✅ ${results.filter(r => r.success).length}/${results.length} imágenes cargadas correctamente`);
-  return results;
-}
-
-async function start() {
-  try {
-    // console.log('🖼️ Iniciando carga de imágenes...');
-    await loadImages();
-    //c onsole.log('🚀 Iniciando slider...');
-    init();
-  } catch (error) {
-    // console.error("Error crítico al cargar imágenes:", error);
-    // Inicializar de todos modos para no dejar la página en blanco
-    // console.log('⚠️ Iniciando slider a pesar del error...');
-    init();
-  }
-}
-
-// Agregar listener para ver cambios en el DOM
-const observer = new MutationObserver((mutations) => {
-  mutations.forEach((mutation) => {
-    if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
-      const el = mutation.target;
-      if (el.classList.contains('card')) {
-        // console.log(`Card ${el.id} updated:`, el.style.cssText);
+    async function start() {
+      try {
+        console.log('🖼️ Iniciando carga de imágenes...');
+        await loadImages();
+        console.log('🚀 Iniciando slider...');
+        init();
+      } catch (error) {
+        console.error("Error crítico al cargar imágenes:", error);
+        console.log('⚠️ Iniciando slider a pesar del error...');
+        init();
       }
     }
-  });
-});
 
-observer.observe(document.getElementById('slider'), { subtree: true, attributes: true, attributeFilter: ['style'] });
+    // Agregar listener para ver cambios en el DOM
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
+          const el = mutation.target;
+          if (el.classList.contains('card')) {
+            console.log(`Card ${el.id} updated:`, el.style.cssText);
+          }
+        }
+      });
+    });
 
-start();
+    observer.observe(document.getElementById('slider'), { subtree: true, attributes: true, attributeFilter: ['style'] });
+
+    start();
   </script>
-
-</main>
-
 </Layout>
