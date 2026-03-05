@@ -75,7 +75,7 @@ body {
 .card-content {
   position: absolute;
   left: 0;
-  top: 0;
+  top: -10px;
   color: #FFFAF0;
   padding-inline: 16px;
   max-width: 200px;

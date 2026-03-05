@@ -4,16 +4,39 @@ import { getExperienciasMapping } from '../lib/experiencias-mapping';
 import { getExperienceImagePath, loadNarratives } from '../lib/narratives-parser';
 import { resolveTaxonomyTerms } from '../lib/wordpress';
 
-// Obtener las primeras 6 experiencias
+// Obtener experiencias que tienen imágenes disponibles para randomización
 const { experienciasSorted } = await getExperienciasMapping();
 const narratives = await loadNarratives();
 
-// Tomar las primeras 6 experiencias
-const firstSixExperiences = experienciasSorted.slice(0, 6);
+// Solo usar las primeras 40 experiencias que SÍ tienen imágenes disponibles
+const experiencesForRandom = experienciasSorted.slice(0, 40); // Solo las que tienen imágenes
+//const experiencesForRandom = experienciasSorted; // Todas las 100 experiencias
+
+// Función para decodificar entidades HTML
+function decodeHtmlEntities(text: string): string {
+  const htmlEntities: Record<string, string> = {
+    '&#8211;': '–', // em dash
+    '&#8212;': '—', // en dash
+    '&#8220;': '"', // left double quote
+    '&#8221;': '"', // right double quote
+    '&#038;': '&',  // ampersand
+    '&amp;': '&',   // ampersand
+    '&lt;': '<',    // less than
+    '&gt;': '>',    // greater than
+    '&quot;': '"',  // quote
+    '&nbsp;': ' ',  // non-breaking space
+  };
+  
+  let decoded = text;
+  for (const [entity, char] of Object.entries(htmlEntities)) {
+    decoded = decoded.replace(new RegExp(entity, 'g'), char);
+  }
+  return decoded;
+}
 
 // Procesar las experiencias para el slider
 const sliderData = await Promise.all(
-  firstSixExperiences.map(async (exp, index) => {
+  experiencesForRandom.map(async (exp, index) => {
     const resolvedTaxonomy = exp.acf ? await resolveTaxonomyTerms(exp.acf) : {};
     const narrative = narratives.find(n => n.expNumber === exp.expNumber);
     
@@ -23,14 +46,18 @@ const sliderData = await Promise.all(
     const location = municipio && departamento ? `${municipio}, ${departamento}` : 'Pacífico Colombiano';
     
     // Usar el mismo sistema que /experiencias: narrative.title primero, luego title.rendered
-    const mainTitle = narrative?.title || exp.title?.rendered || 'EXPERIENCIA';
-    const subTitle = narrative?.subtitle || municipio || 'PACÍFICO';
+    const rawMainTitle = narrative?.title || exp.title?.rendered || 'EXPERIENCIA';
+    const rawSubTitle = narrative?.subtitle || municipio || 'PACÍFICO';
+    
+    // Decodificar entidades HTML en los títulos
+    const mainTitle = decodeHtmlEntities(String(rawMainTitle));
+    const subTitle = decodeHtmlEntities(String(rawSubTitle));
     
     return {
       place: location,
-      title: String(mainTitle).toUpperCase(),
-      title2: String(subTitle).toUpperCase(),
-      description: exp.excerpt?.rendered || 'Descubre esta increíble experiencia en el Pacífico colombiano.',
+      title: mainTitle.toUpperCase(),
+      title2: subTitle.toUpperCase(),
+      description: decodeHtmlEntities(exp.excerpt?.rendered || 'Descubre esta increíble experiencia en el Pacífico colombiano.'),
       image: getExperienceImagePath(exp.expNumber || index + 1),
       expNumber: String(exp.expNumber || index + 1).padStart(3, '0'),
       wpId: exp.id
@@ -51,7 +78,7 @@ const sliderData = await Promise.all(
       <div class="place-box">
         <div class="text">Pacífico Colombiano</div>
       </div>
-      <div class="title-box-1"><div class="title-1">EXPERIENCIAS ÚNICAS</div></div>
+      <div class="title-box-1"><div class="title-1 line-clamp-2">EXPERIENCIAS ÚNICAS</div></div>
       <div class="title-box-2"><div class="title-2"></div></div>
       <div class="desc w-1/2">
         Descubre la diversidad cultural y natural del Pacífico colombiano a través de experiencias auténticas y transformadoras en cada rincón de esta región extraordinaria.
@@ -78,7 +105,7 @@ const sliderData = await Promise.all(
       <div class="place-box">
         <div class="text">Pacífico Colombiano</div>
       </div>
-      <div class="title-box-1"><div class="title-1">SAINT </div></div>
+      <div class="title-box-1"><div class="title-1 line-clamp-2">SAINT </div></div>
       <div class="title-box-2"><div class="title-2">ANTONIEN</div></div>
       <div class="desc">
         Tucked away in the Switzerland Alps, Saint Antönien offers an idyllic retreat for those seeking tranquility and adventure alike. It's a hidden gem for backcountry skiing in winter and boasts lush trails for hiking and mountain biking during the warmer months.
@@ -151,12 +178,24 @@ const sliderData = await Promise.all(
 
   <!-- TUS SCRIPTS AQUÍ -->
   <script is:inline define:vars={{ sliderData }}>
-    // Usar datos reales de WordPress
-    const data = sliderData;
+    // Randomizar experiencias client-side: de TODAS las experiencias, seleccionar 6 aleatorias
+    function shuffleArray(array) {
+      const shuffled = [...array];
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+      return shuffled;
+    }
     
-    // Debug: Verificar datos cargados
-    console.log('=== EXPERIENCIAS CARGADAS ===');
-    console.log('Total experiencias:', data.length);
+    // Tomar 6 experiencias completamente aleatorias de todas las disponibles
+    const randomizedData = shuffleArray(sliderData).slice(0, 6);
+    const data = randomizedData;
+    
+    // Debug: Verificar randomización con imágenes disponibles
+    console.log('=== RANDOMIZACIÓN CON IMÁGENES DISPONIBLES ===');
+    console.log(`Total experiencias con imágenes: ${sliderData.length}`);
+    console.log('6 experiencias seleccionadas aleatoriamente (de las que tienen imagen):');
     data.forEach((exp, i) => {
       console.log(`${i + 1}. ${exp.title} ${exp.title2} - ${exp.place} [EXP-${exp.expNumber}]`);
     });
@@ -167,7 +206,7 @@ const cards = data.map((i, index)=>`<div class="card" id="card${index}" style="b
 const cardContents = data.map((i, index)=>`<div class="card-content" id="card-content-${index}">
 <div class="content-start"></div>
 <div class="content-place">${i.place}</div>
-<div class="content-title-1 uppercase">${i.title}</div>
+<div class="content-title-1 uppercase line-clamp-3">${i.title}</div>
 <!--<div class="content-title-2">${i.title2}</div>-->
 
 </div>`).join('')
@@ -598,25 +637,41 @@ async function loop() {
 }
 
 async function loadImage(src) {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     let img = new Image();
-    img.onload = () => resolve(img);
-    img.onerror = reject;
+    img.onload = () => resolve({ success: true, src });
+    img.onerror = () => {
+      console.warn(`Error loading image: ${src}`);
+      resolve({ success: false, src }); // No rechazar, solo reportar
+    };
     img.src = src;
   });
 }
 
 async function loadImages() {
   const promises = data.map(({ image }) => loadImage(image));
-  return Promise.all(promises);
+  const results = await Promise.all(promises);
+  
+  const failedImages = results.filter(r => !r.success);
+  if (failedImages.length > 0) {
+    console.warn(`${failedImages.length} imágenes no se pudieron cargar:`, failedImages.map(r => r.src));
+  }
+  
+  console.log(`✅ ${results.filter(r => r.success).length}/${results.length} imágenes cargadas correctamente`);
+  return results;
 }
 
 async function start() {
   try {
+    console.log('🖼️ Iniciando carga de imágenes...');
     await loadImages();
+    console.log('🚀 Iniciando slider...');
     init();
   } catch (error) {
-    console.error("One or more images failed to load", error);
+    console.error("Error crítico al cargar imágenes:", error);
+    // Inicializar de todos modos para no dejar la página en blanco
+    console.log('⚠️ Iniciando slider a pesar del error...');
+    init();
   }
 }
 

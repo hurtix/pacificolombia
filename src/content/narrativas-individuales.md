@@ -1,6 +1,6 @@
 **EXP 001 - CAPURGANÁ ENTRE PLAYAS Y FRONTERA - Del muelle al río, del mar a la historia**
 
-Te invitamos a vivir una aventura donde el Pacífico y el Caribe colombianos se encuentran. Empezarás en Turbo (Antioquia) y navegarás en lancha mientras elmar marca el compás. Caminarás hacia La Coquerita por senderos suaves, entrecantos de aves y piscinas naturales de agua cristalina. Recorrerás el centro delpueblo, perfumado con pescado frito y mariscos, mientras la música enciendela noche.
+Te invitamos a vivir una aventura donde el Pacífico y el Caribe colombianos se encuentran. Empezarás en Turbo (Antioquia) y navegarás en lancha mientras el mar marca el compás. Caminarás hacia La Coquerita por senderos suaves, entrecantos de aves y piscinas naturales de agua cristalina. Recorrerás el centro delpueblo, perfumado con pescado frito y mariscos, mientras la música enciendela noche.
 
 Visitarás la playa Sapzurro, de arenas blancas y paz profunda, y desde allícruzarás a playa La Miel en Panamá, un tramo que une a dos países a pie.Disfrutarás de la comida típica, con la sazón que caracteriza al territorio. Entreselvas y mar llegarás a las playas San Francisco y Triganá, donde podrás hacersnorkel o descansar en hamacas mecido por la brisa. Al atardecer, el cielo seteñirá de naranjas y púrpuras sobre el mar, y algo en tu espíritu se aquietará.Al volver, viajarán contigo el aroma del mar, el gusto de la cocina viva y la certezade haber vivido una experiencia transformadora. ¡Ven y descubre que la felicidadse encuentra en Capurganá, entre playas y fronteras!
 
