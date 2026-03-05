@@ -1,7 +1,6 @@
 // Utilidades específicas para el slider
-import { getExperienciasMapping } from './experiencias-mapping';
+import experienciasData from '../data/experiencias.json';
 import { getExperienceImagePath, loadNarratives } from './narratives-parser';
-import { resolveTaxonomyTerms } from './wordpress';
 
 // Función para decodificar entidades HTML
 function decodeHtmlEntities(text: string): string {
@@ -65,35 +64,34 @@ export interface SliderExperience {
 
 // Función principal para procesar experiencias para el slider
 export async function processExperiencesForSlider(count: number = 40): Promise<SliderExperience[]> {
-  const { experienciasSorted } = await getExperienciasMapping();
+  // Usar datos directos del JSON
+  const { experiencias } = experienciasData;
   const narratives = await loadNarratives();
 
-  // Solo usar las primeras experiencias que SÍ tienen imágenes disponibles
-  const experiencesForRandom = experienciasSorted.slice(0, count);
+  // Solo usar las primeras experiencias 
+  const experiencesForRandom = experiencias.slice(0, count);
 
-  const sliderData = await Promise.all(
-    experiencesForRandom.map(async (exp, index) => {
-      const resolvedTaxonomy = exp.acf ? await resolveTaxonomyTerms(exp.acf) : {};
-      const narrative = narratives.find(n => n.expNumber === exp.expNumber);
+  const sliderData = experiencesForRandom.map((exp, index) => {
+    const narrative = narratives.find(n => n.expNumber === exp.expNumber);
+    
+    // Usar los datos directos del JSON (ya resueltos)
+    const municipio = cleanText(exp.municipio || '');
+    const departamento = cleanText(exp.departamento || '');
+    
+    // Formar la ubicación con los datos del JSON
+    let location = 'Pacífico Colombiano'; // Fallback por defecto
+    if (municipio && departamento && municipio.length > 1 && departamento.length > 1) {
+      location = `${municipio}, ${departamento}`;
+    }
       
-      // Formar la ubicación con validación robusta
-      const municipio = cleanText(resolvedTaxonomy.municipio?.[0] || '');
-      const departamento = cleanText(resolvedTaxonomy.departamento?.[0] || '');
-      
-      // Si la taxonomía no se resolvió correctamente, usar fallback
-      let location = 'Pacífico Colombiano'; // Fallback por defecto
-      if (municipio && departamento && municipio !== 'N' && departamento !== 'N' && municipio.length > 1 && departamento.length > 1) {
-        location = `${municipio}, ${departamento}`;
-      }
-      
-      // Usar narrative.title primero, luego title.rendered
-      const rawMainTitle = narrative?.title || exp.title?.rendered || 'EXPERIENCIA';
+      // Usar narrative.title primero, luego title del JSON
+      const rawMainTitle = narrative?.title || exp.title || 'EXPERIENCIA';
       const rawSubTitle = narrative?.subtitle || municipio || 'PACÍFICO';
       
       // Limpiar completamente títulos y descripciones
       const mainTitle = cleanText(rawMainTitle);
       const subTitle = cleanText(rawSubTitle);
-      const description = cleanText(exp.excerpt?.rendered || 'Descubre esta increíble experiencia en el Pacífico colombiano.');
+      const description = cleanText(exp.excerpt || 'Descubre esta increíble experiencia en el Pacífico colombiano.');
       
       return {
         place: location,
@@ -104,8 +102,7 @@ export async function processExperiencesForSlider(count: number = 40): Promise<S
         expNumber: String(exp.expNumber || index + 1).padStart(3, '0'),
         wpId: exp.id
       };
-    })
-  );
+    });
 
   return sliderData;
 }
