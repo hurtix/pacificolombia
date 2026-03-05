@@ -217,12 +217,83 @@ export async function resolveTaxonomyTerms(taxonomyData: any): Promise<any> {
   return resolved;
 }
 
+// Mapeo directo de IDs de taxonomías a nombres reales 
+const MUNICIPIO_MAP: Record<number, string> = {
+  11: 'Tumaco',
+  18: 'Nuquí', 
+  21: 'Guapi',
+  23: 'López de Micay',
+  24: 'Timbiquí', 
+  26: 'Bahía Solano',
+  29: 'Popayán',
+  31: 'Buenaventura',
+  37: 'Cali',
+  42: 'El Charco',
+  45: 'Iscuandé',
+  47: 'La Tola',
+  50: 'Mosquera',
+  53: 'Olaya Herrera',
+  56: 'Roberto Payán',
+  59: 'Santa Bárbara',
+  62: 'Jamundí',
+  65: 'Bojayá',
+  68: 'Quibdó'
+};
+
+const DEPARTAMENTO_MAP: Record<number, string> = {
+  4: 'Chocó',
+  6: 'Cauca', 
+  7: 'Chocó',
+  11: 'Nariño',
+  18: 'Chocó',
+  50: 'Valle del Cauca'
+};
+
+// Helper function to resolve taxonomy IDs to names
+function resolveTaxonomyIds(experiencia: any): any {
+  if (!experiencia.acf) return experiencia;
+  
+  const resolved = { ...experiencia };
+  
+  // Resolve municipio
+  if (experiencia.acf.municipio && Array.isArray(experiencia.acf.municipio)) {
+    const municipioId = experiencia.acf.municipio[0];
+    resolved.acf.municipio = MUNICIPIO_MAP[municipioId] || `ID-${municipioId}`;
+  }
+  
+  // Resolve departamento  
+  if (experiencia.acf.departamento && Array.isArray(experiencia.acf.departamento)) {
+    const departamentoId = experiencia.acf.departamento[0];
+    resolved.acf.departamento = DEPARTAMENTO_MAP[departamentoId] || `ID-${departamentoId}`;
+  }
+  
+  return resolved;
+}
+
 /**
  * Generate static experience data when WordPress is not available  
  * @param limit Number of experiences to generate
  * @returns Promise<any[]>
  */
 async function getStaticExperienceData(limit: number): Promise<any[]> {
+  // First, try to load the real exported data
+  try {
+    // Import the static data
+    const staticData = await import('../data/wordpress-data.json');
+    if (staticData.default?.experiencias && staticData.default.experiencias.length > 0) {
+      console.log(`✅ Using static WordPress data (${staticData.default.experiencias.length} experiencias)`);
+      // Resolve taxonomy IDs to actual names
+      const resolvedData = staticData.default.experiencias
+        .slice(0, limit)
+        .map((exp: any) => resolveTaxonomyIds(exp));
+      
+      return resolvedData;
+    }
+  } catch (error) {
+    console.log('⚠️ Could not load static WordPress data:', error);
+  }
+
+  // If static data loading fails, generate minimal fallback
   const experiences = [];
   
   // Generar datos para hasta 100 experiencias
@@ -250,5 +321,6 @@ async function getStaticExperienceData(limit: number): Promise<any[]> {
     });
   }
   
+  console.log('⚠️ Using minimal fallback data');
   return experiences;
 }
