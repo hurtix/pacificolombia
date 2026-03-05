@@ -4,9 +4,11 @@ import { getExperienciasMapping } from '../lib/experiencias-mapping';
 import { getExperienceImagePath, loadNarratives } from '../lib/narratives-parser';
 import { resolveTaxonomyTerms } from '../lib/wordpress';
 
-// Obtener las primeras 6 experiencias Y las narrativas
+// Obtener las primeras 6 experiencias
 const { experienciasSorted } = await getExperienciasMapping();
 const narratives = await loadNarratives();
+
+// Tomar las primeras 6 experiencias
 const firstSixExperiences = experienciasSorted.slice(0, 6);
 
 // Procesar las experiencias para el slider
@@ -28,7 +30,7 @@ const sliderData = await Promise.all(
       place: location,
       title: String(mainTitle).toUpperCase(),
       title2: String(subTitle).toUpperCase(),
-      description: exp.excerpt?.rendered?.replace(/<[^>]*>/g, '') || 'Descubre esta increíble experiencia en el Pacífico colombiano.',
+      description: exp.excerpt?.rendered || 'Descubre esta increíble experiencia en el Pacífico colombiano.',
       image: getExperienceImagePath(exp.expNumber || index + 1),
       expNumber: String(exp.expNumber || index + 1).padStart(3, '0'),
       wpId: exp.id
@@ -151,10 +153,10 @@ const sliderData = await Promise.all(
     const data = sliderData;
     
     // Debug: Verificar datos cargados
-    console.log('=== DATOS DE EXPERIENCIAS CARGADOS ===');
+    console.log('=== EXPERIENCIAS CARGADAS ===');
     console.log('Total experiencias:', data.length);
     data.forEach((exp, i) => {
-      console.log(`${i + 1}. ${exp.title} ${exp.title2} - ${exp.place}`);
+      console.log(`${i + 1}. ${exp.title} ${exp.title2} - ${exp.place} [EXP-${exp.expNumber}]`);
     });
 
 const _ = (id)=>document.getElementById(id)

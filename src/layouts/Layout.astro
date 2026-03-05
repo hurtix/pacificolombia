@@ -24,7 +24,7 @@ import FloatingNav from '../components/FloatingNav.astro';
   </head>
   <body class={`min-h-screen bg-gradient-to-br from-blue-50 to-green-50 font-body ${overflowHidden ? 'overflow-hidden' : ''}`}>
     <header class="bg-blue-900 text-white shadow-lg">
-      <nav class="container mx-auto px-4 py-6 flex flex-col">
+      <nav class="fixed left-0 top-0 right-0 z-50 flex items-center justify-center container mx-auto px-4">
         <div class="flex items-center justify-center w-full">
           <img class="w-100" src="/images/logo.png" alt="Destino Pacífico Logo">
           <h1 class="text-2xl font-bold hidden">Destino Pacífico</h1>
@@ -48,3 +48,4 @@ import FloatingNav from '../components/FloatingNav.astro';
     <FloatingNav />
   </body>
 </html>
+
