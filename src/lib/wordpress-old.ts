@@ -3,8 +3,6 @@ const WORDPRESS_URL = import.meta.env.WORDPRESS_URL || 'http://pacificolombia.lo
 const WP_API_BASE = `${WORDPRESS_URL}/wp-json/wp/v2`;
 const IS_STATIC_MODE = import.meta.env.PUBLIC_STATIC_MODE === 'true' || !WORDPRESS_URL;
 
-console.log('WordPress config:', { WORDPRESS_URL, IS_STATIC_MODE });
-
 export interface WordPressPost {
   id: number;
   title: {
@@ -40,12 +38,10 @@ export async function getPosts(limit: number = 10): Promise<WordPressPost[]> {
   try {
     const response = await fetch(`${WP_API_BASE}/posts?_embed&per_page=${limit}`);
     if (!response.ok) {
-      console.error('Error fetching posts:', response.statusText);
       return [];
     }
     return await response.json();
   } catch (error) {
-    console.error('Error connecting to WordPress:', error);
     return [];
   }
 }
@@ -63,7 +59,6 @@ export async function getPost(id: number): Promise<WordPressPost | null> {
     }
     return await response.json();
   } catch (error) {
-    console.error('Error fetching post:', error);
     return null;
   }
 }
@@ -76,12 +71,10 @@ export async function getPages(): Promise<WordPressPage[]> {
   try {
     const response = await fetch(`${WP_API_BASE}/pages?_embed`);
     if (!response.ok) {
-      console.error('Error fetching pages:', response.statusText);
       return [];
     }
     return await response.json();
   } catch (error) {
-    console.error('Error connecting to WordPress:', error);
     return [];
   }
 }
@@ -99,7 +92,6 @@ export async function getPage(id: number): Promise<WordPressPage | null> {
     }
     return await response.json();
   } catch (error) {
-    console.error('Error fetching page:', error);
     return null;
   }
 }
@@ -114,7 +106,6 @@ export async function getCustomPosts(postType: string, limit: number = 10): Prom
   try {
     const response = await fetch(`${WP_API_BASE}/${postType}?_embed&per_page=${limit}`);
     if (!response.ok) {
-      console.error(`Error fetching ${postType}:`, response.statusText);
       // Fallback to static data if available
       if (postType === 'experiencia') {
         return getStaticExperienceData(limit);
@@ -123,7 +114,6 @@ export async function getCustomPosts(postType: string, limit: number = 10): Prom
     }
     return await response.json();
   } catch (error) {
-    console.error(`Error connecting to WordPress for ${postType}:`, error);
     // Fallback to static data if available
     if (postType === 'experiencia') {
       return getStaticExperienceData(limit);
@@ -142,12 +132,10 @@ export async function getTaxonomyTerms(taxonomy: string, limit: number = 100): P
   try {
     const response = await fetch(`${WP_API_BASE}/${taxonomy}?per_page=${limit}`);
     if (!response.ok) {
-      console.error(`Error fetching taxonomy ${taxonomy}:`, response.statusText);
       return [];
     }
     return await response.json();
   } catch (error) {
-    console.error(`Error connecting to WordPress for taxonomy ${taxonomy}:`, error);
     return [];
   }
 }
@@ -167,7 +155,6 @@ export async function getTermName(taxonomy: string, termId: number): Promise<str
     const term = await response.json();
     return term.name || null;
   } catch (error) {
-    console.error(`Error fetching term ${termId} from ${taxonomy}:`, error);
     return null;
   }
 }
@@ -281,7 +268,6 @@ async function getStaticExperienceData(limit: number): Promise<any[]> {
     // Import the static data
     const staticData = await import('../data/wordpress-data.json');
     if (staticData.default?.experiencias && staticData.default.experiencias.length > 0) {
-      console.log(`✅ Using static WordPress data (${staticData.default.experiencias.length} experiencias)`);
       // Resolve taxonomy IDs to actual names
       const resolvedData = staticData.default.experiencias
         .slice(0, limit)
@@ -290,7 +276,7 @@ async function getStaticExperienceData(limit: number): Promise<any[]> {
       return resolvedData;
     }
   } catch (error) {
-    console.log('⚠️ Could not load static WordPress data:', error);
+    // Continue to fallback
   }
 
   // If static data loading fails, generate minimal fallback
@@ -321,6 +307,5 @@ async function getStaticExperienceData(limit: number): Promise<any[]> {
     });
   }
   
-  console.log('⚠️ Using minimal fallback data');
   return experiences;
 }

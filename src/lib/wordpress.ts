@@ -11,11 +11,8 @@ import experienciasData from '../data/experiencias.json';
  */
 export async function getCustomPosts(postType: string, limit: number = 10): Promise<any[]> {
   if (postType !== 'experiencia') {
-    console.log(`❌ PostType '${postType}' no soportado`);
     return [];
   }
-  
-  console.log(`✅ Usando datos definitivos (${experienciasData.experiencias.length} experiencias)`);
   
   // Transformar al formato que espera Astro
   const experienciasFormateadas = experienciasData.experiencias.slice(0, limit).map(exp => ({
@@ -43,7 +40,6 @@ export async function getCustomPosts(postType: string, limit: number = 10): Prom
  * @returns Promise<any[]>
  */
 export async function getTaxonomyTerms(taxonomy: string, limit: number = 100): Promise<any[]> {
-  console.log(`ℹ️ Taxonomías ya resueltas en datos definitivos`);
   return [];
 }
 
@@ -54,7 +50,6 @@ export async function getTaxonomyTerms(taxonomy: string, limit: number = 100): P
  */
 export async function resolveTaxonomyTerms(acfData: any): Promise<any> {
   // Los datos ya están resueltos en el JSON definitivo
-  console.log(`ℹ️ Taxonomías ya resueltas`);
   return {
     municipio: acfData?.municipio || 'Pacífico',
     departamento: acfData?.departamento || 'Colombiano', 

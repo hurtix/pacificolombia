@@ -68,10 +68,8 @@ export function parseNarratives(markdownContent: string): ExperienceNarrative[] 
         contentEn: contentEn || undefined
       });
       
-      console.log(`Parsed EXP-${expNumber.toString().padStart(3, '0')}: "${title}" (Spanish: ${content.length} chars, English: ${contentEn.length} chars)`);
-      
     } catch (error) {
-      console.error(`Error parsing EXP ${match[1]}:`, error);
+      // Error parsing
     }
   }
   
@@ -95,35 +93,18 @@ export function getNarrativeByExpNumber(narratives: ExperienceNarrative[], expNu
  */
 export async function loadNarratives(): Promise<ExperienceNarrative[]> {
   try {
-    console.log('=== Loading narratives from file system ===');
-    
     // Read from src/content directory (proper location for Astro content)
     const filePath = path.join(process.cwd(), 'src', 'content', 'narrativas-individuales.md');
-    console.log('Reading from path:', filePath);
     
     if (!fs.existsSync(filePath)) {
-      console.error('File not found:', filePath);
       return [];
     }
     
     const markdownContent = fs.readFileSync(filePath, 'utf-8');
-    console.log('Markdown content loaded, length:', markdownContent.length);
-    console.log('First 200 chars:', markdownContent.substring(0, 200));
-    
     const parsed = parseNarratives(markdownContent);
-    console.log('Parsed narratives count:', parsed.length);
-    
-    if (parsed.length > 0) {
-      console.log('First narrative:', {
-        expNumber: parsed[0].expNumber,
-        title: parsed[0].title,
-        contentLength: parsed[0].content.length
-      });
-    }
     
     return parsed;
   } catch (error) {
-    console.error('Error loading narratives:', error);
     return [];
   }
 }
@@ -137,7 +118,6 @@ export async function loadGeneralNarrative(): Promise<string> {
     const filePath = path.join(process.cwd(), 'src', 'content', 'narrativa-general.md');
     
     if (!fs.existsSync(filePath)) {
-      console.error('General narrative file not found:', filePath);
       return '';
     }
     
@@ -145,7 +125,6 @@ export async function loadGeneralNarrative(): Promise<string> {
     // Clean up the markdown formatting
     return content.replace(/\*\*/g, '').trim();
   } catch (error) {
-    console.error('Error loading general narrative:', error);
     return '';
   }
 }

@@ -37,7 +37,6 @@ export async function getExperienciasMapping() {
       getExperienciaId: (expNumber: number) => experienciasMapping[expNumber]
     };
   } catch (error) {
-    console.log('Error fetching experiencias mapping:', error);
     return {
       experienciasSorted: [],
       experienciasMapping: {},

@@ -384,14 +384,6 @@ class SliderManager {
 
 // Función para inicializar el slider
 export function initializeSlider(sliderData) {
-  console.log('=== DATOS DESDE SERVIDOR (YA RANDOMIZADOS) ===');
-  console.log(`Total experiencias randomizadas: ${sliderData.length}`);
-  console.log('Primera experiencia (debe coincidir con HTML inicial):');
-  console.log(`- ${sliderData[0].title} ${sliderData[0].title2} - ${sliderData[0].place} [EXP-${sliderData[0].expNumber}]`);
-  
-  sliderData.forEach((exp, i) => {
-    console.log(`${i + 1}. ${exp.title} ${exp.title2} - ${exp.place} [EXP-${exp.expNumber}]`);
-  });
 
   return new SliderManager(sliderData);
 }

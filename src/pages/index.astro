@@ -83,14 +83,7 @@ const placeholderSlide = {
     // RANDOMIZAR en el cliente cada vez que carga la página
     const data = shuffleArray(allExperiences).slice(0, 6);
     
-    // Debug: Verificar randomización
-    console.log('🎲 === RANDOMIZACIÓN EN CLIENTE (CADA VEZ DIFERENTE) ===');
-    console.log(`Total experiencias disponibles: ${allExperiences.length}`);
-    console.log(`Experiencias randomizadas para slider: ${data.length}`);
-    console.log('Experiencias seleccionadas:');
-    data.forEach((exp, i) => {
-      console.log(`${i + 1}. ${exp.place} - EXP-${exp.expNumber}: ${exp.title}`);
-    });
+    // Randomizar experiencias sin logs
 
     const _ = (id)=>document.getElementById(id)
     const cards = data.map((i, index)=>`<div class="card" id="card${index}" style="background-image:url(${i.image})"  ></div>`).join('')
@@ -260,26 +253,16 @@ const placeholderSlide = {
         const prevBtn = document.querySelector('.arrow-left');
         
         nextBtn.onclick = () => {
-          console.log(`🔄 Next clicked - isPlaying: ${isPlaying}, clicks: ${clicks}`);
           if (!isPlaying && clicks === 0) {
             clicks = 1;
-            step().then(() => {
-              console.log('✅ Step completed, clicks reset to 0');
-            });
-          } else {
-            console.log('❌ Next blocked - autoplay active or animation in progress');
+            step();
           }
         };
         
         prevBtn.onclick = () => {
-          console.log(`🔄 Prev clicked - isPlaying: ${isPlaying}, clicks: ${clicks}`);
           if (!isPlaying && clicks === 0) {
             clicks = 1;
-            stepBack().then(() => {
-              console.log('✅ StepBack completed, clicks reset to 0');
-            });
-          } else {
-            console.log('❌ Prev blocked - autoplay active or animation in progress');
+            stepBack();
           }
         };
         
@@ -324,7 +307,6 @@ const placeholderSlide = {
           }
           
           updateNavigationState();
-          console.log('🎮 Autoplay:', isPlaying ? 'ACTIVADO' : 'PAUSADO');
         };
       }, startDelay * 1000 + 300);
       
@@ -563,11 +545,8 @@ const placeholderSlide = {
 
     function loop() {
       if (!isPlaying) {
-        console.log('🎮 Loop pausado');
         return;
       }
-      
-      console.log('🎮 Iniciando ciclo de autoplay...');
       
       // Primera animación del indicador
       gsap.to(".indicator", {
@@ -605,7 +584,6 @@ const placeholderSlide = {
         let img = new Image();
         img.onload = () => resolve({ success: true, src });
         img.onerror = () => {
-          console.warn(`Error loading image: ${src}`);
           resolve({ success: false, src });
         };
         img.src = src;
@@ -615,25 +593,14 @@ const placeholderSlide = {
     async function loadImages() {
       const promises = data.map(({ image }) => loadImage(image));
       const results = await Promise.all(promises);
-      
-      const failedImages = results.filter(r => !r.success);
-      if (failedImages.length > 0) {
-        console.warn(`${failedImages.length} imágenes no se pudieron cargar:`, failedImages.map(r => r.src));
-      }
-      
-      console.log(`✅ ${results.filter(r => r.success).length}/${results.length} imágenes cargadas correctamente`);
       return results;
     }
 
     async function start() {
       try {
-        console.log('🖼️ Iniciando carga de imágenes...');
         await loadImages();
-        console.log('🚀 Iniciando slider...');
         init();
       } catch (error) {
-        console.error("Error crítico al cargar imágenes:", error);
-        console.log('⚠️ Iniciando slider a pesar del error...');
         init();
       }
     }
@@ -647,22 +614,9 @@ const placeholderSlide = {
         gsap.killTweensOf([getCard(index), getCardContent(index), getSliderItem(index)]);
       });
       gsap.killTweensOf(".progress-sub-foreground");
-      console.log('🛑 Todas las animaciones GSAP detenidas');
     }
 
-    // Agregar listener para ver cambios en el DOM
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
-          const el = mutation.target;
-          if (el.classList.contains('card')) {
-            console.log(`Card ${el.id} updated:`, el.style.cssText);
-          }
-        }
-      });
-    });
 
-    observer.observe(document.getElementById('slider'), { subtree: true, attributes: true, attributeFilter: ['style'] });
 
     start();
   </script>
