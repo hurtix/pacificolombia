@@ -1,6 +1,9 @@
 // WordPress API configuration
-const WORDPRESS_URL = 'http://pacificolombia.local/'; // URL de tu instalación Local by Flywheel
+const WORDPRESS_URL = import.meta.env.WORDPRESS_URL || 'http://pacificolombia.local/';
 const WP_API_BASE = `${WORDPRESS_URL}/wp-json/wp/v2`;
+const IS_STATIC_MODE = import.meta.env.PUBLIC_STATIC_MODE === 'true' || !WORDPRESS_URL;
+
+console.log('WordPress config:', { WORDPRESS_URL, IS_STATIC_MODE });
 
 export interface WordPressPost {
   id: number;
@@ -108,15 +111,28 @@ export async function getPage(id: number): Promise<WordPressPage | null> {
  * @returns Promise<any[]>
  */
 export async function getCustomPosts(postType: string, limit: number = 10): Promise<any[]> {
+  // En modo estático, usar datos de fallback para experiencias
+  if (IS_STATIC_MODE && postType === 'experiencia') {
+    return getStaticExperienceData(limit);
+  }
+  
   try {
     const response = await fetch(`${WP_API_BASE}/${postType}?_embed&per_page=${limit}`);
     if (!response.ok) {
       console.error(`Error fetching ${postType}:`, response.statusText);
+      // Fallback to static data if available
+      if (postType === 'experiencia') {
+        return getStaticExperienceData(limit);
+      }
       return [];
     }
     return await response.json();
   } catch (error) {
     console.error(`Error connecting to WordPress for ${postType}:`, error);
+    // Fallback to static data if available
+    if (postType === 'experiencia') {
+      return getStaticExperienceData(limit);
+    }
     return [];
   }
 }
@@ -204,4 +220,40 @@ export async function resolveTaxonomyTerms(taxonomyData: any): Promise<any> {
   }
   
   return resolved;
+}
+
+/**
+ * Generate static experience data when WordPress is not available
+ * @param limit Number of experiences to generate
+ * @returns Promise<any[]>
+ */
+async function getStaticExperienceData(limit: number): Promise<any[]> {
+  const experiences = [];
+  
+  // Generar datos basados en las narrativas disponibles (EXP-001 a EXP-020)
+  for (let i = 1; i <= Math.min(limit, 20); i++) {
+    const expNumber = i.toString().padStart(3, '0');
+    experiences.push({
+      id: i,
+      title: {
+        rendered: `EXP-${expNumber} - EXPERIENCIA ${i}`
+      },
+      excerpt: {
+        rendered: `<p>Descubre una experiencia única en el Pacífico colombiano con la EXP-${expNumber}.</p>`
+      },
+      content: {
+        rendered: `<p>Esta es una experiencia del Pacífico colombiano que te conectará con la naturaleza, la cultura y las tradiciones locales.</p>`
+      },
+      acf: {
+        municipio: i <= 10 ? 'Buenaventura' : 'Tumaco',
+        departamento: i <= 10 ? 'Valle del Cauca' : 'Nariño',
+        tipologia: ['Cultural', 'Naturaleza'][i % 2],
+        estado: true
+      },
+      expNumber: i,
+      date: new Date().toISOString()
+    });
+  }
+  
+  return experiences;
 }

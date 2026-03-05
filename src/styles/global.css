@@ -143,6 +143,7 @@ body {
   font-size: 36px;
   max-width: 75%;
   line-height: 1;
+  display: none;
 }
 .details .title-box-1,
 .details .title-box-2 {
