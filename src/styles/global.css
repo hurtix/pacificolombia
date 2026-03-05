@@ -45,6 +45,18 @@
   overflow: hidden;
 }
 
+/* Contenedor del slider - prevenir overflow horizontal */
+#slider {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
 .card::before {
   position: absolute;
   content: '';
@@ -279,6 +291,8 @@ nav > div:last-child > .active:after {
   display: inline-flex;
   align-items: center;
   gap: 16px;
+  max-width: 100vw;
+  overflow: hidden;
 }
 .pagination > .arrow {
   z-index: 60;
@@ -290,6 +304,7 @@ nav > div:last-child > .active:after {
   place-items: center;
   cursor: pointer;
   transition: all 0.3s ease;
+  flex-shrink: 0;
 }
 .pagination > .arrow:hover {
   border-color: #ffffff99;
@@ -312,12 +327,14 @@ nav > div:last-child > .active:after {
 .pagination .progress-sub-container {
   z-index: 60;
   width: 500px;
+  max-width: 40vw;
   height: 50px;
   display: flex;
   align-items: center;
+  flex-shrink: 1;
 }
 .pagination .progress-sub-container .progress-sub-background {
-  width: 500px;
+  width: 100%;
   height: 3px;
   background-color: #ffffff33;
 }
@@ -331,6 +348,7 @@ nav > div:last-child > .active:after {
   overflow: hidden;
   z-index: 60;
   position: relative;
+  flex-shrink: 0;
 }
 .pagination .slide-numbers .item {
   width: 50px;
@@ -355,6 +373,13 @@ nav > div:last-child > .active:after {
   z-index: 100;
 }
 
+/* Ocultar cover en mobile para mejorar visibilidad */
+@media (max-width: 1023px) {
+  .cover {
+    display: none;
+  }
+}
+
 .pagination .autoplay-center  {
   z-index: 60;
   display: flex;
@@ -370,3 +395,179 @@ nav > div:last-child > .active:after {
   background-color: #f0f0d2;
   background-attachment: fixed;
 }
+
+/* ========== RESPONSIVE MEDIA QUERIES ========== */
+
+/* Mobile: < 640px */
+@media (max-width: 639px) {
+  .details {
+    top: 20%;
+    left: 0;
+  }
+  
+  .details .title-1 {
+    font-size: 32px;
+  }
+  
+  .details .title-2 {
+    font-size: 18px;
+  }
+  
+  .details > .desc {
+    font-size: 14px;
+  }
+  
+  .details > .cta {
+    width: auto;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .details > .cta > .discover,
+  .details > .cta > .view-all {
+    width: 100%;
+    font-size: 14px;
+    margin-left: 0;
+  }
+  
+  .pagination {
+    gap: 8px;
+  }
+  
+  .pagination > .arrow {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .pagination > .arrow svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .pagination .slide-numbers {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .pagination .slide-numbers .item {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+}
+
+/* Tablet: 640px - 1023px */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .details {
+    top: 22%;
+    left: 24px;
+  }
+  
+  .details .title-1 {
+    font-size: 48px;
+  }
+  
+  .details .title-2 {
+    font-size: 24px;
+  }
+  
+  .details > .desc {
+    font-size: 16px;
+  }
+  
+  .details > .cta {
+    width: auto;
+    flex-direction: row;
+    gap: 12px;
+  }
+  
+  .details > .cta > .discover,
+  .details > .cta > .view-all {
+    font-size: 16px;
+    margin-left: 0;
+  }
+  
+  .pagination {
+    gap: 12px;
+  }
+  
+  .pagination > .arrow {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .pagination > .arrow svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .pagination .slide-numbers {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .pagination .slide-numbers .item {
+    width: 45px;
+    height: 45px;
+    font-size: 28px;
+  }
+}
+
+/* Desktop: >= 1024px (default/desktop) */
+@media (min-width: 1024px) {
+  .details {
+    top: 240px;
+    left: 60px;
+  }
+  
+  .details .title-1 {
+    font-size: 72px;
+  }
+  
+  .details .title-2 {
+    font-size: 36px;
+  }
+  
+  .details > .desc {
+    font-size: 22px;
+  }
+  
+  .details > .cta {
+    width: 500px;
+    flex-direction: row;
+    gap: 16px;
+  }
+  
+  .details > .cta > .discover,
+  .details > .cta > .view-all {
+    font-size: 18px;
+    margin-left: 0;
+  }
+  
+  .pagination {
+    gap: 16px;
+  }
+  
+  .pagination > .arrow {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .pagination > .arrow svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .pagination .slide-numbers {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .pagination .slide-numbers .item {
+    width: 50px;
+    height: 50px;
+    font-size: 32px;
+  }
+}
+
+

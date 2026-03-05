@@ -11,23 +11,23 @@ export interface Props {
 const { place, title, title2, description, id, isActive = false } = Astro.props;
 ---
 
-<div class={`details space-y-8 text-white w-3/4 ${isActive ? 'opacity-1' : 'opacity-0'}`} id={id}>
+<div class={`details space-y-4 sm:space-y-6 md:space-y-8 text-white w-full sm:w-4/5 md:w-3/4 px-4 sm:px-0 ${isActive ? 'opacity-1' : 'opacity-0'}`} id={id}>
   <div class="place-box">
-    <div class="text text-xl py-4 uppercase">{place}</div>
+    <div class="text text-xs sm:text-sm md:text-xl py-2 sm:py-3 md:py-4 uppercase">{place}</div>
   </div>
   <div class="title-box-1">
-    <div class="title-1 line-clamp-2">{title}</div>
+    <div class="title-1 line-clamp-2 text-3xl sm:text-5xl md:text-6xl lg:text-7xl">{title}</div>
   </div>
   <div class="title-box-2">
-    <div class="title-2">{title2}</div>
+    <div class="title-2 text-sm sm:text-lg md:text-2xl lg:text-3xl">{title2}</div>
   </div>
-  <div class="desc w-1/2">
+  <div class="desc w-full sm:w-3/4 md:w-1/2 text-xs sm:text-sm md:text-base lg:text-lg">
     {description}
   </div>
-  <div class="cta">
-    <a href="/experiencias" class="view-all">
+  <div class="cta flex flex-col sm:flex-row gap-2 sm:gap-4">
+    <a href="/experiencias" class="view-all text-xs sm:text-sm md:text-base">
       Descubre las 100 
     </a>
-    <button class="discover">Explorar</button>
+    <button class="discover text-xs sm:text-sm md:text-base">Explorar</button>
   </div>
 </div>
