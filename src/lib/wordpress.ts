@@ -230,8 +230,8 @@ export async function resolveTaxonomyTerms(taxonomyData: any): Promise<any> {
 async function getStaticExperienceData(limit: number): Promise<any[]> {
   const experiences = [];
   
-  // Generar datos basados en las narrativas disponibles (EXP-001 a EXP-020)
-  for (let i = 1; i <= Math.min(limit, 20); i++) {
+  // Generar datos para hasta 100 experiencias
+  for (let i = 1; i <= Math.min(limit, 100); i++) {
     const expNumber = i.toString().padStart(3, '0');
     experiences.push({
       id: i,
@@ -245,9 +245,9 @@ async function getStaticExperienceData(limit: number): Promise<any[]> {
         rendered: `<p>Esta es una experiencia del Pacífico colombiano que te conectará con la naturaleza, la cultura y las tradiciones locales.</p>`
       },
       acf: {
-        municipio: i <= 10 ? 'Buenaventura' : 'Tumaco',
-        departamento: i <= 10 ? 'Valle del Cauca' : 'Nariño',
-        tipologia: ['Cultural', 'Naturaleza'][i % 2],
+        municipio: ['Buenaventura', 'Tumaco', 'Guapi', 'Nuquí', 'Bahía Solano'][i % 5],
+        departamento: ['Valle del Cauca', 'Nariño', 'Cauca', 'Chocó'][i % 4], 
+        tipologia: ['Cultural', 'Naturaleza', 'Gastronómico', 'Aventura'][i % 4],
         estado: true
       },
       expNumber: i,
