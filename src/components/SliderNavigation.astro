@@ -17,6 +17,27 @@
       />
     </svg>
   </div>
+  
+  <!-- Botón de autoplay en el centro -->
+  <div class="autoplay-center">
+    <button 
+      id="autoplay-toggle" 
+      class="bg-white/20 backdrop-blur-sm text-white px-3 py-2 rounded-full hover:bg-white/30 transition-all duration-300 flex items-center gap-2 text-sm"
+    >
+      <span id="play-icon" class="hidden">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M8 5v14l11-7z"/>
+        </svg>
+      </span>
+      <span id="pause-icon">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+        </svg>
+      </span>
+      <span id="autoplay-text" class="hidden sm:inline">PAUSE</span>
+    </button>
+  </div>
+  
   <div class="arrow arrow-right">
     <svg
       xmlns="http://www.w3.org/2000/svg"

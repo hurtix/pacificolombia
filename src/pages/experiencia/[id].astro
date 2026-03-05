@@ -74,6 +74,18 @@ if (wpId) {
 // Load general narrative
 const generalNarrative = await loadGeneralNarrative();
 
+// Get narratives for previous and next experiences for navigation
+let prevNarrative = null;
+let nextNarrative = null;
+
+if (expNumber > 1) {
+  prevNarrative = getNarrativeByExpNumber(narratives, expNumber - 1);
+}
+
+if (expNumber < 100) {
+  nextNarrative = getNarrativeByExpNumber(narratives, expNumber + 1);
+}
+
 const imageUrl = getExperienceImagePath(expNumber);
 const pageTitle = narrative ? `${narrative.title} - EXP-${id}` : `Experiencia ${id}`;
 const pageDescription = narrative ? narrative.subtitle : `Descubre la experiencia ${id} en el Pacífico colombiano`;
@@ -97,18 +109,20 @@ const pageDescription = narrative ? narrative.subtitle : `Descubre la experienci
     <div class="relative z-10 h-full flex items-center justify-center">
       <div class="text-center text-white max-w-4xl px-4">
         <div class="mb-4">
+          <span class="inline-block uppercase tracking-widest border-b-2 border-white/80 mb-8">
           {experienceData && experienceData.resolvedTaxonomy?.tipologia ? 
                   (Array.isArray(experienceData.resolvedTaxonomy.tipologia) ? 
                     experienceData.resolvedTaxonomy.tipologia.join(', ') : 
                     experienceData.resolvedTaxonomy.tipologia) : 
                   ''}
+                  </span>
           <!-- <span class="inline-block px-4 py-2 bg-blue-600/80 rounded-full text-sm font-semibold tracking-wider">
             EXP-{id}
           </span> -->
         
         {narrative ? (
           <>
-            <h1 class="text-6xl md:text-6xl font-bold mb-6 leading-tight tk-ciclo-display">
+            <h1 class="text-6xl md:text-6xl font-bold mb-6 leading-tight tk-ciclo-display uppercase">
               {narrative.title}
             </h1>
             <p class="text-xl md:text-3xl font-light mb-8">
@@ -116,7 +130,7 @@ const pageDescription = narrative ? narrative.subtitle : `Descubre la experienci
             </p>
           </>
         ) : (
-          <h1 class="text-6xl md:text-6xl font-bold mb-6 leading-tight tk-ciclo-display">
+          <h1 class="text-6xl md:text-6xl font-bold mb-6 leading-tight tk-ciclo-display uppercase">
             Experiencia {id}
           </h1>
         )}
@@ -124,17 +138,12 @@ const pageDescription = narrative ? narrative.subtitle : `Descubre la experienci
         {experienceData && experienceData.resolvedTaxonomy && (
           <div class="flex flex-wrap gap-4 justify-center mt-8">
             {experienceData.resolvedTaxonomy?.municipio && experienceData.resolvedTaxonomy?.departamento && (
-              <span class="px-4 py-2 bg-white/20 rounded-full text-sm">
+              <span class="px-4 py-2 bg-white/20 rounded-full uppercase">
                 {Array.isArray(experienceData.resolvedTaxonomy.municipio) ? 
                       experienceData.resolvedTaxonomy.municipio[0] : 
                       experienceData.resolvedTaxonomy.municipio}, {Array.isArray(experienceData.resolvedTaxonomy.departamento) ? 
                       experienceData.resolvedTaxonomy.departamento[0] : 
                       experienceData.resolvedTaxonomy.departamento}
-              </span>
-            )}
-            {experienceData.resolvedTaxonomy?.estado !== undefined && (
-              <span class="px-4 py-2 bg-white/20 rounded-full text-sm">
-                🏷️ {experienceData.resolvedTaxonomy.estado ? 'Activo' : 'Inactivo'}
               </span>
             )}
           </div>
@@ -151,19 +160,20 @@ const pageDescription = narrative ? narrative.subtitle : `Descubre la experienci
       </div>
     </div>
   </section>
+  
 
   <!-- General Narrative Section -->
   <GeneralNarrative content={generalNarrative} />
 
   <!-- Experience Content -->
-  <section class="py-16 bg-white text-black">
-    <div class="container mx-auto px-4 max-w-7xl">
+  <section class="py-16 bg-white textura text-black mt-12">
+    <div class="container mx-auto p-16 max-w-7xl bg-white space-y-8">
       
       <!-- Experience Narrative -->
       {narrative && (
-        <div class="my-16 grid grid-cols-1 lg:grid-cols-2 gap-x-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-4">
           <div class="spanish">
-            <span class="text-sm border py-0.5 px-2 italic">
+            <span class="text-sm border py-0.5 px-2">
               ES
             </span>
             <div class="prose prose-lg max-w-none mt-6">
@@ -244,11 +254,14 @@ const pageDescription = narrative ? narrative.subtitle : `Descubre la experienci
       )} -->
 
 
+      <hr class="opacity-10">
+
+
       <!-- General Narrative Section -->
       {generalNarrative && (
-        <div class="border-t border-black/10 pt-16 my-64">
+        <div>
           <h3 class="text-3xl mb-6 text-black text-center uppercase">Sobre Destino Pacífico</h3>
-          <div class="prose prose-lg max-w-none text-justify">
+          <div class="prose prose-lg max-w-none">
             {generalNarrative.split('\n\n').map((paragraph) => (
               paragraph.trim() && (
                 <p class="mb-4 text-lg leading-relaxed">
@@ -270,12 +283,14 @@ const pageDescription = narrative ? narrative.subtitle : `Descubre la experienci
         {expNumber > 1 ? (
           <a 
             href={`/experiencia/${(expNumber - 1).toString().padStart(3, '0')}`}
-            class="inline-flex items-center py-8 justify-start text-2xl"
+            class="inline-flex items-center py-8 justify-start text-lg leading-none hover:text-gray-600 transition-colors"
           >
-            <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-6 h-6 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
             </svg>
-            EXP-{(expNumber - 1).toString().padStart(3, '0')}
+            <div class="text-left line-clamp-2">
+              {prevNarrative ? prevNarrative.title : `EXP-${(expNumber - 1).toString().padStart(3, '0')}`}
+            </div>
           </a>
         ) : (
           <div></div>
@@ -283,7 +298,7 @@ const pageDescription = narrative ? narrative.subtitle : `Descubre la experienci
 
         <a 
           href="/experiencias"
-          class="inline-flex items-center py-8 justify-center text-2xl border-l border-r border-black/10"
+          class="inline-flex items-center py-8 justify-center text-lg border-l border-r border-black/10 hover:text-gray-600 transition-colors"
         >
           VER TODAS
         </a>
@@ -291,12 +306,12 @@ const pageDescription = narrative ? narrative.subtitle : `Descubre la experienci
         {expNumber < 100 ? (
           <a 
             href={`/experiencia/${(expNumber + 1).toString().padStart(3, '0')}`}
-            class="inline-flex items-center py-8 justify-end text-2xl"
+            class="inline-flex items-center py-8 justify-end text-lg leading-none hover:text-gray-600 transition-colors"
           >
-            <hgroup>
-            <span>EXP-{(expNumber + 1).toString().padStart(3, '0')}</span>
-            </hgroup>
-            <svg class="w-6 h-6 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="text-right line-clamp-2">
+              {nextNarrative ? nextNarrative.title : `EXP-${(expNumber + 1).toString().padStart(3, '0')}`}
+            </div>
+            <svg class="w-6 h-6 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
           </a>

@@ -1,14 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import GeneralNarrative from '../components/GeneralNarrative.astro';
 import { getExperienciasMapping } from '../lib/experiencias-mapping';
-import { loadNarratives, getExperienceImagePath, loadGeneralNarrative } from '../lib/narratives-parser';
+import { loadNarratives, getExperienceImagePath } from '../lib/narratives-parser';
 import { resolveTaxonomyTerms } from '../lib/wordpress';
 
 // Load all data
 const { experienciasSorted } = await getExperienciasMapping();
 const narratives = await loadNarratives();
-const generalNarrative = await loadGeneralNarrative();
 
 // Create complete experience data by merging WordPress and narratives with resolved taxonomy
 const completeExperiences = await Promise.all(
@@ -25,30 +23,111 @@ const completeExperiences = await Promise.all(
   })
 );
 
+// Extract unique departments and municipalities for filters
+const departments = [...new Set(completeExperiences.map(exp => {
+  const dept = exp.resolvedTaxonomy?.departamento;
+  let deptValue = Array.isArray(dept) ? dept[0] : dept;
+  return typeof deptValue === 'string' ? deptValue : null;
+}).filter(Boolean))].sort();
+
+const municipalities = [...new Set(completeExperiences.map(exp => {
+  const mun = exp.resolvedTaxonomy?.municipio;
+  let munValue = Array.isArray(mun) ? mun[0] : mun;
+  return typeof munValue === 'string' ? munValue : null;
+}).filter(Boolean))].sort();
+
 
 ---
 
 <Layout title="Todas las Experiencias" description="Explora las 100 experiencias únicas del Pacífico colombiano. Descubre aventuras, cultura y naturaleza en cada rincón de esta región extraordinaria.">
 
+  <!-- Page Header -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center text-white">
+        <h1 class="text-4xl md:text-7xl font-black mb-6 tk-ciclo-display uppercase">100 Experiencias</h1>
+        <p class="text-xl md:text-2xl opacity-90">Descubre la diversidad y riqueza cultural a través de 100 experiencias únicas.  Explorar el Pacífico es acercarse a una región viva, diversa y en constante movimiento, que se revela plenamente cuando se escucha, se observa y se camina junto a quienes la habitan. </p>
+      </div>
+    </div>
+  </section>
 
+  <!-- Filters Section -->
+  <section class="py-8">
+    <div class="container mx-auto px-4">
+      <div class="max-w-7xl mx-auto bg-white/20 backdrop-blur-sm p-8 rounded-xl text-white">
+        <div class="flex flex-col md:flex-row gap-4 items-center justify-between">
+          <h2 class="text-xl font-semibold uppercase">Filtrar Experiencias</h2>
+          <div class="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+            <!-- Department Filter -->
+            <div class="min-w-[200px] uppercase">
+              <select 
+                id="department-filter" 
+                class="w-full uppercase px-4 py-2 border border-white rounded-lg focus:ring-2 focus:ring-fuchsia-500 focus:border-fuchsia-500"
+              >
+                <option value="">Todos los Departamentos</option>
+                {departments.map(dept => dept && (
+                  <option value={dept.toLowerCase()}>{dept}</option>
+                ))}
+              </select>
+            </div>
+            
+            <!-- Municipality Filter -->
+            <div class="min-w-[200px] uppercase">
+              <select 
+                id="municipality-filter" 
+                class="w-full uppercase px-4 py-2 border border-white rounded-lg focus:ring-2 focus:ring-fuchsia-500 focus:border-fuchsia-500"
+              >
+                <option value="">Todos los Municipios</option>
+                {municipalities.map(mun => mun && (
+                  <option value={mun.toLowerCase()}>{mun}</option>
+                ))}
+              </select>
+            </div>
+            
+            <!-- Clear Filters Button -->
+            <button 
+              id="clear-filters" 
+              class="px-6 py-2 bg-red-500 text-white rounded-lg hover:bg-red-700 transition-colors whitespace-nowrap"
+            >
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g fill="currentColor"><path d="M12 2.75c-.98 0-1.81.63-2.12 1.5a.75.75 0 0 1-1.42-.5 3.75 3.75 0 0 1 7.08 0 .75.75 0 0 1-1.42.5A2.25 2.25 0 0 0 12 2.75M2.75 6c0-.41.34-.75.75-.75h17a.75.75 0 0 1 0 1.5h-17A.75.75 0 0 1 2.75 6m3.17 2.45a.75.75 0 1 0-1.5.1l.46 6.95c.09 1.28.16 2.32.32 3.13.17.85.45 1.55 1.04 2.1.6.56 1.32.8 2.17.91.83.11 1.87.11 3.15.11h.88c1.29 0 2.32 0 3.15-.1a3.7 3.7 0 0 0 2.17-.91c.59-.55.87-1.26 1.04-2.1.16-.82.23-1.86.32-3.14l.46-6.95a.75.75 0 0 0-1.5-.1l-.45 6.9a26 26 0 0 1-.3 2.99c-.14.68-.33 1.05-.6 1.3-.27.26-.65.42-1.34.52-.71.09-1.65.09-3 .09h-.78c-1.35 0-2.29 0-3-.1-.7-.09-1.07-.25-1.34-.5-.27-.26-.46-.62-.6-1.3-.14-.72-.2-1.65-.3-3z"/><path d="M9.43 10.25c.4-.04.78.26.82.68l.5 5a.75.75 0 0 1-1.5.14l-.5-5a.75.75 0 0 1 .68-.82m5.82.82a.75.75 0 0 0-1.5-.14l-.5 5a.75.75 0 0 0 1.5.14z"/></g></svg>
+            </button>
+          </div>
+        </div>
+        
+        <!-- Results Counter -->
+        <!-- <div class="mb-4">
+          <p class="text-gray-600">
+            Mostrando <span id="results-count" class="font-semibold">{completeExperiences.length}</span> 
+            de {completeExperiences.length} experiencias
+          </p>
+        </div> -->
+      </div>
+    </div>
+  </section>
 
   <!-- Experiences Grid -->
-  <section class="py-16 bg-white">
+  <section class="py-16 min-h-[10768px]">
     <div class="container mx-auto px-4">
       <div class="max-w-7xl mx-auto">
+        <p class="text-white mb-6 text-end uppercase">
+            Mostrando <span id="results-count" class="font-semibold">{completeExperiences.length}</span> 
+            de {completeExperiences.length} experiencias
+          </p>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="experiences-grid">
           {completeExperiences.map((experience) => (
             <article 
               class="experience-card h-100 rounded-lg"
 
-              data-municipio={experience.resolvedTaxonomy?.municipio ? 
-                (Array.isArray(experience.resolvedTaxonomy.municipio) ? 
-                  experience.resolvedTaxonomy.municipio[0]?.toLowerCase() : 
-                  experience.resolvedTaxonomy.municipio.toLowerCase()) : ''}
-              data-departamento={experience.resolvedTaxonomy?.departamento ? 
-                (Array.isArray(experience.resolvedTaxonomy.departamento) ? 
-                  experience.resolvedTaxonomy.departamento[0]?.toLowerCase() : 
-                  experience.resolvedTaxonomy.departamento.toLowerCase()) : ''}
+              data-municipio={(() => {
+                const mun = experience.resolvedTaxonomy?.municipio;
+                const munValue = Array.isArray(mun) ? mun[0] : mun;
+                return typeof munValue === 'string' ? munValue.toLowerCase() : '';
+              })()}
+              data-departamento={(() => {
+                const dept = experience.resolvedTaxonomy?.departamento;
+                const deptValue = Array.isArray(dept) ? dept[0] : dept;
+                return typeof deptValue === 'string' ? deptValue.toLowerCase() : '';
+              })()}
             >
               <!-- Image -->
               <div class="overflow-hidden">
@@ -66,13 +145,13 @@ const completeExperiences = await Promise.all(
               <div class="flex flex-col justify-between relative p-4 text-white z-30 h-full">
                 <!-- Header -->
                 <div class="flex items-center justify-between mb-2">
-                  <span class="text-xs font-bold text-white border p-1">
+                  <span class="text-xs font-bold text-white border p-1 opacity-50">
                     {experience.paddedNumber}
                   </span>
                 </div>
                 <div>
                 <!-- Title -->
-                <h3 class="font-bold mb-2 line-clamp-2 text-lg">
+                <h3 class="font-bold mb-2 line-clamp-2 text-lg uppercase">
                   {experience.narrative?.title || experience.title?.rendered || `Experiencia ${experience.paddedNumber}`}
                 </h3>
                 
@@ -86,20 +165,19 @@ const completeExperiences = await Promise.all(
                 <div class="flex justify-between items-center">
                 <!-- Location -->
                 <div class="flex items-center text-sm">
-                  <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
-                  </svg>
-                  <span>
-                    {experience.resolvedTaxonomy?.municipio ? 
-                      (Array.isArray(experience.resolvedTaxonomy.municipio) ? 
-                        experience.resolvedTaxonomy.municipio[0] : 
-                        experience.resolvedTaxonomy.municipio) : 
-                      'Ubicación'}, 
-                    {experience.resolvedTaxonomy?.departamento ? 
-                      (Array.isArray(experience.resolvedTaxonomy.departamento) ? 
-                        experience.resolvedTaxonomy.departamento[0] : 
-                        experience.resolvedTaxonomy.departamento) : 
-                      'Pacífico'}
+                  <svg class="w-4 h-4 mr-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.25 10.14c0-4.9 3.9-8.89 8.75-8.89s8.75 4 8.75 8.9c0 2.36-.67 4.9-1.87 7.1a11.7 11.7 0 0 1-5.1 5.1 4.2 4.2 0 0 1-3.56 0 11.7 11.7 0 0 1-5.1-5.1 15 15 0 0 1-1.87-7.1M12 2.75c-4 0-7.25 3.3-7.25 7.4 0 2.09.6 4.39 1.68 6.38A10.3 10.3 0 0 0 10.85 21a2.7 2.7 0 0 0 2.3 0c1.8-.85 3.33-2.48 4.42-4.47a14 14 0 0 0 1.68-6.39c0-4.1-3.26-7.39-7.25-7.39m0 5a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5M8.25 10a3.75 3.75 0 1 1 7.5 0 3.75 3.75 0 0 1-7.5 0" fill="currentColor"/></svg>
+                  <span class="uppercase">
+                    {(() => {
+                      const mun = experience.resolvedTaxonomy?.municipio;
+                      const munValue = Array.isArray(mun) ? mun[0] : mun;
+                      const munDisplay = typeof munValue === 'string' ? munValue : 'Ubicación';
+                      
+                      const dept = experience.resolvedTaxonomy?.departamento;
+                      const deptValue = Array.isArray(dept) ? dept[0] : dept;
+                      const deptDisplay = typeof deptValue === 'string' ? deptValue : 'Pacífico';
+                      
+                      return `${munDisplay}, ${deptDisplay}`;
+                    })()}
                   </span>
                 </div>
                 
@@ -124,7 +202,7 @@ const completeExperiences = await Promise.all(
   <!-- Back to top -->
   <button 
     id="back-to-top" 
-    class="fixed bottom-8 right-8 w-12 h-12 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all opacity-0 pointer-events-none z-50"
+    class="fixed bottom-8 right-8 w-12 h-12 bg-fuchsia-950 text-white rounded-full shadow-lg hover:bg-fuchsia-900 transition-all opacity-0 pointer-events-none z-50"
   >
     <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
@@ -133,10 +211,16 @@ const completeExperiences = await Promise.all(
 </Layout>
 
 <script>
-  // Back to top functionality
+  // Filter and back to top functionality
   document.addEventListener('DOMContentLoaded', () => {
     const backToTop = document.getElementById('back-to-top');
+    const departmentFilter = document.getElementById('department-filter');
+    const municipalityFilter = document.getElementById('municipality-filter');
+    const clearFiltersBtn = document.getElementById('clear-filters');
+    const resultsCount = document.getElementById('results-count');
+    const experienceCards = document.querySelectorAll('.experience-card');
     
+    // Back to top functionality
     window.addEventListener('scroll', () => {
       if (window.pageYOffset > 300) {
         backToTop.classList.remove('opacity-0', 'pointer-events-none');
@@ -148,14 +232,106 @@ const completeExperiences = await Promise.all(
     backToTop?.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+
+    // Filter functionality
+    function applyFilters() {
+      const selectedDepartment = departmentFilter.value.toLowerCase();
+      const selectedMunicipality = municipalityFilter.value.toLowerCase();
+      let visibleCount = 0;
+
+      experienceCards.forEach(card => {
+        const cardDepartment = card.getAttribute('data-departamento') || '';
+        const cardMunicipality = card.getAttribute('data-municipio') || '';
+        
+        const matchesDepartment = !selectedDepartment || cardDepartment === selectedDepartment;
+        const matchesMunicipality = !selectedMunicipality || cardMunicipality === selectedMunicipality;
+        
+        if (matchesDepartment && matchesMunicipality) {
+          card.style.display = 'block';
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+          card.style.animation = 'fadeIn 0.3s ease-in';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+          card.style.opacity = '0';
+        }
+      });
+
+      // Update results counter (if you want to add it back)
+      if (resultsCount) {
+        resultsCount.textContent = visibleCount;
+      }
+      
+      // Maintain minimum height for grid container
+      const gridContainer = document.getElementById('experiences-grid');
+      if (gridContainer && visibleCount < 12) { // If less than 3 rows of 4 items
+        gridContainer.style.minHeight = '800px';
+      } else {
+        gridContainer.style.minHeight = 'auto';
+      }
+    }
+
+    // Update municipality options based on selected department
+    function updateMunicipalityOptions() {
+      const selectedDepartment = departmentFilter.value.toLowerCase();
+      const municipalityOptions = municipalityFilter.querySelectorAll('option:not(:first-child)');
+      
+      municipalityOptions.forEach(option => {
+        if (!selectedDepartment) {
+          option.style.display = 'block';
+          return;
+        }
+
+        // Find cards that match the selected department and collect their municipalities
+        const departmentMunicipalities = new Set();
+        experienceCards.forEach(card => {
+          const cardDepartment = card.getAttribute('data-departamento') || '';
+          if (cardDepartment === selectedDepartment) {
+            const cardMunicipality = card.getAttribute('data-municipio') || '';
+            if (cardMunicipality) {
+              departmentMunicipalities.add(cardMunicipality);
+            }
+          }
+        });
+
+        const optionValue = option.value.toLowerCase();
+        if (departmentMunicipalities.has(optionValue)) {
+          option.style.display = 'block';
+        } else {
+          option.style.display = 'none';
+          // Clear municipality selection if it's no longer available
+          if (municipalityFilter.value.toLowerCase() === optionValue) {
+            municipalityFilter.value = '';
+          }
+        }
+      });
+    }
+
+    // Event listeners for filters
+    departmentFilter.addEventListener('change', () => {
+      updateMunicipalityOptions();
+      applyFilters();
+    });
+
+    municipalityFilter.addEventListener('change', applyFilters);
+
+    // Clear filters functionality
+    clearFiltersBtn.addEventListener('click', () => {
+      departmentFilter.value = '';
+      municipalityFilter.value = '';
+      
+      // Show all municipality options
+      const municipalityOptions = municipalityFilter.querySelectorAll('option:not(:first-child)');
+      municipalityOptions.forEach(option => {
+        option.style.display = 'block';
+      });
+      
+      applyFilters();
+    });
+
+    // Initialize filters
+    applyFilters();
   });
 </script>
 
-<style>
-  .line-clamp-2 {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-</style>
