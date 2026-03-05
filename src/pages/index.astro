@@ -34,36 +34,62 @@ function decodeHtmlEntities(text: string): string {
   return decoded;
 }
 
+// Función para limpiar HTML tags y extraer solo texto
+function stripHtmlTags(html: string): string {
+  if (!html) return '';
+  return html
+    .replace(/<[^>]*>/g, '') // Remover todos los HTML tags
+    .replace(/\s+/g, ' ')    // Normalizar espacios en blanco
+    .trim();                 // Remover espacios al inicio y final
+}
+
+// Función para limpiar y procesar texto completamente
+function cleanText(text: string): string {
+  if (!text) return '';
+  const decoded = decodeHtmlEntities(String(text));
+  const stripped = stripHtmlTags(decoded);
+  return stripped;
+}
+
 // Procesar las experiencias para el slider
 const sliderData = await Promise.all(
   experiencesForRandom.map(async (exp, index) => {
     const resolvedTaxonomy = exp.acf ? await resolveTaxonomyTerms(exp.acf) : {};
     const narrative = narratives.find(n => n.expNumber === exp.expNumber);
     
-    // Formar la ubicación "Municipio, Departamento"
-    const municipio = resolvedTaxonomy.municipio?.[0] || '';
-    const departamento = resolvedTaxonomy.departamento?.[0] || '';
-    const location = municipio && departamento ? `${municipio}, ${departamento}` : 'Pacífico Colombiano';
+    // Formar la ubicación "Municipio, Departamento" con validación mejorada
+    const municipio = cleanText(resolvedTaxonomy.municipio?.[0] || '');
+    const departamento = cleanText(resolvedTaxonomy.departamento?.[0] || '');
+    const location = (municipio && departamento) ? `${municipio}, ${departamento}` : 'Pacífico Colombiano';
     
     // Usar el mismo sistema que /experiencias: narrative.title primero, luego title.rendered
     const rawMainTitle = narrative?.title || exp.title?.rendered || 'EXPERIENCIA';
     const rawSubTitle = narrative?.subtitle || municipio || 'PACÍFICO';
     
-    // Decodificar entidades HTML en los títulos
-    const mainTitle = decodeHtmlEntities(String(rawMainTitle));
-    const subTitle = decodeHtmlEntities(String(rawSubTitle));
+    // Limpiar completamente títulos y descripciones
+    const mainTitle = cleanText(rawMainTitle);
+    const subTitle = cleanText(rawSubTitle);
+    const description = cleanText(exp.excerpt?.rendered || 'Descubre esta increíble experiencia en el Pacífico colombiano.');
     
     return {
       place: location,
       title: mainTitle.toUpperCase(),
       title2: subTitle.toUpperCase(),
-      description: decodeHtmlEntities(exp.excerpt?.rendered || 'Descubre esta increíble experiencia en el Pacífico colombiano.'),
+      description: description,
       image: getExperienceImagePath(exp.expNumber || index + 1),
       expNumber: String(exp.expNumber || index + 1).padStart(3, '0'),
       wpId: exp.id
     };
   })
 );
+
+// Debug: Información detallada para comparar local vs producción
+console.log('=== DEBUG SLIDER DATA ===');
+console.log(`Total experiencias procesadas: ${sliderData.length}`);
+sliderData.slice(0, 3).forEach((exp, i) => {
+  console.log(`${i + 1}. PLACE: "${exp.place}" | TITLE: "${exp.title}" | DESC length: ${exp.description.length}`);
+});
+console.log('=== FIN DEBUG ===');
 ---
 
 <Layout title="Destino Pacífico" description="Explora las experiencias únicas del Pacífico colombiano através de un slider interactivo" isHome={true}>
