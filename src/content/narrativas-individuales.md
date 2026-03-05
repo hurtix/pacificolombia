@@ -2162,64 +2162,20 @@ their way back.
 
 **EXP 040 - DESCUBRE JURUBIRÁ - Esencia Pacífica**
 
-Nuquí custodia celosamente una de las joyas más preciadas y escondidas del
+Nuquí custodia celosamente una de las joyas más preciadas y escondidas del Pacífico colombiano. Jurubirá se vive entre cuevas húmedas y manglares que se enamoraron de estas tierras y echaron sus raíces aquí. Descubre Jurubirá es una experiencia donde la selva se abraza con el mar.
 
-Pacífico colombiano. Jurubirá se vive entre cuevas húmedas y manglares que se
+Vivirás una travesía guiada por los habitantes de esta comunidad, quienes te revelarán sus saberes ancestrales más preciados. Caminarás entre la espesa vegetación que te arropa y recorrerás esteros en canoas tradicionales, descubriendo un ecosistema donde tasqueros, piangüas y loras mangleras tejen la vida.
 
-enamoraron de estas tierras y echaron sus raíces aquí. Descubre Jurubirá es una
+Compartirás alimentos que nutren el alma: pescado secado al sol o ahumado con leña, preparado en un ritual que protege la memoria del Pacífico. Al atardecer, las hamacas se mecerán con el viento y las historias alrededor de una fogata te mostrarán que este viaje trasciende lo espiritual.
 
-experiencia donde la selva se abraza con el mar.
-
-Vivirás una travesía guiada por los habitantes de esta comunidad, quienes te
-
-revelarán sus saberes ancestrales más preciados. Caminarás entre la espesa
-
-vegetación que te arropa y recorrerás esteros en canoas tradicionales, descubriendo
-
-un ecosistema donde tasqueros, piangüas y loras mangleras tejen la vida.
-
-Compartirás alimentos que nutren el alma: pescado secado al sol o ahumado con
-
-leña, preparado en un ritual que protege la memoria del Pacífico. Al atardecer,
-
-las hamacas se mecerán con el viento y las historias alrededor de una fogata te
-
-mostrarán que este viaje trasciende lo espiritual.
-
-Al irte, llevarás contigo una nueva forma de habitar el mundo, porque quien
-
-descubre Jurubirá descubre también su propia esencia.
+Al irte, llevarás contigo una nueva forma de habitar el mundo, porque quien descubre Jurubirá descubre también su propia esencia.
 
 EN.
 
-Nuquí guards one of the most treasured and hidden gems of the Colombian
+Nuquí guards one of the most treasured and hidden gems of the Colombian Pacific coast. Jurubirá is a place shaped by humid caves and mangroves that fell in love with this land and chose to root themselves here. Descubre Jurubirá is an experience where the jungle embraces the sea.
 
-Pacific coast. Jurubirá is a place shaped by humid caves and mangroves that
+You will embark on a journey guided by the inhabitants of this community, who will reveal to you their most treasured ancestral knowledge. You will walk through dense vegetation that shelters you and navigate esteros in traditional canoes, discovering an ecosystem where tasqueros, piangüas, and loras mangleras weave life together.
 
-fell in love with this land and chose to root themselves here. Descubre Jurubirá
+You will share foods that nourish the soul: sun-dried fish or fish smoked over firewood, prepared in a ritual that safeguards the Pacific’s memory. At sunset, the hammocks will sway with the wind, and the stories shared around a bonfire will show you that this journey transcends the spiritual.
 
-is an experience where the jungle embraces the sea.
-
-You will embark on a journey guided by the inhabitants of this community,
-
-who will reveal to you their most treasured ancestral knowledge. You will walk
-
-through dense vegetation that shelters you and navigate esteros in traditional
-
-canoes, discovering an ecosystem where tasqueros, piangüas, and loras mangleras
-
-weave life together.
-
-You will share foods that nourish the soul: sun-dried fish or fish smoked over
-
-firewood, prepared in a ritual that safeguards the Pacific’s memory. At sunset,
-
-the hammocks will sway with the wind, and the stories shared around a bonfire
-
-will show you that this journey transcends the spiritual.
-
-When it is time to leave, you will return home with a renewed way of experiencing
-
-the world, because those who discover Jurubirá also discover something essential
-
-within themselves.
+When it is time to leave, you will return home with a renewed way of experiencing the world, because those who discover Jurubirá also discover something essential within themselves.

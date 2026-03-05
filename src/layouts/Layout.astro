@@ -10,6 +10,7 @@ const { title, description = "Descubre la belleza del Pacífico colombiano" } = 
 const currentPath = Astro.url.pathname;
 const isHome = currentPath === '/';
 const isExperiencias = currentPath === '/experiencias' || currentPath.startsWith('/experiencias/');
+const isSingle = currentPath.startsWith('/experiencia/');
 
 import '../styles/global.css';
 import FloatingNav from '../components/FloatingNav.astro';
@@ -29,7 +30,11 @@ import FloatingNav from '../components/FloatingNav.astro';
   </head>
   <body class={`min-h-screen font-body ${isHome ? 'overflow-hidden' : ''} ${isExperiencias ? 'bg-[linear-gradient(to_bottom,_theme(colors.fuchsia.950)_0%,_theme(colors.fuchsia.50)_10%,_theme(colors.fuchsia.50)_90%,_theme(colors.fuchsia.950)_100%)]' : ''}`}>
     <header class="bg-transparent text-white">
-      <nav class={`${isHome ? 'fixed' : 'relative'} left-0 top-0 right-0 z-50 flex items-center justify-center container mx-auto px-4`}>
+      <nav class={`left-0 top-0 right-0 z-50 flex items-center justify-center container mx-auto px-4 
+      ${isHome ? 'fixed' : ''}
+      ${isExperiencias ? 'relative' : ''}
+      ${isSingle ? 'absolute' : ''}
+      `}>
         <div class="flex items-center justify-center w-full">
           <a href="/">
             <img class="w-100 select-none" src="/images/logo.webp" alt="Destino Pacífico Logo">

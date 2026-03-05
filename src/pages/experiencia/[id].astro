@@ -93,7 +93,7 @@ const pageDescription = narrative ? narrative.subtitle : `Descubre la experienci
 
 <Layout title={pageTitle} description={pageDescription}>
   <!-- Hero Section with Image -->
-  <section class="absolute w-full top-0 h-screen bg-gray-900 overflow-hidden">
+  <section class="relative w-full top-0 h-screen bg-gray-900 overflow-hidden">
     <!-- Background Image -->
     <div class="absolute inset-0">
       <img 
@@ -162,11 +162,10 @@ const pageDescription = narrative ? narrative.subtitle : `Descubre la experienci
   </section>
   
 
-  <!-- General Narrative Section -->
-  <GeneralNarrative content={generalNarrative} />
+
 
   <!-- Experience Content -->
-  <section class="py-16 bg-white textura text-black mt-12">
+  <section class="py-16 bg-white textura text-black">
     <div class="container mx-auto p-16 max-w-7xl bg-white space-y-8">
       
       <!-- Experience Narrative -->
