@@ -363,10 +363,10 @@ nav > div:last-child > .active:after {
 }
 
 .textura {
-  background-color: white;
   background-image: url('/images/textura.webp');
   background-size: cover;
   background-position: center;
-  background-blend-mode: exclusion;
+  background-blend-mode: color-dodge;
+  background-color: #f0f0d2;
   background-attachment: fixed;
 }
