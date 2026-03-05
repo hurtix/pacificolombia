@@ -1,127 +1,58 @@
 ---
-import '../styles/global.css';
+import Layout from '../layouts/Layout.astro';
 import { getExperienciasMapping } from '../lib/experiencias-mapping';
-import { getExperienceImagePath } from '../lib/narratives-parser';
+import { getExperienceImagePath, loadNarratives } from '../lib/narratives-parser';
 import { resolveTaxonomyTerms } from '../lib/wordpress';
 
-// Obtener las primeras 6 experiencias
+// Obtener las primeras 6 experiencias Y las narrativas
 const { experienciasSorted } = await getExperienciasMapping();
+const narratives = await loadNarratives();
 const firstSixExperiences = experienciasSorted.slice(0, 6);
 
 // Procesar las experiencias para el slider
 const sliderData = await Promise.all(
   firstSixExperiences.map(async (exp, index) => {
     const resolvedTaxonomy = exp.acf ? await resolveTaxonomyTerms(exp.acf) : {};
+    const narrative = narratives.find(n => n.expNumber === exp.expNumber);
     
     // Formar la ubicación "Municipio, Departamento"
     const municipio = resolvedTaxonomy.municipio?.[0] || '';
     const departamento = resolvedTaxonomy.departamento?.[0] || '';
     const location = municipio && departamento ? `${municipio}, ${departamento}` : 'Pacífico Colombiano';
     
-    // Extraer títulos del título completo (formato: "EXP-001 - TÍTULO - SUBTÍTULO")
-    const fullTitle = exp.title?.rendered || '';
-    const titleParts = fullTitle.replace(/EXP-\d+\s*-\s*/, '').split(' - ');
-    const mainTitle = titleParts[0] || 'EXPERIENCIA';
-    const subTitle = titleParts[1] || 'PACÍFICO';
+    // Usar el mismo sistema que /experiencias: narrative.title primero, luego title.rendered
+    const mainTitle = narrative?.title || exp.title?.rendered || 'EXPERIENCIA';
+    const subTitle = narrative?.subtitle || municipio || 'PACÍFICO';
     
     return {
       place: location,
-      title: mainTitle.toUpperCase(),
-      title2: subTitle.toUpperCase(),
+      title: String(mainTitle).toUpperCase(),
+      title2: String(subTitle).toUpperCase(),
       description: exp.excerpt?.rendered?.replace(/<[^>]*>/g, '') || 'Descubre esta increíble experiencia en el Pacífico colombiano.',
       image: getExperienceImagePath(exp.expNumber || index + 1),
-      expNumber: exp.expNumber,
+      expNumber: String(exp.expNumber || index + 1).padStart(3, '0'),
       wpId: exp.id
     };
   })
 );
 ---
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Destino Pacífico</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" is:inline></script>
-  <!-- TUS ESTILOS AQUÍ -->
+<Layout title="Destino Pacífico" description="Explora las experiencias únicas del Pacífico colombiano através de un slider interactivo" overflowHidden={true}>
 
-
-</head>
-<body>
-
-  <!-- TU HTML AQUÍ -->
-  <main id="app">
+<main id="app">
      
     <div class="indicator"></div>
-
-    <nav>
-      <div>
-        <div class="svg-container">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"
-            />
-          </svg>
-        </div>
-        <div>CODE.WITH.ARROW</div>
-      </div>
-      <div>
-        <div class="active">Home</div>
-        <div>Holidays</div>
-        <div>Destinations</div>
-        <div>Flights</div>
-        <div>Offers</div>
-        <div>Contact</div>
-        <div class="svg-container">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
-            />
-          </svg>
-        </div>
-        <div class="svg-container">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"
-              clip-rule="evenodd"
-            />
-          </svg>
-        </div>
-      </div>
-    </nav>
-
     <div id="demo"></div>
+	<!-- <div class="bg-black/40 absolute h-full w-full z-99"></div> -->
 
     <div class="details" id="details-even">
       <div class="place-box">
-        <div class="text">Switzerland Alps</div>
+        <div class="text">Pacífico Colombiano</div>
       </div>
-      <div class="title-box-1"><div class="title-1">SAINT</div></div>
-      <div class="title-box-2"><div class="title-2">ANTONIEN</div></div>
-      <div class="desc">
-        Tucked away in the Switzerland Alps, Saint Antönien offers an idyllic retreat for those seeking tranquility and adventure alike. It's a hidden gem for backcountry skiing in winter and boasts lush trails for hiking and mountain biking during the warmer months.
+      <div class="title-box-1"><div class="title-1">EXPERIENCIAS ÚNICAS</div></div>
+      <div class="title-box-2"><div class="title-2"></div></div>
+      <div class="desc w-1/2">
+        Descubre la diversidad cultural y natural del Pacífico colombiano a través de experiencias auténticas y transformadoras en cada rincón de esta región extraordinaria.
       </div>
       <div class="cta">
         <button class="bookmark">
@@ -137,13 +68,13 @@ const sliderData = await Promise.all(
             />
           </svg>
         </button>
-        <button class="discover">Discover Location</button>
+        <button class="discover">Descubre Más</button>
       </div>
     </div>
 
     <div class="details" id="details-odd">
       <div class="place-box">
-        <div class="text">Switzerland Alps</div>
+        <div class="text">Pacífico Colombiano</div>
       </div>
       <div class="title-box-1"><div class="title-1">SAINT </div></div>
       <div class="title-box-2"><div class="title-2">ANTONIEN</div></div>
@@ -164,7 +95,7 @@ const sliderData = await Promise.all(
             />
           </svg>
         </button>
-        <button class="discover">Discover Location</button>
+        <button class="discover">Descubre Más</button>
       </div>
     </div>
 
@@ -208,7 +139,9 @@ const sliderData = await Promise.all(
     <div class="cover" ></div>
    
 
-   
+   <div class="label fixed -bottom-15 left-0 z-50 pointer-events-none select-none">
+	<img src="/images/label.png" alt="Label" class="w-72">
+   </div>
   
   </main>
 
@@ -227,16 +160,13 @@ const sliderData = await Promise.all(
 const _ = (id)=>document.getElementById(id)
 const cards = data.map((i, index)=>`<div class="card" id="card${index}" style="background-image:url(${i.image})"  ></div>`).join('')
 
-
-
 const cardContents = data.map((i, index)=>`<div class="card-content" id="card-content-${index}">
 <div class="content-start"></div>
 <div class="content-place">${i.place}</div>
-<div class="content-title-1">${i.title}</div>
-<div class="content-title-2">${i.title2}</div>
+<div class="content-title-1 uppercase">${i.title}</div>
+<!--<div class="content-title-2">${i.title2}</div>-->
 
 </div>`).join('')
-
 
 const sildeNumbers = data.map((_, index)=>`<div class="item" id="slide-item-${index}" >${index+1}</div>`).join('')
 _('demo').innerHTML =  cards + cardContents
@@ -345,9 +275,9 @@ function init() {
     ease,
     onComplete: () => {
       setTimeout(() => {
-        loop(); // Comentado para permitir inspección
+        //loop(); // Comentado para permitir inspección
         console.log('Autoplay desactivado - puedes inspeccionar libremente');
-      }, 500);
+      }, 1500);
     },
   });
   rest.forEach((i, index) => {
@@ -369,9 +299,143 @@ function init() {
   gsap.to("#pagination", { y: 0, opacity: 1, ease, delay: startDelay });
   gsap.to("nav", { y: 0, opacity: 1, ease, delay: startDelay });
   gsap.to(detailsActive, { opacity: 1, x: 0, ease, delay: startDelay });
+  
+  // Configurar botón inicial para dirigir a la primera experiencia
+  setTimeout(() => {
+    const initialDiscoverBtn = document.querySelector(`${detailsActive} .discover`);
+    initialDiscoverBtn.onclick = () => {
+      window.location.href = `/experiencia/${data[order[0]].expNumber}`;
+    };
+  }, startDelay * 1000 + 100);
+  
+  // Configurar botones de navegación
+  setTimeout(() => {
+    const nextBtn = document.querySelector('.arrow-right');
+    const prevBtn = document.querySelector('.arrow-left');
+    
+    nextBtn.onclick = () => {
+      if (clicks === 0) {
+        clicks = 1;
+        step();
+      }
+    };
+    
+    prevBtn.onclick = () => {
+      if (clicks === 0) {
+        clicks = 1;
+        stepBack();
+      }
+    };
+  }, startDelay * 1000 + 200);
 }
 
 let clicks = 0;
+
+function stepBack() {
+  return new Promise((resolve) => {
+    // Ir hacia atrás: mover el último elemento al principio
+    order.unshift(order.pop());
+    detailsEven = !detailsEven;
+
+    const detailsActive = detailsEven ? "#details-even" : "#details-odd";
+    const detailsInactive = detailsEven ? "#details-odd" : "#details-even";
+
+    // Actualizar contenido del panel activo
+    document.querySelector(`${detailsActive} .place-box .text`).textContent =
+      data[order[0]].place;
+    document.querySelector(`${detailsActive} .title-1`).textContent =
+      data[order[0]].title;
+    document.querySelector(`${detailsActive} .title-2`).textContent =
+      data[order[0]].title2;
+    document.querySelector(`${detailsActive} .desc`).textContent =
+      data[order[0]].description;
+
+    // Configurar botón para dirigir a la experiencia
+    const discoverBtn = document.querySelector(`${detailsActive} .discover`);
+    discoverBtn.onclick = () => {
+      window.location.href = `/experiencia/${data[order[0]].expNumber}`;
+    };
+
+    // Animaciones similares a step() pero en reversa
+    gsap.set(detailsActive, { zIndex: 22 });
+    gsap.to(detailsActive, { opacity: 1, delay: 0.4, ease });
+    gsap.to(`${detailsActive} .text`, { y: 0, delay: 0.1, duration: 0.7, ease });
+    gsap.to(`${detailsActive} .title-1`, { y: 0, delay: 0.15, duration: 0.7, ease });
+    gsap.to(`${detailsActive} .title-2`, { y: 0, delay: 0.15, duration: 0.7, ease });
+    gsap.to(`${detailsActive} .desc`, { y: 0, delay: 0.3, duration: 0.4, ease });
+    gsap.to(`${detailsActive} .cta`, {
+      y: 0, delay: 0.35, duration: 0.4, ease,
+      onComplete: () => {
+        clicks = 0;
+        resolve();
+      }
+    });
+    
+    gsap.set(detailsInactive, { zIndex: 12 });
+
+    const [active, ...rest] = order;
+    const next = rest[0]; // El siguiente será el primero en mostrar
+
+    gsap.set(getCard(next), { zIndex: 10, position: 'absolute' });
+    gsap.set(getCard(active), { zIndex: 20, position: 'absolute' });
+    gsap.to(getCard(next), { scale: 1.5, ease, position: 'absolute' });
+
+    gsap.to(getCardContent(active), {
+      y: offsetTop + cardHeight - 10, opacity: 0, duration: 0.3, ease
+    });
+    
+    gsap.to(getSliderItem(active), { x: 0, ease });
+    gsap.to(getSliderItem(next), { x: numberSize, ease });
+    gsap.to(".progress-sub-foreground", {
+      width: 500 * (1 / order.length) * (active + 1), ease
+    });
+
+    gsap.to(getCard(active), {
+      x: 0, y: 0, ease,
+      width: window.innerWidth, height: window.innerHeight,
+      borderRadius: 0, position: 'absolute',
+      onComplete: () => {
+        const xNew = offsetLeft + (rest.length - 1) * (cardWidth + gap);
+        gsap.set(getCard(next), {
+          x: xNew, y: offsetTop,
+          width: cardWidth, height: cardHeight,
+          zIndex: 30, borderRadius: 10, scale: 1, position: 'absolute'
+        });
+
+        gsap.set(getCardContent(next), {
+          x: xNew, y: offsetTop + cardHeight - 100,
+          opacity: 1, zIndex: 40
+        });
+        gsap.set(getSliderItem(next), { x: rest.length * numberSize });
+
+        gsap.set(detailsInactive, { opacity: 0 });
+        gsap.set(`${detailsInactive} .text`, { y: 100 });
+        gsap.set(`${detailsInactive} .title-1`, { y: 100 });
+        gsap.set(`${detailsInactive} .title-2`, { y: 100 });
+        gsap.set(`${detailsInactive} .desc`, { y: 50 });
+        gsap.set(`${detailsInactive} .cta`, { y: 60 });
+      }
+    });
+
+    rest.forEach((i, index) => {
+      if (i !== next) {
+        const xNew = offsetLeft + index * (cardWidth + gap);
+        gsap.set(getCard(i), { zIndex: 30, position: 'absolute' });
+        gsap.to(getCard(i), {
+          x: xNew, y: offsetTop,
+          width: cardWidth, height: cardHeight,
+          ease, delay: 0.1 * (index + 1), position: 'absolute'
+        });
+
+        gsap.to(getCardContent(i), {
+          x: xNew, y: offsetTop + cardHeight - 100,
+          opacity: 1, zIndex: 40, ease, delay: 0.1 * (index + 1)
+        });
+        gsap.to(getSliderItem(i), { x: (index + 1) * numberSize, ease });
+      }
+    });
+  });
+}
 
 function step() {
   return new Promise((resolve) => {
@@ -389,6 +453,12 @@ function step() {
       data[order[0]].title2;
     document.querySelector(`${detailsActive} .desc`).textContent =
       data[order[0]].description;
+
+    // Configurar botón para dirigir a la experiencia
+    const discoverBtn = document.querySelector(`${detailsActive} .discover`);
+    discoverBtn.onclick = () => {
+      window.location.href = `/experiencia/${data[order[0]].expNumber}`;
+    };
 
     gsap.set(detailsActive, { zIndex: 22 });
     gsap.to(detailsActive, { opacity: 1, delay: 0.4, ease });
@@ -540,10 +610,6 @@ async function loadImages() {
 async function start() {
   try {
     await loadImages();
-    console.log('=== INIT START ===');
-    console.log('offsetTop:', offsetTop, 'offsetLeft:', offsetLeft);
-    console.log('cardWidth:', cardWidth, 'cardHeight:', cardHeight, 'gap:', gap);
-    console.log('window.innerWidth:', window.innerWidth, 'window.innerHeight:', window.innerHeight);
     init();
   } catch (error) {
     console.error("One or more images failed to load", error);
@@ -567,5 +633,6 @@ observer.observe(document.getElementById('demo'), { subtree: true, attributes: t
 start();
   </script>
 
-</body>
-</html>
+</main>
+
+</Layout>

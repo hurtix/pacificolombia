@@ -2,10 +2,12 @@
 export interface Props {
   title: string;
   description?: string;
+  overflowHidden?: boolean;
 }
 
-const { title, description = "Descubre la belleza del Pacífico colombiano" } = Astro.props;
+const { title, description = "Descubre la belleza del Pacífico colombiano", overflowHidden = false } = Astro.props;
 import '../styles/global.css';
+import FloatingNav from '../components/FloatingNav.astro';
 ---
 
 <!DOCTYPE html>
@@ -16,32 +18,18 @@ import '../styles/global.css';
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="stylesheet" href="https://use.typekit.net/zew4jfj.css">
-    <script>
-      // Verificar si las fuentes se cargan correctamente
-      document.fonts.ready.then(function() {
-        console.log('Fonts loaded:', document.fonts);
-        document.fonts.forEach(font => {
-          if(font.family.includes('ciclo-display')) {
-            console.log('ciclo-display cargada:', font);
-          }
-        });
-      });
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" is:inline></script>
     <meta name="generator" content={Astro.generator} />
     <title>{title} - Destino Pacífico</title>
   </head>
-  <body class="min-h-screen bg-gradient-to-br from-blue-50 to-green-50 font-body">
+  <body class={`min-h-screen bg-gradient-to-br from-blue-50 to-green-50 font-body ${overflowHidden ? 'overflow-hidden' : ''}`}>
     <header class="bg-blue-900 text-white shadow-lg">
-      <nav class="container mx-auto px-4 py-6">
-        <div class="flex items-center justify-between">
-          <h1 class="text-2xl font-bold">Destino Pacífico</h1>
-          <ul class="flex space-x-6">
-            <li><a href="/" class="hover:text-blue-200 transition-colors">Inicio</a></li>
-            <li><a href="/destinos" class="hover:text-blue-200 transition-colors">Destinos</a></li>
-            <li><a href="/experiencias" class="hover:text-blue-200 transition-colors">Experiencias</a></li>
-            <li><a href="/contacto" class="hover:text-blue-200 transition-colors">Contacto</a></li>
-          </ul>
+      <nav class="container mx-auto px-4 py-6 flex flex-col">
+        <div class="flex items-center justify-center w-full">
+          <img class="w-100" src="/images/logo.png" alt="Destino Pacífico Logo">
+          <h1 class="text-2xl font-bold hidden">Destino Pacífico</h1>
         </div>
+
       </nav>
     </header>
 
@@ -55,5 +43,8 @@ import '../styles/global.css';
         <p class="mt-2 text-green-200">Descubre la magia del Pacífico colombiano</p>
       </div>
     </footer>
+
+    <!-- Menú flotante -->
+    <FloatingNav />
   </body>
 </html>

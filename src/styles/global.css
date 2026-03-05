@@ -34,7 +34,6 @@ body {
   background-color: #000000;
   color: #FFFAF0;
   position: relative;
-  overflow: hidden;
 }
 
 .card {
@@ -45,6 +44,16 @@ body {
   background-size: cover;
   box-shadow: 6px 6px 10px 2px rgba(0, 0, 0, 0.6);
 }
+
+.card::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.45);
+}
+
+
 
 #btn {
   position: absolute;
@@ -58,7 +67,8 @@ body {
   left: 0;
   top: 0;
   color: #FFFAF0;
-  padding-left: 16px;
+  padding-inline: 16px;
+  max-width: 200px;
 }
 
 .content-place {
@@ -74,8 +84,10 @@ body {
 .content-title-1,
 .content-title-2 {
   font-weight: 600;
-  font-size: 20px;
-  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  /* white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; */
 }
 
 .content-start {
@@ -109,21 +121,27 @@ body {
   border-radius: 99px;
   background-color: white;
 }
-.details .title-1,
+
+.details .title-1 {
+  font-family: var(--font-ciclo);
+  font-weight: 900;
+  font-size: 72px;
+}
 .details .title-2 {
   font-weight: 600;
-  font-size: 72px;
-  font-family: "Oswald", sans-serif;
+  font-size: 36px;
+  max-width: 75%;
 }
 .details .title-box-1,
 .details .title-box-2 {
   margin-top: 2px;
-  height: 100px;
+  height: auto;
   overflow: hidden;
 }
 .details > .desc {
   margin-top: 16px;
-  width: 500px;
+  /* max-width: 50%; */
+  font-size: 22px;
 }
 .details > .cta {
   width: 500px;
@@ -152,9 +170,16 @@ body {
   border-radius: 99px;
   color: #FFFAF0;
   padding: 4px 24px;
-  font-size: 12px;
+  font-size: 18px;
   margin-left: 16px;
   text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.details > .cta > .discover:hover {
+  background-color: white;
+  color: black;
 }
 
 nav {
