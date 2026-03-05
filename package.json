@@ -7,7 +7,7 @@
     "build": "astro build",
     "build:static": "PUBLIC_STATIC_MODE=true astro build",
     "build:cloudflare": "PUBLIC_STATIC_MODE=true astro build",
-    "export:wordpress": "node scripts/export-wordpress-data.mjs",
+    "export:definitivo": "node scripts/crear-datos-definitivos.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },
