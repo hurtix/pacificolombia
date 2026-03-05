@@ -2,13 +2,13 @@
 import Layout from '../layouts/Layout.astro';
 import SliderDetails from '../components/SliderDetails.astro';
 import SliderNavigation from '../components/SliderNavigation.astro';
-import { getRandomizedSliderData, type SliderExperience } from '../lib/slider-utils';
+import { processExperiencesForSlider, type SliderExperience } from '../lib/slider-utils';
 
-// Obtener 6 experiencias randomizadas para el slider
-const randomizedSliderData: SliderExperience[] = await getRandomizedSliderData(40, 6);
+// Obtener TODAS las experiencias disponibles (sin randomizar) 
+const allSliderExperiences: SliderExperience[] = await processExperiencesForSlider(40);
 
-// Datos para el contenido inicial (primera experiencia)
-const firstSlide = randomizedSliderData[0] || {
+// Datos para el contenido inicial (primera experiencia) - será reemplazado por JS
+const firstSlide = {
   place: 'Pacífico Colombiano',
   title: 'EXPERIENCIAS ÚNICAS',
   title2: 'DEL PACÍFICO',
@@ -69,17 +69,27 @@ const placeholderSlide = {
   </main>
 
   <!-- Script del slider -->
-  <script is:inline define:vars={{ sliderData: randomizedSliderData }}>
-    // Usar los datos del servidor directamente
-    const data = sliderData;
+  <script is:inline define:vars={{ allExperiences: allSliderExperiences }}>
+    // Función para randomizar array en el cliente
+    function shuffleArray(array) {
+      const shuffled = [...array];
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+      return shuffled;
+    }
     
-    // Debug: Verificar que coincide con el servidor
-    console.log('=== DATOS DESDE SERVIDOR (YA RANDOMIZADOS) ===');
-    console.log(`Total experiencias randomizadas: ${data.length}`);
-    console.log('Primera experiencia (debe coincidir con HTML inicial):');
-    console.log(`- ${data[0].title} ${data[0].title2} - ${data[0].place} [EXP-${data[0].expNumber}]`);
+    // RANDOMIZAR en el cliente cada vez que carga la página
+    const data = shuffleArray(allExperiences).slice(0, 6);
+    
+    // Debug: Verificar randomización
+    console.log('🎲 === RANDOMIZACIÓN EN CLIENTE (CADA VEZ DIFERENTE) ===');
+    console.log(`Total experiencias disponibles: ${allExperiences.length}`);
+    console.log(`Experiencias randomizadas para slider: ${data.length}`);
+    console.log('Experiencias seleccionadas:');
     data.forEach((exp, i) => {
-      console.log(`${i + 1}. ${exp.title} ${exp.title2} - ${exp.place} [EXP-${exp.expNumber}]`);
+      console.log(`${i + 1}. ${exp.place} - EXP-${exp.expNumber}: ${exp.title}`);
     });
 
     const _ = (id)=>document.getElementById(id)
@@ -188,6 +198,12 @@ const placeholderSlide = {
       });
 
       gsap.set(".indicator", { x: -window.innerWidth });
+
+      // ✅ ACTUALIZAR CONTENIDO CON DATOS RANDOMIZADOS
+      document.querySelector(`${detailsActive} .place-box .text`).textContent = data[active].place;
+      document.querySelector(`${detailsActive} .title-1`).textContent = data[active].title;
+      document.querySelector(`${detailsActive} .title-2`).textContent = data[active].title2;
+      document.querySelector(`${detailsActive} .desc`).textContent = data[active].description;
 
       const startDelay = 0.6;
 
