@@ -11,9 +11,9 @@ export interface Props {
 const { place, title, title2, description, id, isActive = false } = Astro.props;
 ---
 
-<div class={`details space-y-8 text-white ${isActive ? 'opacity-1' : 'opacity-0'}`} id={id}>
+<div class={`details space-y-8 text-white w-3/4 ${isActive ? 'opacity-1' : 'opacity-0'}`} id={id}>
   <div class="place-box">
-    <div class="text text-xl pt-4 uppercase">{place}</div>
+    <div class="text text-xl py-4 uppercase">{place}</div>
   </div>
   <div class="title-box-1">
     <div class="title-1 line-clamp-2">{title}</div>
