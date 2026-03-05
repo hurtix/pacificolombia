@@ -263,6 +263,12 @@ const municipalities = [...new Set(completeExperiences.map(exp => {
         }
       });
       
+      // Update the results counter
+      const resultsCount = document.getElementById('results-count');
+      if (resultsCount) {
+        resultsCount.textContent = visibleCount;
+      }
+      
       // Maintain minimum height for grid container
       const gridContainer = document.getElementById('experiences-grid');
       if (gridContainer && visibleCount < 12) {
