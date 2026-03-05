@@ -116,7 +116,7 @@ const municipalities = [...new Set(completeExperiences.map(exp => {
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="experiences-grid">
           {completeExperiences.map((experience) => (
             <article 
-              class="experience-card h-100 rounded-lg"
+              class="experience-card h-100 rounded-lg relative"
 
               data-municipio={(() => {
                 const mun = experience.resolvedTaxonomy?.municipio;
@@ -130,8 +130,8 @@ const municipalities = [...new Set(completeExperiences.map(exp => {
               })()}
             >
               <!-- Image -->
-              <div class="overflow-hidden">
-                <div class="absolute top-0 left-0 w-full h-full bg-black/30 z-2"></div>
+              <div class="absolute inset-0 overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-full bg-black/30 z-10"></div>
                 <img 
                   src={experience.imageUrl} 
                   alt={experience.narrative?.title || experience.title?.rendered || `Experiencia ${experience.paddedNumber}`}
@@ -142,7 +142,7 @@ const municipalities = [...new Set(completeExperiences.map(exp => {
               </div>
               
               <!-- Content -->
-              <div class="flex flex-col justify-between relative p-4 text-white z-30 h-full">
+              <div class="flex flex-col justify-between relative p-4 text-white z-20 h-full">
                 <!-- Header -->
                 <div class="flex items-center justify-between mb-2">
                   <span class="text-xs font-bold text-white border p-1 opacity-50">
