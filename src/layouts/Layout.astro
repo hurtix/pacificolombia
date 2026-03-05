@@ -2,10 +2,10 @@
 export interface Props {
   title: string;
   description?: string;
-  overflowHidden?: boolean;
+  isHome?: boolean;
 }
 
-const { title, description = "Descubre la belleza del Pacífico colombiano", overflowHidden = false } = Astro.props;
+const { title, description = "Descubre la belleza del Pacífico colombiano", isHome = false } = Astro.props;
 import '../styles/global.css';
 import FloatingNav from '../components/FloatingNav.astro';
 ---
@@ -22,9 +22,9 @@ import FloatingNav from '../components/FloatingNav.astro';
     <meta name="generator" content={Astro.generator} />
     <title>{title} - Destino Pacífico</title>
   </head>
-  <body class={`min-h-screen bg-gradient-to-br from-blue-50 to-green-50 font-body ${overflowHidden ? 'overflow-hidden' : ''}`}>
+  <body class={`min-h-screen bg-gradient-to-br from-blue-50 to-green-50 font-body ${isHome ? 'overflow-hidden' : ''}`}>
     <header class="bg-blue-900 text-white shadow-lg">
-      <nav class="fixed left-0 top-0 right-0 z-50 flex items-center justify-center container mx-auto px-4">
+      <nav class={`${isHome ? 'fixed' : 'relative'} left-0 top-0 right-0 z-50 flex items-center justify-center container mx-auto px-4`}>
         <div class="flex items-center justify-center w-full">
           <img class="w-100" src="/images/logo.png" alt="Destino Pacífico Logo">
           <h1 class="text-2xl font-bold hidden">Destino Pacífico</h1>
