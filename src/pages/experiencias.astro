@@ -29,46 +29,8 @@ const completeExperiences = await Promise.all(
 ---
 
 <Layout title="Todas las Experiencias" description="Explora las 100 experiencias únicas del Pacífico colombiano. Descubre aventuras, cultura y naturaleza en cada rincón de esta región extraordinaria.">
-  <!-- Hero Section -->
-  <section class="py-16 bg-gradient-to-br from-blue-900 via-green-800 to-teal-700 text-white">
-    <div class="container mx-auto px-4">
-      <div class="max-w-4xl mx-auto text-center">
-        <h1 class="text-4xl md:text-6xl font-bold mb-6">
-          100 Experiencias del Pacífico
-        </h1>
-        <p class="text-xl md:text-2xl mb-8 text-blue-100">
-          Descubre la diversidad cultural y natural del Pacífico colombiano a través de experiencias auténticas y transformadoras.
-        </p>
-        <div class="flex flex-wrap justify-center gap-4 text-sm">
-          <span class="px-4 py-2 bg-white/20 rounded-full">
-            📊 {completeExperiences.length} experiencias
-          </span>
-          <span class="px-4 py-2 bg-white/20 rounded-full">
-            🗺️ {[...new Set(completeExperiences.map(e => e.resolvedTaxonomy?.departamento).flat().filter(Boolean))].length} departamentos
-          </span>
-          <span class="px-4 py-2 bg-white/20 rounded-full">
-            🏘️ {[...new Set(completeExperiences.map(e => e.resolvedTaxonomy?.municipio).flat().filter(Boolean))].length} municipios
-          </span>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- General Narrative Section -->
-  <GeneralNarrative content={generalNarrative} />
 
-  <!-- Filters and Search -->
-  <section class="py-8 bg-gray-50 sticky top-0 z-40 shadow-sm">
-    <div class="container mx-auto px-4">
-      <div class="max-w-6xl mx-auto">
-        <div class="text-center">
-          <p class="text-lg text-gray-600">
-            Explora las {completeExperiences.length} experiencias disponibles
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Experiences Grid -->
   <section class="py-16 bg-white">
@@ -89,7 +51,7 @@ const completeExperiences = await Promise.all(
                   experience.resolvedTaxonomy.departamento.toLowerCase()) : ''}
             >
               <!-- Image -->
-              <div class="aspect-video overflow-hidden">
+              <div class="overflow-hidden">
                 <div class="absolute top-0 left-0 w-full h-full bg-black/30 z-2"></div>
                 <img 
                   src={experience.imageUrl} 
@@ -101,29 +63,29 @@ const completeExperiences = await Promise.all(
               </div>
               
               <!-- Content -->
-              <div class="relative p-4 text-white z-30">
+              <div class="flex flex-col justify-between relative p-4 text-white z-30 h-full">
                 <!-- Header -->
                 <div class="flex items-center justify-between mb-2">
-                  <span class="text-xs font-bold text-black bg-blue-50 px-2 py-1">
-                    EXP-{experience.paddedNumber}
+                  <span class="text-xs font-bold text-white border p-1">
+                    {experience.paddedNumber}
                   </span>
-
                 </div>
-                
+                <div>
                 <!-- Title -->
-                <h3 class="font-bold mb-2 line-clamp-2 text-sm">
+                <h3 class="font-bold mb-2 line-clamp-2 text-lg">
                   {experience.narrative?.title || experience.title?.rendered || `Experiencia ${experience.paddedNumber}`}
                 </h3>
                 
                 <!-- Subtitle/Description -->
-                {experience.narrative?.subtitle && (
+                {/* {experience.narrative?.subtitle && (
                   <p class="text-sm mb-3 line-clamp-2">
                     {experience.narrative.subtitle}
                   </p>
-                )}
+                )} */}
                 
+                <div class="flex justify-between items-center">
                 <!-- Location -->
-                <div class="flex items-center text-sm mb-3">
+                <div class="flex items-center text-sm">
                   <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
                   </svg>
@@ -144,10 +106,12 @@ const completeExperiences = await Promise.all(
                 <!-- Action Button -->
                 <a 
                   href={`/experiencia/${experience.paddedNumber}`}
-                  class="block w-full text-center px-4 py-2 bg-transparent border text-white text-sm rounded-full hover:bg-white hover:text-black transition-colors"
+                  class="block text-center px-4 py-2 bg-transparent border text-white text-sm rounded-full hover:bg-white hover:text-black transition-colors"
                 >
                   EXPLORAR
                 </a>
+              </div>
+              </div>
               </div>
             </article>
           ))}

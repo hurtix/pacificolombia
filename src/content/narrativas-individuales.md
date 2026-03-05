@@ -98,71 +98,19 @@ conviction: protecting these natural refuges also protects who we are.
 
 **EXP 004 - RUTA CULTURAL MADRE TIERRA - La Magia del Arte y la Naturaleza. Conectamos cultura, arte y naturaleza en experiencias vivenciales**
 
-En Piendamó (Cauca), existe un lugar donde el arte y la naturaleza encontraron
+En Piendamó (Cauca), existe un lugar donde el arte y la naturaleza encontraron su equilibrio. Te invitamos a ser parte de esta obra viva que se descubre a través de senderos que se entrelazan con los árboles, donde las aves entonan la banda sonora de tu experiencia y cientos de mariposas añaden efectos especiales. Al llegar a nuestra finca, queremos que seas protagonista de esta gran película, donde te encontrarás con gigantes esculturas habitables y coloridos murales que hablan de tolerancia y respeto.
 
-su equilibrio. Te invitamos a ser parte de esta obra viva que se descubre a través
+Podrás dejar tus pinceladas en un mural grupal, crear figuras cerámicas en arcilla y convertirte en parte del elenco de nuestro acto de circo. Aquí, en Madre Tierra, la experiencia también se vive con el paladar: podrás disfrutar de nuestra pizza al horno de leña, trucha fresca y café local. Tendrás tiempo para descansar en hamacas, interactuar con los animales de la granja, reír en la casa de los espejos o recorrer los senderos en bicicleta.
 
-de senderos que se entrelazan con los árboles, donde las aves entonan la banda
-
-sonora de tu experiencia y cientos de mariposas añaden efectos especiales. Al
-
-llegar a nuestra finca, queremos que seas protagonista de esta gran película,
-
-donde te encontrarás con gigantes esculturas habitables y coloridos murales
-
-que hablan de tolerancia y respeto.
-
-Podrás dejar tus pinceladas en un mural grupal, crear figuras cerámicas en arcilla
-
-y convertirte en parte del elenco de nuestro acto de circo. Aquí, en Madre Tierra,
-
-la experiencia también se vive con el paladar: podrás disfrutar de nuestra pizza
-
-al horno de leña, trucha fresca y café local. Tendrás tiempo para descansar en
-
-hamacas, interactuar con los animales de la granja, reír en la casa de los espejos
-
-o recorrer los senderos en bicicleta.
-
-Al caer la tarde, te espera una programación cultural que puede incluir teatro,
-
-danza o música. Aquí te encontrarás contigo mismo, explorarás tu creatividad y
-
-descubrirás que es posible habitar la naturaleza sin hacerle daño.
+Al caer la tarde, te espera una programación cultural que puede incluir teatro, danza o música. Aquí te encontrarás contigo mismo, explorarás tu creatividad y descubrirás que es posible habitar la naturaleza sin hacerle daño.
 
 EN.
 
-In Piendamó (Cauca), there is a place where art and nature have found their
+In Piendamó (Cauca), there is a place where art and nature have found their balance. We invite you to become part of this living masterpiece, discovered through trails that weave among the trees, where birds perform the soundtrack of your experience and hundreds of butterflies add their special effects. When you arrive at our finca, we want you to become the protagonist of this great film, where you will encounter giant habitable sculptures and colorful murals that speak of tolerance and respect.
 
-balance. We invite you to become part of this living masterpiece, discovered
+You will be able to leave your brushstrokes on a collective mural, create ceramic figures in clay, and become part of the cast in our circus performance. Here, at Madre Tierra, the experience is also lived through flavor: you'll enjoy our wood-fired oven pizza, fresh trout, and local coffee. You'll have time to relax in hammocks, interact with the farm animals, laugh in the house of mirrors, or explore the trails by bicycle.
 
-through trails that weave among the trees, where birds perform the soundtrack
-
-of your experience and hundreds of butterflies add their special effects. When
-
-you arrive at our finca, we want you to become the protagonist of this great film,
-
-where you will encounter giant habitable sculptures and colorful murals that
-
-speak of tolerance and respect.
-
-You will be able to leave your brushstrokes on a collective mural, create ceramic
-
-figures in clay, and become part of the cast in our circus performance. Here,
-
-at Madre Tierra, the experience is also lived through flavor: you'll enjoy our
-
-wood-fired oven pizza, fresh trout, and local coffee. You'll have time to relax
-
-in hammocks, interact with the farm animals, laugh in the house of mirrors, or
-
-explore the trails by bicycle.
-
-As evening falls, a cultural program awaits you, which may include theater, dance,
-
-or music. Here, you will find yourself, explore your creativity, and discover that
-
-it is possible to inhabit nature without harming it.
+As evening falls, a cultural program awaits you, which may include theater, dance, or music. Here, you will find yourself, explore your creativity, and discover that it is possible to inhabit nature without harming it.
 
 **EXP 005 - RUTA CULTURAL CAFETERA - Donde el café se vive, la cultura se siente y la historia te atrapa**
 
@@ -570,71 +518,15 @@ strength, our respect, our hope, and the spell of the mangrove.
 
 **EXP 011 - CICLOPASEO POR LAS CALLES DE MI BELLO GUAPI - Pedalea entre historia, cultura y sabor - descubre Guapi sobre ruedas**
 
-En Guapi hablamos todo el tiempo; es nuestra manera de expresar la alegría y de
+En Guapi hablamos todo el tiempo; es nuestra manera de expresar la alegría y de dialogar con la historia ancestral que nos acompaña. Te invitamos a conocer este territorio no en lancha ni en canoa, sino montado en una bicicleta. Pedaleando, contemplarás su identidad urbana y redescubrirás un pueblo lleno de arte y tradición. El recorrido inicia en el Coliseo Municipal. Mientras ajustas el asiento, nuestro guía te dará la bienvenida a este viaje sensorial. Las piedrecitas de las calles raspan el suelo al paso de tus ruedas y anuncian que la ruta apenas comienza. En el muelle de cabotaje escucharás relatos de barqueros y pescadores; en la Catedral Inmaculada Concepción y en el parque La Pola sentirás la fuerza de la fe que mueve a la comunidad.
 
-dialogar con la historia ancestral que nos acompaña. Te invitamos a conocer este
-
-territorio no en lancha ni en canoa, sino montado en una bicicleta. Pedaleando,
-
-contemplarás su identidad urbana y redescubrirás un pueblo lleno de arte y tradición.
-
-El recorrido inicia en el Coliseo Municipal. Mientras ajustas el asiento, nuestro
-
-guía te dará la bienvenida a este viaje sensorial. Las piedrecitas de las calles
-
-raspan el suelo al paso de tus ruedas y anuncian que la ruta apenas comienza.
-
-En el muelle de cabotaje escucharás relatos de barqueros y pescadores; en la
-
-Catedral Inmaculada Concepción y en el parque La Pola sentirás la fuerza
-
-de la fe que mueve a la comunidad.
-
-Probarás dulces artesanales y agua de coco que te revitalizarán. El paisaje se abre
-
-hacia el río en el muelle turístico, y en la escuela de Puerto Cali el mural más
-
-hermoso de Guapi te contará la historia ancestral del Pacífico.
-
-Partirás con la certeza de haber conocido un pueblo orgulloso de sus raíces,
-
-donde el futuro se construye desde la alegría y la fe, y donde cada pedaleo es un
-
-reencuentro con la memoria.
+Probarás dulces artesanales y agua de coco que te revitalizarán. El paisaje se abre hacia el río en el muelle turístico, y en la escuela de Puerto Cali el mural más hermoso de Guapi te contará la historia ancestral del Pacífico. Partirás con la certeza de haber conocido un pueblo orgulloso de sus raíces, donde el futuro se construye desde la alegría y la fe, y donde cada pedaleo es un reencuentro con la memoria.
 
 EN.
 
-In Guapi, we talk all the time; it is our way of expressing joy and engaging
+In Guapi, we talk all the time; it is our way of expressing joy and engaging in dialogue with the ancestral history that accompanies us. We invite you to discover this territory not by lancha or canoa, but by bicycle. As you pedal, you will take in its urban identity and rediscover a town full of art and tradition. The journey begins at the Coliseo Municipal. While you adjust your seat, our guide will welcome you to this sensory adventure. The tiny stones on the streets scrape the ground beneath your wheels, announcing that the route is just beginning. At the Muelle de Cabotaje, you will hear stories from boatmen and fishermen; at the Catedral Inmaculada Concepción and Parque La Pola, you will feel the strength of the faith that moves this community.
 
-in dialogue with the ancestral history that accompanies us. We invite you to
-
-discover this territory not by lancha or canoa, but by bicycle. As you pedal, you
-
-will take in its urban identity and rediscover a town full of art and tradition.
-
-The journey begins at the Coliseo Municipal. While you adjust your seat,
-
-our guide will welcome you to this sensory adventure. The tiny stones on the
-
-streets scrape the ground beneath your wheels, announcing that the route is just
-
-beginning. At the Muelle de Cabotaje, you will hear stories from boatmen and
-
-fishermen; at the Catedral Inmaculada Concepción and Parque La Pola, you
-
-will feel the strength of the faith that moves this community.
-
-You will taste artisanal sweets and refreshing coconut water. The landscape opens
-
-toward the river at the Muelle Turístico, and at the Escuela de Puerto Cali, the
-
-most beautiful mural in Guapi will share the ancestral history of the Pacific with you.
-
-You will leave with the certainty of having discovered a town proud of its
-
-roots-where the future is built from joy and faith, and where every pedal stroke
-
-becomes a reunion with memory.
+You will taste artisanal sweets and refreshing coconut water. The landscape opens toward the river at the Muelle Turístico, and at the Escuela de Puerto Cali, the most beautiful mural in Guapi will share the ancestral history of the Pacific with you. You will leave with the certainty of having discovered a town proud of its roots-where the future is built from joy and faith, and where every pedal stroke becomes a reunion with memory.
 
 **EXP 012 - GUARAPO. UN VIAJE ANCESTRAL - Un viaje sensorial por la memoria viva del Cauca, guiado por el sabor del guarapo**
 

@@ -36,14 +36,17 @@ import FloatingNav from '../components/FloatingNav.astro';
     </header>
 
     <main class="flex-1">
+      <div class="label fixed top-10 left-0 z-50 pointer-events-none select-none -rotate-2">
+	<img src="/images/label.png" alt="Label" class="w-72">
+   </div>
       <slot />
     </main>
 
-    <footer class="bg-green-800 text-white py-8">
-      <div class="container mx-auto px-4 text-center">
+    <footer class="bg-blue-900 text-white py-8 pointer-events-none select-none">
+      <img src="/images/by.png" alt="By" class="w-[700px] mx-auto block">
+      <!-- <div class="container mx-auto px-4 text-center">
         <p>&copy; 2026 Destino Pacífico. Todos los derechos reservados.</p>
-        <p class="mt-2 text-green-200">Descubre la magia del Pacífico colombiano</p>
-      </div>
+      </div> -->
     </footer>
 
     <!-- Menú flotante -->
