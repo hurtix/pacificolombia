@@ -59,10 +59,10 @@ const sliderData = await Promise.all(
     
     // DEBUG: Verificar qué devuelve la taxonomía
     if (index < 2) { // Solo para las primeras 2 experiencias
-      console.log(`=== DEBUG EXP-${exp.expNumber} ===`);
-      console.log('resolvedTaxonomy:', resolvedTaxonomy);
-      console.log('municipio raw:', resolvedTaxonomy.municipio);
-      console.log('departamento raw:', resolvedTaxonomy.departamento);
+      // console.log(`=== DEBUG EXP-${exp.expNumber} ===`);
+      // console.log('resolvedTaxonomy:', resolvedTaxonomy);
+      // console.log('municipio raw:', resolvedTaxonomy.municipio);
+      // console.log('departamento raw:', resolvedTaxonomy.departamento);
     }
     
     // Formar la ubicación con validación robusta
@@ -76,7 +76,7 @@ const sliderData = await Promise.all(
     } else {
       // Fallback: intentar usar directamente desde ACF si existe
       if (exp.acf?.municipio && exp.acf?.departamento) {
-        console.log('Usando fallback directo de ACF para EXP-' + exp.expNumber);
+        // console.log('Usando fallback directo de ACF para EXP-' + exp.expNumber);
       }
     }
     
@@ -102,15 +102,37 @@ const sliderData = await Promise.all(
 );
 
 // Debug: Información detallada para comparar local vs producción
-console.log('=== DEBUG SLIDER DATA ===');
-console.log(`Total experiencias procesadas: ${sliderData.length}`);
+// console.log('=== DEBUG SLIDER DATA ===');
+// console.log(`Total experiencias procesadas: ${sliderData.length}`);
 sliderData.slice(0, 3).forEach((exp, i) => {
-  console.log(`${i + 1}. EXP-${exp.expNumber}`);
-  console.log(`   LOCATION: "${exp.place}"`);
-  console.log(`   TITLE: "${exp.title}"`);
-  console.log(`   DESC: "${exp.description.substring(0, 50)}..."`);
+  // console.log(`${i + 1}. EXP-${exp.expNumber}`);
+  // console.log(`   LOCATION: "${exp.place}"`);
+  // console.log(`   TITLE: "${exp.title}"`);
+  // console.log(`   DESC: "${exp.description.substring(0, 50)}..."`);
 });
-console.log('=== FIN DEBUG ===');
+
+// Función para randomizar array (también usada por JavaScript)
+function shuffleArray(array: any[]): any[] {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
+// Hacer la misma randomización que JavaScript para que coincidan
+const randomizedSliderData = shuffleArray(sliderData).slice(0, 6);
+
+// Pre-llenar el contenido inicial para evitar flash - ahora usa la primera de las 6 randomizadas
+const firstSlide = randomizedSliderData && randomizedSliderData.length > 0 ? randomizedSliderData[0] : {
+  place: 'Pacífico Colombiano',
+  title: 'EXPERIENCIAS ÚNICAS',
+  title2: 'DEL PACÍFICO',
+  description: 'Descubre la diversidad cultural y natural del Pacífico colombiano a través de experiencias auténticas y transformadoras.'
+};
+
+// console.log('=== FIN DEBUG ===');
 ---
 
 <Layout title="Destino Pacífico" description="Explora las experiencias únicas del Pacífico colombiano através de un slider interactivo" isHome={true}>
@@ -121,14 +143,14 @@ console.log('=== FIN DEBUG ===');
     <div id="slider"></div>
 	<!-- <div class="bg-black/40 absolute h-full w-full z-99"></div> -->
 
-    <div class="details space-y-8" id="details-even">
+    <div class="details space-y-8 text-white" id="details-even">
       <div class="place-box">
-        <div class="text">Pacífico Colombiano</div>
+        <div class="text text-xl pt-4">{firstSlide.place}</div>
       </div>
-      <div class="title-box-1"><div class="title-1 line-clamp-2">EXPERIENCIAS ÚNICAS</div></div>
-      <div class="title-box-2"><div class="title-2"></div></div>
+      <div class="title-box-1"><div class="title-1 line-clamp-2">{firstSlide.title}</div></div>
+      <div class="title-box-2"><div class="title-2">{firstSlide.title2}</div></div>
       <div class="desc w-1/2">
-        Descubre la diversidad cultural y natural del Pacífico colombiano a través de experiencias auténticas y transformadoras en cada rincón de esta región extraordinaria.
+        {firstSlide.description}
       </div>
       <div class="cta">
         <button class="bookmark">
@@ -148,14 +170,14 @@ console.log('=== FIN DEBUG ===');
       </div>
     </div>
 
-    <div class="details space-y-8" id="details-odd">
+    <div class="details space-y-8 text-white" id="details-odd">
       <div class="place-box">
-        <div class="text">Pacífico Colombiano</div>
+        <div class="text text-xl pt-4">Pacífico Colombiano</div>
       </div>
-      <div class="title-box-1"><div class="title-1 line-clamp-2">SAINT </div></div>
-      <div class="title-box-2"><div class="title-2">ANTONIEN</div></div>
+      <div class="title-box-1"><div class="title-1 line-clamp-2">EXPLORANDO EL</div></div>
+      <div class="title-box-2"><div class="title-2">PACÍFICO</div></div>
       <div class="desc">
-        Tucked away in the Switzerland Alps, Saint Antönien offers an idyllic retreat for those seeking tranquility and adventure alike. It's a hidden gem for backcountry skiing in winter and boasts lush trails for hiking and mountain biking during the warmer months.
+        Sumérgete en la riqueza cultural y biodiversidad del Pacífico colombiano, donde cada experiencia te conecta con tradiciones ancestrales y paisajes únicos.
       </div>
       <div class="cta">
         <button class="bookmark">
@@ -224,25 +246,15 @@ console.log('=== FIN DEBUG ===');
   </main>
 
   <!-- TUS SCRIPTS AQUÍ -->
-  <script is:inline define:vars={{ sliderData }}>
-    // Randomizar experiencias client-side: de TODAS las experiencias, seleccionar 6 aleatorias
-    function shuffleArray(array) {
-      const shuffled = [...array];
-      for (let i = shuffled.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-      }
-      return shuffled;
-    }
+  <script is:inline define:vars={{ sliderData: randomizedSliderData }}>
+    // Usar directamente los datos ya randomizados desde el servidor
+    const data = sliderData;
     
-    // Tomar 6 experiencias completamente aleatorias de todas las disponibles
-    const randomizedData = shuffleArray(sliderData).slice(0, 6);
-    const data = randomizedData;
-    
-    // Debug: Verificar randomización con imágenes disponibles
-    console.log('=== RANDOMIZACIÓN CON IMÁGENES DISPONIBLES ===');
-    console.log(`Total experiencias con imágenes: ${sliderData.length}`);
-    console.log('6 experiencias seleccionadas aleatoriamente (de las que tienen imagen):');
+    // Debug: Verificar que coincide con el servidor
+    console.log('=== DATOS DESDE SERVIDOR (YA RANDOMIZADOS) ===');
+    console.log(`Total experiencias randomizadas: ${data.length}`);
+    console.log('Primera experiencia (debe coincidir con HTML inicial):');
+    console.log(`- ${data[0].title} ${data[0].title2} - ${data[0].place} [EXP-${data[0].expNumber}]`);
     data.forEach((exp, i) => {
       console.log(`${i + 1}. ${exp.title} ${exp.title2} - ${exp.place} [EXP-${exp.expNumber}]`);
     });
@@ -366,7 +378,7 @@ function init() {
     onComplete: () => {
       setTimeout(() => {
         loop(); // Comentado para permitir inspección
-        console.log('Autoplay desactivado - puedes inspeccionar libremente');
+        //console.log('Autoplay desactivado - puedes inspeccionar libremente');
       }, 1500);
     },
   });
@@ -396,6 +408,14 @@ function init() {
     initialDiscoverBtn.onclick = () => {
       window.location.href = `/experiencia/${data[order[0]].expNumber}`;
     };
+    
+    // También configurar el botón que ya está visible desde el servidor
+    const serverDiscoverBtn = document.querySelector('#details-even .discover');
+    if (serverDiscoverBtn) {
+      serverDiscoverBtn.onclick = () => {
+        window.location.href = `/experiencia/${data[order[0]].expNumber}`;
+      };
+    }
   }, startDelay * 1000 + 100);
   
   // Configurar botones de navegación
@@ -704,20 +724,20 @@ async function loadImages() {
     console.warn(`${failedImages.length} imágenes no se pudieron cargar:`, failedImages.map(r => r.src));
   }
   
-  console.log(`✅ ${results.filter(r => r.success).length}/${results.length} imágenes cargadas correctamente`);
+  // console.log(`✅ ${results.filter(r => r.success).length}/${results.length} imágenes cargadas correctamente`);
   return results;
 }
 
 async function start() {
   try {
-    console.log('🖼️ Iniciando carga de imágenes...');
+    // console.log('🖼️ Iniciando carga de imágenes...');
     await loadImages();
-    console.log('🚀 Iniciando slider...');
+    //c onsole.log('🚀 Iniciando slider...');
     init();
   } catch (error) {
-    console.error("Error crítico al cargar imágenes:", error);
+    // console.error("Error crítico al cargar imágenes:", error);
     // Inicializar de todos modos para no dejar la página en blanco
-    console.log('⚠️ Iniciando slider a pesar del error...');
+    // console.log('⚠️ Iniciando slider a pesar del error...');
     init();
   }
 }
@@ -728,7 +748,7 @@ const observer = new MutationObserver((mutations) => {
     if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
       const el = mutation.target;
       if (el.classList.contains('card')) {
-        console.log(`Card ${el.id} updated:`, el.style.cssText);
+        // console.log(`Card ${el.id} updated:`, el.style.cssText);
       }
     }
   });

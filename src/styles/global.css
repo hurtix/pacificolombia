@@ -7,6 +7,10 @@
   }
   
   body {
+  @apply bg-black;
+  }
+
+  body {
     font-family: var(--font-botanika);
   }
 }
@@ -29,12 +33,7 @@
   text-shadow: 10px 10px 10 black, 10px 10px 10 black, 10px 10px 10 black, 10px 10px 10 black;
 }
 
-body {
-  margin: 0;
-  background-color: #000000;
-  color: #FFFAF0;
-  position: relative;
-}
+
 
 .card {
   position: absolute;
@@ -117,10 +116,10 @@ body {
   height: 46px;
   overflow: hidden;
 }
-.details .place-box .text {
+/* .details .place-box .text {
   padding-top: 16px;
   font-size: 20px;
-}
+} */
 .details .place-box .text:before {
   top: 0;
   left: 0;
