@@ -111,40 +111,25 @@ export async function getPage(id: number): Promise<WordPressPage | null> {
  * @returns Promise<any[]>
  */
 export async function getCustomPosts(postType: string, limit: number = 10): Promise<any[]> {
-  // First priority: Try to load static exported data
-  if (postType === 'experiencia') {
-    try {
-      const staticDataPath = new URL('../../data/wordpress-data.json', import.meta.url);
-      const staticDataResponse = await fetch(staticDataPath);
-      if (staticDataResponse.ok) {
-        const staticData = await staticDataResponse.json();
-        if (staticData.experiencias && staticData.experiencias.length > 0) {
-          console.log(`✅ Using static WordPress data (${staticData.experiencias.length} experiencias)`);
-          return staticData.experiencias.slice(0, limit);
-        }
+  try {
+    const response = await fetch(`${WP_API_BASE}/${postType}?_embed&per_page=${limit}`);
+    if (!response.ok) {
+      console.error(`Error fetching ${postType}:`, response.statusText);
+      // Fallback to static data if available
+      if (postType === 'experiencia') {
+        return getStaticExperienceData(limit);
       }
-    } catch (error) {
-      console.log('ℹ️ Static data not available, trying WordPress API...');
+      return [];
     }
-  }
-
-  // Second priority: Try WordPress API (when local development)
-  if (!IS_STATIC_MODE) {
-    try {
-      const response = await fetch(`${WP_API_BASE}/${postType}?_embed&per_page=${limit}`);
-      if (response.ok) {
-        const posts = await response.json();
-        console.log(`✅ Using WordPress API data (${posts.length} ${postType}s)`);
-        return posts;
-      }
-    } catch (error) {
-      console.log(`⚠️ WordPress API not available for ${postType}:`, error.message);
+    return await response.json();
+  } catch (error) {
+    console.error(`Error connecting to WordPress for ${postType}:`, error);
+    // Fallback to static data if available
+    if (postType === 'experiencia') {
+      return getStaticExperienceData(limit);
     }
+    return [];
   }
-
-  // Last resort: Empty array (no fake data)
-  console.log(`❌ No data available for ${postType}, returning empty array`);
-  return [];
 }
 
 /**
@@ -233,12 +218,10 @@ export async function resolveTaxonomyTerms(taxonomyData: any): Promise<any> {
 }
 
 /**
- * DEPRECATED: Generate static experience data when WordPress is not available
- * This function is no longer used - we now use exported real data from wordpress-data.json
+ * Generate static experience data when WordPress is not available  
  * @param limit Number of experiences to generate
  * @returns Promise<any[]>
  */
-/*
 async function getStaticExperienceData(limit: number): Promise<any[]> {
   const experiences = [];
   
@@ -269,4 +252,3 @@ async function getStaticExperienceData(limit: number): Promise<any[]> {
   
   return experiences;
 }
-*/
