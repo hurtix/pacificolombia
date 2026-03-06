@@ -158,13 +158,10 @@
 }
 .details .title-box-1,
 .details .title-box-2 {
-  margin-top: 2px;
   height: auto;
   overflow: hidden;
 }
 .details > .desc {
-  margin-top: 16px;
-  /* max-width: 50%; */
   font-size: 22px;
 }
 .details > .cta {

@@ -58,8 +58,8 @@ import FloatingNav from "../components/FloatingNav.astro";
 
     <main class="flex-1">
       <div
-        class={`label fixed left-0 z-50 pointer-events-none select-none -rotate-2
-          ${isHome ? "top-30 md:top-40 md:bottom-auto" : "top-4 md:top-50"}
+        class={`label absolute md:fixed left-0 z-50 pointer-events-none select-none -rotate-2
+          ${isHome ? "top-28 md:top-40 md:bottom-auto" : "top-20 md:top-50"}
         `}
       >
         <img src="/images/label.webp" alt="Label" class="w-32 md:w-64" />
@@ -99,7 +99,7 @@ import FloatingNav from "../components/FloatingNav.astro";
             ></path></g
           ></svg
         >
-        <span class="text-[7pt] w-[50px] leading-none text-wrap ml-1 hidden md:inline">Hecho en Popayán</span>
+        <span class="text-[7pt] w-[50px] leading-none text-wrap ml-1">Hecho en Popayán</span>
         </a
       >
     </footer>
