@@ -14,6 +14,7 @@ const { place, title, title2, description, id, isActive = false } = Astro.props;
 <div class={`details space-y-1 md:space-y-8 text-white w-full sm:w-4/5 md:w-3/4 px-4 sm:px-0 ${isActive ? 'opacity-1' : 'opacity-0'}`} id={id}>
   <div class="place-box">
     <div class="text text-xs sm:text-sm md:text-xl py-2 sm:py-3 md:py-4 uppercase">{place}</div>
+    <div class="w-10 h-1 md:h-2 bg-white rounded-full"></div>
   </div>
   <div class="title-box-1">
     <div class="title-1 line-clamp-3 md:line-clamp-2 text-3xl sm:text-5xl md:text-6xl lg:text-7xl">{title}</div>

@@ -23,7 +23,7 @@ import FloatingNav from "../components/FloatingNav.astro";
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="stylesheet" href="https://use.typekit.net/zew4jfj.css" />
     <script
@@ -44,9 +44,9 @@ import FloatingNav from "../components/FloatingNav.astro";
       `}
       >
         <div class="flex items-center justify-start md:justify-center w-full">
-          <a href="/">
+          <a href="/" class="md:p-4">
             <img
-              class="w-50 md:w-100 select-none pt-1 pl-1 md:pt-0 md:pl-0"
+              class="w-50 md:w-80 select-none pt-1 pl-1 md:pt-0 md:pl-0"
               src="/images/logo.webp"
               alt="Destino Pacífico Logo"
             />
@@ -57,13 +57,15 @@ import FloatingNav from "../components/FloatingNav.astro";
     </header>
 
     <main class="flex-1">
+      <!-- Label  -->
       <div
         class={`label absolute md:fixed left-0 z-50 pointer-events-none select-none -rotate-2
-          ${isHome ? "top-28 md:top-40 md:bottom-auto" : "top-20 md:top-50"}
+          ${isHome ? "invisible md:visible top-28 md:top-44 md:bottom-auto" : "top-20 md:top-50"}
         `}
       >
-        <img src="/images/label.webp" alt="Label" class="w-32 md:w-64" />
+        <img src="/images/label.webp" alt="Label" class="w-32 md:w-55" />
       </div>
+      <!-- End of label -->
       <slot />
     </main>
 
