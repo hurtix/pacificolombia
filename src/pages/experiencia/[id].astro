@@ -138,7 +138,7 @@ const pageDescription = narrative ? narrative.subtitle : `Descubre la experienci
         {experienceData && experienceData.resolvedTaxonomy && (
           <div class="flex flex-wrap gap-4 justify-center mt-8">
             {experienceData.resolvedTaxonomy?.municipio && experienceData.resolvedTaxonomy?.departamento && (
-              <span class="px-4 py-2 bg-white/20 rounded-full uppercase">
+              <span class="px-4 py-2 bg-white/20 rounded-full uppercase font-semibold tracking-wider">
                 {Array.isArray(experienceData.resolvedTaxonomy.municipio) ? 
                       experienceData.resolvedTaxonomy.municipio[0] : 
                       experienceData.resolvedTaxonomy.municipio}, {Array.isArray(experienceData.resolvedTaxonomy.departamento) ? 
