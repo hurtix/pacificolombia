@@ -108,7 +108,7 @@ const municipalities = [...new Set(completeExperiences.map(exp => {
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="experiences-grid">
           {completeExperiences.map((experience) => (
             <article 
-              class="experience-card h-100 rounded-lg relative"
+              class="experience-card h-100 rounded-lg relative border border-white/30"
 
               data-municipio={(() => {
                 const mun = experience.resolvedTaxonomy?.municipio;

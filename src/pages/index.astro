@@ -86,7 +86,7 @@ const placeholderSlide = {
     // Randomizar experiencias sin logs
 
     const _ = (id)=>document.getElementById(id)
-    const cards = data.map((i, index)=>`<div class="card" id="card${index}" style="background-image:url(${i.image})"  ></div>`).join('')
+    const cards = data.map((i, index)=>`<div class="card border border-white/30" id="card${index}" style="background-image:url(${i.image})"  ></div>`).join('')
 
     const cardContents = data.map((i, index)=>`<div class="card-content" id="card-content-${index}">
     <div class="content-place uppercase">${i.place}</div>
