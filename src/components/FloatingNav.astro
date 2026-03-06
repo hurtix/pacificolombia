@@ -50,12 +50,19 @@
 
   /* Fondo de navegación */
   #nav-bg {
+    position: fixed;
+    height: calc(var(--btn-size) * 1px);
+    width: calc(var(--btn-size) * 1px);
+    top: calc(var(--offset-value) * 1px);
+    right: calc(var(--offset-value) * 1px);
+    border-radius: 50%;
     transform-origin: center center;
     transition: transform 0.3s;
     transform: translate(var(--translate-x), var(--translate-y)) scale(var(--scale));
     will-change: transform;
     pointer-events: none;
     background: linear-gradient(135deg, var(--pacifico-green), var(--pacifico-blue));
+    z-index: 999 !important;
   }
 
   /* Botón toggle */
@@ -310,8 +317,8 @@
       offsetY = (h / 2) - buttonCenterY;
 
       // Calcular radio suficiente para cubrir toda la pantalla
-      const radius = Math.sqrt(w * w + h * h);
-      scale = (radius / (elemW / 2)) + 0.2;
+      const diagonalDistance = Math.sqrt(w * w + h * h);
+      scale = (diagonalDistance / (elemW / 2)) * 1.2;
       return scale;
     };
 

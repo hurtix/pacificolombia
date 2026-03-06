@@ -6,70 +6,28 @@ import Layout from '../layouts/Layout.astro';
   title="Página no encontrada - Destino Pacífico" 
   description="La página que buscas no está disponible. Explora nuestras 100 experiencias del Pacífico colombiano."
 >
-  <section class="py-20 bg-gradient-to-br from-blue-900 via-green-800 to-teal-700 text-white min-h-screen flex items-center">
+  <section class="py-20 bg-fuchsia-950 text-white min-h-screen flex items-center">
     <div class="container mx-auto px-4 text-center">
       <div class="max-w-2xl mx-auto">
         <!-- 404 Icon -->
-        <div class="text-8xl mb-8">🌊</div>
         
         <!-- Error Message -->
         <h1 class="text-6xl font-bold mb-4">404</h1>
-        <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-blue-100">
+        <h2 class="text-2xl md:text-3xl font-semibold mb-6 uppercase">
           Esta experiencia se perdió en el océano
         </h2>
-        <p class="text-lg mb-8 text-blue-100">
+        <p class="text-lg mb-8">
           La página que buscas no existe o fue movida. Pero no te preocupes, 
           hay muchas aventuras esperándote en el Pacífico colombiano.
         </p>
         
         <!-- Action Buttons -->
-        <div class="flex flex-wrap gap-4 justify-center">
-          <a 
-            href="/" 
-            class="px-6 py-3 bg-white text-blue-900 rounded-lg font-semibold hover:bg-blue-50 transition-colors shadow-md inline-flex items-center"
-          >
-            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
-            </svg>
-            Volver al inicio
-          </a>
-          <a 
-            href="/experiencias" 
-            class="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-md inline-flex items-center"
-          >
-            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
-            </svg>
-            Explorar experiencias
-          </a>
-        </div>
-        
-        <!-- Quick Links -->
-        <div class="mt-12 pt-8 border-t border-blue-300/30">
-          <h3 class="text-lg font-semibold mb-4 text-blue-100">
-            Experiencias populares:
-          </h3>
-          <div class="flex flex-wrap gap-2 justify-center text-sm">
-            <a href="/experiencia/001" class="px-3 py-1 bg-white/20 rounded-full hover:bg-white/30 transition-colors">
-              EXP-001
-            </a>
-            <a href="/experiencia/010" class="px-3 py-1 bg-white/20 rounded-full hover:bg-white/30 transition-colors">
-              EXP-010
-            </a>
-            <a href="/experiencia/025" class="px-3 py-1 bg-white/20 rounded-full hover:bg-white/30 transition-colors">
-              EXP-025
-            </a>
-            <a href="/experiencia/050" class="px-3 py-1 bg-white/20 rounded-full hover:bg-white/30 transition-colors">
-              EXP-050
-            </a>
-            <a href="/experiencia/075" class="px-3 py-1 bg-white/20 rounded-full hover:bg-white/30 transition-colors">
-              EXP-075
-            </a>
-            <a href="/experiencia/100" class="px-3 py-1 bg-white/20 rounded-full hover:bg-white/30 transition-colors">
-              EXP-100
-            </a>
-          </div>
-        </div>
+        <div class="flex flex-col md:flex-row justify-center items-center gap-6 uppercase">
+    <a href="/" class="bg-transparent border rounded-full px-4 py-2 hover:bg-white hover:text-fuchsia-950 transition-all duration-300">
+      Volver al inicio
+    </a>
+    <a href="/experiencias" class="bg-transparent border rounded-full px-4 py-2 hover:bg-white hover:text-fuchsia-950 transition-all duration-300">Explorar experiencias</a>
+  </div>
       </div>
     </div>
   </section>
