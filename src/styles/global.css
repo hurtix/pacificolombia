@@ -169,7 +169,6 @@
 }
 .details > .cta {
   width: 500px;
-  margin-top: 24px;
   display: flex;
   align-items: center;
 }
@@ -401,7 +400,7 @@ nav > div:last-child > .active:after {
 /* Mobile: < 640px */
 @media (max-width: 639px) {
   .details {
-    top: 10%;
+    top: 20%;
     left: 0;
   }
   
@@ -419,7 +418,6 @@ nav > div:last-child > .active:after {
   
   .details > .cta {
     width: auto;
-    flex-direction: column;
     gap: 8px;
   }
   

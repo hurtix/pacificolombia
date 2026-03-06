@@ -16,7 +16,7 @@ const { place, title, title2, description, id, isActive = false } = Astro.props;
     <div class="text text-xs sm:text-sm md:text-xl py-2 sm:py-3 md:py-4 uppercase">{place}</div>
   </div>
   <div class="title-box-1">
-    <div class="title-1 line-clamp-2 text-3xl sm:text-5xl md:text-6xl lg:text-7xl">{title}</div>
+    <div class="title-1 line-clamp-3 md:line-clamp-2 text-3xl sm:text-5xl md:text-6xl lg:text-7xl">{title}</div>
   </div>
   <div class="title-box-2">
     <div class="title-2 text-sm sm:text-lg md:text-2xl lg:text-3xl">{title2}</div>
@@ -24,7 +24,7 @@ const { place, title, title2, description, id, isActive = false } = Astro.props;
   <div class="desc w-full hidden md:block md:w-1/2 text-xs sm:text-sm md:text-base lg:text-lg">
     {description}
   </div>
-  <div class="cta flex !flex-row gap-4">
+  <div class="cta flex flex-row gap-4">
     <a href="/experiencias" class="view-all text-xs sm:text-sm md:text-base">
       Descubre las 100 
     </a>
