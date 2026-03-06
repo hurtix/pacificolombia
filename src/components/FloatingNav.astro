@@ -58,11 +58,14 @@
     border-radius: 50%;
     transform-origin: center center;
     transition: transform 0.3s;
-    transform: translate(var(--translate-x), var(--translate-y)) scale(var(--scale));
+    transform: translate(calc(var(--translate-x) * 1px), calc(var(--translate-y) * 1px)) scale(var(--scale));
     will-change: transform;
     pointer-events: none;
     background: linear-gradient(135deg, var(--pacifico-green), var(--pacifico-blue));
     z-index: 9997 !important;
+    overflow: visible;
+    box-sizing: border-box;
+  }
   }
 
   /* Botón toggle */
@@ -323,8 +326,8 @@
     };
 
     const openMenu = () => {
-      elem.style.setProperty('--translate-x', `${offsetX}px`);
-      elem.style.setProperty('--translate-y', `-${offsetY}px`);
+      elem.style.setProperty('--translate-x', offsetX);
+      elem.style.setProperty('--translate-y', offsetY);
       elem.style.setProperty('--scale', scale);
     };
 
