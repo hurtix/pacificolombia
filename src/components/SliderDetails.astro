@@ -21,10 +21,10 @@ const { place, title, title2, description, id, isActive = false } = Astro.props;
   <div class="title-box-2">
     <div class="title-2 text-sm sm:text-lg md:text-2xl lg:text-3xl">{title2}</div>
   </div>
-  <div class="desc w-full sm:w-3/4 md:w-1/2 text-xs sm:text-sm md:text-base lg:text-lg">
+  <div class="desc w-full hidden md:block md:w-1/2 text-xs sm:text-sm md:text-base lg:text-lg">
     {description}
   </div>
-  <div class="cta flex flex-col sm:flex-row gap-2 sm:gap-4">
+  <div class="cta flex !flex-row gap-4">
     <a href="/experiencias" class="view-all text-xs sm:text-sm md:text-base">
       Descubre las 100 
     </a>
