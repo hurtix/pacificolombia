@@ -82,17 +82,6 @@ const placeholderSlide = {
     
     // RANDOMIZAR en el cliente cada vez que carga la página
     const data = shuffleArray(allExperiences).slice(0, 6);
-    
-    // DEBUG: Mostrar todos los datos
-    console.log('=== DATOS DEL SLIDER ===');
-    data.forEach((exp, idx) => {
-      console.log(`[${idx}]`, {
-        expNumber: exp.expNumber,
-        title: exp.title,
-        place: exp.place,
-        description: exp.description
-      });
-    });
 
     const _ = (id)=>document.getElementById(id)
     const cards = data.map((i, index)=>`<div class="card border border-white/30" id="card${index}" style="background-image:url(${i.image})"  ></div>`).join('')
@@ -243,10 +232,6 @@ const placeholderSlide = {
       gsap.set(".indicator", { x: -window.innerWidth });
 
       // ✅ ACTUALIZAR CONTENIDO CON DATOS RANDOMIZADOS
-      console.log('Actualizando con:', data[active]);
-      console.log('place:', data[active].place);
-      console.log('title:', data[active].title);
-      console.log('title2:', data[active].title2);
       
       const placeTextEl = document.querySelector(`${detailsActive} [data-place-text]`);
       const titleEl = document.querySelector(`${detailsActive} [data-place-title1]`);
@@ -255,19 +240,15 @@ const placeholderSlide = {
       
       if (placeTextEl) {
         placeTextEl.textContent = data[active].place;
-        console.log('place-text actualizado a:', data[active].place);
       }
       if (titleEl) {
         titleEl.textContent = data[active].title;
-        console.log('title actualizado a:', data[active].title);
       }
       if (title2El) {
         title2El.textContent = data[active].title2;
-        console.log('title2 actualizado a:', data[active].title2);
       }
       if (descEl) {
         descEl.textContent = data[active].description;
-        console.log('desc actualizado');
       }
 
       const startDelay = 0.6;
