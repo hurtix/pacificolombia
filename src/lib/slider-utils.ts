@@ -72,7 +72,11 @@ export async function processExperiencesForSlider(count: number = 40): Promise<S
   const experiencesForRandom = experiencias.slice(0, count);
 
   const sliderData = experiencesForRandom.map((exp, index) => {
-    const narrative = narratives.find(n => n.expNumber === exp.expNumber);
+    // Extraer el número real del título (EXP-XX)
+    const titleMatch = exp.title.match(/EXP-(\d+)/);
+    const realExpNumber = titleMatch ? parseInt(titleMatch[1]) : (exp.expNumber || index + 1);
+    
+    const narrative = narratives.find(n => n.expNumber === realExpNumber);
     
     // Usar los datos directos del JSON (ya resueltos)
     const municipio = cleanText(exp.municipio || '');
@@ -98,8 +102,8 @@ export async function processExperiencesForSlider(count: number = 40): Promise<S
         title: mainTitle.toUpperCase(),
         title2: subTitle.toUpperCase(),
         description: description,
-        image: getExperienceImagePath(exp.expNumber || index + 1),
-        expNumber: String(exp.expNumber || index + 1).padStart(3, '0'),
+        image: getExperienceImagePath(realExpNumber),
+        expNumber: String(realExpNumber).padStart(3, '0'),
         wpId: exp.id
       };
     });

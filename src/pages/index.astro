@@ -83,7 +83,16 @@ const placeholderSlide = {
     // RANDOMIZAR en el cliente cada vez que carga la página
     const data = shuffleArray(allExperiences).slice(0, 6);
     
-    // Randomizar experiencias sin logs
+    // DEBUG: Mostrar todos los datos
+    console.log('=== DATOS DEL SLIDER ===');
+    data.forEach((exp, idx) => {
+      console.log(`[${idx}]`, {
+        expNumber: exp.expNumber,
+        title: exp.title,
+        place: exp.place,
+        description: exp.description
+      });
+    });
 
     const _ = (id)=>document.getElementById(id)
     const cards = data.map((i, index)=>`<div class="card border border-white/30" id="card${index}" style="background-image:url(${i.image})"  ></div>`).join('')
@@ -203,10 +212,10 @@ const placeholderSlide = {
       gsap.set(getCardContent(active), { x: 0, y: 0, opacity: 0 });
       gsap.set(detailsActive, { opacity: 0, zIndex: 22, x: -200 });
       gsap.set(detailsInactive, { opacity: 0, zIndex: 12 });
-      gsap.set(`${detailsInactive} .text`, { y: 100 });
-      gsap.set(`${detailsInactive} .title-1`, { y: 100 });
-      gsap.set(`${detailsInactive} .title-2`, { y: 100 });
-      gsap.set(`${detailsInactive} .desc`, { y: 50 });
+      gsap.set(`${detailsInactive} [data-place-text]`, { y: 100 });
+      gsap.set(`${detailsInactive} [data-place-title1]`, { y: 100 });
+      gsap.set(`${detailsInactive} [data-place-title2]`, { y: 100 });
+      gsap.set(`${detailsInactive} [data-place-desc]`, { y: 50 });
       gsap.set(`${detailsInactive} .cta`, { y: 60 });
 
       gsap.set(".progress-sub-foreground", {
@@ -234,10 +243,32 @@ const placeholderSlide = {
       gsap.set(".indicator", { x: -window.innerWidth });
 
       // ✅ ACTUALIZAR CONTENIDO CON DATOS RANDOMIZADOS
-      document.querySelector(`${detailsActive} .place-box .text`).textContent = data[active].place;
-      document.querySelector(`${detailsActive} .title-1`).textContent = data[active].title;
-      document.querySelector(`${detailsActive} .title-2`).textContent = data[active].title2;
-      document.querySelector(`${detailsActive} .desc`).textContent = data[active].description;
+      console.log('Actualizando con:', data[active]);
+      console.log('place:', data[active].place);
+      console.log('title:', data[active].title);
+      console.log('title2:', data[active].title2);
+      
+      const placeTextEl = document.querySelector(`${detailsActive} [data-place-text]`);
+      const titleEl = document.querySelector(`${detailsActive} [data-place-title1]`);
+      const title2El = document.querySelector(`${detailsActive} [data-place-title2]`);
+      const descEl = document.querySelector(`${detailsActive} [data-place-desc]`);
+      
+      if (placeTextEl) {
+        placeTextEl.textContent = data[active].place;
+        console.log('place-text actualizado a:', data[active].place);
+      }
+      if (titleEl) {
+        titleEl.textContent = data[active].title;
+        console.log('title actualizado a:', data[active].title);
+      }
+      if (title2El) {
+        title2El.textContent = data[active].title2;
+        console.log('title2 actualizado a:', data[active].title2);
+      }
+      if (descEl) {
+        descEl.textContent = data[active].description;
+        console.log('desc actualizado');
+      }
 
       const startDelay = 0.6;
 
@@ -394,14 +425,15 @@ const placeholderSlide = {
         const detailsActive = detailsEven ? "#details-even" : "#details-odd";
         const detailsInactive = detailsEven ? "#details-odd" : "#details-even";
 
-        document.querySelector(`${detailsActive} .place-box .text`).textContent =
-          data[order[0]].place;
-        document.querySelector(`${detailsActive} .title-1`).textContent =
-          data[order[0]].title;
-        document.querySelector(`${detailsActive} .title-2`).textContent =
-          data[order[0]].title2;
-        document.querySelector(`${detailsActive} .desc`).textContent =
-          data[order[0]].description;
+        const placeTextEl = document.querySelector(`${detailsActive} [data-place-text]`);
+        const titleEl = document.querySelector(`${detailsActive} [data-place-title1]`);
+        const title2El = document.querySelector(`${detailsActive} [data-place-title2]`);
+        const descEl = document.querySelector(`${detailsActive} [data-place-desc]`);
+        
+        if (placeTextEl) placeTextEl.textContent = data[order[0]].place;
+        if (titleEl) titleEl.textContent = data[order[0]].title;
+        if (title2El) title2El.textContent = data[order[0]].title2;
+        if (descEl) descEl.textContent = data[order[0]].description;
 
         const discoverBtn = document.querySelector(`${detailsActive} .discover`);
         discoverBtn.onclick = () => {
@@ -410,10 +442,10 @@ const placeholderSlide = {
 
         gsap.set(detailsActive, { zIndex: 22 });
         gsap.to(detailsActive, { opacity: 1, delay: 0.4, ease });
-        gsap.to(`${detailsActive} .text`, { y: 0, delay: 0.1, duration: 0.7, ease });
-        gsap.to(`${detailsActive} .title-1`, { y: 0, delay: 0.15, duration: 0.7, ease });
-        gsap.to(`${detailsActive} .title-2`, { y: 0, delay: 0.15, duration: 0.7, ease });
-        gsap.to(`${detailsActive} .desc`, { y: 0, delay: 0.3, duration: 0.4, ease });
+        gsap.to(`${detailsActive} [data-place-text]`, { y: 0, delay: 0.1, duration: 0.7, ease });
+        gsap.to(`${detailsActive} [data-place-title1]`, { y: 0, delay: 0.15, duration: 0.7, ease });
+        gsap.to(`${detailsActive} [data-place-title2]`, { y: 0, delay: 0.15, duration: 0.7, ease });
+        gsap.to(`${detailsActive} [data-place-desc]`, { y: 0, delay: 0.3, duration: 0.4, ease });
         gsap.to(`${detailsActive} .cta`, {
           y: 0, delay: 0.35, duration: 0.4, ease,
           onComplete: () => {
@@ -460,10 +492,10 @@ const placeholderSlide = {
             gsap.set(getSliderItem(next), { x: rest.length * numberSize });
 
             gsap.set(detailsInactive, { opacity: 0 });
-            gsap.set(`${detailsInactive} .text`, { y: 100 });
-            gsap.set(`${detailsInactive} .title-1`, { y: 100 });
-            gsap.set(`${detailsInactive} .title-2`, { y: 100 });
-            gsap.set(`${detailsInactive} .desc`, { y: 50 });
+            gsap.set(`${detailsInactive} [data-place-text]`, { y: 100 });
+            gsap.set(`${detailsInactive} [data-place-title1]`, { y: 100 });
+            gsap.set(`${detailsInactive} [data-place-title2]`, { y: 100 });
+            gsap.set(`${detailsInactive} [data-place-desc]`, { y: 50 });
             gsap.set(`${detailsInactive} .cta`, { y: 60 });
           }
         });
@@ -496,14 +528,15 @@ const placeholderSlide = {
         const detailsActive = detailsEven ? "#details-even" : "#details-odd";
         const detailsInactive = detailsEven ? "#details-odd" : "#details-even";
 
-        document.querySelector(`${detailsActive} .place-box .text`).textContent =
-          data[order[0]].place;
-        document.querySelector(`${detailsActive} .title-1`).textContent =
-          data[order[0]].title;
-        document.querySelector(`${detailsActive} .title-2`).textContent =
-          data[order[0]].title2;
-        document.querySelector(`${detailsActive} .desc`).textContent =
-          data[order[0]].description;
+        const placeTextEl = document.querySelector(`${detailsActive} [data-place-text]`);
+        const titleEl = document.querySelector(`${detailsActive} [data-place-title1]`);
+        const title2El = document.querySelector(`${detailsActive} [data-place-title2]`);
+        const descEl = document.querySelector(`${detailsActive} [data-place-desc]`);
+        
+        if (placeTextEl) placeTextEl.textContent = data[order[0]].place;
+        if (titleEl) titleEl.textContent = data[order[0]].title;
+        if (title2El) title2El.textContent = data[order[0]].title2;
+        if (descEl) descEl.textContent = data[order[0]].description;
 
         const discoverBtn = document.querySelector(`${detailsActive} .discover`);
         discoverBtn.onclick = () => {
@@ -512,10 +545,10 @@ const placeholderSlide = {
 
         gsap.set(detailsActive, { zIndex: 22 });
         gsap.to(detailsActive, { opacity: 1, delay: 0.4, ease });
-        gsap.to(`${detailsActive} .text`, { y: 0, delay: 0.1, duration: 0.7, ease });
-        gsap.to(`${detailsActive} .title-1`, { y: 0, delay: 0.15, duration: 0.7, ease });
-        gsap.to(`${detailsActive} .title-2`, { y: 0, delay: 0.15, duration: 0.7, ease });
-        gsap.to(`${detailsActive} .desc`, { y: 0, delay: 0.3, duration: 0.4, ease });
+        gsap.to(`${detailsActive} [data-place-text]`, { y: 0, delay: 0.1, duration: 0.7, ease });
+        gsap.to(`${detailsActive} [data-place-title1]`, { y: 0, delay: 0.15, duration: 0.7, ease });
+        gsap.to(`${detailsActive} [data-place-title2]`, { y: 0, delay: 0.15, duration: 0.7, ease });
+        gsap.to(`${detailsActive} [data-place-desc]`, { y: 0, delay: 0.3, duration: 0.4, ease });
         gsap.to(`${detailsActive} .cta`, {
           y: 0, delay: 0.35, duration: 0.4, ease,
           onComplete: () => {
@@ -559,10 +592,10 @@ const placeholderSlide = {
             gsap.set(getSliderItem(prv), { x: rest.length * numberSize });
 
             gsap.set(detailsInactive, { opacity: 0 });
-            gsap.set(`${detailsInactive} .text`, { y: 100 });
-            gsap.set(`${detailsInactive} .title-1`, { y: 100 });
-            gsap.set(`${detailsInactive} .title-2`, { y: 100 });
-            gsap.set(`${detailsInactive} .desc`, { y: 50 });
+            gsap.set(`${detailsInactive} [data-place-text]`, { y: 100 });
+            gsap.set(`${detailsInactive} [data-place-title1]`, { y: 100 });
+            gsap.set(`${detailsInactive} [data-place-title2]`, { y: 100 });
+            gsap.set(`${detailsInactive} [data-place-desc]`, { y: 50 });
             gsap.set(`${detailsInactive} .cta`, { y: 60 });
             
             // Resetear clicks después de completar la animación
