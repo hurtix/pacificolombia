@@ -30,7 +30,7 @@ const placeholderSlide = {
 >
   <main id="app">
     <!-- Indicador de progreso -->
-    <div class="indicator"></div>
+    <div class="indicator fixed left-0 right-0 top-0 h-1 z-60 bg-yellow-500"></div>
     
     <!-- Contenedor del slider (se llena dinámicamente) -->
     <div id="slider"></div>
@@ -57,10 +57,10 @@ const placeholderSlide = {
     <SliderNavigation />
 
     <!-- Pantalla de carga -->
-    <div class="cover"></div>
+    <div class="cover absolute left-0 top-0 w-screen h-screen bg-fuchsia-950 z-[100]"></div>
 
     <!-- Logo -->
-    <div class="label fixed bottom-0 md:bottom-5 left-0 z-50 pointer-events-none select-none">
+    <div class="label block md:hidden lg:hidden xl:block absolute bottom-0 md:bottom-0 lg:bottom-full xl:bottom-5 left-0 z-50 pointer-events-none select-none">
       <img src="/images/by.webp" alt="By" class="w-full md:w-[600px] lg:w-[700px]">
     </div>
     <div class="hidden md:block absolute bottom-2 right-0 z-50 opacity-50 hover:opacity-100 transition-opacity duration-300">
@@ -84,15 +84,15 @@ const placeholderSlide = {
     const data = shuffleArray(allExperiences).slice(0, 6);
 
     const _ = (id)=>document.getElementById(id)
-    const cards = data.map((i, index)=>`<div class="card border border-white/30" id="card${index}" style="background-image:url(${i.image})"  ></div>`).join('')
+    const cards = data.map((i, index)=>`<div class="card absolute left-0 top-0 bg-cover bg-center shadow-lg overflow-hidden before:absolute before:content-[''] before:w-full before:h-full before:bg-black/45 border border-white/30" id="card${index}" style="background-image:url(${i.image})"  ></div>`).join('')
 
-    const cardContents = data.map((i, index)=>`<div class="card-content" id="card-content-${index}">
-    <div class="content-place uppercase">${i.place}</div>
-    <div class="content-start"></div>
-    <div class="content-title-1 uppercase line-clamp-3">${i.title}</div>
+    const cardContents = data.map((i, index)=>`<div class="card-content absolute text-amber-50 px-2 max-w-[200px]" id="card-content-${index}">
+    <div class="content-place text-xs font-medium uppercase">${i.place}</div>
+    <div class="content-start my-1 w-[30px] h-1 bg-amber-50 rounded-full"></div>
+    <div class="content-title-1 text-base font-semibold uppercase line-clamp-3">${i.title}</div>
     </div>`).join('')
 
-    const sildeNumbers = data.map((_, index)=>`<div class="item" id="slide-item-${index}" >${index+1}</div>`).join('')
+    const sildeNumbers = data.map((_, index)=>`<div class="item absolute w-[50px] h-[50px] text-white top-0 left-0 flex items-center justify-center text-3xl font-bold" id="slide-item-${index}" >${index+1}</div>`).join('')
     _('slider').innerHTML =  cards + cardContents
     _('slide-numbers').innerHTML =  sildeNumbers
 

@@ -11,22 +11,22 @@ export interface Props {
 const { place, title, title2, description, id, isActive = false } = Astro.props;
 ---
 
-<div class={`details space-y-1 md:space-y-8 text-white w-full sm:w-4/5 md:w-3/4 px-4 sm:px-0 ${isActive ? 'opacity-1' : 'opacity-0'}`} id={id}>
-  <div class="place-box" data-place-box>
-    <div class="text text-xs sm:text-sm md:text-xl py-2 sm:py-3 md:py-4 uppercase" data-place-text></div>
+<div class={`absolute z-[22] space-y-1 md:space-y-8 text-white w-full sm:w-4/5 md:w-3/4 px-4 max-2xl:top-[20%] max-2xl:left-0 lg:top-[240px] lg:left-[60px] ${isActive ? 'opacity-1' : 'opacity-0'}`} id={id}>
+  <div class="h-auto overflow-hidden" data-place-box>
+    <div class="text text-xs md:text-sm lg:text-lg xl:text-xl py-2 sm:py-3 md:py-4 uppercase font-botanika" data-place-text></div>
     <div class="w-10 h-1 md:h-2 bg-white rounded-full"></div>
   </div>
-  <div class="title-box-1">
-    <div class="title-1 line-clamp-3 md:line-clamp-2 text-3xl sm:text-5xl md:text-6xl lg:text-7xl" data-place-title1></div>
+  <div class="h-auto overflow-hidden">
+    <div class="title-1 line-clamp-3 md:line-clamp-1 lg:line-clamp-1 xl:line-clamp-2 text-3xl lg:text-4xl xl:text-7xl tk-ciclo-display font-black leading-none" data-place-title1></div>
   </div>
-  <div class="title-box-2">
-    <div class="title-2 text-sm sm:text-lg md:text-2xl lg:text-3xl" data-place-title2></div>
+  <div class="h-auto overflow-hidden">
+    <div class="title-2 text-sm lg:text-2xl xl:text-3xl font-semibold max-w-[75%] leading-none hidden" data-place-title2></div>
   </div>
-  <div class="desc w-full hidden md:block md:w-1/2 text-xs sm:text-sm md:text-base lg:text-lg" data-place-desc></div>
-  <div class="cta flex flex-row gap-4">
-    <a href="/experiencias" class="view-all text-xs sm:text-sm md:text-base">
+  <div class="w-full hidden xl:block md:w-1/2 text-base md:text-lg lg:text-xl xl:text-2xl" data-place-desc></div>
+  <div class="cta flex flex-row md:flex-col lg:flex-col xl:flex-row items-start gap-4 w-full lg:w-[500px]">
+    <a href="/experiencias" class="view-all flex-1 lg:flex-none border border-white bg-white text-black px-6 py-2 rounded-full text-xs sm:text-sm md:text-base font-medium uppercase cursor-pointer transition-colors hover:bg-gray-400 inline-flex items-center justify-center">
       Descubre las 100 
     </a>
-    <button class="discover text-xs sm:text-sm md:text-base">Explorar</button>
+    <button class="discover flex-1 lg:flex-none border border-white bg-transparent text-white px-6 py-2 rounded-full text-xs sm:text-sm md:text-base font-medium uppercase cursor-pointer transition-colors hover:bg-white hover:text-black">Explorar</button>
   </div>
 </div>
