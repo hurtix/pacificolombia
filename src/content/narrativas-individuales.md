@@ -713,3 +713,1087 @@ You will embark on a journey guided by the inhabitants of this community, who wi
 You will share foods that nourish the soul: sun-dried fish or fish smoked over firewood, prepared in a ritual that safeguards the Pacific’s memory. At sunset, the hammocks will sway with the wind, and the stories shared around a bonfire will show you that this journey transcends the spiritual.
 
 When it is time to leave, you will return home with a renewed way of experiencing the world, because those who discover Jurubirá also discover something essential within themselves.
+
+**EXP 041 - VIAJE A TU INTERIOR - Donde la naturaleza te abraza y el alma renace en su esencia**
+
+Dicen que, en los comienzos del mundo, existía un paraíso, y hoy ese Edén se esconde en Capurganá, un santuario del Chocó donde la selva se inclina hacia el mar y el tiempo parece anterior al olvido. Nosotros te recibimos en este refugio llamado «Pura Vida», un lugar frente al mar, rodeado de árboles y flores, para que comiences tu viaje hacia el interior.
+
+Contigo honramos la tierra y su gente mediante un ritual de gratitud en la piscina natural, una caminata contemplativa hacia Iracas de Belén y la apertura de un círculo sagrado de sanación. Realizamos una limpieza energética al amanecer y vivimos la terapia de Barras Access en la playa, para soltar cargas y abrir espacio a la paz. Juntos, en la sesión de escucha interna, nos reconectamos con la esencia y compartimos la terapia del perdón, una experiencia liberadora.
+
+Cuando regreses a casa, comprenderás que la fuerza de la naturaleza no está afuera, sino dentro de ti. El paisaje más bello será el que reconstruiste en tu interior, donde el río, la selva y el mar seguirán sonando como una sola energía. Tu camino de vida apenas inicia, porque sanar también es recordar que estás vivo.
+
+EN.
+
+They say that, at the beginning of the world, there was once a paradise, and today that Eden hides in Capurganá, a sanctuary in Chocó where the jungle leans toward the sea and time seems older than memory. We welcome you to this refuge called «Pura Vida», a place by the ocean, surrounded by trees and flowers, where your journey inward begins.
+
+Together, we honor the land and its people through a ritual of gratitude in the natural pool, a contemplative walk to Iracas de Belén, and the opening of a sacred healing circle. At dawn, we carry out an energetic cleansing and experience Access Bars therapy on the beach, releasing burdens and creating space for peace. In the session of inner listening, we reconnect with our essence and share the forgiveness therapy–an experience of profound liberation.
+
+When you return home, you will understand that the force of nature is not outside but within you. The most beautiful landscape will be the one you rebuilt inside yourself, where the river, the jungle, and the sea will continue resonating as a single energy. Your life path is only beginning, for healing is also remembering that you are alive.
+
+**EXP 042 - RELATOS, SABERES Y SABORES DE QUIBDÓ - La historia se vive y el sabor se transforma en el corazón del Atrato**
+
+Te invitamos a vivir una experiencia escrita por las aguas del río Atrato. Desde el momento en que pisas Quibdó, el aire cambia.
+
+Comenzaremos en la plaza de mercado, donde te mostraremos los elementos de nuestra despensa: marañón, chontaduro, hierbas medicinales y mucho más. Caminaremos por el Malecón, donde las aguas arrastran relatos de resistencia, y continuaremos hacia la Catedral, testigo de siglos de historia.
+
+Navegarás el río en un potrillo, acariciando su cauce milenario, mientras nuestros intérpretes comparten leyendas que el viento llevará hasta tus oídos. Esta inmersión preparará tu cuerpo y tu espíritu para el gran banquete en el Museo Gastronómico. Tus manos se teñirán de achiote y limón mientras aprendes de las cocineras guardianas del saber. Luego, probarás lo preparado: un encocado de pescado, arroz con coco y jugo de borojó, un verdadero diálogo con la tierra.
+
+Al caer la noche, la quietud del río apaciguará tu ser. Comprenderás que esta experiencia no consiste en llegar a un lugar, sino en permitir que Quibdó llegue a lo más profundo de ti. Después de vivirla, te convertirás para siempre en chocoano.
+
+EN.
+
+We invite you to live an experience written by the waters of the Río Atrato. From the moment you set foot in Quibdó, the air changes.
+
+We will begin at the Plaza de mercado, where we will show you the elements of our pantry: marañón, chontaduro, medicinal herbs, and much more. We will walk along the Malecón, where the waters carry stories of resistance, and continue on to the Catedral, a witness to centuries of history.
+
+You will navigate the river in a potrillo, gliding along its millenary course, while our interpreters share legends that the wind will carry to your ears. This immersion will prepare your body and spirit for the great banquet at the Museo Gastronómico. Your hands will be stained with achiote and lemon as you learn from the cooks who guard ancestral knowledge. Then, you will taste what you have prepared: encocado de pescado, coconut rice, and borojó juice —a true dialogue with the land.
+
+As night falls, the stillness of the river will soothe your being. You will understand that this experience is not about arriving at a place, but about allowing Quibdó to reach the deepest part of you. After living it, you will become chocoano forever.
+
+**EXP 043 - VIVE UNA EXPERIENCIA POR EL PACÍFICO - Manglar, Selva y Mar**
+
+Dicen que al llegar a Panguí aparece la extraña sensación de regresar a un lugar que siempre te esperó. Te invitamos a vivir una experiencia donde la selva y el mar se encuentran en un abrazo profundo. Navegarás entre manglares, donde no solo podrás contemplarlos, sino también sembrarlos, dejando tu legado en el río.
+
+Te internarás en la selva junto a nuestros intérpretes, sintiendo que cada paso te acerca a la esencia de tu vida. Observarás tucanes, mieleros azules y garzas reales, descubriendo una fauna que te ofrecerá su propia guardia de honor. Vivirás nuestra cultura a través de la cocina ancestral y recorrerás la huerta de la Posada Chachita. Participarás en un ritual mientras escuchas cantos de la tradición.
+
+Cuando llegue la despedida, sentirás gratitud y sabrás que el paraíso habita en este rincón de manglares, selva y mar que ahora también vive en tu memoria.
+
+EN.
+
+They say that when you arrive in Panguí, you feel the strange sensation of returning to a place that has always been waiting for you. We invite you to live an experience where the jungle and the sea meet in a deep embrace. You will navigate through mangroves, where you can not only contemplate them but also plant them, leaving your legacy in the river. 
+
+You will venture into the forest alongside our interpreters, feeling that each step brings you closer to the essence of your life. You will observe tucanes, mieleros azules, and garzas reales, discovering wildlife that offers you its own guard of honor. You will experience our culture through ancestral cuisine and walk through the garden of Posada Chachita. You will take part in a ritual while listening to traditional chants. 
+
+When the moment of farewell arrives, you will feel grateful, knowing that paradise lives in this corner of mangroves, jungle, and sea that now also lives within your memory.
+
+**EXP 044 - CANALETE - Sabores que conectan con el territorio**
+
+Te invitamos a una celebración en cada sorbo, donde el viche es el alma de la fiesta: un destilado ancestral que guarda la sabiduría medicinal de generaciones y el espíritu mismo del Pacífico. Es el hilo invisible que entreteje la fiesta, la medicina y una cultura que celebra la vida con cada paso de baile.
+
+Iniciaremos un diálogo con el tiempo caminando por el malecón. Luego vivirás la cata vichera, un ritual guiado por las maestras vicheras en el que educarás tus sentidos: apreciarás tonos ámbar y dorados, distinguirás notas ahumadas y frutales, percibirás texturas sedosas y descubrirás una poesía que se abre paso en la garganta.
+
+En el Museo Gastronómico, las cocineras tradicionales te mostrarán cómo el alimento es un acto cultural, mientras participas en la preparación de platos que son un lenguaje de orgullo identitario. La aventura culmina en Tutunendo, con un viaje en champa que se convierte en una meditación flotante. Al sumergirte en sus cascadas, tu cuerpo experimentará una reconexión primaria con la naturaleza.
+
+Cuando llegue el momento de partir, comprenderás que esta experiencia trasciende y permanece en tu interior. Llevarás grabado en el corazón el abrazo de un patrimonio fermentado y la memoria de un pueblo que celebra la vida a través de sus sabores, sonidos y aromas.
+
+EN.
+
+We invite you to a celebration in every sip, where viche is the soul of the feast— an ancestral distilled spirit that holds the medicinal wisdom of generations and the very spirit of the Pacific. It is the invisible thread that weaves together celebration, healing, and a culture that honors life with every step of dance.
+
+We will begin a dialogue with time by walking along the malecón. Then you will experience the Cata vichera, a ritual guided by the maestras vicheras, where you will educate your senses: you will admire amber and golden hues, distinguish smoky and fruity notes, perceive silky textures, and discover poetry that unfolds in the throat.
+
+At the Museo Gastronómico, traditional cooks will show you how food is a cultural act, as you take part in preparing dishes that speak a language of identity and pride. The adventure culminates in Tutunendo, with a journey by champa that becomes a floating meditation. As you immerse yourself in its waterfalls, your body will experience a primal reconnection with nature.
+
+When it’s time to leave, you will understand that this experience transcends the moment and remains within you. You will carry etched in your heart the embrace of a fermented heritage and the memory of a people who celebrate life through their flavors, sounds, and aromas
+
+**EXP 045 - BIOÁGORA EL MARAÑÓN - Naturaleza y cultura: sabiduría del territorio**
+
+En Lloró, donde el río Andágueda traza su curso entre selvas exuberantes y el aire se impregna del aroma de la tierra mojada, te invitamos a una inmersión sensorial que inicia al recorrer senderos ecológicos entre hierba santa y árboles de borojó. Allí descubrirás huertas comunitarias donde se preservan técnicas agrícolas ancestrales.
+
+Nuestras cocineras prepararán ante ti encocado de pescado en leche de coco recién extraída y sancocho de gallina criolla, mientras cruzas el puente colgante sobre el río para contemplar la confluencia de las aguas y bañarte en pozos naturales.
+
+Al caer la tarde, serás parte de danzas tradicionales al ritmo del currulao, observarás a las tejedoras de iraca y, bajo un cielo teñido de naranja, los ancianos compartirán su sabiduría sobre el vínculo profundo entre el territorio y sus habitantes. Esta experiencia transformadora te permitirá reconocer la verdadera abundancia de ser parte de un tejido vivo, sembrando en ti una nueva forma de habitar el mundo.
+
+EN.
+
+In Lloró, where the Río Andágueda traces its course through lush rainforest, and the air is infused with the scent of wet earth, we invite you to a sensory immersion that begins along ecological trails lined with hierba santa and borojó trees. Here, you will discover community gardens where ancestral agricultural techniques are carefully preserved.
+
+Our local cooks will prepare encocado de pescado with freshly extracted coconutç milk and sancocho de gallina criolla before your eyes, while you cross the hangingç bridge over the river to contemplate the meeting of the waters and bathe inç natural pools.
+
+As evening falls, you will take part in traditional dances to the rhythm of currulao, observe iraca weavers, and, beneath an orange-tinted sky, elders will share their wisdom about the deep bond between the territory and its people. This transformative experience will allow you to recognize the true abundance of being part of a living tapestry, planting within you a new way of inhabiting the world.
+
+**EXP 046 - SABORES NUQUISEÑOS - Estancia Pacífica donde el río se encuentra con el mar**
+
+Te invitamos a Guachalito, donde el mar sueña contigo. Dejarás atrás el ruido de la ciudad y llegarás a Nuquí, a La Casa de Iris, tu refugio frente al mar. Te adentrarás entre playa y selva para llegar a las aguas termales que aliviarán tu cuerpo y también tu alma. 
+
+Caminarás por arena gris, verás cangrejos y, con suerte, liberaciones de tortugas. Aprenderás sobre el viche, bebida ancestral que es relato de resistencia. En la noche, alrededor de la fogata, escucharás cuentos, mitos y leyendas provenientes de las voces de los mayores, maestros en el arte de «echar» historias. Como el Pacífico es sabor, podrás internarte en la cocina de doña Iris y probar su tapao de pescado humeante, impregnado de hierbas y coco.
+
+Al marcharte, tu cuerpo, sanado por la sal y el humo, sentirá gratitud por haber sido testigo del amor por la tierra y el mar. Guachalito se convertirá en el eco de los legados honrados y en el sabor de una vida con todos los sentidos despiertos.
+
+EN.
+
+We invite you to Guachalito, where the sea dreams of you. You will leave the city’s noise behind and arrive in Nuquí, at La Casa de Iris, your sanctuary by the ocean. You will venture between beach and jungle to reach the hot springs that will soothe your body and your soul. 
+
+You’ll walk along gray sand, spot crabs, and, with some luck, witness sea turtle releases. You will learn about viche, an ancestral drink that carries a story of resistance. At night, around the bonfire, you will listen to tales, myths, and legends shared by the elders, masters in the art of storytelling.
+
+And because the Pacific is flavor, you’ll step into Doña Iris’s kitchen and taste her steaming tapao de pescado, infused with herbs and coconut. As you leave, your body —healed by salt and smoke— will feel grateful for having witnessed the deep love for the land and the sea. Guachalito will remain as the echo of honored legacies and the taste of a life lived with all your senses awake.
+
+**EXP 047 - RESERVA NATURAL RÍO ÑAMBÍ - Ofrecemos experiencias de inmersión natural cultural en un entorno de alta biodiversidad**
+
+Deja que el canto de las aves marque el compás al internarte en el bosque primario de Ñambí. Vivirás una experiencia en la que respirarás el perfume de un santuario de biodiversidad. Sentirás la humedad abrazar tu piel y el bosque abrazar la memoria. Pasarás la noche en una cabaña integrada al bosque.
+
+Temprano, con las primeras luces del día, te unirás a nuestra intérprete especializada para salir en búsqueda del paragüero, del correcaminos, del pilpe o, quizás, del cucharillo, aves que despliegan su vuelo por todo el territorio y de las cuales aprenderás su papel en el ecosistema. 
+
+Participarás en talleres de plantas medicinales, reconociendo especies que curan y equilibran. Saborearás platos típicos con pescados de río, frutas tropicales y verduras de la zona, sintiendo el deleite en tu alma.
+
+Por la noche, saldrás a una caminata nocturna donde podrás ver ranas de cristal y hongos bioluminiscentes, descubriendo la magia del bosque que iluminará tu camino. A la luz de la luna, los guías compartirán relatos ancestrales sobre los espíritus guardianes, y entenderás que este lugar es un símbolo de conservación, donde naturaleza y cultura se entrelazan.
+
+EN.
+
+Let birdsong set your pace as you venture into the primary forest of the Río Ñambí. Here, biodiversity has its own fragrance, and the humid air wraps around you as the forest begins to write itself into your memory. You’ll spend the night in a cabin tucked deep within this sanctuary, where dawn awakens both you and the landscape.
+
+Early in the morning, with the first light of day, you will join our specialized interpreter to search for the paragüero, the correcaminos, the pilpe, or perhaps the cucharillo—birds that spread their wings across the territory and whose role in the ecosystem you will learn about. 
+
+You will participate in medicinal plant workshops, recognizing species that heal and restore balance. You will savor traditional dishes prepared with river fish, tropical fruits, and local vegetables, feeling a deep delight within your soul.
+
+When night falls, you’ll set out on a guided walk to discover glass frogs, bioluminescent fungi, and the quiet magic that only the forest reveals after dark. By moonlight, our guides will share ancestral stories of guardian spirits, helping you understand why this territory is a living symbol of conservation, where nature and culture are inseparable.
+
+**EXP 048 - SABERES Y SABORES QUE LA GUERRA NOS QUITÓ - Memoria de resistencia femenina**
+
+Te esperamos en Altaquer para que dejes atrás los pesares y los transformes en contemplación y asombro. Te recibiremos con júbilo por tu llegada. En la finca La Violeta, serás guiado por una Ashampa, una mujer valiente que ha tejido con paciencia aquello que la guerra intentó deshilachar. 
+
+Aprenderás con las manos la siembra de yuca y de plantas de azotea en talleres vivenciales, donde el maíz canta en la paila y las hierbas perfuman el vapor.
+
+Recorrerás senderos naturales y atravesarás montañas envueltas en neblina y bosques de orquídeas, mientras compartimos contigo la historia sagrada que enlaza a la comunidad con «Katsa Su», nuestra tierra. En las huertas comunitarias sembrarás plantas nativas en un acto de esperanza. Por las tardes, alrededor del fogón, degustarás el phalá-bala, el postre de chiro y chapil, y bebidas ancestrales, mientras el aire se llena con el aroma del café y el humo que recuerda al hogar.
+
+Al finalizar, te entregaremos una bolsa de semillas como memoria viva. Deseamos que te lleves una transformación interior: la calma profunda de quien siente el pulso de la naturaleza y la esperanza renovada de un futuro que se siembra, se cocina y se teje con manos que creen en la vida.
+
+EN.
+
+We await you in Altaquer, where you can leave your burdens behind and transform them into contemplation and wonder. We will welcome you with joy upon your arrival. At the Finca La Violeta, you will be guided by an Ashampa, a courageous woman who has patiently woven together what the war once tried to unravel. 
+
+With your own hands, you will learn to plant cassava and plantas de azotea in hands-on workshops where corn sings in the pan, and herbs perfume the rising steam.
+
+You will walk along natural trails and cross mountains wrapped in mist and orchid forests, while we share with you the sacred story that connects the community with «Katsa Su», our land. In the community gardens, you will plant native species in an act of hope. In the afternoons, gathered around the hearth, you will taste phalá-bala, the chiro and chapil dessert, and ancestral beverages, as the air fills with the aroma of coffee and the smoke that evokes home.
+
+At the end, we will gift you a bag of seeds as a living memory. We hope you will take with you an inner transformation: the deep calm of someone who feels the pulse of nature, and the renewed hope of a future that is planted, cooked, and woven by hands that believe in life.
+
+**EXP 049 - RUTA AGROTURÍSTICA Y PAISAJÍSTICA - Caminos ancestrales del Gran Cumbal**
+
+Vivirás con nosotros una experiencia que fusiona naturaleza, memoria y espiritualidad en el Gran Cumbal. Te recibiremos con una taza de agua de panela con quesillo y realizarás una armonización con romero y ruda antes de emprender la caminata entre siembras de papa y haba, siempre bajo la presencia del volcán.
+
+Al anochecer, llegarás a la casa campesina, donde el aroma de la leña encendida acompañará la cena de trucha o gallina criolla de la chagra. Con la primera luz del día ascenderás al volcán Cumbal, avanzando entre frailejones y quebradas mientras bebes agua de panela con hierbas y escuchas el canto del chihuaco y el copetón. En la cima, el viento despejará tu mirada frente a las lagunas. 
+
+De regreso, cosecharás con las mujeres, participarás en el ordeño y degustarás cuy asado con papas nativas. El fogón abrirá el espacio para un ritual de armonización con flores y hierbas, donde conocerás sobre mingas e Inti Raymi. Al partir, te acompañarán el olor de la tierra húmeda, el sabor de la chicha y la certeza de haber caminado una memoria viva. Si un día decides volver, este territorio te recibirá como a quien regresa a casa.
+
+EN.
+
+You will share with us an experience that weaves together nature, memory, and spirituality in the Gran Cumbal. We will welcome you with a warm cup of agua de panela with quesillo, followed by a harmonization ritual with rosemary and rue before beginning a walk through fields of potatoes and habas, always under the presence of the volcano. 
+
+
+At dusk, you will arrive at a traditional farmhouse where the aroma of burning firewood will accompany a dinner of trout or gallina criolla from the chagra. With the first light of day, you will ascend the Volcán Cumbal, moving among frailejones and mountain streams while sipping herbal agua de panela and listening to the songs of the chihuaco and the copetón. At the summit, the wind will clear your gaze as the lagunas unfold before you. 
+
+On the way back, you will harvest alongside the women, take part in the milking, and taste roasted cuy with native potatoes. The fireside will open the space for a ritual of harmonization with flowers and herbs, where you will learn about mingas and Inti Raymi. As you depart, the scent of wet earth, the taste of chicha, and the certainty of having walked a living memory will remain with you. And if one day you choose to return, this territory will welcome you as someone coming home.
+
+**EXP 050 - RAÍCES DEL GUAPUL ANDINO - Entre el aroma del fogón y el canto del viento**
+
+Cada mañana, el sol te llama con su luz milenaria. Nosotros te recibimos en Nariño, en la vereda Cuaical, donde la vida se revela en la piedra que mantiene viva la memoria.
+
+Al llegar, tus sentidos despertarán: verás el imponente volcán Cumbal, los campos verdes y el brillo del agua que desciende de los páramos; escucharás el canto de los gallos durante el día y, por la noche, el silencio habitado por luciérnagas. Comenzarás con un recorrido cultural por el parque principal, visitando la iglesia y la enigmática Piedra de los Machines.
+
+Vivirás una ceremonia ancestral de armonización y agradecimiento a la Pachamama. Luego caminarás el sendero de la Cuchilla, entre montañas y riachuelos, aprendiendo sobre plantas medicinales y la relación sagrada con la tierra. Llegarás al mirador de Guapul, donde la inmensidad del paisaje se funde con melodías autóctonas.
+
+Degustarás cuy asado o trucha arcoíris, acompañados de bebidas tradicionales. Al caer la tarde, compartiremos música, danza y relatos de nuestras costumbres y saberes ancestrales.
+
+Al regresar a casa, sentirás que algo en ti se ha despertado. Sin necesidad de palabras, comprenderás que este viaje no fue un destino: fue un regreso a tu esencia.
+
+EN.
+
+Each morning, the sun calls to you with its millenary light. We welcome you to Nariño, in the Vereda Cuaical, where life reveals itself in the stone that keeps memory alive.
+
+Upon arrival, your senses will awaken: you will see the imposing Volcán Cumbal, the green fields, and the shimmer of water descending from the páramos; you will hear roosters crowing during the day and, at night, a silence inhabited by fireflies. You will begin with a cultural walk through the main square, visiting the church and the enigmatic Piedra de los Machines.
+
+You will take part in an ancestral ceremony of harmonization and gratitude to the Pachamama. Then you will walk the Sendero de la Cuchilla, winding through mountains and streams, learning about medicinal plants and the sacred relationship with the land. You will arrive at the Mirador de Guapul, where the vastness of the landscape blends with indigenous melodies.
+
+You will savor cuy asado or trucha arcoíris, accompanied by traditional beverages. As evening falls, we will share music, dance, and stories of our customs and ancestral knowledge.
+
+When you return home, you will feel that something within you has awakened. Without the need for words, you will understand that this journey was not a destination—it was a return to your essence.
+
+**EXP 051 - NAVEGANDO ENTRE PAISAJES Y SENDEROS - Laguna de Cumbal**
+
+Descubre la Laguna La Bolsa, en Cumbal, donde el volcán guardián se refleja en las aguas profundas y los frailejones bailan con el viento. Navegarás en lanchas tradicionales mientras los intérpretes te comparten los relatos de los primeros habitantes, la leyenda de la Paila de las Siete Orejas y la historia de cómo sus ancestros construyeron las primeras embarcaciones.
+
+Caminarás por senderos entre musgos vibrantes y aves andinas, descubriendo plantas medicinales como la menta y el eucalipto. Conocerás la Piedra de los Machines, con sus grabados del sol de los Pastos, que narran la conexión entre el fuego volcánico y las aguas sagradas.
+
+Probarás trucha fresca con papas nativas y participarás en rituales de armonización, pidiendo permiso a la laguna. Al regresar a casa, llevarás contigo la serenidad de este territorio y la calidez de una comunidad que mantiene viva su cultura, comprendiendo el verdadero significado de una relación de reciprocidad con la naturaleza.
+
+EN.
+
+Discover Laguna La Bolsa, in Cumbal, where the guardian volcano reflects upon its deep waters and the frailejones dance with the wind. You will navigate in traditional boats while the interpreters share with you the stories of the first inhabitants, the legend of the Paila de las Siete Orejas, and the tale of how their ancestors built the first vessels.
+
+You will walk along trails lined with vibrant mosses and Andean birds, discovering medicinal plants such as mint and eucalyptus. You will visit the Piedra de los Machines, whose engravings of the sol de los Pastos narrate the connection between volcanic fire and sacred waters.
+
+You will taste fresh trout with native potatoes and take part in harmonization rituals, asking the lagoon for permission. When you return home, you will carry with you the serenity of this landscape and the warmth of a community that keeps its culture alive and teaches the true meaning of living in reciprocity with nature.
+
+**EXP 052 - RUTA CULTURAL SOL DE LOS PASTOS - En los caminos sagrados del sur, se revela el alma viva del territorio**
+
+Aquí, en Cumbal, llevamos la herencia ancestral en la memoria de la tierra que pisamos, donde revivimos los ritos tradicionales de nuestros ancestros, guiados por el Sol de los Pastos.
+
+Al arribar a la vereda Tasmag del resguardo del Gran Cumbal, tu mirada se sumergirá en paisajes sagrados como la Piedra de los Machines y la Laguna del Encanto, donde lo celeste y lo terrenal se encuentran. El clima andino te envolverá mientras recorres senderos antiguos y escuchas los relatos de los sabedores. Tu olfato se dejará guiar por los aromas de arrayanes, frailejones y el humo de las tulpas.
+
+El gusto abrirá un universo festivo con chapil ardiente, helados de paila y cuy asado, donde cada bocado es un ritual. Serás partícipe de ceremonias como la entrega de bastones de mando y del arte del tejido tradicional. Comprenderás que somos hijos de un mismo Sol, guiados por la Pachamama.
+
+Esta vivencia va más allá de un viaje: es una inmersión para descubrir la esencia del pueblo de los Pastos. No serás un simple visitante, sino un guardián foráneo de nuestra memoria. Al despedirte, te llevarás una enseñanza viva sobre el respeto y lo sagrado, un reencuentro contigo mismo de la mano de una tierra que palpita.
+
+EN.
+
+Here in Cumbal, we carry ancestral heritage in the memory of the land we walk upon, where we revive the traditional rites of our ancestors, guided by the Sun of los Pastos.
+
+Upon arriving in Vereda Tasmag del resguardo del Gran Cumbal, your gaze will immerse itself in sacred landscapes such as Piedra de los Machines and Laguna del Encanto, where the celestial and the earthly meet. The Andean climate will embrace you as you walk along ancient paths and listen to the stories of the sabedores. Your sense of smell will be guided by the aromas of arrayanes, frailejones, and the smoke of the tulpas.
+
+Taste will open a festive universe with fiery chapil, helados de paila, and cuy asado, where every bite is a ritual. You will take part in ceremonies such as the offering of bastones de mando and the art of traditional weaving. You will come to understand that we are children of the same Sun, guided by the Pachamama.
+
+This experience goes beyond a simple trip; it's an immersion into the essence of the Pastos people. You won't be a mere visitor, but a guardian of our collective memory, coming closer to your inner self, guided by a land that pulsates with primal life.
+
+**EXP 053 - ASCENSO AL VOLCÁN CUMBAL - Descubre el poder del Cumbal: una cima, mil historias y una sola conexión**
+
+Te recibiremos durante un día y una noche en la falda del volcán Cumbal, guardián del páramo que habla con sabiduría milenaria. Te invitamos a caminar por el «Camino a la Nieve», la ruta donde nuestros abuelos aprendieron del azufre. Allí, los frailejones aparecerán y brotarán nacimientos de agua cristalina; serás testigo de cómo nace la vida en la montaña.
+
+Escucharás el murmullo del agua, el canto del Quinde y el batir de sus alas. Con nuestra guía, aprenderás a reconocer el silbido del viento y los aromas del azufre mezclados con la tierra húmeda. En la cumbre, tu mirada se abrirá hacia los volcanes Chiles, Cayambe y Cotopaxi, mientras compartimos contigo nuestra historia de comunión y protección del territorio.
+
+Al descender, nos aguardará el abrazo cálido de la posada rural. Te serviremos cuy asado o trucha con papas nativas y quesos artesanales, acompañados de hervido de mora con chapil, cocinado sobre leña. Cerraremos la jornada honrando a la Pachamama en un ritual de agradecimiento.
+
+Al volver, sabrás que el volcán vestido de azufre no es un simple destino: es un ser vivo que te esperará siempre con los brazos abiertos y las estrellas cerca.
+
+EN.
+
+We will welcome you for one day and one night on the slopes of Volcán Cumbal, guardian of the páramo, a place that speaks with millenary wisdom. We invite you to walk along the «Camino a la Nieve», the route where our ancestors learned from sulfur. There, frailejones will appear and crystal-clear water springs will emerge; you will witness how life is born in the mountain.
+
+You will hear the murmur of water, the song of the Quinde, and the beating of its wings. With our guidance, you will learn to recognize the whistle of the wind and the aromas of sulfur blended with damp earth. At the summit, your gaze will open toward the Volcanes Chiles, Cayambe, and Cotopaxi, as we share with you our history of communion with and protection of the territory.
+
+On the descent, the warm embrace of a rural lodge will await us. We will serve cuy asado or trout with native potatoes and artisanal cheeses, accompanied by hervido de mora con chapil, cooked over a wood fire. We will close the day by honoring the Pachamama in a ritual of gratitude.
+
+When you return home, you will know that the sulfur-clad volcano is not merely a destination, but a living being—one that will always await you with open arms and the stars close at hand.
+
+**EXP 054 - VIVE LA SHAGRA - Siente la tierra, siembra con el corazón, cosecha experiencias que alimentan el alma**
+
+Te invitamos a cocinar juntos, a alimentar el cuerpo y a llenar tu alma de libertad. Serás parte de esta tierra, el hogar que siempre seremos para ti. Te recibiremos durante seis días y cinco noches en nuestra Shagra en La Boyera (Nariño), territorio ancestral del pueblo Pasto.
+
+Al llegar, tus sentidos se activarán: verás los verdes pastel de los frailejones y los cultivos de la huerta, oirás el canto de los pájaros y el murmullo del río Carchi, y respirarás hierbabuena y tierra húmeda. Aprenderás a tejer en la guanga y prepararás tortillas en callana sobre el fogón de leña. Con nuestra intérprete, caminarás por senderos naturales hasta el río, donde participarás en un tradicional asado comunitario; y, por las tardes, probarás el cuy de carne blanca y la trucha fresca.
+
+Al caer la noche, nos reuniremos en torno al fogón para compartir historias y saberes. Sabemos que, cuando vuelvas a casa, esta vivencia habrá transformado la manera en que ves la tierra y habrá despertado en ti un regreso a la autenticidad. En La Boyera, siempre tendrás un hogar.
+
+EN.
+
+We invite you to cook with us, to nourish your body, and to fill your soul with freedom. You will become part of this land; the home we will always be for you. We will welcome you for six days and five nights in our Shagra in La Boyera (Nariño), ancestral territory of the pueblo Pasto.
+
+When you arrive, your senses will awaken, you will see the pastel greens of the frailejones and the crops in the garden, hear the song of the birds and the murmur of the Río Carchi, and breathe in hierbabuena and damp earth. You will learn to weave on the guanga (loom) and prepare tortillas on a callana (clay griddle) over a wood-fired. With our interpreter, you will walk along natural paths to the river, where you will take part in a communal barbecue, and in the afternoons, you will taste cuy with white meat and fresh trout.
+
+When night falls, we will gather around the fire to share stories and ancestral knowledge. When you return home, this experience will have transformed the way you see the land, reconnecting you with authenticity. In La Boyera, you will always have a home.
+
+**EXP 055 - EMBILQUER TOUR - Historia, naturaleza y aventura**
+
+Sabemos que alguna vez has soñado con un lugar donde lo imposible sucede. Ese lugar existe y te espera entre la niebla del volcán Cumbal y las aguas quietas de la laguna La Bolsa, en el sur de Nariño. Aquí, el paisaje es un relato que se narra sin prisa, y bajo la laguna duerme la ciudad encantada de Embilquer.
+
+Te guiaremos en una travesía de dos días. Conocerás el Museo Tasmakur y sus símbolos, como el Sol de los Pastos. En la Piedra de los Machines, el Taita Paguay te armonizará con la Madre Tierra. Muy temprano ascenderás al volcán Cumbal, mientras la luna aún brilla en el cielo oscuro y el aire, enrarecido, se llena de misterio.
+
+Navegarás en lancha por la laguna, observando el reflejo del volcán erguido como un guardián silencioso. Después, en el restaurante Yakumama, saborearás platos como la trucha frita, mientras disfrutas de danzas tradicionales.
+
+Te irás con el cuerpo marcado por los senderos del páramo y el alma tibia, tejida con hilos de historia, mito y verdad.
+
+EN.
+
+We know you’ve imagined a place where the impossible quietly takes shape. That place exists, waiting for you between the mist of Volcán Cumbal and the still waters of Laguna la Bolsa, in southern Nariño. Here, the landscape is a story told without haste, and beneath the lagoon lies the enchanted city of Embilquer.
+
+We will guide you on a two-day journey. You will visit the Museo Tasmakur and its symbols, such as the Sol de los Pastos. At the Piedra de los Machines, Taita Paguay will harmonize your energy with that of Mother Earth. Early in the morning, you will ascend Volcán Cumbal while the moon still shines in the dark sky and the thin air fills with mystery.
+
+You will ride a boat across the lagoon, watching the volcano’s reflection rise like a silent guardian. Later, at Yakumama restaurant, you will savor dishes such as fried trout while enjoying traditional dances.
+
+You will leave with your body marked by the páramo trails and your soul warmed, woven with threads of history, myth, and truth.
+
+**EXP 056 - ENTRE EL MAR Y EL MANGLAR, AVENTÚRATE A LO ANCESTRAL - Vivencia ancestral y sabores auténticos del Pacífico**
+
+Te invitamos a descubrir un tesoro escondido en el Pacífico nariñense, una comunidad que se resiste a irse a pesar de la rudeza de la naturaleza. Desde tu llegada al muelle te recibiremos con nuestro cálido abrazo, la brisa salada y el olor a mar y manglar. Te acompañaremos a recorrer el pueblo, entre casas coloridas y sonrisas genuinas, donde todo se hace con las manos, los pies y la piel.
+
+Aprenderás la danza de las piangüeras entre las raíces del mangle, y los pescadores nativos te llevarán mar adentro para compartir contigo sus técnicas y destrezas en un ritual de respeto por el mar. Navegarás por playas solitarias y senderos ecológicos, y probarás un tapao’ de pescado o un encocado de camarones que narran, en cada bocado, nuestra historia. Bailarás currulao al ritmo de la marimba y te convertirás en un «ñaño», parte de nuestra hermandad.
+
+Al regresar a casa, llevarás contigo la fuerza de nuestras tradiciones, los sabores auténticos y la música que siempre sonará en tus recuerdos. Esto no es un adiós, sino un pronto regreso.
+
+EN.
+
+We invite you to discover a hidden treasure in the Pacific region of Nariño, a community that refuses to disappear despite the harshness of nature. From the moment you arrive at the dock, we will welcome you with our warm embrace, the salty breeze, and the scent of the sea and mangrove. We will guide you through the village, among colorful houses and genuine smiles, where everything is done with hands, feet, and skin.
+
+You will learn the dance of the piangüeras among the roots of the mangrove, and native fishermen will take you out to sea to share their techniques and skills with you in a ritual of respect for the ocean. You will navigate along solitary beaches and ecological trails, and you will taste a tapao’ de pescado or a shrimp encocado, dishes that tell our story in every bite. You will dance currulao to the rhythm of the marimba and become a «ñaño», part of our brotherhood.
+
+When you return home, you will carry with you the strength of our traditions, the authenticity of our flavors, and the music that will continue echoing in your memories. This is not a farewell, but a promised return.
+
+**EXP 057 - LA VICTORIA ARTESANAL - Tejiendo Naturaleza y Comunidad - Tejemos raíces, bordamos futuro**
+
+Desde el antiguo Puente Viejo de Ipiales, donde el aire transporta el aroma de plantas recién cosechadas, iniciarás tu camino hacia La Victoria. Bajo la guía de mujeres artesanas, tus manos aprenderán el arte ancestral de tejer con tunda y chilanté, creando canastos que guardan historias de superación comunitaria.
+
+Luego recorrerás el bosque de niebla del río Chingual, avanzando entre musgos y orquídeas hasta descubrir las cuevas de Licamancha al ritmo de quebradas ancestrales. 
+
+Al regresar, compartirás una mesa con sabores orgánicos de la chagra familiar y, junto al fuego, escucharás relatos que transforman memorias en arte colectivo. Te llevarás el canasto tejido por ti y la certeza de haber formado parte de un proceso comunitario en el que tradición, naturaleza y solidaridad se entrelazan para honrar el pasado y construir un futuro sostenible.
+
+EN.
+
+From the old Puente Viejo in Ipiales, where the air carries the scent of freshly harvested plants, you will begin your journey toward La Victoria. Guided by women artisans, your hands will learn the ancestral art of weaving with tunda and chilanté, creating baskets that hold stories of community resilience. 
+
+You will then walk through the cloud forest of the Río Chingual, moving among mosses and orchids until you discover the Cuevas de Licamancha to the rhythm of ancestral streams. 
+
+Upon your return, you will share a meal prepared with organic ingredients from the family chagra and, by the fire, listen to stories that transform memory into collective art. You will take with you the basket you wove and the certainty of having been part of a community process in which tradition, nature, and solidarity intertwine to honor the past and build a sustainable future.
+
+**EXP 058 - ANGASMAYO MÍSTICO - Aventura entre Andes y Selva - Un viaje que despierta tu espíritu**
+
+¿Has sentido ese impulso de buscar un tesoro en tu interior? Te guiaremos a Angasmayo, en Nariño, donde el camino no se mide solo en kilómetros, sino en capas de conciencia que se van desprendiendo.
+
+Te invitamos a caminar por el Qhapaq Ñan, escuchando los relatos del espíritu del cacique Chapal y de la Cabeza del Inca. Respirarás la tierra húmeda y sentirás cómo el aire cambia, cómo algo en ti se eleva hacia el «Hanan Pacha». Llegarás a la cascada, donde serás parte de una ceremonia de sanación y agradecimiento al agua.
+
+Visitarás chagras productivas para cosechar los ingredientes con los que prepararás trucha frita, «locro de papa» y bebidas ancestrales. Al caer la tarde, alrededor del fogón, conversaremos sobre las tres dimensiones andinas.
+
+Al marcharte, comprenderás que el verdadero tesoro eres tú: renovado y con un respeto más profundo por todo lo que te rodea.
+
+EN.
+
+Have you ever felt the impulse to search for a treasure within yourself? We will guide you to Angasmayo, in Nariño, where the path is not measured only in kilometers, but in layers of awareness that slowly fall away.
+
+We invite you to walk along the Qhapaq Ñan, listening to the stories of the spirit of Cacique Chapal and the Cabeza del Inca. You will breathe in the damp earth and feel how the air shifts, how something within you rises toward «Hanan Pacha». You will arrive at the waterfall, where you will take part in a ceremony of healing and gratitude to the water.
+
+You will visit productive chagras to harvest the ingredients with which you will prepare trucha frita, «locro de papa», and ancestral beverages. As evening falls, gathered around the fire, we will talk about the three Andean dimensions.
+
+As you leave, you will understand that the true treasure is a renewed you, filled with more respect for what surrounds you.
+
+**EXP 059 - MOUNTAIN BIKE AL SANTUARIO DE LAS LAJAS POR CAMINOS ANCESTRALES - Donde cada pedal cuenta una historia**
+
+Te invitamos a una aventura en la que el ciclismo de montaña se transforma en un viaje a través del tiempo, la cultura y la espiritualidad. En Ipiales, donde las calles se elevan como plegarias, iniciarás el recorrido montado en caballitos de aluminio con pedales.
+
+Pedalearás por caminos asfaltados que se transforman en senderos empedrados, moldeados por antiguos arrieros y parte del Qhapaq Ñan, la red de caminos ancestrales del Imperio inca. Tus sentidos captarán la esencia única del territorio: el aroma de la tierra húmeda se mezcla con el perfume del eucalipto y el olor a leña; el sonido de las ruedas sobre las piedras milenarias se funde con el canto de los pájaros.
+
+La mirada descubre la imponente silueta del Santuario de las Lajas elevándose sobre el abismo, un lugar sagrado que aviva la fe. Tras la travesía, disfrutarás de un quimbolito y de café de origen nariñense. Esta experiencia quedará grabada en tu memoria: cada curva y cada mirada al abismo mantendrán viva la conexión con la fuerza andina, transformando tu manera de percibir la historia viva de los Andes.
+
+EN.
+
+We invite you to an adventure in which mountain biking becomes a journey through time, culture, and spirituality. In Ipiales, where the streets rise like prayers, you will begin the route riding aluminum steeds with pedals.
+
+You will pedal along paved roads that gradually transform into cobblestone paths, shaped by ancient muleteers and forming part of the Qhapaq Ñan, the ancestral road network of the Inca Empire. Your senses will capture the unique essence of the territory: the scent of damp earth blends with the fragrance of eucalyptus and the smell of firewood, while the sound of wheels rolling over millenary stones merges with birdsong.
+
+Your gaze will discover the imposing silhouette of the Santuario de las Lajas rising above the abyss, a sacred place that rekindles faith. After the journey, you will enjoy a quimbolito and coffee from Nariño. This experience will remain etched in your memory: every curve and every glance into the abyss will keep the connection to Andean strength alive, transforming the way you perceive the living history of the Andes.
+
+**EXP 060 - DESCUBRE NARIÑO - Tapiz de retazos , cultura , gastronomía y tradición**
+
+En las tierras altas del sur, donde la neblina se posa sobre las montañas, vivirás una travesía que templará tu espíritu. Caminarás por caminos forjados en la lengua de los pueblos originarios, entre paisajes sagrados. Escucharás el murmullo de las quebradas y el vuelo de los colibríes del páramo, mientras el perfume del maíz, la papa nativa y las hierbas calientes anuncia que aquí se cocina con alma.
+
+Con nuestra guía, recorrerás el Qhapaq Ñan, cuyas piedras guardan la memoria de un imperio. Pisarás senderos milenarios y, en los cafetales, sentirás entre tus manos los frutos que se transforman en un elixir aromático. Presenciarás las «Mojigangas», una historia de resistencia que se convirtió en danza.
+
+Al día siguiente, comprenderás la cosmovisión del pueblo de los Pastos frente a la Piedra de los Machines y participarás en una armonización ancestral junto a la Laguna de la Bolsa. Degustarás los sabores auténticos de la región, como la trucha fresca y los hervidos de frutas.
+
+No solo habrás conocido paisajes de ensueño, llevarás contigo el recuerdo de una conexión profunda, un viaje que tu espíritu atesorará, grabado en el corazón para siempre.
+
+EN.
+
+In the highlands of the south, where mist settles over the mountains, you will embark on a journey that soothes the spirit. You will walk along paths shaped by the languages of Indigenous peoples, through sacred landscapes. You will hear the murmur of the quebradas and the flight of páramo hummingbirds, while the scent of corn, native potatoes, and warm herbs announces that here, food is prepared with soul.
+
+With our guidance, you will travel along the Qhapaq Ñan, whose stones hold the memory of an empire. You will tread millenary paths and, among the coffee plantations, feel in your hands the fruits that are transformed into an aromatic elixir. You will witness the «Mojigangas», a story of resistance that became dance.
+
+The following day, you will come to understand the worldview of the Pastos people at the Piedra de los Machines and take part in an ancestral harmonization beside the Laguna de la Bolsa. You will savor the authentic flavors of the region, such as fresh trout and fruit hervidos.
+
+You will not only have encountered dreamlike landscapes; you will carry with you the memory of a deep connection—a journey your spirit will treasure, etched in your heart forever.
+
+**EXP 061 - RUTA DEL COLIBRÍ GIGANTE - Una experiencia inolvidable**
+
+En las montañas del Pacífico nariñense vive un titán alado que despierta tu asombro en Ipiales. Ven y descubre la Ruta del Colibrí Gigante, nuestro guardián y orgullo. Con nosotros emprenderás una caminata interpretativa por el cañón del río Guáitara, donde tus sentidos se sincronizarán con los cantos de las aves, el fluir del agua y el susurro del viento. Aprenderás a leer el vuelo del colibrí y a escuchar los silencios para lograr avistarlo.
+
+Llegarás al Santuario de Las Lajas por un camino secreto donde la fe conversa con el bosque. Ascenderás en teleférico a la Casa del Artesano para un taller de cerámica ancestral, sintiendo la textura fría del barro mientras percibes aromas a tierra, café recién hecho y pan de maíz. Probarás sabores típicos como el cafecito nariñense, los quimbolitos y el cuy asado.
+
+Serás testigo de la Danza del Colibrí y aprenderás cómo nuestra cultura es un tesoro en sí misma. Cuando la experiencia llegue a su fin, llevarás impresa en tu memoria y en tu piel la majestuosidad del pequeño gigante, y serás afortunado al creer en la existencia de los gigantes, pues ya has visto a uno que lleva el fuego del volcán en sus plumas.
+
+EN.
+
+In the mountains of the Nariño Pacific coast lives a winged titan that awakens your sense of wonder in Ipiales. Come and discover the Ruta del Colibrí Gigante, our guardian and our pride. With us, you will embark on an interpretive hike through the Río Guáitara canyon, where your senses will synchronize with the songs of the birds, the flow of the water, and the whisper of the wind. You will learn to read the hummingbird’s flight and to listen to the silences in order to spot it.
+
+You will arrive at the Santuario de Las Lajas through a secret path where faith converses with the forest. You will ascend by cable car to the Casa del Artesano for an ancestral ceramics workshop, feeling the cool texture of the clay as you take in the aromas of earth, freshly brewed coffee, and corn bread. You will taste traditional flavors such as cafecito nariñense, quimbolitos, and roasted cuy.
+
+You will witness the Danza del Colibrí and learn how our culture is a treasure in itself. By the end, you will carry the majesty of this «little giant» with you— fortunate to know that giants truly exist, for you have seen one whose feathers hold the fire of the volcano.
+
+**EXP 062 - CONEXIÓN CON SUS SENTIDOS - En armonía con la naturaleza y la cultura local**
+
+Te invitamos a conectar tu historia con la nuestra en La Cruz (Nariño). Durante dos días de exploración sensorial, tus sentidos se alinearán con la energía vital de los volcanes Ánimas, Petacas y Doña Juana. Recorrerás senderos que huelen a tierra húmeda y a hojas bañadas en lluvia. Escucharás el canto de las aves entrelazarse con las voces tiernas de las artesanas, y nuestro guía te contará las leyendas del territorio mientras descubres cascadas que ondean como un telón cristalino.
+
+Tocarás el barro divino con las alfareras, guardianas de técnicas ancestrales. En Tajumbina, el calor envolvente de sus aguas termales acariciará tus músculos. Comerás despacio, sin prisa, con la sensación de agradecerle a la montaña por sus sabores auténticos, que son un diálogo con el paisaje.
+
+Esta experiencia es una semilla de conexión que florecerá en ti. Llevarás contigo la convicción de que lo que le haces a la naturaleza, te lo haces a ti mismo, transformado por la certeza de que somos parte de su destino.
+
+EN.
+
+We invite you to connect your story with ours in La Cruz (Nariño). Over two days of sensory exploration, your senses will align with the vital energy of the Volcanes Ánimas, Petacas, and Doña Juana. You will walk along trails that smell of wet earth and rain-soaked leaves. You will hear birdsong intertwine with the gentle voices of the artisans, and our guide will share the legends of the territory as you discover waterfalls that ripple like a crystalline curtain.
+
+You will touch the divine clay with the alfareras, guardians of ancestral techniques. In Tajumbina, the enveloping warmth of its thermal waters will soothe your muscles. You will eat slowly, without hurry, with a sense of gratitude toward the mountain for its authentic flavors—flavors that form a dialogue with the landscape.
+
+This experience is a seed of connection that will blossom within you. You will leave with the conviction that what we do to nature, we do to ourselves, transformed by the certainty that we are part of its destiny.
+
+**EXP 063 - PARQUE ARQUEOLÓGICO LAS WAKAS DE LAS ÁNIMAS - El Legado de Caciques - Lugar de encuentro, saberes, respeto y reflexión**
+
+Imagínate caminar entre la neblina, donde cada paso es un eco del pasado. Te invitamos a nuestro parque en Nariño, un lugar de encuentro, saberes, respeto y reflexión, donde la frontera entre lo natural y lo sobrenatural es apenas un velo. Aquí, en el corazón de la vereda Las Ánimas, custodiamos tumbas ancestrales y piezas arqueológicas reveladas a través de los sueños. Al llegar, participarás en un ritual de apertura y nuestros intérpretes te acompañarán en un recorrido profundo para honrar a nuestros antepasados.
+
+En el quiosco ceremonial, saborearás los frutos de nuestra tierra: café recién colado, panes de achira y quinua, y lácteos frescos preparados por las manos de nuestras mujeres. La comunidad te abrirá las puertas de sus casas para el descanso.
+
+Al día siguiente, participarás en las labores cotidianas de la tierra y emprenderás una caminata hacia el petroglifo de San Antonio y las cascadas que guardan secretos milenarios. Tu cuerpo regresará a la ciudad, pero tu alma se quedará.
+
+Habrás sentido lo invisible, compartido el pan y la palabra, y sabrás que existe un lugar en el mundo donde la vida y la muerte conviven juntas.
+
+EN.
+
+Imagine walking through the mist, where every step echoes the past. We invite you to our park in Nariño, a place of encounter, knowledge, respect, and reflection, where the boundary between the natural and the supernatural is only a thin veil. Here, in the heart of Vereda Las Ánimas, we safeguard ancestral tombs and archaeological pieces revealed through dreams. Upon arrival, you will take part in an opening ritual, and our interpreters will guide you on a deep journey to honor our ancestors.
+
+At the ceremonial kiosk, you will savor the fruits of our land: freshly brewed coffee, panes de achira y quinoa, and fresh dairy products prepared by the hands of our women. The community will open the doors of their homes for you to rest.
+
+The following day, you will join in the daily work of the land and set out on a walk to the Petroglifo de San Antonio and the waterfalls that hold millenary secrets. Your body will return to the city, but your soul will remain. 
+
+You will have felt the invisible, shared bread and words, and you will know that there is a place in the world where life and death coexist.
+
+**EXP 064 - VIAJANDO AL «KATZA SU» - Purifica tu espíritu en Chinagüí**
+
+El territorio Awá será testigo de cómo el canto del agua y la montaña se conectarán con tu espíritu al pisar el suelo de «Katza Sú». Vivirás una experiencia en la que todo a tu alrededor estará impregnado de mística, con aromas de hierbas como la Chilangua perfumando el aire. Andarás por los senderos del +nkal Kuankua, descubriendo cascadas esculpidas por la fuerza del espíritu del agua y conociendo a sus guardianes.
+
+Nuestros curanderos te revelarán los secretos de las vaporizaciones y las sanaciones con hierbas ancestrales, mientras saludas a la comunidad deseando el bien con la expresión «Wat K+n Maré Watzal». Podrás probar la bala de chiro y la tilapia artesanal acompañada de frutas de temporada. Al sumergirte en el río Vegas, vivirás un diálogo de purificación con el origen de la vida.
+
+Al final, regresarás con el espíritu transformado, sintiéndote parte de todo yç comprendiendo el profundo cuidado que merece el entorno natural que nuestrosç ancestros han protegido por generaciones.
+
+EN.
+
+The Awá territory will bear witness to how the song of the water and the mountain connect with your spirit as you step onto the land of «Katza Sú». You will experience a journey in which everything around you is infused with mysticism, with the aromas of herbs like Chilangua perfuming the air. You will walk along the paths of Watzal, discovering waterfalls sculpted by the force of the spirit of water and meeting their guardians.
+
+Our curanderos will reveal the secrets of vaporizations and healings with ancestral herbs, while you greet the community and wish them well with the expression «Wat K+n Maré Watzal». You will taste bala de chiro and artisanal tilapia served with seasonal fruits. As you immerse yourself in the Río Vegas, you will enter a dialogue of purification with the origin of life.
+
+In the end, you will return with your spirit transformed, feeling a sense of belonging to everything and understanding the profound care that the natural environment, protected by our ancestors for generations, deserves.
+
+**EXP 065 - TALLER DE COCINA VIVENCIAL - Sabor Ancestral del Pacífico - Aprender técnicas y recetas transmitidas por tradición familiar**
+
+Deja que los sabores ancestrales del Pacífico invadan tu cuerpo desde el primer bocado. En La Cocina de Alejo vivirás una experiencia gratificante, donde las degustaciones te llevan al cielo y cada propuesta gastronómica es un relato que se cocina a fuego lento desde el corazón de nuestra familia. Aprenderás a cocinar a varias manos, guiado por cocineras tradicionales que te revelarán los secretos de las hierbas de azotea, el achiote y los aromas que despiertan la memoria de la comunidad.
+
+Mientras rallas coco al ritmo de las voces, descubrirás el diálogo entre el fuego y el pescado fresco, y, entre risas, aprenderás el pulso de las especias. Te invitaremos a recorrer Bucheli, donde la gastronomía representa encuentro y resistencia, y donde la magia de la naturaleza, la riqueza cultural y la sabiduría culinaria se entrelazan.
+
+Al sentarnos alrededor del fogón, probarás el chirarán y la chillangua que sazonan nuestra vida, brindarás con jugo de borojó o viche artesanal y comprenderás que aquí alimentamos el cuerpo y el espíritu. Te marcharás con la nostalgia de dejar atrás una familia, pero con el corazón contento y el deseo de volver, llevando contigo el sabor auténtico de un Pacífico que lucha y se comparte con orgullo.
+
+EN.
+
+Let the ancestral flavors of the Pacific flood your body from the very first bite. At La Cocina de Alejo, you will live a gratifying experience where each tasting carries you to the sky, and every culinary creation is a story slow-cooked from the heart of our family. You will learn to cook “with many hands,” guided by traditional cooks who will reveal the secrets of the hierbas de azotea, achiote, and the aromas that awaken the community’s memory.
+
+As you grate coconut to the rhythm of their voices, you will discover the dialogue between fire and fresh fish, and, amid laughter, you will learn the cadence of the spices. We will invite you to explore Bucheli, where gastronomy represents encounter and resistance, and where the magic of nature, cultural richness, and culinary wisdom intertwine.
+
+As we gather around the fire, you will taste chirarán and chillangua, which season our lives; you will toast with jugo de borojó or artisanal viche, and you will understand that here we nourish both body and spirit. You will leave with the nostalgia of parting from a family, yet with a full heart and the desire to return, carrying with you the authentic flavor of a Pacific that resists, persists, and is shared with pride.
+
+**EXP 066 - EL JARDÍN - Experiencias campestres desde el corazón de la ciudad**
+
+En Tumaco, la realidad y el ensueño se encuentran, y la marea del Pacífico trenzanaturaleza, memoria ancestral y gastronomía. En nuestro hotel disfrutarás decabañas rústicas entre jardines tropicales. Realizarás caminatas ecológicas porparaísos como Playa Virgen, siendo testigo de la biodiversidad de la costa.Navegarás en kayak por la bahía, avistando aves migratorias y, si es temporada,ballenas jorobadas.
+
+Descubrirás la Ruta de la Miel junto a sabedores locales y aprenderás el arte de la recolección artesanal, degustando miel medicinal. Probarás la gastronomía tradicional con ingredientes como pescado, coco y piangüa. 
+
+Recorrerás el casco urbano en vehículos eléctricos, descubriendo murales artísticos y la herencia afrodescendiente de la mano de guías certificados. Cada experiencia revelará la biodiversidad generosa y la riqueza cultural de esta comunidad guardiana.
+
+Al final, te llevarás el sol tibio del Pacífico en la piel y la certeza de haber estado en un lugar donde la vida florece en comunidad. Este viaje te transformará a través de lo compartido, lo cuidado y lo celebrado.
+
+EN.
+
+In Tumaco, reality and dreamlike wonder meet, and the tide of the Pacific weaves together nature, ancestral memory, and gastronomy. At our hotel, you will enjoy rustic cabins nestled among tropical gardens. You will take ecological walks through paradises such as Playa Virgen, witnessing the biodiversity of the coast. You will kayak through the bay, spotting migratory birds and, if it is the season, humpback whales.
+
+You will discover the Ruta de la Miel alongside local knowledge keepers and learn the art of artisanal honey harvesting, tasting medicinal honey along the way. You will savor traditional gastronomy featuring ingredients such as fish, coconut, and piangüa. 
+
+You will explore the town center in electric vehicles, discovering artistic murals and Afro-descendant heritage guided by certified experts. Each experience will reveal the generous biodiversity and cultural richness of this guardian community.
+
+When you leave, you will carry with you the warmth of the Pacific sun and the certainty that you have visited a place where life blooms through community. This journey will transform you through sharing, caring, and celebration.
+
+**EXP 067 - RUTA MANGLAR Y PIANGÜA - Vive la tradición del manglar, los sabores y la cultura del Pacífico.**
+
+Te invitamos a navegar al compás de cantos ancestrales por los mágicos manglares de Tumaco. Al amanecer, cuando la marea desciende, se revela el tesoro oculto de la piangüa. Junto a las piangüeras, guardianas del ecosistema, te guiaremos para que participes en su recolección artesanal.
+
+Partirás desde La Tagüera, que te recibirá con el cielo pintado de naranja. La brisa cálida del Pacífico acariciará tu piel mientras avanzas en canoas tradicionales de madera labrada. Escucharás las voces de las piangüeras entonando melodías que flotan como hebras de memoria cultural.
+
+Caminarás sobre el mangle, te hundirás en el barro y extraerás la piangüa de las raíces. Es un reto exigente, pero con nuestra guía lo lograrás. Luego, prepararás un ceviche acompañado de patacones y arroz con coco, mientras aprendes de nuestra sabiduría culinaria. Los aromas se mezclarán en el aire: la dulzura del coco, la frescura del limón y el sabor salino del mar.
+
+Al marcharte, sentirás una conexión profunda con este territorio y su gente. Comprenderás tu relación con la naturaleza, recordando que cada gesto es gratitud, cada sonido es historia y cada sabor es memoria.
+
+EN.
+
+We invite you to navigate to the rhythm of ancestral songs through the magical mangroves of Tumaco. At dawn, when the tide recedes, the hidden treasure of piangüa is revealed. Alongside the piangüeras, guardians of the ecosystem, we will guide you so you can take part in its artisanal harvesting.
+
+You will depart from La Tagüera, where the sky welcomes you, painted in shades of orange. The warm Pacific breeze will caress your skin as you move forward in traditional hand-carved wooden canoes. You will hear the voices of the piangüeras singing melodies that float like threads of cultural memory.
+
+You will walk across the mangrove, sink into the mud, and extract the piangüa from the roots. It is a demanding challenge, but with our guidance, you will succeed. Afterwards, you will prepare a ceviche accompanied by patacones and arroz con coco, while learning from our culinary wisdom. The aromas will mingle in the air: the sweetness of coconut, the freshness of lime, and the salty taste of the sea.
+
+As you depart, you will feel a deep connection with this territory and its people. You will understand your relationship with nature, remembering that every gesture is gratitude, every sound is history, and every flavor is memory.
+
+**EXP 068 - VIVE LA EXPERIENCIA BOCAGRANDE - Una isla en medio del mar, la isla del famoso bolero «Noche de Bocagrande»**
+
+Desde el puerto de Tumaco, donde el mar habla en voz baja, te recibiremos para navegar juntos hacia la isla de Bocagrande. El azul del Pacífico te llevará hasta Las Lilianas Ecolodge, un refugio de cabañas palafíticas donde el tiempo obedece a las mareas. Aquí te sumergirás en dos vivencias profundas.
+
+Con las sabedoras locales rasparás el coco y prepararás el emblemático encocado; saborearás una comida increíble que nace de la historia y es hecha por ti. Luego recorrerás los manglares, un laberinto vivo de raíces donde observaremos aves, tortugas y, con suerte, ballenas jorobadas.
+
+La isla también nos regala kilómetros de playa para caminar descalzos, un espacio de soledad luminosa que se abre a la inmensidad del paisaje. Al partir, no te llevarás solo el sabor del encocado, sino la calidez de una comunidad que te arropa, te aloja y comparte su cultura.
+
+Vivirás una experiencia auténtica y transformadora, renovarás tus energías y querrás regresar a este rincón del Pacífico.
+
+EN.
+
+From the port of Tumaco, where the sea speaks in a quiet voice, we will welcome you to sail with us toward the Isla de Bocagrande. The blue of the Pacific will carry you to Las Lilianas Ecolodge, a refuge of stilted cabins where time follows the rhythm of the tides. Here, you will immerse yourself in two profound experiences.
+
+With the local sabedoras, you will scrape fresh coconut and prepare the emblematic encocado; you’ll savor an incredible dish born from history and made by your own hands. Then, you will explore the mangroves, a living maze of roots where we will observe birds, turtles, and, if luck is on our side, humpback whales.
+
+The island also offers kilometers of beach for barefoot walks, a space of luminous solitude that opens onto the immensity of the landscape. As you depart, you will carry not only the flavor of the encocado but also the warmth of a community that welcomes you, hosts you, and shares its culture.
+
+You will live an authentic and transformative experience, renew your energy, and find yourself wishing to return to this corner of the Pacific.
+
+**EXP 069 - TRES TESOROS DEL PACÍFICO - Tumaco, Curay y Bocagrande**
+
+Ven al Pacífico nariñense, donde los tesoros no se ocultan en cofres, sino que se revelan en la sonrisa de nuestra gente y en el aroma salado de los puertos. Te guiaremos a través de una experiencia que celebra la vida en comunidad en Tumaco, Curay y Bocagrande. Al llegar, te envolverá el aroma salino del mar, mezclado con coco y miel de caña. Visitarás la Casa de la Memoria y las playas de El Morro, escuchando relatos de ancestros y de mar.
+
+Navegarás en canoas artesanales por los esteros, sintiendo la brisa marina entre manglares que son vida e inspiración. Participarás en actividades culturales con música del Pacífico y degustarás sabores ancestrales con mariscos, pescados y coco, base de nuestra herencia afrodescendiente.
+
+En Curay vivirás la Ruta del Viche, conocerás su proceso artesanal y escucharás a los mayores compartir relatos de pesca y celebración. Bocagrande te espera con su playa inmensa para alimentarte el alma. Disfrutarás de nuestra gastronomía y podrás realizar travesías en kayak por el manglar.
+
+Tu círculo de amistad se extenderá hasta el Pacífico y descubrirás que el tesoro nunca estuvo lejos. Desde tu llegada, el mar habitará en ti.
+
+EN.
+
+Come to the Nariño Pacific coast, where treasures are not hidden in chests but revealed in the smiles of our people and the salty aroma of the ports. We will guide you through an experience that celebrates community life in Tumaco, Curay, and Bocagrande. Upon arrival, you will be enveloped by the salty scent of the sea mixed with coconut and miel de caña. You will visit the Casa de la Memoria and the Playa de El Morro, listening to stories of ancestors and the sea.
+
+You will navigate in artisanal canoes through the esteros, feeling the sea breeze among the mangroves that embody life and inspiration. You will take part in cultural activities with music from the Pacific and enjoy ancestral flavors prepared with seafood, fish, and coconut—the foundation of our Afro-descendant heritage.
+
+In Curay, you will experience the Ruta del Viche, learn about its artisanal production process, and hear elders share stories of fishing and celebration. Bocagrande awaits you with its immense beach, ready to nourish your spirit. You will enjoy our gastronomy and may venture on kayak journeys through the mangrove.
+
+Your circle of friendship will extend to the Pacific, and you will discover that the treasure was never far away. From the moment you arrive, the sea will live within you.
+
+**EXP 070 - MORA DULCE DE CAÑA, RUTAS DE ORIGEN - Conectando con el dulce tesoro**
+
+Allá, donde el volcán Galeras te protege y cobija, se encuentra Sandoná, un lugar donde vivirás la esencia del corazón andino nariñense. Allí, el canto de las aves marcará el ritmo del día, mientras el aroma a panela recién elaborada te envolverá y el sabor de la miel con plátano cocinado te conectará con los sabores tradicionales de esta tierra.
+
+Tus pasos serán guiados por senderos donde lo natural y lo arqueológico se encuentran, permitiéndote descubrir petroglifos Quillacingas que narran la historia del sol y la luna. El arte también tendrá un lugar en esta experiencia, por lo que tus manos serán entrenadas por nuestras mujeres sabedoras en talleres de tejeduría en paja «toquilla».
+
+Al caer la noche, en medio de la atmósfera musical única que los acetatos ofrecen en los tocadiscos de antaño, disfrutarás de una cata de café que revela los sabores propios de nuestra región. Esta experiencia autóctona de fin de semana, compartida en comunidad, despertará en ti el deseo de regresar a este lugar donde, por un instante, la vida te recordará que también sabe abrazar.
+
+EN.
+
+There, where the Volcán Galeras protects and shelters you, lies Sandoná, a place where you will experience the essence of the Andean heart of Nariño. There, the song of the birds will set the rhythm of the day, while the aroma of freshly made panela fills the air, and the taste of honey with cooked plantain connects you to the traditional flavors of this land.
+
+Your steps will be guided along paths where the natural and the archaeological come together, allowing you to discover Quillacinga’s petroglyphs that tell the story of the sun and the moon. Art will also be part of this experience, as your hands will be trained by our knowledge-keeping women in weaving workshops using paja «toquilla».
+
+When night falls, surrounded by the unique musical atmosphere created by vinyl records spinning on old turntables, you will enjoy a coffee tasting that reveals the distinctive flavors of our region. This authentic weekend experience, lived in community, will awaken a longing to return to this place where, for a moment, life reminds you of its gentle ability to embrace.
+
+**EXP 071 - RAÍCES VIVAS - Experiencia creativa que une tradición en el tejido de iraca**
+
+La iraca húmeda y el café recién colado serán tus anfitriones en esta hermosa experiencia. Te recibirán en nuestra casa taller de Sandoná, donde aprenderás a transformar la palma de iraca con tus manos, creando piezas únicas mientras sientes su textura áspera y dócil. 
+
+Aprenderás técnicas ancestrales al ritmo del murmullo de la cascada de Belén, tejiendo entre conversaciones sobre nuestra historia de lucha y resistencia. Escucharás el sonido suave de las fibras entrelazándose en un acto colectivo y sentirás cómo el tiempo desacelera para regalarte este espacio donde son las manos las que dialogan.
+
+Saborearás los frutos recolectados de nuestra tierra mientras das forma a aros quitapesares, flores o portavasos. Nuestra experiencia se trata de conexión: de comprender el valor de lo que se hace con las manos y lo que esto representa en tu vida. Serás acogido por una comunidad que desea compartir sus conocimientos contigo. Sandoná será parte de ti, guardando para siempre este encuentro con nuestras raíces vivas.
+
+EN.
+
+The scent of wet iraca palm and freshly brewed coffee will welcome you to this immersive experience. You will be welcomed into our casa taller in Sandoná, where you will learn to transform palma de iraca with your own hands, creating unique pieces as you feel its coarse yet gentle texture. 
+
+You will learn ancestral techniques to the rhythm of the murmuring Cascada de Belén, weaving amid conversations about our history of struggle and resistance. You will hear the soft sound of fibers intertwining in a collective act, and you will feel time slow down to offer you this space where it is the hands that speak.
+
+You will taste fruits harvested from our land as you give shape to aros quitapesares, flowers, or coasters. Our experience is about connection: understanding the value of what is made by hand and what that represents in your life. You will be embraced by a community eager to share its craft, and Sandoná will stay with you long after you leave,
+
+**EXP 072 - CITY TOUR TUMACO - Tumaco y sus bellezas culturales, un recorrido mágico en TukTuk**
+
+En lo profundo del Pacífico colombiano, te recibiremos como a un hermano o una hermana más. Aquí, el mar acaricia la tierra y el pulso de nuestra cultura afro te hace parte de esta gran familia. Te invitamos a caminar por Tumaco y a sentir la palmadita en la espalda que te recuerda que aquí todos somos «tíos y tías» de una historia a la que, sin duda, pertenecerás.
+
+Iniciarás el recorrido a bordo de un Tuk-Tuk desde la playa del Morro, evocando a los indios Tumac y al palenque donde la gente vive feliz y libre. Conocerás el puente del Morro, con su paisaje de palafitos; el Parque Colón, habitado por iguanas; y el ficus que, como tú, fue recibido, cuidado y se convirtió en parte de nosotros.
+
+Refrescarás tu cuerpo con un cholao o una ensalada de frutas y probarás los sabores de Tumaco: pescado frito, encocados y ceviches. Al regresar a casa, llevarás contigo una nueva mirada de este lugar que se resiste a ser definido si no es vivido. Cuando digamos «hasta pronto», te sentirás más tumaqueño que la Peña del Morro.
+
+EN.
+
+In the depths of the Colombian Pacific, we will welcome you as one more brother or sister. Here, the sea caresses the land, and the pulse of our Afro culture makes you part of this great family. We invite you to walk through Tumaco and feel the friendly pat on the back that reminds you that here we are all «aunts and uncles» of a story to which you will undoubtedly belong.
+
+You will begin the journey aboard a Tuk-Tuk from Playa del Morro, evoking the Tumac people and the palenque where life is lived freely and joyfully. You will visit El Puente del Morro, with its landscape of palafitos; The Parque Colón, home to iguanas; and the ficus tree that, like you, was welcomed, cared for, and became part of us.
+
+You will refresh yourself with a cholao or a fruit salad and taste the flavors of Tumaco: fried fish, encocados, and ceviches. When you return home, you will carry with you a new way of seeing this place—one that refuses to be defined unless it is lived. And when we say, «see you soon», you will feel more tumaqueño than la Peña del Morro.
+
+**EXP 073 - EL SABOR DE RAFA - Sabores que construyen paz desde el turismo y la tradición**
+
+Te damos la bienvenida a la playa de El Morro, en Tumaco, donde el Pacífico marca el pulso de la vida y la brisa tibia envuelve con sabor a sal, coco y leña recién encendida. Nosotros te recibiremos con los aromas del mar y de la tierra viva, para que tu viaje verdadero se inaugure a fuego lento bajo la majestuosidad de los almendros.
+
+Escucharás la historia de Rafa, cuyo legado late en cada plato, mientras disfrutas de pescado sudado, patacones recién majados y café recién colao. Caminarás las playas al ritmo de la marea, donde todo vibra con una música antigua, mientras te espera un festín de encocados cremosos, cazuelas perfumadas y mariscos que saben a costa e historia.
+
+Tu visita cerrará con broche de oro: participarás en una ceremonia de sabores con viche, mientras el atardecer tiñe el cielo de dorado y rosado. Te llevarás en la piel la caricia del viento, en el paladar la dulzura del coco y, en el alma, la certeza de ser parte de un relato vivo que honra la cultura y la alegría que fluyen como el mar.
+
+EN.
+
+We welcome you to la playa de El Morro, in Tumaco, where the Pacific sets the rhythm of life and the warm breeze carries the taste of salt, coconut, and freshly lit firewood. We will greet you with the aromas of the sea and the living earth, so your true journey begins slowly, under the majestic shade of the almond trees.
+
+You will hear the story of Rafa, whose legacy beats in every dish, while you enjoy pescado sudado, freshly mashed patacones, and freshly brewed café colao. You will walk along the beach to the rhythm of the tide, where everything vibrates with an ancient music, as a feast of creamy encocados, fragrant cazuelas, and seafood flavored with coast and history awaits you.
+
+Your visit will end on a golden note: you will take part in a ceremony of flavors with viche, as the sunset paints the sky in gold and pink. You will carry on your skin the caress of the wind, on your palate the sweetness of coconut, and in your soul the certainty of having become part of a living story that honors the culture and joy that flow like the sea.
+
+**EXP 074 - RECORRIDO CAFETERO SALMA COFFEE - Legado, sostenibilidad y sabor a café**
+
+En las montañas del Pacífico colombiano, entre laderas verdes y el murmullo del río Guabas, te esperamos en nuestra finca para que descubras el sabor único del café del Valle del Cauca. Tras un viaje desde Cali, un jeep te llevará hasta nuestro paraíso en La Floresta, donde el canto de las aves y el aroma de la montaña te darán la bienvenida. Al llegar, la familia te recibirá con los brazos abiertos.
+
+Te adentrarás en el cafetal con tu canasto para cosechar el grano rojo y brillante, aprendiendo sobre nuestras prácticas agroecológicas. Luego, en el patio, participarás en el mágico proceso de tostado. La experiencia culminará con una cata en la que descubrirás un universo de sabores: flor, caña dulce, cítricos y caramelo.
+
+Al final, te llevarás un paquete de tu café preferido. Y días después, cuando abras esa bolsa en tu casa, la finca volverá a tu memoria, el recuerdo se asentará y la historia de tu familia cafetera seguirá viva.
+
+EN.
+
+In the mountains of the Colombian Pacific region, nestled between green slopes and the gentle murmur of the Río Guabas, we await you at our farm so you can discover the unique flavor of coffee from Valle del Cauca. After traveling from Cali, a jeep will take you to our little paradise in La Floresta, where birdsong and the aroma of the mountains will welcome you. Upon arrival, the family will greet you with open arms.
+
+You will step into the coffee fields with your basket to harvest the bright red cherries, learning about our agroecological practices. Then, in the patio, you will take part in the magical roasting process. The experience will culminate in a tasting session where you will discover a universe of flavors: floral notes, sweet cane, citrus, and caramel.
+
+Before you depart, you’ll take home a package of your favorite coffee. And days later, when you open that bag at home, the memory of the farm will return—the landscape, the people, and the story of your coffee-growing family kept alive in every cup.
+
+**EXP 075 - SOMOS LAGUNA DE SONSO - Espejo de Vida - Conocer para amar... Amar para conservar**
+
+En la Laguna de Sonso, donde el agua aprende a ser espejo y el cielo se detiene a mirarse, iniciaremos un viaje para escuchar cómo respira el humedal. Bajaremos la voz mientras caminamos por senderos antiguos, envueltos por el concierto de garzas, patos silbadores y el emblemático cardenal pantanero. 
+
+Subiremos a embarcaciones tradicionales, donde practicarás el lanzamiento de la atarraya y aprenderás el lenguaje ancestral de la pesca: «guango» cuando la red vuelve llena y «pajarear» cuando el día se hace esquivo.
+
+El aroma a fogón de leña nos guiará hacia las cocineras tradicionales, con quienes participarás en la preparación del pescado fresco y probarás arepas de maíz tierno con hierbas del bosque. En los talleres vivenciales, abrazaremos árboles centenarios y comprenderás que este lugar es un ser que respira.
+
+Te llevarás la certeza de que los humedales son territorios sagrados, y te despediremos como un guardián temporal de este sueño compartido, donde «conocer para amar, amar para conservar» se convierte en tu nueva forma de vida.
+
+EN.
+
+At Laguna de Sonso, where the water learns to become a mirror, and the sky pauses to look at itself, we will begin a journey to listen to the breath of the wetland. We will lower our voices as we walk along ancient paths, wrapped in the symphony of garzas, patos silbadores, and the emblematic cardenal pantanero. 
+
+We will board traditional boats, where you will practice casting the atarraya and learn the ancestral language of fishing: «guango» when the net returns full, and «pajarear» when the day grows elusive.
+
+The aroma of the wood-fired stove will guide us to the traditional cooks, with whom you will take part in preparing fresh pescado and taste arepas de maíz tierno with forest herbs. During the hands-on workshops, we will embrace centuries-old trees, and you will understand that this place is a being that breathes.
+
+You will carry with you the certainty that wetlands are sacred territories, and we will bid you farewell as a temporary guardian of this shared dream, where «to know is to love, and to love is to conserve» becomes your new way of life.
+
+**EXP 076 - SABORES Y SABERES DEL SILBO: COCINA, TEJIDO Y MAR - Experiencias auténticas que honran el alma del Pacífico**
+
+Desde el muelle de Buenaventura, alzamos camino sobre el agua hacia nuestro refugio: un lugar donde la naturaleza, la cultura del Pacífico y la espiritualidad se entrelazan. En El Silbo Apacible, construido con alma más que con recursos, no vienes solo a contemplar paisajes, sino a escuchar la calma que te aquieta por dentro.
+
+Durante tu estancia, tus manos aprenderán el amasado ancestral en el taller de galletas de coco, y te convertirás en cocinero por un rato pelando plátano o friendo pescado bajo la guía de mujeres portadoras de sabiduría culinaria. Las tardes revelarán «flores invisibles» en el bosque húmedo, y las noches abrirán otro mundo de sonidos y luces diminutas.
+
+Aprenderás sobre baños purificadores con hierbas medicinales y sobre el proceso tradicional del viche. Sin embargo, lo más hondo ocurrirá fuera del programa: en el comadreo ancestral, en el tejido con hilo de bolsa o en las conversaciones con los intérpretes baquianos.
+
+Aquí no serás un cliente, sino una persona que encuentra un lugar para respirar paz y reconectar con lo esencial. En tu regreso, llevarás la certeza de haber sido parte de algo que trasciende el turismo: una transformación silenciosa que sigue resonando mucho después de partir.
+
+EN.
+
+From the Buenaventura pier, we glide over the water toward our refuge: a place where nature, Pacific culture, and spirituality intertwine. At El Silbo Apacible, built with soul rather than resources, you do not come only to admire landscapes—you come to listen to the calm that quiets you from within.
+
+During your stay, your hands will learn amasado ancestral in the coconut cookie workshop, and you will become a cook for a moment, peeling plantain or frying fish under the guidance of women who carry deep culinary wisdom. Afternoons will reveal «invisible flowers» in the humid forest, and nights will open another world of sounds and tiny lights.
+
+You will learn about purifying baths with medicinal herbs and about the traditional process of viche. Yet the deepest experiences will unfold outside the formal program: in ancestral comadreo, in weaving with recycled-bag thread, or in conversations with the local interpreters.
+
+Here you will not be a client, but a person who finds a place to breathe peace and reconnect with what is essential. On your return, you will carry the certainty of having been part of something that transcends tourism: a silent transformation that continues to resonate long after you leave.
+
+**EXP 077 - SENDERO FRECA - Conecta con las aves, la comunidad y contigo mismo, en una experiencia transformadora**
+
+Aquietamos el ritmo para que la montaña te hable despacio. Te recibiremos en la Fundación Renacer Campoalegre, en la vereda Alaska, donde iniciaremos un camino rural que abre cultivos diversificados hacia montañas vestidas de verde. Iremos por senderos que alguna vez fueron caminos de herradura, bajo la memoria antigua de la tierra, donde se alzan helechos gigantes como guardianes y orquídeas de colores sutiles.
+
+Escucharás la sinfonía del territorio: el rumor del río Guadalajara y el coro de carriquíes, guacharacas y barranqueros. Con nuestros intérpretes aprenderás a leer huellas y reconocer presencias; quizá oigas el llamado de los monos aulladores o veas el paso sigiloso de zorros y venados.
+
+Después, en la mesa, probarás café de origen recién tostado, trucha al ajillo y arepas de maíz tierno con queso artesanal. Descubrirás también recetas que guardan memoria, como el masato y las mogollas. En los talleres vivenciales entraremos en el lenguaje secreto del bosque, donde la respiración se acompasa con los ritmos naturales y aparece una paz sencilla.
+
+Al descender el sol, sabrás que este no es solo un paseo, sino un viaje a las raíces: una lección de resiliencia y la certeza de que, en el abrazo de la naturaleza, siempre es posible renacer.
+
+EN.
+
+We slow the pace so the mountain can speak to you gently. We will welcome you at Fundación Renacer Campoalegre, in the Vereda Alaska, where we will begin a rural path that opens onto diversified crops and mountains dressed in green. We will walk along trails that were once mule paths, beneath the ancient memory of the land, where giant ferns rise like guardians and orchids bloom in subtle colors.
+
+You will listen to the territory’s symphony: the murmur of the Río Guadalajara, and the chorus of carriquíes, guacharacas, and barranqueros. With our interpreters, you’ll learn to read tracks and recognize presences; you may hear the call of howler monkeys or glimpse the silent passage of foxes and deer.
+
+Later, at the table, you will taste freshly roasted single-origin coffee, garlic trout, and sweet-corn arepas with artisanal cheese. You will also discover recipes that preserve memory, such as masato and mogollas. In the hands-on workshops, we will enter the forest’s secret language, where your breath aligns with natural rhythms and a simple peace emerges.
+
+As the sun descends, you will understand that this is not just an outing but a journey to your roots: a lesson in resilience and the certainty that, in nature’s embrace, it is always possible to be reborn.
+
+**EXP 078 - PLAYA ANCESTRAL - Experiencia comunitaria que une naturaleza, ancestralidad y cultura afrodescendiente**
+
+Cuando el Pacífico se vuelve un espejo en movimiento, el mar deja de ser distancia para convertirse en un sendero líquido hacia una playa viva y blanca, poblada de cangrejos y sembrada de conchas. Aquí, el manglar es memoria, sustento y resistencia.
+
+Te recibimos en Punta Soldado con una cotidianidad vibrante: la música, la danza folclórica y el dominó marcan el pulso del lugar, mientras las risas de los niños transforman el vínculo con el pueblo. Junto a la comunidad participarás en la pesca artesanal, empujarás canoas y aprenderás sobre la restauración ecológica en el cocotal. Los niños te guiarán en el avistamiento de aves y compartirán contigo las historias de nuestros antepasados.
+
+En la mesa, el territorio se saborea desde el primer momento con un gran desayuno: tapao de pescado, plátano y aguapanela con limoncillo. Cada bocado tiene sabor a manglar y a memoria.
+
+No te llevarás solo recuerdos, sino la certeza de que el manglar es vida y que las tradiciones son un presente compartido con orgullo. Este lugar es un legado que late al ritmo del manglar y de las olas: una escuela abierta donde cada gesto es gratitud, cada sonido es historia y cada sabor es memoria.
+
+EN.
+
+When the Pacific becomes a moving mirror, the sea ceases to be a distance and turns into a liquid pathway leading to a living, white beach, populated by crabs and strewn with shells. Here, the mangrove is memory, sustenance, and resistance.
+
+We welcome you to Punta Soldado with a vibrant everyday life: music, folk dance, and dominoes set the rhythm of the place, while children’s laughter transforms your bond with the community. Alongside the locals, you will take part in artisanal fishing, push canoes, and learn about ecological restoration in the cocotal. Children will guide you in birdwatching and share with you the stories of our ancestors.
+
+At the table, the territory reveals itself from the very first moment through a generous breakfast: tapao de pescado, plantain, and aguapanela con limoncillo. Each bite carries the flavor of the mangrove and of memory.
+
+You will depart with the certainty that the mangrove is life, and that traditions here are a shared present, celebrated with pride. Punta Soldado is a living legacy, a place that beats to the rhythm of the mangrove and the waves, an open school where every gesture is gratitude, every sound is a story, and every flavor is remembrance.
+
+**EXP 079 - HISTORIA DE LA SALSA EN CALI - Una visita, mil historias... el corazón salsero de Cali**
+
+Te recibimos en un lugar donde los timbres de las casas suenan en clave 2/3 y la salsa explota en las bocinas y los bafles viejos. Aquí, en el Barrio Obrero, nuestro museo guarda con celo toda esa música que no cabe en una sola noche. Desde que cruzas la puerta, comienza un recorrido guiado e inmersivo que revela cómo esta historia forma parte esencial de la identidad caleña. Escuchas grabaciones de Richie Ray y Bobby Cruz, el tumbao de Eddie Palmieri y sientes la presencia de Celia Cruz, Héctor Lavoe y Rubén Blades.
+
+La música no solo se oye: se interpreta en clases gratuitas de instrumentos y se baila en pequeñas pistas donde aprendes los estilos de la salsa caleña. El ritual del tambor africano te conecta con la raíz afrodescendiente que late en el corazón del género.
+
+Al final, cuando sales a las calles, algo en ti ha cambiado: caminas con tumbao, das un paso al frente y un paso atrás. La salsa vive ahora dentro de ti, y bailar se convierte en un acto de memoria, resistencia, identidad y comunidad.
+
+EN.
+
+We welcome you to a place where doorbells ring in 2/3 time and salsa bursts from old speakers and worn-out amplifiers. Here, in Barrio Obrero, our museum carefully preserves all the music that could never fit into a single night. From the moment you step inside, an immersive guided tour begins, revealing how this story forms an essential part of Cali’s identity. You listen to recordings by Richie Ray and Bobby Cruz, the tumbao of Eddie Palmieri, and you feel the presence of Celia Cruz, Héctor Lavoe, and Rubén Blades.
+
+Music is not only heard: it is played in free instrument classes and danced in small practice floors where you learn the styles of salsa caleña. The ritual of the African drum connects you with the Afro-descendant roots beating at the heart of the genre.
+
+In the end, when you return to the streets, something in you has changed: you walk with tumbao, taking one step forward and one step back. Salsa now lives inside you, and dancing becomes an act of memory, resistance, identity, and community
+
+**EXP 080 - MOVET - Moviendo destinos, moviendo culturas**
+
+Te llevamos desde la ciudad hasta los corregimientos donde la Cali urbana encuentra su alma rural. En un recorrido de aproximadamente cuarenta minutos dejamos atrás el ruido del tráfico para internarnos en verdes laderas, en neblina ligera y en casitas campesinas. Allí, un sendero sereno se abre entre cultivos y bosques, donde el canto de las aves y el rumor del río se mezclan con tu caminar.
+
+Te invitamos a vivir la emoción de llegar a Charco Azul, un espejo de agua cristalina escondido entre montañas, donde podrás sumergirte y sentir cómo tu mente se despeja. Luego, compartirás un almuerzo campesino en una finca anfitriona, con sabores que evocan tradición y comunidad —seguido de un café recién «colao» y pan tradicional.
+
+Esta experiencia, que incluye una presentación de salsa, te introduce en un modelo de turismo comunitario que honra la memoria y los saberes locales. Al regresar, la montaña quedará atrás, pero una calma se instalará en tu mente, con la certeza de haber sido parte de algo capaz de regenerar el alma y el territorio.
+
+EN.
+
+We take you from the city out to the corregimientos where urban Cali meets itsrural soul. On a journey of roughly forty minutes, we leave behind the noise oftraffic to venture into green hillsides, gentle mist, and humble campesino houses.There, a serene path opens among fields and forests, where the birds’ songs andthe river’s murmur accompany your steps.
+
+We invite you to experience the thrill of arriving at Charco Azul – a crystalline pool hidden among the mountains – where you can immerse yourself and feel your mind clear. Afterwards, you’ll share a simple countryside lunch at a welcoming finca, with flavors that evoke tradition and community, followed by freshly brewed “colao” coffee and traditional bread.
+
+This experience – including a salsa dance presentation – introduces you to a model of community tourism that honors memory and local wisdom. On the return journey, the mountains fade into the distance, yet a calm settles within you – the certainty of having been part of something that regenerates both soul and the territory.
+
+**EXP 081 - FESTIVAL MUNDIAL BALLENAS Y CANTAORAS - Biosfera Pacífico**
+
+Cuentan en Bahía Málaga que una tarde tibia, casi divina, de solsticio de verano, el 24 de junio, Fabián, la tía Helena, el Taita Amor y una pareja de amigos viajeros se subieron a la lancha de Willington Gamboa para cantarle al mar. No buscaban tesoros ni señales: solo agradecer, respirar hondo, escuchar cómo el océano les murmuraba historias antiguas.
+
+Las voces se elevaron como aves suaves sobre la espuma: cantos ancestrales y un poema que parecía acariciar la piel del agua: “Ballena de los poderosos océanos, todo lo has contemplado...” Entonces, el océano respiró profundo. En el horizonte apareció una madre yubarta con su ballenato, tímidos como muchacha enamorada que se asoma a la ventana para escuchar al galán. Hubo un silencio que abrazó el alma, un instante donde la mirada humana se unió con la memoria salada del mar. Y quedó flotando en el océano la imagen de dos gigantes brillando como lunas recién nacidas sobre una sábana de plata.
+
+El Festival Mundial Ballenas y Cantaoras, con ocho años de trayectoria, es un proceso que respira conservación, que escucha la oralidad ancestral, que abraza la cultura del Pacífico. Un encuentro donde los cantos humanos dialogan con los cantos de las ballenas. Con los años se ha vuelto motor de transformación social, recupera playas, embellece territorios, reactiva el turismo, genera ingresos, empleos, orgullo y levanta el ánimo de las comunidades. Hoy son más de 700 familias tocadas por esta ola de vida. Más de 400 empleos creados. Más de 5.000 turistas que llegaron a saborear el encanto de este rincón del mundo.
+
+Y una imagen queda vibrando: playas limpias que brillan como espejos donde las ballenas miran su propia sombra.
+
+**EXP 082 - CALIMA, AVENTURA Y CONEXIÓN - Conecta con la naturaleza y siente la adrenalina**
+
+El viento nos toma de la mano para invitarnos a leer sus caminos sobre el agua, donde el cuerpo aprende otra gramática. En el Lago Calima, ese espejo inmenso de atardeceres, el viento es un viejo amigo que nos recibe.
+
+Contigo armamos el equipo, conectamos líneas y ajustamos el arnés; sientes la tensión limpia de las cuerdas y la cometa llenándose de aire como un pulmón. Es una danza de adrenalina y serenidad: cada caída enseña humildad, cada arranque es una celebración íntima.
+
+Cuando el viento baja el tono, probamos sabores del Pacífico y de la tradición vallecaucana. Después, en Zhaberara, te espera un masaje en agua. Al amanecer, repetimos el ritual con el paddle, todo a tu ritmo, y compartimos un refrigerio en medio del lago.
+
+Finalmente, cabalgamos con Perucho por las montañas, disfrutando del silencio y de la belleza del paisaje. Cerramos con una mesa compartida, donde la conversación fluye como la brisa. Aquí encuentras un hogar temporal que transforma el ánimo y te llevas la certeza de que, en cada ráfaga, una parte de Calima viaja contigo.
+
+EN.
+
+The wind takes us by the hand and invites us to read its paths across the water, where the body learns a different grammar. At Lago Calima, that vast mirror of sunsets, the wind is an old friend who welcomes us.
+
+Together we set up the equipment, connect the lines, and adjust the harness; you feel the clean tension of the cords and the kite filling with air like a lung. It is a dance of adrenaline and serenity: every fall teaches humility; every takeoff is an intimate celebration.
+
+When the wind recedes, we savor the flavors of the Pacific coast and the traditions of Valle del Cauca. Later, in Zhaberara, a water massage awaits you. At dawn, we repeat the ritual with the paddle, entirely at your own pace, and share a light refreshment in the middle of the lake.
+
+Finally, we ride with Perucho through the mountains, enjoying the silence and the beauty of the landscape. We end with a shared meal, where conversation flows as lightly as the breeze. And when you leave, you will take with you the certainty that in every gust of wind, a part of Calima travels by your side.
+
+**EXP 083 - AGUAS CRISTALINAS - Vive una experiencia natural, auténtica y transformadora en el Pacífico colombiano**
+
+Te invitamos a un viaje donde el agua es origen, espíritu y memoria líquida. En nuestro territorio de paz en Agua Clara (Valle del Cauca), tus sentidos despertarán en un diálogo íntimo con la naturaleza. Caminarás por senderos de vegetación espesa hasta joyas cristalinas como La Tortugaña, donde nadarás contra la corriente, y los Hilos de Oro, cascadas en las que la luz danza con el agua. Allí sentirás la adrenalina de un clavado en el cañón profundo. Nuestra casa familiar será tu refugio y nuestra gastronomía, una poesía hecha sazón con los frutos directos de estos ecosistemas. 
+
+Al segundo día, emprenderemos una ruta de conexión profunda con la naturaleza hacia El Embudo, sumergiéndote en un mundo de fauna y flora, con la opción de descender en flotador por el río Agua Clarita.
+
+Al despedirte, regresarás a casa transformado. El agua, al nutrir tu cuerpo y tu alma, habrá sembrado en ti un profundo respeto, y tu testimonio llevará al mundo el mensaje de tu propia renovación.
+
+EN.
+
+We invite you on a journey where water is origin, spirit, and liquid memory. In our territory of peace in Agua Clara (Valle del Cauca), your senses will awaken in an intimate dialogue with nature. You will walk along trails of dense vegetation to crystalline gems such as La Tortugaña, where you will swim against the current, and Los Hilos de Oro, waterfalls where light dances with water. There, you will feel the adrenaline of a dive into the deep canyon. Our family home will be your refuge, and our gastronomy, a poetry of flavor crafted from the gifts of these ecosystems. 
+
+On the second day, we will set out on a route of deep connection with nature toward El Embudo, immersing you in a world of fauna and flora, with the option of floating down the Río Agua Clarita on an inner tube.
+
+As you take your leave, you will return home transformed. Water, by nourishing your body and soul, will have planted in you a profound respect, and your testimony will carry into the world the message of your own renewal.
+
+**EXP 084 - TOUR REGENERATIVO - Conecta con la naturaleza local, la alimentación consciente a través de una experiencia transformadora**
+
+En Yotoco, donde el Valle del Cauca abre su telón verde y el lago Calima respira hondo, te invitamos a un viaje que baja el volumen de la ciudad para escuchar los susurros de la naturaleza. Comenzaremos bajo la sombra circular de La Maloka, donde comprenderás los principios del turismo regenerativo y la capacidad de autosanación del bosque.
+
+Recorreremos nuestras siembras, observando más de setenta alimentos que cultivamos con nuestras propias manos, y visitaremos la sala cuna de semillas, ese archivo vivo donde cada grano guarda una promesa de futuro. Durante la caminata interpretativa por el bosque, los principios de inmunidad —microclima, diversidad, agua, reciclaje de nutrientes y descanso— dejarán de ser conceptos para convertirse en una lengua viva pronunciada por la tierra.
+
+Al finalizar, entenderás que este campo escuela es un regreso al origen y guardarás en la memoria esa conexión indisoluble con la Madre Tierra, junto con la necesidad de imitar su sabiduría perfecta en cada decisión cotidiana.
+
+EN.
+
+In Yotoco, where the Valle del Cauca opens its green curtain, and Lago Calima takes a deep breath, we invite you on a journey that lowers the volume of the city so you can hear the whispers of nature. We will begin under the circular shade of La Maloka, where you will learn the principles of regenerative tourism and the forest’s capacity for self-healing.
+
+We will walk through our crops, observing more than seventy foods we grow with our own hands, and visit the seed nursery, a living archive where each seed holds a promise for the future. During the interpretive walk through the forest, the principles of immunity —microclimate, diversity, water, nutrient recycling, and rest— will stop being abstract notions and become a living language spoken by the earth itself.
+
+By the end, you will understand that this campo escuela is a return to origin, and you will carry in your memory an unbreakable connection to Mother Earth, along with the need to imitate her perfect wisdom in every daily decision.
+
+**EXP 085 - VOX ECO TOURS - La revolución del turismo sostenible - Movilidad eléctrica y experiencias inmersivas. Vive la experiencia Vox**
+
+Te recibimos en Buga para mostrarte sus milagros ocultos entre naturaleza verde y arquitectura patrimonial. Iniciaremos con una explicación clara del recorrido en scooters eléctricas, que incluirá una breve prueba de manejo y de seguridad. Así podrás recorrer la ciudad con energía limpia y disfrutar hasta tres horas de un trayecto guiado con pausas programadas.
+
+Visitaremos el Hotel Guadalajara, el Parque Bolívar, el monumento a Alejandro Cabal Pombo y la Basílica del Señor de los Milagros. Las scooters te permitirán deslizarte por calles coloniales y casonas antiguas. Luego, en la zona rural, navegaremos en barcaza por el río: el motor se apagará y el silencio del bosque ribereño abrazará tus sentidos mientras observas garzas mora, caravanas, coquitos y al martín pescador.
+
+Buga es una sinfonía de olores y sabores: campanas resonando, aromas de pandebono recién horneado, café colao, mango biche y chontaduro con miel; aire que huele a lulada, sancocho, dulce de leche y guayaba. Créenos: será fácil enamorarse de Buga. Al final, la ciudad se te instalará en el pecho, cada esquina te adoptará y no querrás decir adiós, porque sabrás que ya perteneces a esta Buga oculta donde la fe camina con alegría.
+
+EN.
+
+We welcome you to Buga to reveal its hidden miracles nestled between lush nature and heritage architecture. We’ll begin with a clear explanation of the electric scooter route, including a brief handling and safety test. This way, you’ll be able to explore the city using clean energy and enjoy up to three hours of a guided journey with scheduled stops.
+
+We will visit Hotel Guadalajara, Parque Bolívar, Monumento Alejandro Cabal Pombo, and the Basílica del Señor de los Milagros. The scooters will let you glide through colonial streets and historic mansions. Later, in the rural area, we’ll travel by barge along the river: the engine will turn off, and the silence of the riverside forest will embrace your senses as you spot Garzas Mora, Caravanas, Coquitos, and the Martín Pescador.
+
+Buga is a symphony of scents and flavors: ringing bells; the aroma of freshly baked pandebono, café colao, mango biche, and chontaduro with honey; air that smells of lulada, sancocho, dulce de leche, and guayaba. Believe us, falling in love with Buga will be easy. In the end, the city will settle in your heart, and you’ll know you already belong to this hidden Buga where faith walks hand in hand with joy.
+
+**EXP 086 - RUTA NÁUTICA EL VUELO DEL GARZÓN AZUL - Naturaleza, sostenibilidad y comunidad**
+
+En Yotoco, donde el río Cauca fluye como una arteria antigua y el Garzón Azul traza círculos en el cielo, iniciamos esta travesía que celebra la amistad eterna entre el río y su guardián alado.
+
+Te recibiremos en Media Canoa para navegar en canoas por las aguas ceremoniosas del Cauca, donde las ramas de los árboles se inclinan para saludarte y cientos de aves celebran tu presencia con trinos y cantos. El Garzón Azul se revelará en toda su grandeza, ofreciéndote un espectáculo de vuelos y acuatizajes perfectos, mientras los pescadores te enseñan a tejer y lanzar la atarraya.
+
+Visitaremos la Reserva de Chimbilaco, donde se han reforestado más de 380.000 árboles, y compartiremos cenas bajo las estrellas con bocachico preparado según recetas heredadas, mientras las fogatas iluminan relatos de conservación y memoria.
+
+Al despedirnos, comprenderás que este territorio se ha elevado por encima de las adversidades, al igual que el Garzón Azul, y que ahora formas parte de este vuelo colectivo, donde la verdadera riqueza está en aprender a cuidar aquello que amamos.
+
+EN.
+
+In Yotoco, where the Río Cauca flows like an ancient artery and the Garzón Azul traces circles in the sky, we begin this journey that celebrates the eternal bond between the river and its winged guardian.
+
+We will welcome you to Media Canoa to navigate by canoe along the ceremonial waters of Cauca, where tree branches lean in to greet you and hundreds of birds celebrate your presence with trills and songs. The Garzón Azul will reveal itself in all its grandeur, offering a spectacle of flawless flights and landings on the water, while local fishers teach you how to weave and cast the atarraya.
+
+We will visit the Reserva de Chimbilaco, where more than 380,000 trees have been replanted, and share dinners under the stars featuring bocachico prepared according to inherited recipes, as bonfires illuminate stories of conservation and memory.
+
+When it is time to say goodbye, you will understand that this territory has risen above adversity, just like the Garzón Azul, and that you are now part of this collective flight, where true wealth lies in learning how to care for what we love.
+
+**EXP 087 - RECORRIDO CULTURAL FAMILIA ALBANIA - Patrimonio, Identidad y Gastronomía**
+
+En el Valle del Cauca, donde el tiempo se mide en fogones encendidos y melodías que no se olvidan, te invitamos a un recorrido que entra en la memoria de los 110 años de historia de Ginebra desde la cocina, el fogón y la butaca.
+
+Nosotros, la familia Albania, te recibiremos en nuestra Casa Museo, una antigua hacienda preservada donde cada objeto, fotografía y rincón está listo para contarte una historia que se cocina a fuego lento.
+
+Caminarás por sus salas y sentirás que entras en otra época: mesas de madera, baúles y ollas de barro reconstruyen la vida de las grandes haciendas vallecaucanas. La degustación despierta todos tus sentidos. Un vino artesanal de uva isabela, chips de plátano con «hogao» y un sancocho de gallina hecho en fogón de leña te esperan. Cada cucharada es una historia de quienes siembran, cosechan y comparten.
+
+El predio se abre como un respiro verde para caminar, observar la flora o descansar en hamacas bajo árboles generosos. Al despedirnos, queremos que te lleves más que un recuerdo: que valores la cultura de esta región y que, cuando vuelvas a casa, mires tus alimentos con otros ojos, consciente de las historias, los trabajos y los afectos que los sostienen.
+
+EN.
+
+In Valle del Cauca, where time is measured by glowing hearths and melodies that never fade, we invite you on a journey into 110 years of Ginebra’s history— told through its kitchen, its fire, and its stories. 
+
+We, the Albania family, will welcome you into our Casa Museo, an old preserved hacienda where every object, photograph, and corner is ready to share a story that has been simmering over time.
+
+As you walk through its rooms, you will feel as if you’ve stepped into another era: wooden tables, trunks, and clay pots reconstruct the life of the great haciendas of Valle del Cauca. The tasting will awaken all your senses. A handcrafted Uva Isabela wine, plantain chips with «hogao», and a sancocho de gallina cooked over a wood-fired stove await you. Each spoonful carries the story of those who sow, harvest, and share.
+
+The property opens into a green breath of fresh air where you can walk, observe the flora, or rest in hammocks under generous trees. As we say goodbye, we hope you take with you more than a memory: that you come to value the culture of this region and, when you return home, look at your food with new eyes—aware of the stories, the labor, and the affections that sustain it.
+
+**EXP 088 - RUTA TURÍSTICA BIOCULTURAL, VICHE Y MARIMBA SAN CIPRIANO - Un viaje por la selva, el sabor y la música del Pacífico**
+
+Abrimos los sentidos para buscar aquello que el mapa no dice: el pulso de la montaña, el murmullo de los ríos y la música que nace en las casas. Contigo ascendemos por la vía hacia Buga, donde la neblina desciende como un velo y la selva se revela en todo su esplendor.
+
+Te espera la Brujita, un transporte único que avanza sobre rieles y nos conduce por túneles naturales, donde el aire se enfría y la vegetación se cierra como un telón vivo. En San Cipriano iniciamos este recorrido de dos días y una noche. Te sumergirás en los charcos de agua cristalina del río Dagua y flotarás en sus corrientes.
+
+Escucharás la marimba y el cununo mezclarse con el canto de las aves. Descubrirás las plantas medicinales en la huerta de don Néstor y los sabores del viche junto a doña Amalia. Degustarás el tapao de pescado y los dulces de coco que endulzan el alma.
+
+Por la noche, alrededor del fogón, los mitos recorrerán tu piel con un escalofrío fascinante. Dormirás arrullado por la sinfonía nocturna y despertarás con la marimba. Al regresar, llevarás en tu equipaje la certeza de haber sido parte de una esencia cultural que transforma.
+
+EN.
+
+We open our senses to seek what the map does not reveal: the pulse of the mountain, the murmur of the rivers, and the music born within homes. Together, we ascend along the road toward Buga, where the mist descends like a veil, and the jungle reveals itself in all its splendor.
+
+Awaiting you is la Brujita, a unique rail-bound transport that carries us through natural tunnels, where the air cools, and the vegetation closes in like a living curtain. In San Cipriano, we begin this two-day, one-night journey. You will immerse yourself in the crystal-clear pools of the Río Dagua and float along its currents.
+
+You will hear the marimba and cununo blend with birdsong. You will discover medicinal plants in don Néstor’s garden and explore the flavors of viche with doña Amalia. You will savor tapao de pescado and coconut sweets that gently sweeten the soul.
+
+At night, gathered around the hearth, myths will travel across your skin with a captivating shiver. You will fall asleep lulled by the nocturnal symphony and awaken to the sound of the marimba. When you return, you’ll carry with you the certainty of having lived a transformative cultural experience.
+
+**EXP 089 - RUTA DE LA PARTERA - Experiencia cultural que conecta saberes ancestrales del Pacífico**
+
+En un rincón del Pacífico colombiano, donde los recién nacidos son bendecidos con dos madres, te recibimos en Buenaventura para celebrar la vida. Esta experiencia es un encuentro de alegría comunitaria, sanación, sabiduría ancestral y biodiversidad, en honor a la existencia.
+
+Te guiaremos por las calles de este puerto vibrante, donde las cornetas de los barcos retumban y marcan el pulso del lugar. Caminarás hacia el Museo de Memoria Viva, sintiendo cómo las energías se transforman a cada paso. Allí escucharás los cantos y rezos de las parteras, así como sus relatos de vida, que revelan prácticas de parto humanizado y una filosofía basada en la danza entre el frío y el calor.
+
+En talleres vivenciales, las matronas te enseñarán a preparar brebajes con viche; tocarás las plantas, percibirás sus aromas y conocerás los sobijos, masajes ancestrales que reequilibran las energías. Descubrirás bebidas tradicionales como el viche de poder ritual, el curao y la tomaseca. Visitaremos también los nichos de las sabedoras, donde se conservan con respeto los elementos necesarios para traer niños al mundo.
+
+Al despedirte, comprenderás que la partería es un legado vivo y un acto de resistencia cultural, en el que las mujeres son guardianas de la vida. Regresarás a casa agradecido por haber conocido su entrega y su lucha por la vida misma.
+
+EN.
+
+In a corner of the Colombian Pacific, where newborns are blessed with two mothers, we welcome you to Buenaventura to celebrate life. This experience is a meeting of community joy, healing, ancestral wisdom, and biodiversity, in honor of existence.
+
+We will guide you through the streets of this vibrant port, where the horns of ships resound and set the rhythm of the place. You will walk toward the Museo de Memoria Viva, feeling how the energies shift with every step. There, you will listen to the songs and prayers of the midwives, as well as their life stories, which reveal practices of humanized childbirth and a philosophy based on the dance between cold and heat.
+
+In experiential workshops, the matronas will teach you how to prepare brews with viche; you will touch the plants, sense their aromas, and learn about sobijos, ancestral massages that rebalance energies. You will discover traditional beverages such as viche with ritual power, curao, and tomaseca. We will also visit the niches of the sabedoras, where the elements needed to bring children into the world are respectfully preserved.
+
+As you take your leave, you will understand that midwifery is a living legacy and an act of cultural resistance, in which women are guardians of life. You will return home grateful for having learned about their devotion and their struggle for life itself.
+
+**EXP 090 - BOSQUE, CASCADA Y YOGA - Camina al ritmo de la naturaleza**
+
+En Cali, la luna te llama, y nosotros estamos listos para acompañarte en un viaje hacia los Farallones de Cali, a las tierras que alguna vez recorrió el cacique Pichindé. Te internarás en los bosques de Peñas Blancas, donde el camino de tierra se convierte en un acto de contemplación.
+
+Poco a poco, dejarás que tu cuerpo suelte la prisa acumulada y que tu mente se vacíe, mientras el paisaje se revela en sus detalles y te sincronizas con el lugar. Te recostarás sobre la tierra húmeda para participar en una sesión de yoga que te guiará hacia el estiramiento y la conexión contigo mismo, al ritmo del pulso de la cascada, del viento y de un coro de aves como fondo sonoro.
+
+Descubrirás la cascada Los Olivos, sintiendo el contacto del agua pura como un bautismo de iniciación: el territorio te reconoce y te acepta como parte de él. Nuestro encuentro culminará alrededor de una mesa campesina, donde participarás de los sabores del campo vallecaucano, servidos en hoja de plátano.
+
+Al partir, sentirás con claridad que ya no eres el mismo: algo de este territorio se quedará contigo, tu mente estará en calma y tu espíritu, renovado.
+
+EN.
+
+In Cali, the moon calls to you, and we are ready to accompany you on a journey to the Farallones de Cali, to the lands once walked by Cacique Pichindé. You will venture into the forests of Peñas Blancas, where the dirt path becomes an act of contemplation.
+
+Gradually, you will allow your body to release built-up haste and your mind to empty itself as the landscape reveals its details and you synchronize with the surroundings. You will lie down on the damp earth to participate in a yoga session that guides you toward stretching and reconnecting with yourself, in rhythm with the pulse of the waterfall, the wind, and a chorus of birds as a natural soundtrack.
+
+You will discover Cascada Los Olivos, feeling the touch of pure water as a baptism of initiation: the territory recognizes you and welcomes you as part of it. Our gathering will conclude around a campesino table, where you will share the flavors of the Valle del Cauca countryside, served on banana leaves.
+
+When you return home, you will clearly feel that you are no longer the same: something from this territory will remain with you, your mind at ease and your spirit renewed.
+
+**EXP 091 - INMERSIÓN EN EL FASCINANTE MUNDO DE LOS VINAGRES ANTIGUOS - Rescatamos tradiciones fermentadas creando experiencias sensoriales que transforman cultura y bienestar**
+
+En el Museo del Vinagre de Cali descubrirás que este ingrediente ancestral es mucho más que un simple aderezo: es medicina líquida, tradición familiar y cómplice silencioso de las cocinas ancestrales.
+
+Comenzaremos con un recorrido por los alrededores del río Cali, antes de adentrarnos en este espacio íntimo donde las botellas de ámbar resguardan historias de generaciones. En estaciones guiadas, sin afán, explorarás una cata olfativa de vinagres históricos como el de los Cuatro Ladrones, cuyos aromas de ruda, romero y canela te transportarán a antiguas boticas. En la cata gustativa descubrirás matices que van desde notas frutales hasta perfiles herbales.
+
+La experiencia culmina con una inmersión gastronómica en la que aprenderás cómo este elixir transforma ensaladas, salsas e incluso postres, mientras comprendes su papel en la conservación de alimentos y en la creación de shrubs refrescantes.
+
+Al regresar a las calles de Cali, llevarás contigo no solo nuevos conocimientos, sino la certeza de haber conectado con una tradición viva que seguirá ocupando un lugar especial en tu cocina y en tu memoria.
+
+EN.
+
+At the Museo del Vinagre de Cali, you will discover that this ancestral ingredient is far more than a simple condiment: it is liquid medicine, family tradition, and a silent accomplice of ancestral kitchens.
+
+We will begin with a walk around the surroundings of the Río Cali, before entering this intimate space where amber bottles safeguard stories passed down through generations. Through unhurried, guided stations, you will explore an olfactory tasting of historic vinegars such as Cuatro Ladrones, whose aromas of rue, rosemary, and cinnamon will transport you to ancient apothecaries. In the gustatory tasting, you will discover nuances ranging from fruity notes to herbal profiles.
+
+The experience culminates in a gastronomic immersion in which you will learn how this elixir transforms salads, sauces, and even desserts, while understanding its role in food preservation and in the creation of refreshing shrubs.
+
+As you return to the streets of Cali, you will carry with you not only new knowledge but also the certainty of having connected with a living tradition that will continue to hold a special place in your kitchen and in your memory.
+
+**EXP 092 - ADRENALINA EN PARAPENTE CON VISTA AL PARAÍSO - Del Valle al cielo en un solo vuelo**
+
+En Dédalos Fly House transformamos ese sueño de volar, el que te despierta con anhelo, en el momento más real de tu vida. Te acompañamos por un camino pintoresco desde Palmira, ascendiendo a Tienda Nueva y Los Ceibos, cruzando el puente sobre el río Amaime, hasta llegar a la Hacienda El Paraíso, donde la atmósfera romántica inspira tu propia historia.
+
+Continuamos en camionetas por la montaña, mientras el paisaje se abre en verdes intensos y cielos expansivos. En el despegue, a 800 metros de desnivel, ajustas el arnés y la vela: sientes temor, sí, pero también un deseo incontrolable de cumplir el sueño de volar. El piloto te guía paso a paso y, tras unos pasos firmes, despegas.
+
+El viento roza tu rostro, asciendes hacia el sol dorado y experimentas una libertad antigua: tu cuerpo se aligera, las montañas se disuelven a lo lejos y el silencio puro del cielo te envuelve en un éxtasis sereno. Al aterrizar, te invaden la plenitud, la alegría y unas lágrimas de gratitud. Después de volar, algo en ti se reacomoda: entiendes que atreverse a despegar es volver a encontrarse con lo esencial de uno mismo.
+
+EN.
+
+At Dédalos Fly House, we transform that dream of flying, the one that wakes you with longing, into the most real moment of your life. We guide you along a picturesque route from Palmira, ascending through Tienda Nueva and Los Ceibos, crossing the bridge over the Río Amaime, until we reach Hacienda El Paraíso, where the romantic atmosphere inspires your own story.
+
+We continue up the mountain in our trucks as the landscape unfolds into deep greens and expansive skies. At the launch site, with an 800-meter drop below, you adjust your harness and wing: you feel fear, yes, but also an uncontrollable desire to finally fulfill the dream of flying. The pilot guides you step by step and, after a few steady strides, you take off.
+
+The wind brushes your face, you rise toward the golden sun, and you experience an ancient kind of freedom: your body grows lighter, the mountains drift into the distance, and the sky’s pure silence wraps you in serene ecstasy. Upon landing, fullness, joy, and tears of gratitude wash over you. After flying, something within you shifts; you understand that daring to take off is a return to the most essential part of yourself.
+
+**EXP 093 - NASHIRA - Un paraíso sostenible con nombre de mujer**
+
+En un rincón del Valle del Cauca, donde el espíritu femenino y colectivo toma forma, te invitamos a vivir una experiencia transformadora. Tu primera respiración aquí será purificadora, impregnada del olor a tierra mojada y del dulce perfume de las plantas aromáticas. No serás un simple observador: te envolverá la calidez de nuestras asociadas, mujeres resilientes cuyas manos han construido no solo viviendas, sino un verdadero hogar.
+
+Aprenderás sobre el reciclaje, una lección de alquimia moderna donde lo desechado renace. En el taller de cerámica crearás, con tus propias manos, un vaso único que te llevarás a casa. La gastronomía es un eje fundamental: degustarás comida tradicional y saludable, preparada con productos de la zona.
+
+Al caer la tarde, la lunada bajo un cielo estrellado se llenará de historias de superación, música y voces que iluminan la noche. Te alojarás en nuestras casas, sintiéndote un invitado especial. Al despedirte, llevarás contigo la convicción de que la verdadera riqueza está en la solidaridad y en el cuidado de la tierra, y la certeza íntima de que otro mundo es posible.
+
+EN.
+
+In this corner of the Valle del Cauca, where the feminine and collective spirit becomes tangible, we invite you to live a transformative experience. Your first breath here will be purifying, infused with the scent of wet earth and the sweet fragrance of aromatic plants. You won’t be a mere observer: you’ll be embraced by the warmth of our associates, resilient women whose hands have built not only houses, but a true home.
+
+You’ll learn about recycling, a lesson in modern alchemy where what was once discarded is reborn. In the ceramics workshop, you’ll craft with your own hands a unique cup to take home. Gastronomy is a fundamental pillar: you will taste traditional and wholesome food prepared with local products.
+
+As evening arrives, a moonlit gathering under the starry sky invites you to listen to stories of resilience, accompanied by music and voices that illuminate the night. You will stay in our homes, feeling like a special guest. And when you leave, you’ll carry with you the conviction that true wealth lies in solidarity and in caring for the earth—and the intimate certainty that another world is possible.
+
+**EXP 094 - RUTA ANCESTRAL DEL VICHE, LA MARIMBA Y EL MAR - Vive el alma del Pacífico: sabor a viche, ritmo de marimba y magia natural**
+
+En Juanchaco, donde el mar se encuentra con la memoria ancestral, te sumergirás en una experiencia que sabe a viche y suena a marimba. Comenzarás con talleres en los que aprenderás a interpretar el bombo, que late con el territorio; el cununo, que habla con voz de tierra; y la marimba, que imita los sonidos del bosque.
+
+Mujeres y hombres de la comunidad te enseñarán los ritmos del currulao, el bunde y la juga, compartiendo la historia de resistencia que habita en cada compás. Participarás en catas de bebidas ancestrales, descubriendo hasta 27 variedades de viche servidas en conchas de piangüa, y comprenderás su trascendencia como medicina tradicional y símbolo de identidad.
+
+Navegarás por Bahía Málaga, visitando cascadas escondidas donde el agua dulce se rinde ante la vegetación tropical, y playas de arena oscura donde el paisaje costero te abrazará. Por las noches, alrededor de las fogatas, los mayores compartirán relatos sobre la partería tradicional y los usos medicinales de las plantas, tejiendo un diálogo entre generaciones.
+
+Al partir, llevarás en tu interior la esencia del Pacífico, convertido en embajador de nuestros ritmos e historias, con la certeza de haber vivido la autenticidad de un pueblo que conserva su identidad con esperanza.
+
+EN.
+
+In Juanchaco, where the sea meets ancestral memory, you will immerse yourself in an experience that tastes of viche and sounds like marimba. You will begin with workshops in which you will learn to play the bombo, which beats in rhythm with the territory; the cununo, which speaks with the voice of the earth; and the marimba, which imitates the sounds of the forest.
+
+Women and men from the community will teach you the rhythms of currulao, bunde, and juga, sharing the history of resistance that lives within each beat. You will take part in tastings of ancestral beverages, discovering up to 27 varieties of viche served in piangüa shells, and you will come to understand its significance as traditional medicine and a symbol of identity.
+
+You will navigate through Bahía Málaga, visiting hidden waterfalls where fresh water yields to tropical vegetation, and dark-sand beaches where the coastal landscape embraces you. In the evenings, gathered around bonfires, elders will share stories of traditional midwifery and the medicinal uses of plants, weaving a dialogue between generations.
+
+When you depart, you will carry within you the essence of the Pacific, becoming an ambassador of our rhythms and stories, with the certainty of having experienced the authenticity of a people who preserve their identity with hope.
+
+**EXP 095 - LA RUTA DEL AGUA - Redescubre Colombia a través de su mayor tesoro**
+
+Te acompañamos a caminar hacia ese lugar donde todo empieza, hacia ese primer suspiro líquido que el páramo guardó en silencio. Juntos emprendemos el camino desde Sevilla hacia la vereda Miraflores, donde el paisaje campesino se revela y el camino se vuelve silencio. Iniciaremos un ascenso tranquilo, a pie o a caballo, entre neblina y un frío verde, hasta llegar a tu alojamiento.
+
+Durante tres días, tus pasos se adentrarán en senderos donde el páramo se manifiesta como un templo vivo. Los frailejones, guardianes silenciosos, te reciben. Te guiaremos en una expedición a lo alto de la montaña, donde el cielo se llena de aves y surgen lagunas como espejos helados que guardan el firmamento. Allí experimentarás libertad, desconexión y asombro.
+
+Junto a las familias de la alta montaña, saborearás la cocina tradicional campesina: leche recién ordeñada, quesos artesanales y trucha fresca que reconfortan el cuerpo y el alma. Comprenderás que este paisaje es una red de vínculos que merece ser honrada. Esta experiencia quedará resonando en tu memoria y se convertirá en un capítulo profundo y vivo de tu propia historia.
+
+EN.
+
+We accompany you on a journey toward that place where everything begins, toward that first liquid breath the páramo kept in silence. Together, we set out from Sevilla toward the Vereda Miraflores, where the rural landscape reveals itself and the path turns quiet. We will begin a gentle ascent, on foot or on horseback, through mist and a green cold, until we reach your lodging.
+
+For three days, your steps will enter trails where the páramo unfolds as a living temple. The frailejones, silent guardians, welcome you. We will guide you on an expedition to the mountaintop, where the sky fills with birds and glacial lagoons appear like frozen mirrors holding the heavens. There, you will experience freedom, disconnection, and wonder.
+
+Alongside the high-mountain families, you will savor traditional rural cuisine: freshly milked warm milk, artisanal cheeses, and fresh trout that comfort both body and soul. You will come to understand that this landscape is a network of relationships that deserves reverence. This experience will continue resonating in your memory and will become a deep, living chapter of your own story.
+
+**EXP 096 - ECOEXPERIENCIA LABRIEGO DEL RÍO - Orquídeas, Café, Aves y Cascadas**
+
+En las montañas de Sevilla, donde el campesino labriego del río honra con sus manos la tierra, te invitamos a recorrer un territorio donde orquídeas, café, aves y cascadas se entrelazan en un mismo relato. Iniciaremos en el Parque Uribe para ascender hacia la vereda Las Brisas, donde el horizonte se abre en fincas centenarias y cafetales que murmuran historias.
+
+Visitaremos la finca La Olga, guardiana de más de cien años de tradición campesina, y la finca La Frontera, con su colección de orquídeas. Disfrutarás desayunos con productos locales, café de origen recién preparado y un almuerzo de fiambre montañero, mientras caminamos junto al río Pijao y descubrimos cascadas que la comunidad protege con esmero.
+
+Al regresar, llevarás en tu memoria no solo el Paisaje Cultural Cafetero, sino también la certeza de haber participado en un rito auténtico: donde la tierra se honra, las manos cuidadoras te acompañan y cada sorbo de café recuerda la importancia de vivir en armonía con la naturaleza.
+
+EN.
+
+In the mountains of Sevilla, where labriegos de río (river farmers) honor the land with their hands, we invite you to explore a territory where orchids, coffee, birds, and waterfalls intertwine in a single story. We will begin at Parque Uribe and ascend toward the Vereda Las Brisas, where the horizon opens into century-old farms and coffee fields that whisper their tales.
+
+We will visit Finca La Olga, guardian of more than a hundred years of campesino tradition, and Finca La Frontera, home to an exceptional orchid collection. You will enjoy breakfasts made with local products, freshly brewed single-origin coffee, and a traditional fiambre montañero lunch, as we walk along the Río Pijao and discover waterfalls lovingly protected by the community.
+
+By the time you return, you will carry with you not only the beauty of the Paisaje Cultural Cafetero, but also the certainty of having taken part in an authentic ritual: one in which the land is honored, caring hands accompany you, and each sip of coffee reminds you of the importance of living in harmony with nature.
+
+**EXP 097 - KALUA - Un homenaje a la cultura y a los vientos de Calima**
+
+Te invitamos a caminar por un territorio donde la neblina enamorada abraza y revela historias, sabores y tradiciones. En las montañas verdes del Valle del Cauca nace nuestro homenaje de dos días y una noche al Lago Calima y a sus vientos, que juegan con el agua en un romance que se renueva cada tarde.
+
+Te guiaremos por un recorrido en el que el café deja de ser solo una bebida para convertirse en vínculo, historia y abrazo. Te recibiremos en el parque Los Fundadores, lleno de historia y la calidez de nuestra gente, para caminar el corazón del pueblo mágico, visitar la iglesia y el Museo Arqueológico Calima. 
+
+Vivirás un taller sensorial moliendo café, te adentrarás en el embalse a bordo de una embarcación y saborearás una gastronomía que es, en sí misma, un acto de memoria. Al caer la tarde, una taza de café se transformará en ritual.
+
+Al regresar, el camino se medirá en recuerdos. Llevarás en tu interior la músicadel viento y la historia de estas montañas, con la certeza de haber encontradouna calma verdadera y una nueva forma de entender el viaje como un regresoa lo esencial.
+
+EN.
+
+We invite you to walk through a territory where the enchanted mist embraces and reveals stories, flavors, and traditions. In the green mountains of Valle del Cauca, our two-day, one-night tribute is born—an homage to Lago Calima and its winds, which play with the water in a romance renewed each afternoon.
+
+We will guide you along a journey where coffee ceases to be merely a beverage and becomes a bond, a story, and an embrace. We will welcome you to Parque Los Fundadores, a place steeped in memory and community spirit. From there, we explore the heart of this magical town, visit the church, and immerse ourselves in the heritage preserved at the Museo Arqueológico Calima.
+
+You will take part in a sensory workshop grinding coffee, venture into the reservoir aboard a boat, and savor gastronomy that is, in itself, an act of memory. As evening falls, a cup of coffee will transform into a ritual.
+
+When it’s time to return, you will find that the journey is measured not in miles but in memories. You will carry with you the music of the wind, the stories of the mountains, and the quiet certainty that true peace is found in returning to what’s essential.
+
+**EXP 098 - VENADO VERDE CASCADAS EL PARAÍSO - Conexión profunda con las cascadas**
+
+En las costas del Valle del Cauca, en Buenaventura, te invitamos a un lugar donde el bosque respira contigo. Caminaremos a tu lado, dejando que la quebrada guíe el camino. Andarás por senderos húmedos junto al río, entre yarumos, chonta y helechos que escriben en verde.
+
+El río te conducirá a pozos claros y a la cascada del Paraíso, donde el aire huele a selva fresca. Descubrirás tres cascadas de agua cristalina y te sumergirás en charcos de profunda tranquilidad. Nuestros intérpretes locales compartirán contigo los relatos del duende que tocaba guitarra, la voz viva de un pueblo.
+
+Los sabores auténticos del Pacífico te seducirán con pescado, arroz con coco y, si eres aventurero, arrechón o crema de viche. Comer aquí es entender el territorio con la lengua. Después, un baño en la Pringosa completará la experiencia y revelará la majestuosidad del lugar.
+
+Antes de partir, recibirás un pequeño tambor de madera de chonta. Cuando te vayas, llevarás contigo la ligereza del agua en las piernas y el canto de las aves anclado en la memoria. Caminarás distinto, como si el bosque te hubiera prestado su manera de ir despacio. Aquí descubrirás que cuidar también es una forma de belleza.
+
+EN.
+
+On the coast of Valle del Cauca, in Buenaventura, we invite you to a place where the forest breathes with you. We will walk by your side, letting the stream guide the way. You will move along damp paths beside the river, among yarumos, chonta, and ferns that write the landscape in green.
+
+The river will lead you to clear pools and to Cascada del Paraíso, where the air smells of fresh rainforest. You will discover three crystal-clear waterfalls and immerse yourself in pools of deep tranquility. Our local interpreters will share with you the stories of the guitar-playing duende, the living voice of a people.
+
+The authentic flavors of the Pacific will entice you with fish, coconut rice, and, if you are adventurous, arrechón or crema de viche. Eating here is understanding the territory through taste. Afterwards, a swim in la Pringosa will complete the experience and reveal the majesty of the place.
+
+Before you depart, you will receive a small drum made of chonta wood. And when you leave, you will carry with you the lightness of water in your legs and the birdsong anchored in your memory. You will walk differently, as if the forest had lent you its way of moving slowly. Here you will discover that caring, too, is a form of beauty.
+
+**EXP 099 - CAMPO PARA LA VIDA - Experiencia rural para aprender de la tierra, cuidar la vida y sembrar sostenibilidad**
+
+Cuando sientes que todo a tu alrededor son pantallas, afán y cemento, te abrimos la puerta de nuestra casa común en el Valle del Cauca. Te invitamos a vivir, durante un día y una noche, una experiencia que te devuelve a lo esencial: despertar tus sentidos hacia la tierra, el alimento y las familias campesinas que los hacen posibles.
+
+En el IMCA Hotel, en Buga, comenzarás a soltar tu equipaje invisible y a recargarte de energía serena, mientras ardillas, iguanas y mariposas te dan la bienvenida. Desde allí, nos movilizaremos en una chiva hacia la Finca Campoalegre, donde Marleny, Cristian y don Marino te recibirán con los brazos abiertos.
+
+Caminarás entre sus huertas, hundirás las manos en la tierra tibia y comprenderás la agroecología como una forma de vida. Saborearás un tamal de pipián y un café que son puro patrimonio, mientras conversas y compartes con una familia que te abraza como propia.
+
+Regresarás a casa renovado, cargado de conciencia y con la certeza de que es posible habitar el mundo de otra manera: transformando tu relación con la naturaleza, la comida y el campo colombiano.
+
+EN.
+
+When you feel that everything around you is screens, haste, and concrete, we open the door to our shared home in Valle del Cauca. We invite you to live, for one day and one night, an experience that brings you back to what truly matters: awakening your senses to the land, to food, and to the familias campesinas who make it all possible.
+
+At IMCA Hotel, in Buga, you will begin to let go of your invisible baggage and recharge with a calm, grounding energy, while squirrels, iguanas, and butterflies welcome you. From there, we will travel by chiva to Finca Campoalegre, where Marleny, Cristian, and Don Marino will receive you with open arms.
+
+You will walk among their gardens, sink your hands into the warm soil, and come to understand agroecology as a way of life. You will savor a tamal de pipián and a cup of coffee that are pure heritage, while you converse and share with a family that embraces you as one of their own.
+
+You will return home renewed, filled with awareness, and with the certainty that it is possible to inhabit the world in another way—by transforming your relationship with nature, food, and the Colombian countryside.
+
+**EXP 100 - LOS SENTIDOS DEL AGUA Y LA TRAVESÍA DEL CACIQUE XAMUNDÍ - Descubre esta expedición natural en Jamundí**
+
+Te invitamos a la Reserva Natural Bonanza, en el Valle del Cauca, un umbral donde el bosque de niebla guarda historias de resiliencia y renacimiento. Aquí vienes a recordar la esencia de tu propia naturaleza.
+
+Iniciarás tu visita con un desayuno campesino que honra la tierra. Luego caminarás, junto a nuestro guía, por un circuito ecológico de 5 km donde el agua es la gran protagonista. El murmullo de la quebrada Guerrero se mezcla con el canto de las aves y forma una sola sinfonía, mientras te compartimos las memorias del cacique Xamundí.
+
+Abrazarás el árbol que sobrevivió al impacto de un rayo y sentirás cómo su energía circula, mientras algo en tu pecho se aquieta. Escucharás monos aulladores y otros mamíferos: apenas una parte del paisaje sonoro que habita este territorio. El descenso hacia la cascada Gallito de Roca te regala un baño de rocío, donde el agua fría despeja la mente y el cansancio se transforma en paz.
+
+Después de la caminata, disfrutarás de los sabores de la zona y, finalmente, compartirás una taza de café del valle al pie de la montaña. Al partir, sabrás que la verdadera aventura fue abrazar la naturaleza y reconocerte como guardián de su legado eterno.
+
+EN.
+
+We invite you to Reserva Natural Bonanza, in Valle del Cauca, a gateway where the cloud forest shelters stories of resilience and renewal. Here, you come to remember the essence of your own nature.
+
+You will begin your visit with a traditional breakfast that honors the land. Then, alongside our guide, you will walk a 5 km ecological circuit where water is the true protagonist. The murmur of Quebrada Guerrero blends with birdsong to form a single symphony, as we share with you the memories of Cacique Xamundí.
+
+You will embrace the tree that survived a lightning strike and feel how its energy flows, while something in your chest grows still. You will hear monos aulladores and other mammals—just a fragment of the soundscape that inhabits this territory. The descent toward Cascada Gallito de Roca offers a misty baptism, where cold water clears the mind, and fatigue transforms into peace.
+
+After your hike, you will enjoy the flavors of the region and, finally, share a cup of café del valle at the foot of the mountain. When you depart, you will know that the true adventure was embracing nature and recognizing yourself as a guardian of its eternal legacy.
+
