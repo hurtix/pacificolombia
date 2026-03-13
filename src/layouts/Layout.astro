@@ -70,18 +70,16 @@ import FloatingNav from "../components/FloatingNav.astro";
     </main>
 
     <footer
-      class="flex flex-col justify-end text-white py-8 pointer-events-none select-none"
+      class="flex flex-col justify-end text-white py-8 select-none"
     >
       <img
         src="/images/by.webp"
         alt="By"
-        class="w-full md:w-[700px] mx-auto block"
+        class="w-full md:w-[700px] mx-auto block pointer-events-none"
       />
-      <!-- <div class="container mx-auto px-4 text-center">
-        <p>&copy; 2026 Destino Pacífico. Todos los derechos reservados.</p>
-      </div> -->
+      <div class="flex justify-center items-center mt-4 lg:mt-0">
       <a
-        class="flex justify-center items-center mt-4 lg:mt-0 text-white"
+        class="flex items-center text-white pointer-events-auto hover:opacity-75 transition-opacity"
         href="https://gorilabs.com?ref=destinopacifico"
         target="_blank"
         ><svg
@@ -102,8 +100,8 @@ import FloatingNav from "../components/FloatingNav.astro";
           ></svg
         >
         <span class="text-[7pt] w-[50px] leading-none text-wrap ml-1">Hecho en Popayán</span>
-        </a
-      >
+        </a>
+      </div>
     </footer>
 
     <!-- Menú flotante -->
